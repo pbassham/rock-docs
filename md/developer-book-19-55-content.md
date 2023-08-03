@@ -1,14 +1,6 @@
 # 
 from:developer-book-19-55-content.html
 
-#### Updates for McKinley 3.0
-
-No updates made.
-
-#### Updates for McKinley 1.0
-
-No updates made.
-
 [](#helloworld)Hello World
 ==========================
 

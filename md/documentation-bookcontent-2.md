@@ -1,28 +1,6 @@
 # 
 from:documentation-bookcontent-2.html
 
-#### Updates for McKinley 10.0
-
-No updates made.
-
-#### Updates for McKinley 6.0
-
-No updates made.
-
-#### Updates for McKinley 7.0
-
-Below is a summary of the updates for this version.
-
-*   Added the Prepare Your Staff section to the Prepare Now chapter.
-
-#### Updates for McKinley 8.0
-
-No updates made.
-
-#### Updates for McKinley 9.0
-
-No updates made.
-
 [](#welcome)Welcome
 ===================
 

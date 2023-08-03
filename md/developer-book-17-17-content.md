@@ -1,10 +1,6 @@
 # 
 from:developer-book-17-17-content.html
 
-#### Updates for McKinley 1.0
-
-No updates made.
-
 [](#morethanblocks)More Than Blocks
 ===================================
 

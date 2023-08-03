@@ -1,10 +1,6 @@
 # 
 from:developer-book-26-26-content.html
 
-#### Updates for McKinley 3.0
-
-No updates made.
-
 [](#welcome)Welcome
 ===================
 

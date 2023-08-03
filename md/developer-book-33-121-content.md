@@ -1,13 +1,6 @@
 # 
 from:developer-book-33-121-content.html
 
-#### Updates for McKinley 7.0
-
-Below is a summary of the updates for this version.
-
-*   Added Shortcodes documentation and screenshots.
-*   Updated Shortcodes List screenshot and documentation.
-
 [](#gettingstarted)Getting Started
 ==================================
 

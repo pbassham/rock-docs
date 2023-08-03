@@ -3,3 +3,8 @@ I was frustrated with how many places I had to search to find answers to my Rock
 
 ## How to use
 1. Enter your search term in the search box above.
+
+## To Do
+- [ ] Automate the process of updating the documentation.
+- [ ] Fix link back to the official Rock RMS documentation at the top of each page.
+- [ ] Add RockU video transcriptions

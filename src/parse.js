@@ -179,6 +179,7 @@ export const getTextFrom = (html) => {
     $('nav').remove();
     $('.header-row').remove();
     $('.topbar').remove();
+    $('div[data-type="update-summary"]').remove();
 
     // remove class header-row
     

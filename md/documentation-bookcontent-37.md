@@ -1,36 +1,6 @@
 # 
 from:documentation-bookcontent-37.html
 
-#### Updates for McKinley 15.0
-
-No updates made.
-
-#### Updates for McKinley 9.0
-
-No updates made.
-
-#### Updates for McKinley 10.0
-
-Below is a summary of the updates for this version.
-
-*   Added Assessments to History in Person Profile
-
-#### Updates for McKinley 11.0
-
-No updates made.
-
-#### Updates for McKinley 12.0
-
-No updates made.
-
-#### Updates for McKinley 13.0
-
-No updates made.
-
-#### Updates for McKinley 14.0
-
-No updates made.
-
 [](#assessments)Assessments
 ===========================
 

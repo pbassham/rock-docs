@@ -1,22 +1,6 @@
 # 
 from:documentation-bookcontent-31.html
 
-#### Updates for McKinley 10.0
-
-No updates made.
-
-#### Updates for McKinley 6.0
-
-No updates made.
-
-#### Updates for McKinley 8.0
-
-No updates made.
-
-#### Updates for McKinley 9.0
-
-No updates made.
-
 [](#introduction)Introduction
 =============================
 

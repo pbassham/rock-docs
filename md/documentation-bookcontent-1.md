@@ -1,54 +1,6 @@
 # 
 from:documentation-bookcontent-1.html
 
-#### Updates for McKinley 14.0
-
-No updates made.
-
-#### Updates for McKinley 1.0
-
-No updates made.
-
-#### Updates for McKinley 2.0
-
-No updates made.
-
-#### Updates for McKinley 3.0
-
-No updates made.
-
-#### Updates for McKinley 4.0
-
-Below is a summary of the updates for this version.
-
-*   Added information on enabling Snapshot Isolation.
-
-#### Updates for McKinley 5.0
-
-No updates made.
-
-#### Updates for McKinley 6.0
-
-No updates made.
-
-#### Updates for McKinley 7.0
-
-No updates made.
-
-#### Updates for McKinley 8.0
-
-No updates made.
-
-#### Updates for McKinley 9.0
-
-Below is a summary of the updates for this version.
-
-*   Added Encryption Note
-
-#### Updates for McKinley 13.0
-
-No updates made.
-
 [](#introduction)Introduction
 =============================
 

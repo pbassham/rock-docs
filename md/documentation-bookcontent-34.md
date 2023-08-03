@@ -1,44 +1,6 @@
 # 
 from:documentation-bookcontent-34.html
 
-#### Updates for McKinley 15.0
-
-No updates made.
-
-#### Updates for McKinley 7.0
-
-This is a new manual for v7 all about creating email templates!
-
-#### Updates for McKinley 8.0
-
-No updates made.
-
-#### Updates for McKinley 9.0
-
-No updates made.
-
-#### Updates for McKinley 10.0
-
-No updates made.
-
-#### Updates for McKinley 11.0
-
-No updates made.
-
-#### Updates for McKinley 12.0
-
-Below is a summary of the updates for this version.
-
-*   CSS Inlining can be enabled for all emails using a new setting in the Communication Medium configuration
-
-#### Updates for McKinley 13.0
-
-No updates made.
-
-#### Updates for McKinley 14.0
-
-No updates made.
-
 [](#welcome)Welcome
 ===================
 

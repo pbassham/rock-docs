@@ -1,41 +1,6 @@
 # 
 from:documentation-bookcontent-36.html
 
-#### Updates for McKinley 15.0
-
-No updates made.
-
-#### Updates for McKinley 8.0
-
-No updates made.
-
-#### Updates for McKinley 9.0
-
-No updates made.
-
-#### Updates for McKinley 10.0
-
-Below is a summary of the updates for this version.
-
-*   Added new chapter Using Wi-Fi Presence for Service Attendance
-*   Updated Captive Portal block settings
-
-#### Updates for McKinley 11.0
-
-No updates made.
-
-#### Updates for McKinley 12.0
-
-No updates made.
-
-#### Updates for McKinley 13.0
-
-No updates made.
-
-#### Updates for McKinley 14.0
-
-No updates made.
-
 [![Frontporch Advertisement](/GetImage.ashx?Id=22369)](http://www.frontporch.com/ "Frontporch")
 
 [](#welcome)Welcome

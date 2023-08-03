@@ -1,64 +1,6 @@
 # 
 from:documentation-bookcontent-39.html
 
-#### Updates for McKinley 15.0
-
-Below is a summary of the updates for this version.
-
-*   The Sign-Ups feature lets you quickly and easily register for short-term serving opportunities
-
-#### Updates for McKinley 10.0
-
-Below is a summary of the updates for this version.
-
-*   Added existing Connections chapters.
-*   Added new chapters for Steps.
-*   Added new chapters for Streaks.
-*   Added details to describe single-campus behavior.
-*   Updated Connection Request Transfer feature.
-*   Added capability to enter attribute values during connection request signup.
-*   Added Connection Campaigns.
-
-#### Updates for McKinley 11.0
-
-Below is a summary of the updates for this version.
-
-*   Added option to apply security to individual Connection Requests
-*   Added new Steps Automation job to add Steps for people in a Data View
-*   Added support for Connection Activity Attributes
-*   Future Follow-Up Connection Requests can be set back to Active and can launch workflows after the follow-up date has passed
-
-#### Updates for McKinley 12.0
-
-Below is a summary of the updates for this version.
-
-*   New setting on the Connection Type which can optionally specify a particular page to use when viewing details for requests of that type
-*   Added Achievements features that allow any entity to earn achievements
-*   Achievements can be tracked using Interactions or Step Program data, in addition to Streak data
-*   Dates for Steps can be either optional or required
-*   Multiple changes to the look and feel of Connections, including a new Board view, an updated List view and an improved view of individual requests
-*   Added a new 'Achievement' Badge Type for displaying Achievement badges
-*   Added 'Advanced Settings' to Connection Opportunity configuration, allowing certain options to be hidden when working with requests
-*   A new 'Future Follow-up Complete' action is automatically added to Connection Requests that reach their future follow-up date
-*   A history of changes can be viewed for each Connection Request by clicking the "View History" link on the request
-
-#### Updates for McKinley 13.0
-
-Below is a summary of the updates for this version.
-
-*   The history of a person's Steps data can be viewed on the History tab of the Person Profile page
-*   The status of Connection Requests can be updated automatically by setting up Status Automation rules on the Connection Type
-*   Streaks and Achievements can now be driven by a person's giving data
-
-#### Updates for McKinley 14.0
-
-Below is a summary of the updates for this version.
-
-*   The Connection Request list view has a special Bulk Update feature that let's you update things like the status, state or connector for multiple requests at once
-*   The order in which Connection Status Automations are processed is now configurable
-*   The new Step Flow feature gives you visual insights into engagement patterns in your Step Programs
-*   The manual workflows that are launched from a Connection Request can now be displayed or hidden based on the Status of the request
-
 [](#welcome)Welcome
 ===================
 

@@ -1,50 +1,6 @@
 # 
 from:documentation-bookcontent-32.html
 
-#### Updates for McKinley 15.0
-
-No updates made.
-
-#### Updates for McKinley 7.0
-
-Learn the ins and outs of this new feature in v7.
-
-#### Updates for McKinley 8.0
-
-Below is a summary of the updates for this version.
-
-*   Added Lucene search enging documentation.
-
-#### Updates for McKinley 9.0
-
-No updates made.
-
-#### Updates for McKinley 10.0
-
-Below is a summary of the updates for this version.
-
-*   Added details related to indexing of sites
-
-#### Updates for McKinley 11.0
-
-No updates made.
-
-#### Updates for McKinley 12.0
-
-Below is a summary of the updates for this version.
-
-*   Event Items have been added to Universal Search
-
-#### Updates for McKinley 13.0
-
-No updates made.
-
-#### Updates for McKinley 14.0
-
-Below is a summary of the updates for this version.
-
-*   Updated instructions for installing version 8 of Elasticsearch
-
 [](#welcome)Welcome
 ===================
 

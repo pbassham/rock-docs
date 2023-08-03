@@ -1,47 +1,6 @@
 # 
 from:documentation-bookcontent-35.html
 
-#### Updates for McKinley 15.0
-
-No updates made.
-
-#### Updates for McKinley 7.0
-
-Below is a summary of the updates for this version.
-
-*   Added BI Job chapter.
-*   Added BI Individuals Report screenshot.
-
-#### Updates for McKinley 8.0
-
-No updates made.
-
-#### Updates for McKinley 9.0
-
-No updates made.
-
-#### Updates for McKinley 10.0
-
-No updates made.
-
-#### Updates for McKinley 11.0
-
-No updates made.
-
-#### Updates for McKinley 12.0
-
-No updates made.
-
-#### Updates for McKinley 13.0
-
-Below is a summary of the updates for this version.
-
-*   Added details for using the Analytics Source Date table
-
-#### Updates for McKinley 14.0
-
-No updates made.
-
 [](#businessintelligence)Business Intelligence
 ==============================================
 

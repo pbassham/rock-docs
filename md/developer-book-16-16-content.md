@@ -1,10 +1,6 @@
 # 
 from:developer-book-16-16-content.html
 
-#### Updates for McKinley 1.0
-
-No updates made.
-
 [](#introduction)Introduction
 =============================
 
