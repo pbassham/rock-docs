@@ -398,26 +398,12 @@ You will need to include `using Rock.Security;` in your block. Once you do this,
 Here are the standard security actions and their meanings:
 
 Standard security action names
-
-Name
-
-Description
-
-View
-
-Grants the ability to view the item's public properties.
-
-Edit
-
-Includes view access and the ability to change the item's name and other properties.
-
-Administrate
-
-This means the block's security and block's settings can be changed.
-
-Approve
-
-Authorization to approve the item (html, prayer, ads, etc).
+| Name | Description |
+| --- | --- |
+| View | Grants the ability to view the item's public properties. |
+| Edit | Includes view access and the ability to change the item's name and other properties. |
+| Administrate | This means the block's security and block's settings can be changed. |
+| Approve | Authorization to approve the item (html, prayer, ads, etc). |
 
 If you need to define additional action names to control your custom functionality, you can simply decorate your block with `[SecurityAction(...)]` like this:
 
@@ -1182,44 +1168,18 @@ Over the course of time, duplicate person records happen and then they're merged
 Consider this example where code is referencing PersonAlias Ids 100 and 101 which point to two Tom Miller records with Person Id 16 and 17, respectively.
 
 A representation of two duplicate person records and their aliases.
-
-Your Reference
-
-PersonAlias Id ->Person Id
-
-Person (Id)
-
-100
-
-100 -> 16
-
-![](https://rockrms.blob.core.windows.net/documentation/Books/16/1.1.0/images/personalias-tommiller.png) (16)
-
-101
-
-101 -> 17
-
-![](https://rockrms.blob.core.windows.net/documentation/Books/16/1.1.0/images/personalias-thomasmiller.png) (17)
+| Your Reference | PersonAlias Id ->Person Id | Person (Id) |
+| --- | --- | --- |
+| 100 | 100 -> 16 | ![](https://rockrms.blob.core.windows.net/documentation/Books/16/1.1.0/images/personalias-tommiller.png) (16) |
+| 101 | 101 -> 17 | ![](https://rockrms.blob.core.windows.net/documentation/Books/16/1.1.0/images/personalias-thomasmiller.png) (17) |
 
 After the two Tom Miller records are merged, the PersonAlias references are intact and point to the Tom Miller whose PersonId is 16.
 
 A representation of the person records and their aliases after a merge.
-
-Your Reference
-
-PersonAlias Id ->Person Id
-
-Person (Id)
-
-100
-
-100 -> 16
-
-![](https://rockrms.blob.core.windows.net/documentation/Books/16/1.1.0/images/personalias-tommiller.png) (16)
-
-101
-
-101 -> 16
+| Your Reference | PersonAlias Id ->Person Id | Person (Id) |
+| --- | --- | --- |
+| 100 | 100 -> 16 | ![](https://rockrms.blob.core.windows.net/documentation/Books/16/1.1.0/images/personalias-tommiller.png) (16) |
+| 101 | 101 -> 16 |
 
 Comment:
 ========
@@ -1480,115 +1440,27 @@ Here are some rules to follow so your stuff doesn't collide with other's stuff. 
 
 In all cases below the "domain" MUST be lowercase.
 
-Item
-
-Rule
-
-Example
-
-Project Naming
-
-<reversed.domain>.<Project Name>
-
-`org.mychurch.MyProjectName` (domain is always lowercase)
-
-Tables
-
-\_<reversed\_domain>\_<project>\_<tablename>
-
-`_org_mychurch_MyProjectName_Book`
-
-Stored Procedures
-
-\_<reversed\_domain>\_sp<project and/or component>
-
-`_org_mychurch_spWidgetGet`
-
-User Functions
-
-\_<reversed\_domain>\_unf<project and/or component>
-
-`_org_mychurch_unfWidgetCalc`
-
-Action Categorization
-
-<Organization Name>: <category name>
-
-`[Category( "My Church: MyActionCategory" )]` or include a locality/identifier if your organization's name is common  
-`[Category( "My Church (AZ): MyActionCategory" )]`
-
-Lava Shortcodes
-
-<reversed\_domain>\_<shortcode tag-name>
-
-`{[ org_mychurch_supermap ... ]}`
-
-Block Categorization
-
-<Organization Name> \> <category name>
-
-`[Category( "My Church > My Category" )]` or include a locality/identifier if your organization's name is common  
-`[Category( "My Church (AZ) > My Category" )]`
-
-Block Location
-
-RockWeb/Plugins/<reversed\_domain>/<project>/
-
-`RockWeb/Plugins/org_mychurch/MyProject/`
-
-Block Namespace
-
-RockWeb.Plugins.<reversed\_domain>.<project>
-
-`RockWeb.Plugins.org_mychurch.MyProjectName`
-
-Class Namespace
-
-<reversed.domain>.<project>
-
-`org.mychurch.MyProjectName`
-
-Assemblies
-
-<reversed.domain>.<project>.dll
-
-`org.mychurch.MyProjectName.dll`
-
-API path
-
-api/<reversed.domain>/
-
-`api/org.mychurch/`
-
-Attribute "Key" names (except Block Attributes)
-
-<reversed\_domain>\_<variable>
-
-`org_mychurch_AmazingWidgetFoo`
-
-Private Class Property
-
-\_<property>
-
-`_fooId`
-
-Querystring Parameters
-
-use field/property case (Pascal Case)
-
-`GroupId`
-
-Webhook filename
-
-\_<reversed\_domain>\_... or <org initials>\_... (again, to prevent collisions with other plugin developers)
-
-`_org_mychurch_Mailgun.ashx` or `mc_Mailgun.ashx`
-
-Or Webhook folder
-
-Webhooks/<reversed\_domain>/Mailgun.ashx
-
-`Webhooks/org_mychurch/Mailgun.ashx`
+| Item | Rule | Example |
+| --- | --- | --- |
+| Project Naming | <reversed.domain>.<Project Name> | `org.mychurch.MyProjectName` (domain is always lowercase) |
+| Tables | \_<reversed\_domain>\_<project>\_<tablename> | `_org_mychurch_MyProjectName_Book` |
+| Stored Procedures | \_<reversed\_domain>\_sp<project and/or component> | `_org_mychurch_spWidgetGet` |
+| User Functions | \_<reversed\_domain>\_unf<project and/or component> | `_org_mychurch_unfWidgetCalc` |
+| Action Categorization | <Organization Name>: <category name> | `[Category( "My Church: MyActionCategory" )]` or include a locality/identifier if your organization's name is common  
+`[Category( "My Church (AZ): MyActionCategory" )]` |
+| Lava Shortcodes | <reversed\_domain>\_<shortcode tag-name> | `{[ org_mychurch_supermap ... ]}` |
+| Block Categorization | <Organization Name> \> <category name> | `[Category( "My Church > My Category" )]` or include a locality/identifier if your organization's name is common  
+`[Category( "My Church (AZ) > My Category" )]` |
+| Block Location | RockWeb/Plugins/<reversed\_domain>/<project>/ | `RockWeb/Plugins/org_mychurch/MyProject/` |
+| Block Namespace | RockWeb.Plugins.<reversed\_domain>.<project> | `RockWeb.Plugins.org_mychurch.MyProjectName` |
+| Class Namespace | <reversed.domain>.<project> | `org.mychurch.MyProjectName` |
+| Assemblies | <reversed.domain>.<project>.dll | `org.mychurch.MyProjectName.dll` |
+| API path | api/<reversed.domain>/ | `api/org.mychurch/` |
+| Attribute "Key" names (except Block Attributes) | <reversed\_domain>\_<variable> | `org_mychurch_AmazingWidgetFoo` |
+| Private Class Property | \_<property> | `_fooId` |
+| Querystring Parameters | use field/property case (Pascal Case) | `GroupId` |
+| Webhook filename | \_<reversed\_domain>\_... or <org initials>\_... (again, to prevent collisions with other plugin developers) | `_org_mychurch_Mailgun.ashx` or `mc_Mailgun.ashx` |
+| Or Webhook folder | Webhooks/<reversed\_domain>/Mailgun.ashx | `Webhooks/org_mychurch/Mailgun.ashx` |
 
 Note:
 =====
@@ -1644,461 +1516,100 @@ When developing custom API extensions, you must use a folder convention `api/<co
 
 If you really want to make the core team happy, you can follow these naming conventions on your entity property/fields:
 
-Control Type
-
-Prefix
-
-Example
-
-AccountPicker
-
-`acctp`
-
-AutoCompleteDropDown
-
-`ac`
-
-acPersonSelect
-
-AttributeEditor
-
-`edt`
-
-edtGroupMemberAttributes
-
-Badge
-
-`badge`
-
-badgeNotice
-
-BinaryFilePicker
-
-`bfp`
-
-BinaryFileTypePicker
-
-`bftp`
-
-BirthdayPicker
-
-`bdayp`
-
-**BootstrapButton**
-
-`bbtn`
-
-bbtnSearch
-
-**Button**
-
-`btn`
-
-btnSendLogin
-
-ButtonDropDownList
-
-`bddl`
-
-CampusesPicker
-
-`mcamp`
-
-CampusPicker
-
-`camp`
-
-CategoryPicker
-
-`catp`
-
-catpCategory
-
-CheckBox
-
-`cb`
-
-cbUnlisted
-
-CheckBoxList
-
-`cbl`
-
-CodeEditor
-
-`ce`
-
-CompareValidator
-
-`coval`
-
-ComponentPicker
-
-`comp`
-
-ConfirmPageUnload
-
-`conpu`
-
-CustomValidator
-
-`cval`
-
-**DataDropDownList**
-
-`ddl`
-
-ddlDataView
-
-DataPager
-
-`dpgr`
-
-DataTextBox
-
-`dtb`
-
-dtbDescription
-
-DatePicker
-
-`dp`
-
-dpAnniversaryDate
-
-DateRangePicker
-
-`drp`
-
-DateTimePicker
-
-`dtp`
-
-dtpFutureSendAt
-
-DropDownList
-
-`ddl`
-
-EntityTypePicker
-
-`etp`
-
-FieldTypeList
-
-`ftl`
-
-FileUpload
-
-`fup`
-
-FileUploader
-
-`fupr`
-
-GeoPicker
-
-`geop`
-
-**Grid**
-
-`g`
-
-gMembers
-
-**GridFilter**
-
-`gf`
-
-gfSettings
-
-GroupPicker
-
-`gp`
-
-GroupRolePicker
-
-`grp`
-
-GroupTypePicker
-
-`gtp`
-
-HelpBlock
-
-`hb`
-
-**HiddenField**
-
-`hf`
-
-hfValue
-
-**HighlightLabel**
-
-`hlbl`
-
-hlblUrgent
-
-HtmlEditor
-
-`html`
-
-HyperLink
-
-`hl`
-
-Image
-
-`img`
-
-ImageButton
-
-`imb`
-
-ImageUploader
-
-`imgup`
-
-imgupPhoto
-
-**Label**
-
-`lbl`
-
-lblApprovedByPerson
-
-**LinkButton**
-
-`btn`
-
-btnLoginLogout
-
-ListView
-
-`lv`
-
-**Literal**
-
-`l`
-
-lPostText
-
-LocationItemPicker
-
-`locip`
-
-LocationPicker
-
-`locp`
-
-MergeFieldPicker
-
-`mfp`
-
-**ModalAlert**
-
-`ma`
-
-maDeleteWarning
-
-ModalDialog
-
-`md`
-
-mdPreview
-
-ModalPopupExtender
-
-`mpe`
-
-MonthDayPicker
-
-`mdp`
-
-MonthYearPicker
-
-`myp`
-
-NewFamilyMembers
-
-`nfm`
-
-nfmMembers
-
-NoteContainer
-
-`note`
-
-noteComments
-
-**NotificationBox**
-
-`nb`
-
-nbError
-
-NumberBox
-
-`numb`
-
-NumberRangeEditor
-
-`nre`
-
-PagePicker
-
-`pagep`
-
-pagepRedirectTo
-
-**Panel**
-
-`pnl`
-
-pnlValue
-
-PanelWidget
-
-`pnlw`
-
-pnlwDisplay
-
-PersonPicker
-
-`pp`
-
-ppGroupMemberPerson
-
-PersonProfileBadgeList
-
-`badgel`
-
-PlaceHolder
-
-`ph`
-
-phSuccess
-
-PostBackTrigger
-
-`trgr`
-
-RadioButtonList
-
-`rbl`
-
-**Repeater**
-
-`rpt`
-
-rptCompletedPledges
-
-RockBulletedList
-
-`blst`
-
-**RockCheckBox**
-
-`cb`
-
-cbValue
-
-RockCheckBoxList
-
-`cbl`
-
-RockControlWrapper
-
-`wrap`
-
-**RockDropDownList**
-
-`ddl`
-
-ddlGender
-
-RockLiteral
-
-`l`
-
-**RockRadioButtonList**
-
-`rbl`
-
-rblStatus
-
-**RockTextBox**
-
-`tb`
-
-tbEmail
-
-ScheduleBuilder
-
-`schedb`
-
-SecurityButton
-
-`sbtn`
-
-SlidingDateRangePicker
-
-`sdrp`
-
-sdrpFeeDateRange
-
-StateDropDownList
-
-`statep`
-
-Table
-
-`tbl`
-
-TagList
-
-`tagl`
-
-TermDescription
-
-`termd`
-
-termdTransactionCode
-
-TextBox
-
-`tb`
-
-tbNewNote
-
-TimePicker
-
-`timep`
-
-timepStartTime
-
-Toggle
-
-`tgl`
-
-**UpdatePanel**
-
-`upnl`
-
-upnlSettings
-
-ValidationSummary
-
-`val`
-
-valSummaryTop
-
-Xml
-
-`xml`
-
-xmlContent
+| Control Type | Prefix | Example |
+| --- | --- | --- |
+| AccountPicker | `acctp` |  |
+| AutoCompleteDropDown | `ac` | acPersonSelect |
+| AttributeEditor | `edt` | edtGroupMemberAttributes |
+| Badge | `badge` | badgeNotice |
+| BinaryFilePicker | `bfp` |  |
+| BinaryFileTypePicker | `bftp` |  |
+| BirthdayPicker | `bdayp` |  |
+| **BootstrapButton** | `bbtn` | bbtnSearch |
+| **Button** | `btn` | btnSendLogin |
+| ButtonDropDownList | `bddl` |  |
+| CampusesPicker | `mcamp` |  |
+| CampusPicker | `camp` |  |
+| CategoryPicker | `catp` | catpCategory |
+| CheckBox | `cb` | cbUnlisted |
+| CheckBoxList | `cbl` |  |
+| CodeEditor | `ce` |  |
+| CompareValidator | `coval` |  |
+| ComponentPicker | `comp` |  |
+| ConfirmPageUnload | `conpu` |  |
+| CustomValidator | `cval` |  |
+| **DataDropDownList** | `ddl` | ddlDataView |
+| DataPager | `dpgr` |  |
+| DataTextBox | `dtb` | dtbDescription |
+| DatePicker | `dp` | dpAnniversaryDate |
+| DateRangePicker | `drp` |  |
+| DateTimePicker | `dtp` | dtpFutureSendAt |
+| DropDownList | `ddl` |  |
+| EntityTypePicker | `etp` |  |
+| FieldTypeList | `ftl` |  |
+| FileUpload | `fup` |  |
+| FileUploader | `fupr` |  |
+| GeoPicker | `geop` |  |
+| **Grid** | `g` | gMembers |
+| **GridFilter** | `gf` | gfSettings |
+| GroupPicker | `gp` |  |
+| GroupRolePicker | `grp` |  |
+| GroupTypePicker | `gtp` |  |
+| HelpBlock | `hb` |  |
+| **HiddenField** | `hf` | hfValue |
+| **HighlightLabel** | `hlbl` | hlblUrgent |
+| HtmlEditor | `html` |  |
+| HyperLink | `hl` |  |
+| Image | `img` |  |
+| ImageButton | `imb` |  |
+| ImageUploader | `imgup` | imgupPhoto |
+| **Label** | `lbl` | lblApprovedByPerson |
+| **LinkButton** | `btn` | btnLoginLogout |
+| ListView | `lv` |  |
+| **Literal** | `l` | lPostText |
+| LocationItemPicker | `locip` |  |
+| LocationPicker | `locp` |  |
+| MergeFieldPicker | `mfp` |  |
+| **ModalAlert** | `ma` | maDeleteWarning |
+| ModalDialog | `md` | mdPreview |
+| ModalPopupExtender | `mpe` |  |
+| MonthDayPicker | `mdp` |  |
+| MonthYearPicker | `myp` |  |
+| NewFamilyMembers | `nfm` | nfmMembers |
+| NoteContainer | `note` | noteComments |
+| **NotificationBox** | `nb` | nbError |
+| NumberBox | `numb` |  |
+| NumberRangeEditor | `nre` |  |
+| PagePicker | `pagep` | pagepRedirectTo |
+| **Panel** | `pnl` | pnlValue |
+| PanelWidget | `pnlw` | pnlwDisplay |
+| PersonPicker | `pp` | ppGroupMemberPerson |
+| PersonProfileBadgeList | `badgel` |  |
+| PlaceHolder | `ph` | phSuccess |
+| PostBackTrigger | `trgr` |  |
+| RadioButtonList | `rbl` |  |
+| **Repeater** | `rpt` | rptCompletedPledges |
+| RockBulletedList | `blst` |  |
+| **RockCheckBox** | `cb` | cbValue |
+| RockCheckBoxList | `cbl` |  |
+| RockControlWrapper | `wrap` |  |
+| **RockDropDownList** | `ddl` | ddlGender |
+| RockLiteral | `l` |  |
+| **RockRadioButtonList** | `rbl` | rblStatus |
+| **RockTextBox** | `tb` | tbEmail |
+| ScheduleBuilder | `schedb` |  |
+| SecurityButton | `sbtn` |  |
+| SlidingDateRangePicker | `sdrp` | sdrpFeeDateRange |
+| StateDropDownList | `statep` |  |
+| Table | `tbl` |  |
+| TagList | `tagl` |  |
+| TermDescription | `termd` | termdTransactionCode |
+| TextBox | `tb` | tbNewNote |
+| TimePicker | `timep` | timepStartTime |
+| Toggle | `tgl` |  |
+| **UpdatePanel** | `upnl` | upnlSettings |
+| ValidationSummary | `val` | valSummaryTop |
+| Xml | `xml` | xmlContent |
 
 Note:
 =====
@@ -2110,293 +1621,45 @@ Items shown in bold are the most frequently used controls.
 
 We'd also recommend these naming conventions on your entity property/fields:
 
-Data
-
-Field Name Convention
-
-SQL Datatype
-
-C# Datatype
-
-Note
-
-Name
-
-Name
-
-nvarchar(100)
-
-string
-
-Grids, Unique, Not Null, Not Empty
-
-Description
-
-Description
-
-nvarchar(max)
-
-string
-
-NoGrid, NotUnique, Optional
-
-Date "Key"
-
-..DateKey
-
-int
-
-int
-
-This is _essentially_ a FK to the AnalyticsSourceDate.DateKey (yyyymmdd) table/column for additional date analytics (useful for cases like 'select only Sunday dates').
-
-Date/Time
-
-..DateTime
-
-DateTime
-
-DateTime
-
-Date
-
-..Date
-
-DateTime
-
-DateTime
-
-Time
-
-..Time
-
-DateTime
-
-DateTime
-
-Url
-
-..Url
-
-nvarchar(2000)
-
-string
-
-[http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url](http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url)
-
-Birthdate - Month
-
-BirthMonth
-
-int
-
-int
-
-Birthdate - Day
-
-BirthDay
-
-int
-
-int
-
-Birthdate - Year
-
-BirthYear
-
-int
-
-int
-
-optional, null means not disclosed
-
-email
-
-..Email
-
-nvarchar(254)
-
-string
-
-[http://stackoverflow.com/questions/386294/maximum-length-of-a-valid-email-address](http://stackoverflow.com/questions/386294/maximum-length-of-a-valid-email-address)
-
-boolean
-
-Is.. (unless obvious)
-
-bit
-
-bool
-
-0 = false, 1 = true (try to avoid double negatives, for example "NotEnabled")
-
-First,Middle,Last name
-
-..Name
-
-nvarchar(50)
-
-string
-
-FullName
-
-..FullName
-
-nvarchar(152)
-
-Guid
-
-Guid
-
-uniqueidentifier
-
-Guid
-
-Unique, Not Displayed, Not Null, Not Empty, Required Column for Rock Tables
-
-Duration (OBSOLETED)
-
-..Duration
-
-int
-
-int
-
-a field that implies a number of seconds or minutes of something
-
-Duration (as of v11)
-
-..Duration`{UnitOfTime}`
-
-int, decimal (18,2) or float
-
-int, decimal or double
-
-where `{UnitOfTime}` is Seconds, Milliseconds, Days, Hours, Weeks, etc.
-
-Path/FileName
-
-..Path/Filename
-
-nvarchar(260)
-
-string
-
-[http://msdn.microsoft.com/en-us/library/aa365247.aspx](http://msdn.microsoft.com/en-us/library/aa365247.aspx)
-
-Order
-
-..Order
-
-int
-
-int
-
-Currency
-
-..Amount
-
-decimal (18,2)
-
-decimal
-
-US Dollar Only
-
-Percent
-
-TBD 100%, 1 or 100. 100 reads better
-
-Password
-
-Password
-
-nvarchar(128)
-
-string
-
-Html
-
-..Html
-
-nvarchar(max)
-
-string
-
-PhoneNumber
-
-PhoneNumber
-
-nvarchar(20)
-
-string
-
-store unformatted, no spaces, no dashes, no parentheses
-
-PhoneNumberExtension
-
-\[PhoneNumber\]Extension
-
-nvarchar(20)
-
-string
-
-store unformatted, no spaces, no dashes, no parentheses
-
-PrimaryKey
-
-Id
-
-int
-
-int
-
-ForeignKey
-
-`[optional]`+`<ParentTableName>`+Id
-
-int
-
-int
-
-ex. see Note's NoteTypeId
-
-DefinedValue Foreign Key
-
-`<DefinedType.Name>`+ValueId
-
-a ref to a DefinedValue of a DefinedType
-
-BinaryFile Foreign Key
-
-`[optional]`+BinaryFileId or `[optional]`+FileId
-
-ex. Page's IconBinaryFileId
+| Data | Field Name Convention | SQL Datatype | C# Datatype | Note |
+| --- | --- | --- | --- | --- |
+| Name | Name | nvarchar(100) | string | Grids, Unique, Not Null, Not Empty |
+| Description | Description | nvarchar(max) | string | NoGrid, NotUnique, Optional |
+| Date "Key" | ..DateKey | int | int | This is _essentially_ a FK to the AnalyticsSourceDate.DateKey (yyyymmdd) table/column for additional date analytics (useful for cases like 'select only Sunday dates'). |
+| Date/Time | ..DateTime | DateTime | DateTime |  |
+| Date | ..Date | DateTime | DateTime |  |
+| Time | ..Time | DateTime | DateTime |  |
+| Url | ..Url | nvarchar(2000) | string | [http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url](http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url) |
+| Birthdate - Month | BirthMonth | int | int |  |
+| Birthdate - Day | BirthDay | int | int |  |
+| Birthdate - Year | BirthYear | int | int | optional, null means not disclosed |
+| email | ..Email | nvarchar(254) | string | [http://stackoverflow.com/questions/386294/maximum-length-of-a-valid-email-address](http://stackoverflow.com/questions/386294/maximum-length-of-a-valid-email-address) |
+| boolean | Is.. (unless obvious) | bit | bool | 0 = false, 1 = true (try to avoid double negatives, for example "NotEnabled") |
+| First,Middle,Last name | ..Name | nvarchar(50) | string |  |
+| FullName | ..FullName | nvarchar(152) |  |  |
+| Guid | Guid | uniqueidentifier | Guid | Unique, Not Displayed, Not Null, Not Empty, Required Column for Rock Tables |
+| ~Duration~ (OBSOLETED) | ~..Duration~ | ~int~ | ~int~ | ~a field that implies a number of seconds or minutes of something~ |
+| Duration (as of v11) | ..Duration`{UnitOfTime}` | int, decimal (18,2) or float | int, decimal or double | where `{UnitOfTime}` is Seconds, Milliseconds, Days, Hours, Weeks, etc. |
+| Path/FileName | ..Path/Filename | nvarchar(260) | string | [http://msdn.microsoft.com/en-us/library/aa365247.aspx](http://msdn.microsoft.com/en-us/library/aa365247.aspx) |
+| Order | ..Order | int | int |  |
+| Currency | ..Amount | decimal (18,2) | decimal | US Dollar Only |
+| Percent |  |  |  | TBD 100%, 1 or 100. 100 reads better |
+| Password | Password | nvarchar(128) | string |  |
+| Html | ..Html | nvarchar(max) | string |  |
+| PhoneNumber | PhoneNumber | nvarchar(20) | string | store unformatted, no spaces, no dashes, no parentheses |
+| PhoneNumberExtension | \[PhoneNumber\]Extension | nvarchar(20) | string | store unformatted, no spaces, no dashes, no parentheses |
+| PrimaryKey | Id | int | int |  |
+| ForeignKey | `[optional]`+`<ParentTableName>`+Id | int | int | ex. see Note's NoteTypeId |
+| DefinedValue Foreign Key | `<DefinedType.Name>`+ValueId |  |  | a ref to a DefinedValue of a DefinedType |
+| BinaryFile Foreign Key | `[optional]`+BinaryFileId ~or `[optional]`+FileId~ |  |  | ex. Page's IconBinaryFileId |
 
 [](#utilityclassnamingconventions)Utility Class Naming Conventions
 ==================================================================
 
 Lastly, here are a few conventions for any UI controls you might create:
 
-Class Name Convention
-
-Description
-
-Example
-
-`..Picker`
-
-users selecting and picking an item
-
-CampusPicker
-
-`..Uploader`
-
-editor control for selecting or uploading
-
-ImageUploader
-
-`..List`
-
-used for simple list/grid-like controls
-
-ButtonDropDownList
+| Class Name Convention | Description | Example |
+| --- | --- | --- |
+| `..Picker` | users selecting and picking an item | CampusPicker |
+| `..Uploader` | editor control for selecting or uploading | ImageUploader |
+| `..List` | used for simple list/grid-like controls | ButtonDropDownList |

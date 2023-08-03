@@ -3,46 +3,6 @@ from:subscriptions-rx2021-lava-20-transition-to-the-fluid-engine.html
 
    
 
-[
-
-Community
-
-](https://community.rockrms.com/)Toggle navigation
-
-*   Community
-    
-    *   [Q&A](https://community.rockrms.com/ask)
-    *   [Recipes](https://community.rockrms.com/recipes)
-    *   [Ideas](https://community.rockrms.com/Ideas)
-    *   [Chat](https://community.rockrms.com/chat)
-    *   [Get Involved](https://community.rockrms.com/get-involved)
-    *   [Blog](https://community.rockrms.com/Connect)
-    *   [Podcast](https://community.rockrms.com/podcast)
-*   Learn
-    
-    *   [Ask Chip](https://community.rockrms.com/askchip)
-    *   [Manuals](https://community.rockrms.com/documentation)
-    *   [Lava](https://community.rockrms.com/Lava)
-    *   [Styling](https://community.rockrms.com/styling)
-    *   [Rock U](https://community.rockrms.com/rocku)
-    *   [Classes](https://community.rockrms.com/classes)
-    *   [Subscriptions](https://community.rockrms.com/subscriptions)
-    *   [Developer Resources](https://community.rockrms.com/developer)
-
-[RX23 Content Subscription available to order now.](https://community.rockrms.com/subscriptions) ×
-
-1.  [Rock Community](/page/1247)
-2.  [Subscriptions](/subscriptions)
-3.  [RX2021 Sessions](/subscriptions/rx2021)
-4.  Lava 2.0 - Transition to the Fluid Engine
-
-[Log In](/login?returnurl=/page/2367)
-
-![](/Themes/RockCommunity/Assets/Images/particles.png)
-
-RX2021 Watch Video
-==================
-
 Lava 2.0 - Transition to the Fluid Engine
 =========================================
 

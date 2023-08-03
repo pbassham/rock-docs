@@ -157,83 +157,23 @@ Block Settings
 
 Here are some of the settings for these request blocks, right out of the box.
 
-Setting
-
-Description
-
-Example
-
-Category Selection
-
-This controls which categories the requestor can choose for their prayer request. Selecting a top-level category enables all the categories underneath as options. Leaving this option blank will hide the category control from the requester and assign all prayer requests entered here to the Default Category you choose (see the next option).
-
-All Church
-
-Default Category
-
-This is the default category that will be assigned to the request unless it is changed at the time the request is entered.
-
-General
-
-Enable Auto-Approve
-
-The system can be configured to _auto-approve_ any prayer requests entered by people on the website. This means a request will be immediately available for the prayer team. Otherwise, you will have to approve (and optionally edit) each request before the team will see them.
-
-Yes/No
-
-Expires After (Days)
-
-This controls how long a prayer request remains active once it's approved. This setting is only used if auto-approve is enabled.
-
-14
-
-Default Allow Comments Setting
-
-If _Enable Comments Flag_ is enabled, then this setting controls whether the checkbox the requester sees for "Allow Encouraging Comments?" is checked or not. If this is set to "Yes" then comments will be allowed by default.
-
-Yes/No
-
-Enable Urgent Flag
-
-If enabled, the person entering the prayer request has the option to mark it as urgent, which keeps it at the top of the prayer stack.
-
-Yes/No
-
-Enable Comments Flag
-
-If enabled, requestors will be able to set whether or not they want to allow comments on their requests.
-
-Yes/No
-
-Enable Public Display Flag
-
-This allows the requester to say whether their request can be shown on the public website for a wider audience to pray for.
-
-Yes/No
-
-Character Limit
-
-This controls the maximum permitted length of the prayer request. Setting this to a reasonable value will cause the requestor to focus their request on the essential details.
-
-250
-
-Navigate to Parent On Save
-
-Checking this causes the website visitor to be returned to the page they were on before they entered the request.
-
-Yes/No
-
-Save Success Text
-
-This text will be shown after the request is saved (unless the previous setting is checked). You can use both HTML and Lava here.
-
+| Setting | Description | Example |
+| --- | --- | --- |
+| Category Selection | This controls which categories the requestor can choose for their prayer request. Selecting a top-level category enables all the categories underneath as options. Leaving this option blank will hide the category control from the requester and assign all prayer requests entered here to the Default Category you choose (see the next option). | All Church |
+| Default Category | This is the default category that will be assigned to the request unless it is changed at the time the request is entered. | General |
+| Enable Auto-Approve | The system can be configured to _auto-approve_ any prayer requests entered by people on the website. This means a request will be immediately available for the prayer team. Otherwise, you will have to approve (and optionally edit) each request before the team will see them. | Yes/No |
+| Expires After (Days) | This controls how long a prayer request remains active once it's approved. This setting is only used if auto-approve is enabled. | 14 |
+| Default Allow Comments Setting | If _Enable Comments Flag_ is enabled, then this setting controls whether the checkbox the requester sees for "Allow Encouraging Comments?" is checked or not. If this is set to "Yes" then comments will be allowed by default. | Yes/No |
+| Enable Urgent Flag | If enabled, the person entering the prayer request has the option to mark it as urgent, which keeps it at the top of the prayer stack. | Yes/No |
+| Enable Comments Flag | If enabled, requestors will be able to set whether or not they want to allow comments on their requests. | Yes/No |
+| Enable Public Display Flag | This allows the requester to say whether their request can be shown on the public website for a wider audience to pray for. | Yes/No |
+| Character Limit | This controls the maximum permitted length of the prayer request. Setting this to a reasonable value will cause the requestor to focus their request on the essential details. | 250 |
+| Navigate to Parent On Save | Checking this causes the website visitor to be returned to the page they were on before they entered the request. | Yes/No |
+| Save Success Text | This text will be shown after the request is saved (unless the previous setting is checked). You can use both HTML and Lava here. | 
 Thank you for allowing us to pray for you.
 
-Workflow
-
-If a workflow is selected here, then the workflow will launch following a prayer request being submitted. You can then access the request's information from within the workflow.
-
-Photo Request
+ |
+| Workflow | If a workflow is selected here, then the workflow will launch following a prayer request being submitted. You can then access the request's information from within the workflow. | Photo Request |
 
 Prayer Attributes
 =================
@@ -368,35 +308,12 @@ Block Settings
 
 Below are some of the settings for the _Prayer Session_ block. You'll want to review these and the other settings for this block to ensure it fits your process and needs.
 
-Setting
-
-Description
-
-Example
-
-Welcome Introduction Text
-
-Custom text (HTML) that is shown to the prayer team before they start their prayer session.
-
-Let's get ready to pray
-
-Category
-
-Setting a top-level category controls which sub-categories are shown when starting a prayer session.
-
-Health Issues
-
-Enable Prayer Team Flagging
-
-If enabled, members of the prayer team can flag prayer requests that they believe are inappropriate and need reviewing or editing by the prayer administrator.
-
-Yes/No
-
-Flag Limit
-
-This specifies how many times a request needs to be flagged before it is unapproved.
-
-1
+| Setting | Description | Example |
+| --- | --- | --- |
+| Welcome Introduction Text | Custom text (HTML) that is shown to the prayer team before they start their prayer session. | Let's get ready to pray |
+| Category | Setting a top-level category controls which sub-categories are shown when starting a prayer session. | Health Issues |
+| Enable Prayer Team Flagging | If enabled, members of the prayer team can flag prayer requests that they believe are inappropriate and need reviewing or editing by the prayer administrator. | Yes/No |
+| Flag Limit | This specifies how many times a request needs to be flagged before it is unapproved. | 1 |
 
   
 

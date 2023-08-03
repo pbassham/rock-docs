@@ -3,45 +3,6 @@ from:developer-changelog.html
 
     
 
-[
-
-Community
-
-](https://community.rockrms.com/)Toggle navigation
-
-*   Community
-    
-    *   [Q&A](https://community.rockrms.com/ask)
-    *   [Recipes](https://community.rockrms.com/recipes)
-    *   [Ideas](https://community.rockrms.com/Ideas)
-    *   [Chat](https://community.rockrms.com/chat)
-    *   [Get Involved](https://community.rockrms.com/get-involved)
-    *   [Blog](https://community.rockrms.com/Connect)
-    *   [Podcast](https://community.rockrms.com/podcast)
-*   Learn
-    
-    *   [Ask Chip](https://community.rockrms.com/askchip)
-    *   [Manuals](https://community.rockrms.com/documentation)
-    *   [Lava](https://community.rockrms.com/Lava)
-    *   [Styling](https://community.rockrms.com/styling)
-    *   [Rock U](https://community.rockrms.com/rocku)
-    *   [Classes](https://community.rockrms.com/classes)
-    *   [Subscriptions](https://community.rockrms.com/subscriptions)
-    *   [Developer Resources](https://community.rockrms.com/developer)
-
-[RX23 Content Subscription available to order now.](https://community.rockrms.com/subscriptions) ×
-
-1.  [Rock Community](/page/1247)
-2.  [Developer Resources](/developer)
-3.  Technical Release Notes
-
-[Log In](/login?returnurl=/page/1337)
-
-![](/Themes/RockCommunity/Assets/Images/particles.png)
-
-Technical Release Notes
-=======================
-
 **Error**
 
 Technical Release Notes
@@ -268,14 +229,18 @@ Starting with v14.0...
     
     The parent class of the badge component `Rock.Badge.Component.Campus` has been changed. Previously it inherited from `Rock.Badge.HighlightLabelBadge`. This has been changed to `Rock.Badge.BadgeComponent`. This is to remove Web Forms dependency from the core Rock back end code. Plugins using the Campus badge component will need to use the `Render()` method instead of the `GetLabel()` method.
     
-    The following libraries were updated for compatibility reasons:
+    ~The following libraries were updated for compatibility reasons:~
     
-    *   RestSharp upgraded from 105.2.3 to 106.12.0
-    *   RestSharp.Newtonsoft.Json from 1.0.0 to 1.5.1
+    ~*   RestSharp upgraded from 105.2.3 to 106.12.0
+    *   RestSharp.Newtonsoft.Json from 1.0.0 to 1.5.1~
+    
+    ~
     
     If you have a plugin that is using any of these, it will need to be recompiled to use this new version.
     
-    The reference between a PersonAlias to a Person has been severed so the `PersonAlias.PersonId` property is now a _nullable_ int (`int?`)
+    ~
+    
+    ~The reference between a PersonAlias to a Person has been severed so the `PersonAlias.PersonId` property is now a _nullable_ int (`int?`)~
     
     Updated Entity Framework to version 6.4.4.
     

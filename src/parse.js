@@ -1,11 +1,12 @@
 import fs from 'fs';
 import * as cheerio from 'cheerio';
 import TurndownService from 'turndown';
+import turndownPluginGfm from 'turndown-plugin-gfm';
 const turndownService = new TurndownService({
   // headingStyle: 'atx',
   preformattedCode: true,
 });
-
+turndownService.use(turndownPluginGfm.gfm)
 turndownService.addRule('code', {
   filter: ['pre'],
   replacement: function (content) {
@@ -175,6 +176,11 @@ export const getTextFrom = (html) => {
     $('style').remove();
     $('footer').remove();
     $('aside').remove();
+    $('nav').remove();
+    $('.header-row').remove();
+    $('.topbar').remove();
+
+    // remove class header-row
     
     let bodyHTML 
     //  if there is an article tag

@@ -1821,41 +1821,13 @@ There are three parts to the URL: the organization's domain name (i.e., rocksoli
 
 Let's take a closer look at the parameters available for customizing the calendar feed. You can use parameters to tell the feed to pull only events from a specific campus, specified dates, or even from a certain Lava template. The following parameters are available with the iCalendar feed:
 
-Parameter
-
-Description
-
-Example
-
-templateid
-
-The Lava template ID for the iCalendar description. If this is not specified, the default is used. The default is a concatenation of the EventItem Description and the EventItemOccurrence Note.
-
-templateid=1234
-
-campusids
-
-A comma separated list of campus IDs. Default is all campuses.
-
-campusids=2,4,12,9
-
-audienceids
-
-A comma separated list of audience IDs. Default is all audiences.
-
-audienceids=5,6
-
-startdate
-
-The earliest date to get calendar info. Format: yyyyMMdd. Default is the current day.
-
-startdate=20180501
-
-enddate
-
-The latest date to get calendar info. Format: yyyyMMdd. Default is two months from the startdate.
-
-enddate=20180701
+| Parameter | Description | Example |
+| --- | --- | --- |
+| templateid | The Lava template ID for the iCalendar description. If this is not specified, the default is used. The default is a concatenation of the EventItem Description and the EventItemOccurrence Note. | templateid=1234 |
+| campusids | A comma separated list of campus IDs. Default is all campuses. | campusids=2,4,12,9 |
+| audienceids | A comma separated list of audience IDs. Default is all audiences. | audienceids=5,6 |
+| startdate | The earliest date to get calendar info. Format: yyyyMMdd. Default is the current day. | startdate=20180501 |
+| enddate | The latest date to get calendar info. Format: yyyyMMdd. Default is two months from the startdate. | enddate=20180701 |
 
 So, using our same URL sample above, if you want to grab the feed for events on the public calendar from April 1, 2018 through July 7, 2018, the URL feed would be:
 

@@ -352,86 +352,28 @@ SMS Pipeline Response Lava
 Below is a list of Lava merge fields you can include in your pipeline when you're working with the Launch Workflow action. These are the same workflow attribute merge fields we cover in the [SMS Pipeline Workflows](https://community.rockrms.com/documentation/bookcontent/12#smspipelineworkflows) chapter of the [Blasting Off With Workflows](https://community.rockrms.com/documentation/bookcontent/12/) guide.
 
 SMS Pipeline Workflow Lava Merge Fields
-
-Merge Field
-
-Description
-
-Field Type
-
-{{ FromPerson.PrimaryAlias.Guid }}
-
-The pipeline uses the person's phone number to look up the first person with that phone number. If it finds a match, it assigns that individual's record to FromPerson. If the phone number is used in more than one profile, the pipeline defaults to the first record of an adult with children.
-
-Person
-
-{{ FromPhone }}
-
-The person's phone number, pulled from the inbound message, from the SMS gateway. This will automatically get added to the workflow as FromPhone and will include the country code (i.e., the raw phone number 18645555555).
-
-Phone Number
-
-{{ ToPhone }}
-
-The SMS gateway number where the message was sent.
-
-Phone Number
-
-{{ ReceivedDate }}
-
-The date the message was received.
-
-Date
-
-{{ ReceivedTime }}
-
-The time the message was received.
-
-Time
-
-{{ ReceivedDateTime }}
-
-The date and time the message was received.
-
-Date Time
-
-{{ MessageBody }}
-
-The content of the SMS message that was received.
-
-Text or Memo
-
-{{ MatchedGroups }}
-
-If the RegEx expression provided contains matched groups, they are loaded into an array here. This is an advanced feature, so if you’re not sure what this means, don’t worry. You probably don’t need it.
-
-Typically, you fill in a text field with a merge expression of a single result from the MatchedGroups array.
+| Merge Field | Description | Field Type |
+| --- | --- | --- |
+| {{ FromPerson.PrimaryAlias.Guid }} | The pipeline uses the person's phone number to look up the first person with that phone number. If it finds a match, it assigns that individual's record to FromPerson. If the phone number is used in more than one profile, the pipeline defaults to the first record of an adult with children. | Person |
+| {{ FromPhone }} | The person's phone number, pulled from the inbound message, from the SMS gateway. This will automatically get added to the workflow as FromPhone and will include the country code (i.e., the raw phone number 18645555555). | Phone Number |
+| {{ ToPhone }} | The SMS gateway number where the message was sent. | Phone Number |
+| {{ ReceivedDate }} | The date the message was received. | Date |
+| {{ ReceivedTime }} | The time the message was received. | Time |
+| {{ ReceivedDateTime }} | The date and time the message was received. | Date Time |
+| {{ MessageBody }} | The content of the SMS message that was received. | Text or Memo |
+| {{ MatchedGroups }} | If the RegEx expression provided contains matched groups, they are loaded into an array here. This is an advanced feature, so if you’re not sure what this means, don’t worry. You probably don’t need it. | Typically, you fill in a text field with a merge expression of a single result from the MatchedGroups array. |
 
 ### Reply Action Lava
 
 Below is a list of Lava merge fields you can use when you're working with the _Reply_ action. Note that each uses a prefix of `Message`.
 
 SMS Pipeline Reply Lava Merge Fields
-
-Merge Field
-
-Description
-
-{{ Message.FromNumber }}
-
-The person’s phone number from the inbound message
-
-{{ Message.ToNumber }}
-
-The SMS number where the message was sent
-
-{{ Message.FromPerson }}
-
-The pipeline uses the person's phone number to look up the first person with that phone number. If it finds a match, it assigns the value to FromPerson. If the phone number is used in more than one profile, the pipeline defaults to the first record of an adult with children. This is the full Person object, so, for instance, you'll need `{{ Message.FromPerson.FullName }}` to get the person's full name.
-
-{{ Message.Message }}
-
-The content of the SMS message that was received
+| Merge Field | Description |
+| --- | --- |
+| {{ Message.FromNumber }} | The person’s phone number from the inbound message |
+| {{ Message.ToNumber }} | The SMS number where the message was sent |
+| {{ Message.FromPerson }} | The pipeline uses the person's phone number to look up the first person with that phone number. If it finds a match, it assigns the value to FromPerson. If the phone number is used in more than one profile, the pipeline defaults to the first record of an adult with children. This is the full Person object, so, for instance, you'll need `{{ Message.FromPerson.FullName }}` to get the person's full name. |
+| {{ Message.Message }} | The content of the SMS message that was received |
 
 [](#addingnewpipelines)Adding New Pipelines
 ===========================================

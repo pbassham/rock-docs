@@ -39,58 +39,12 @@ How much power and space will you need for your Rock instance? It’s difficult 
 It's important to note that while average attendance is a good starting point, it's often too simplistic of a measure to be applied in every use case. For instance, a medium-sized church might run their website on Rock and heavily use most of Rock’s features in a significant way. They may need more resources than an extra-large church that is only getting started with Rock. Keep this in mind as you consider the recommendations below.
 
 Azure Hosted Services Sizing
-
-Small
-
-Medium
-
-Large
-
-Extra-Large
-
-Above
-
-Max Weekend Attendance
-
-500
-
-2,000
-
-5,000
-
-10,000
-
-Custom
-
-Web VM
-
-B2S
-
-B2MS
-
-B4MS
-
-B8MS
-
-Azure SQL
-
-S1
-
-S2
-
-S3
-
-S4
-
-Est. Cost / Month
-
-$48
-
-$108
-
-$218
-
-$436
+|  | Small | Medium | Large | Extra-Large | Above |
+| --- | --- | --- | --- | --- | --- |
+| Max Weekend Attendance | 500 | 2,000 | 5,000 | 10,000 | Custom |
+| Web VM | B2S | B2MS | B4MS | B8MS |
+| Azure SQL | S1 | S2 | S3 | S4 |
+| Est. Cost / Month | $48 | $108 | $218 | $436 |
 
 Price Updates
 =============

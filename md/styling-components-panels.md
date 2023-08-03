@@ -32,29 +32,11 @@ Panel heading
 
 Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
-#
-
-First Name
-
-Last Name
-
-1
-
-Ted
-
-Decker
-
-2
-
-Alisha
-
-Marble
-
-3
-
-Pete
-
-Foster
+| # | First Name | Last Name |
+| --- | --- | --- |
+| 1 | Ted | Decker |
+| 2 | Alisha | Marble |
+| 3 | Pete | Foster |
 
 ```
 <div class="panel panel-default">
@@ -79,29 +61,11 @@ If there is no panel body, the component moves from panel header to table withou
 Panel heading
 =============
 
-#
-
-First Name
-
-Last Name
-
-1
-
-Ted
-
-Decker
-
-2
-
-Alisha
-
-Marble
-
-3
-
-Pete
-
-Foster
+| # | First Name | Last Name |
+| --- | --- | --- |
+| 1 | Ted | Decker |
+| 2 | Alisha | Marble |
+| 3 | Pete | Foster |
 
 ```
 <div class="panel panel-default">

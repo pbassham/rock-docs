@@ -3,45 +3,6 @@ from:developer-rockit.html
 
     
 
-[
-
-Community
-
-](https://community.rockrms.com/)Toggle navigation
-
-*   Community
-    
-    *   [Q&A](https://community.rockrms.com/ask)
-    *   [Recipes](https://community.rockrms.com/recipes)
-    *   [Ideas](https://community.rockrms.com/Ideas)
-    *   [Chat](https://community.rockrms.com/chat)
-    *   [Get Involved](https://community.rockrms.com/get-involved)
-    *   [Blog](https://community.rockrms.com/Connect)
-    *   [Podcast](https://community.rockrms.com/podcast)
-*   Learn
-    
-    *   [Ask Chip](https://community.rockrms.com/askchip)
-    *   [Manuals](https://community.rockrms.com/documentation)
-    *   [Lava](https://community.rockrms.com/Lava)
-    *   [Styling](https://community.rockrms.com/styling)
-    *   [Rock U](https://community.rockrms.com/rocku)
-    *   [Classes](https://community.rockrms.com/classes)
-    *   [Subscriptions](https://community.rockrms.com/subscriptions)
-    *   [Developer Resources](https://community.rockrms.com/developer)
-
-[RX23 Content Subscription available to order now.](https://community.rockrms.com/subscriptions) ×
-
-1.  [Rock Community](/page/1247)
-2.  [Developer Resources](/developer)
-3.  Rockit SDK
-
-[Log In](/login?returnurl=/page/1339)
-
-![](/Themes/RockCommunity/Assets/Images/particles.png)
-
-Rockit SDK
-==========
-
 **Error**
 
 ![](/Content/RockExternal/Images/developer/rockit.png)

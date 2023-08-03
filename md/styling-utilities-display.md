@@ -57,49 +57,18 @@ For faster mobile-friendly development, use responsive display classes for showi
 
 To hide elements simply use the `.d-none` class or one of the `.d-{sm,md,lg}-none` classes for any responsive screen variation.
 
-Screen Size
-
-Class
-
-Hidden on all
-
-`.d-none`
-
-Hidden only on xs
-
-`.d-none .d-sm-block`
-
-Hidden only on sm
-
-`.d-sm-none .d-md-block`
-
-Hidden only on md
-
-`.d-md-none .d-lg-block`
-
-Hidden only on lg
-
-`.d-lg-none`
-
-Visible on all
-
-`.d-block`
-
-Visible only on xs
-
-`.d-block .d-sm-none`
-
-Visible only on sm
-
-`.d-none .d-sm-block .d-md-none`
-
-Visible only on md
-
-`.d-none .d-md-block .d-lg-none`
-
-Visible only on lg
-
-`.d-none .d-lg-block`
+| Screen Size | Class |
+| --- | --- |
+| Hidden on all | `.d-none` |
+| Hidden only on xs | `.d-none .d-sm-block` |
+| Hidden only on sm | `.d-sm-none .d-md-block` |
+| Hidden only on md | `.d-md-none .d-lg-block` |
+| Hidden only on lg | `.d-lg-none` |
+| Visible on all | `.d-block` |
+| Visible only on xs | `.d-block .d-sm-none` |
+| Visible only on sm | `.d-none .d-sm-block .d-md-none` |
+| Visible only on md | `.d-none .d-md-block .d-lg-none` |
+| Visible only on lg | `.d-none .d-lg-block` |
 
 * * *
 

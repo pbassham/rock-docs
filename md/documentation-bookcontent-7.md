@@ -414,257 +414,85 @@ Show/Hide Group Type Settings
 
 The following Group Type settings, located in the General section of the _Group Type Detail_ block, control which panels and options should be shown or hidden in that block.
 
-Setting
-
-Description
-
-Allow Specific Group Member Attributes
-
-Determines if individual groups of this type are allowed to have their own group member attributes. If selected, the Member Attributes section will be shown when editing the group.
-
-Enable Specific Group Requirements
-
-Determines if the Group Requirements section will be shown on the _Group Details_ block.
-
-Allow Group Sync
-
-Determines if groups of this type are allowed to have Group Syncs. This will show/hide the Group Sync Settings section. If a group of this type already has group syncs, they will be kept. Unchecking this box will **not** prevent them from running.
-
-Allow Specific Group Member Workflows
-
-Determines if groups of this type should be allowed to have Group Member Workflows. If selected, the Group Member Workflows section will be shown.
+| Setting | Description |
+| --- | --- |
+| Allow Specific Group Member Attributes | Determines if individual groups of this type are allowed to have their own group member attributes. If selected, the Member Attributes section will be shown when editing the group. |
+| Enable Specific Group Requirements | Determines if the Group Requirements section will be shown on the _Group Details_ block. |
+| Allow Group Sync | Determines if groups of this type are allowed to have Group Syncs. This will show/hide the Group Sync Settings section. If a group of this type already has group syncs, they will be kept. Unchecking this box will **not** prevent them from running. |
+| Allow Specific Group Member Workflows | Determines if groups of this type should be allowed to have Group Member Workflows. If selected, the Group Member Workflows section will be shown. |
 
 Common Group Type Settings
 --------------------------
 
-Setting
-
-Description
-
-Example
-
-Group Term
-
-This is what Rock will use to describe the group on the various screens.
-
-Group, Family, Event, Team
-
-Group Member Term
-
-This is what Rock will use to describe the people in the groups on the various screens.
-
-Member, Individual, Participant
-
-Roles
-
-Roles describe the relationship of the individual to the group. Are they a leader? Or just a member?
-
-Leader, Member, Prospect
-
-Default Group Role
-
-The default role to use when someone is added to the group.
-
-Selection of one of the roles defined for the group, like Member.
-
-Allowed Child Group Types
-
-As we discussed above, child group types help determine the hierarchy of the group tree. This tells Rock what kind of groups can be added as children of the current group.
-
-Serving Teams may allow Child Serving Teams
-
-Location Types
-
-The types of locations that can be assigned to the group.
-
-Meeting Location
-
-Location Selection Modes
-
-Determines how locations should be selected in Location Picker.
-
-The following options are available:
-
+| Setting | Description | Example |
+| --- | --- | --- |
+| Group Term | This is what Rock will use to describe the group on the various screens. | Group, Family, Event, Team |
+| Group Member Term | This is what Rock will use to describe the people in the groups on the various screens. | Member, Individual, Participant |
+| Roles | Roles describe the relationship of the individual to the group. Are they a leader? Or just a member? | Leader, Member, Prospect |
+| Default Group Role | The default role to use when someone is added to the group. | Selection of one of the roles defined for the group, like Member. |
+| Allowed Child Group Types | As we discussed above, child group types help determine the hierarchy of the group tree. This tells Rock what kind of groups can be added as children of the current group. | Serving Teams may allow Child Serving Teams |
+| Location Types | The types of locations that can be assigned to the group. | Meeting Location |
+| Location Selection Modes | Determines how locations should be selected in Location Picker. | The following options are available:
 *   Named - Allows you to pick from named locations that have been defined under Admin Tools > General Settings > Named Locations.
 *   Address - Allows the input of a new street address for the location.
 *   Point - Displays a map that allows for the selection of a specific latitude/longitude point.
 *   Geo-fence - Also displays a map that allows for drawing a polygon shape to use as a geo-fence.
 *   Group Member Address - Lists all of the addresses associated with the members of the group. Note that if the address of the group member changes the meeting location will not be automatically updated to this new address.
 
-Multiple Locations
-
-Determines if the group can have multiple locations.
-
-True/False
-
-Group Attributes
-
-The custom attributes that each group will have. When adding new Group attributes, the explicit authorizations from the Group Type are copied over to the Group attribute.
-
-Meeting Day, Meeting Time, Topic of Study
-
-Member Attributes
-
-The custom attributes that each group member will have.
-
-Hours Per Week Serving, Assigned Bus
-
-Group Capacity Rule
-
-Rock allows you to set individual capacities for groups. This configuration setting determines how the capacity should be enforced. If _Hard_ or _Soft_ is chosen, you'll get the option to make capacities required for all groups of this type.
-
-The following options are available:
+ |
+| Multiple Locations | Determines if the group can have multiple locations. | True/False |
+| Group Attributes | The custom attributes that each group will have. When adding new Group attributes, the explicit authorizations from the Group Type are copied over to the Group attribute. | Meeting Day, Meeting Time, Topic of Study |
+| Member Attributes | The custom attributes that each group member will have. | Hours Per Week Serving, Assigned Bus |
+| Group Capacity Rule | Rock allows you to set individual capacities for groups. This configuration setting determines how the capacity should be enforced. If _Hard_ or _Soft_ is chosen, you'll get the option to make capacities required for all groups of this type. | The following options are available:
 
 *   None - This disables the group capacity features.
 *   Hard - This places a hard limit on the capacity. Once the capacity is reached no additional group members can be added.
 *   Soft - The soft option will warn you when adding a member that is over the group's capacity, but still allows you to add them. This warning only appears in the Group Toolbox, not when adding members from the internal administration pages (e.g., Group Viewer).
 
-Groups Require a Campus
-
-This setting will require that all groups of this type have a campus when adding and editing.
-
-True/False
-
-Show Administrator
-
-This setting determines if groups of this type support assigning an administrator for each group. Group administrators don't have the security privileges of Leaders, and they aren't members of the group. Generally, the group administrator is only used for internal purposes to identify who is responsible for the group from an organizational perspective. This is super useful in reporting because you can easily identify all the groups associated with an individual without having to add that individual to any of those groups.
-
-True/False
-
-Administrator Term
-
-This setting allows you to customize the term used for the administrator of the group.
-
-Administrator, Coordinator, Director
-
-Enable Group Tag
-
-This determines if tags are allowed for groups of this type.
-
-True/False
-
-Group RSVP Enabled
-
-This setting enables [Group RSVP](#grouprsvp) features for groups of this type.
-
-True/False
-
-Enable Inactive Reason
-
-If enabled, an _Inactive Reason_ may be provided when inactivating a group.
-
-True/False
-
-Require Inactive Reason
-
-Determines whether an _Inactive Reason_ must be provided when inactivating a group.
-
-True/False
+ |
+| Groups Require a Campus | This setting will require that all groups of this type have a campus when adding and editing. | True/False |
+| Show Administrator | This setting determines if groups of this type support assigning an administrator for each group. Group administrators don't have the security privileges of Leaders, and they aren't members of the group. Generally, the group administrator is only used for internal purposes to identify who is responsible for the group from an organizational perspective. This is super useful in reporting because you can easily identify all the groups associated with an individual without having to add that individual to any of those groups. | True/False |
+| Administrator Term | This setting allows you to customize the term used for the administrator of the group. | Administrator, Coordinator, Director |
+| Enable Group Tag | This determines if tags are allowed for groups of this type. | True/False |
+| Group RSVP Enabled | This setting enables [Group RSVP](#grouprsvp) features for groups of this type. | True/False |
+| Enable Inactive Reason | If enabled, an _Inactive Reason_ may be provided when inactivating a group. | True/False |
+| Require Inactive Reason | Determines whether an _Inactive Reason_ must be provided when inactivating a group. | True/False |
 
 Attendance and Check-in Settings
 --------------------------------
 
-Setting
-
-Description
-
-Example
-
-Takes Attendance
-
-Determines if the group takes attendance. This will help to enable check-in and metrics features.
-
-True/False
-
-Weekend Service
-
-Determines if attendance for this group should be counted towards attending a weekend service. For example, the attendance badge on the Person Profile will only consider attendance in groups with this value enabled.
-
-True/False
-
-Group Schedule Options
-
-This setting is used when you want to configure a schedule for the groups of this type. The schedule is used for features like group attendance and group member scheduling. The options you select here help determine the types of schedules that can be configured for the groups.
-
-Schedule type options include:
-
+| Setting | Description | Example |
+| --- | --- | --- |
+| Takes Attendance | Determines if the group takes attendance. This will help to enable check-in and metrics features. | True/False |
+| Weekend Service | Determines if attendance for this group should be counted towards attending a weekend service. For example, the attendance badge on the Person Profile will only consider attendance in groups with this value enabled. | True/False |
+| Group Schedule Options | This setting is used when you want to configure a schedule for the groups of this type. The schedule is used for features like group attendance and group member scheduling. The options you select here help determine the types of schedules that can be configured for the groups. | Schedule type options include:
 *   Weekly: This option allows a simple weekly schedule to be selected. When setting up a group of this type, all you'll need to do is select the day of the week the group meets and the start time. We highly recommend that you use this setting as it is the only schedule option that is usable as a filter in the [Group Finder](#groupfinder).
 *   Custom: With this option enabled each group can select its own repeating schedule. This option allows for the most power and flexibility, but the schedule that's created can't be used as a filter in the Group Finder.
 *   Named: The named option allows you to pick the group's schedule from a list of preconfigured schedules. These schedules are configured under Admin Tools > General Settings > Schedules. Like the _Custom_ option this setting can't be used as a filter in the Group Finder.
 
-Schedule Exclusions
-
-This setting allows you to define a set of date ranges when all of the groups of this type will not meet regardless of the specific group schedules. This allows you to easily configure breaks and holidays without having to edit each group's schedule individually.
-
-Set of date ranges when groups of this type will not meet.
-
-Check-in Rule
-
-Determines how check-in will work if the person is not already in the group.
-
-Add on Check-in (adds the person to the group if they are not already in the group), Already Belongs (the individual must already belong to the group)
-
-Group Attendance Requires Location
-
-This option will require that all attendance occurrences have a location.
-
-True/False
-
-Group Attendance Requires Schedule
-
-This option will require that all attendance occurrences have a schedule.
-
-True/False
+ |
+| Schedule Exclusions | This setting allows you to define a set of date ranges when all of the groups of this type will not meet regardless of the specific group schedules. This allows you to easily configure breaks and holidays without having to edit each group's schedule individually. | Set of date ranges when groups of this type will not meet. |
+| Check-in Rule | Determines how check-in will work if the person is not already in the group. | Add on Check-in (adds the person to the group if they are not already in the group), Already Belongs (the individual must already belong to the group) |
+| Group Attendance Requires Location | This option will require that all attendance occurrences have a location. | True/False |
+| Group Attendance Requires Schedule | This option will require that all attendance occurrences have a schedule. | True/False |
 
 Advanced Group Type Settings
 ----------------------------
 
 These settings will be rarely used, but it's helpful to know they exist as you define your group types.
 
-Setting
-
-Description
-
-Example
-
-Purpose
-
-The purpose helps categorize different group types together. This allows you the flexibility of creating multiple group types but at the same time providing a way of 'linking' these various types together with a single 'purpose'. To add a new purpose simply add a new _Defined Value_ under Admin Tools > General Settings > Defined Values > Group Type Purpose.
-
-While we recommend that you start with a single group type to manage your various serving teams you could over time add new ones. You would then create a purpose to describe them all as serving opportunities.
-
-Group Type Attributes
-
-Custom attributes that will be shared by every group of this type. In other words, every group of this type will have the same value of these attributes.
-
-Group Type Attributes are used by the check-in system. Most group types won't have a need for them.
-
-Print Using
-
-When printing check-in labels, should the device's printer or the location's printer be used? The options are:
-
+| Setting | Description | Example |
+| --- | --- | --- |
+| Purpose | The purpose helps categorize different group types together. This allows you the flexibility of creating multiple group types but at the same time providing a way of 'linking' these various types together with a single 'purpose'. To add a new purpose simply add a new _Defined Value_ under Admin Tools > General Settings > Defined Values > Group Type Purpose. | While we recommend that you start with a single group type to manage your various serving teams you could over time add new ones. You would then create a purpose to describe them all as serving opportunities. |
+| Group Type Attributes | Custom attributes that will be shared by every group of this type. In other words, every group of this type will have the same value of these attributes. | Group Type Attributes are used by the check-in system. Most group types won't have a need for them. |
+| Print Using | When printing check-in labels, should the device's printer or the location's printer be used? The options are:
 *   Device Printer - Always print using the device's printer.
 *   Location Printer - Always print at the printer configured for the location.
 
-This setting will have limited value outside of configuring check-ins.
-
-Inherited Group Type
-
-This allows you to create a group type that inherits its attributes from another group type. This is helpful when you have two group types that are very similar, but one needs a few more attributes.
-
-Say you have a _Serving Team_ group type that covers most of your serving groups. Your worship teams, however, would like to add a special attribute for _Instruments Played_. You want this new group type to have all of the same attributes of the current _Serving Team_. To solve this, add the _Serving Team_ group type as the _Inherited Group Type_ of the new _Worship Serving Team_ group type.
-
-Show Connection Status
-
-This allows you to show a person's connection status in a column on group member lists.
-
-This comes in handy for trying to understand a person's connection to your organization at a glance.
-
-Show Marital Status
-
-This allows you to show a person's marital status in a column on group member lists.
-
-This comes in handy for quickly viewing a person's marital status.
+ | This setting will have limited value outside of configuring check-ins. |
+| Inherited Group Type | This allows you to create a group type that inherits its attributes from another group type. This is helpful when you have two group types that are very similar, but one needs a few more attributes. | Say you have a _Serving Team_ group type that covers most of your serving groups. Your worship teams, however, would like to add a special attribute for _Instruments Played_. You want this new group type to have all of the same attributes of the current _Serving Team_. To solve this, add the _Serving Team_ group type as the _Inherited Group Type_ of the new _Worship Serving Team_ group type. |
+| Show Connection Status | This allows you to show a person's connection status in a column on group member lists. | This comes in handy for trying to understand a person's connection to your organization at a glance. |
+| Show Marital Status | This allows you to show a person's marital status in a column on group member lists. | This comes in handy for quickly viewing a person's marital status. |
 
 [](#groupmemberroles)Group Member Roles
 =======================================
@@ -2663,130 +2491,33 @@ Group Attributes
 
 Below is a detailed discussion of each setting for the group that represents the opportunity (Mission Trip, Internship Season, etc.)
 
-Name
-
-Type
-
-Description
-
-Opportunity Title
-
-Text
-
-The group name is mainly used internally. This attribute of _Opportunity Title_ is what will show on the external site when opportunities are listed.
-
-Opportunity Date Range
-
-Date Range
-
-Used to show the start and end dates of the opportunity. For a mission trip, we would recommend that you put the trip dates here. This date range doesn't control when the opportunity is shown externally; it just describes when the opportunity occurs.
-
-Opportunity Location
-
-Text
-
-This is the location of the opportunity. For a mission trip, this would be the city or country. Feel free to leave this blank if it doesn't make sense in your situation.
-
-Opportunity Summary
-
-Memo
-
-A brief description of the fundraising opportunity.
-
-Opportunity Photo
-
-Image
-
-If a picture is worth a thousand words, then we'd better include one.
-
-Opportunity Details
-
-HTML
-
-Now we get to the nitty-gritty of what this opportunity is all about.
-
-Individual Fundraising Goal
-
-Currency
-
-This field determines how much money each person is trying to raise. If each person in the opportunity is raising different amounts, you can provide those unique amounts on their group member attribute (discussed below).
-
-Opportunity Type
-
-Defined Value
-
-The opportunity type helps group similar opportunities. Rock ships with three options (_Trip_, _Internship_ and _Project_). You can add your own under General Settings > Defined Types > Fundraising Opportunity Type.  
+| Name | Type | Description |
+| --- | --- | --- |
+| Opportunity Title | Text | The group name is mainly used internally. This attribute of _Opportunity Title_ is what will show on the external site when opportunities are listed. |
+| Opportunity Date Range | Date Range | Used to show the start and end dates of the opportunity. For a mission trip, we would recommend that you put the trip dates here. This date range doesn't control when the opportunity is shown externally; it just describes when the opportunity occurs. |
+| Opportunity Location | Text | This is the location of the opportunity. For a mission trip, this would be the city or country. Feel free to leave this blank if it doesn't make sense in your situation. |
+| Opportunity Summary | Memo | A brief description of the fundraising opportunity. |
+| Opportunity Photo | Image | If a picture is worth a thousand words, then we'd better include one. |
+| Opportunity Details | HTML | Now we get to the nitty-gritty of what this opportunity is all about. |
+| Individual Fundraising Goal | Currency | This field determines how much money each person is trying to raise. If each person in the opportunity is raising different amounts, you can provide those unique amounts on their group member attribute (discussed below). |
+| Opportunity Type | Defined Value | The opportunity type helps group similar opportunities. Rock ships with three options (_Trip_, _Internship_ and _Project_). You can add your own under General Settings > Defined Types > Fundraising Opportunity Type.  
   
 This setting has two roles:
-
 *   Acts as a filter for opportunities on the external website (e.g., show only mission trips on this list)
 *   Provides a label to describe the opportunity type. For instance, should this opportunity be referred to as a _Trip_, _Project_, etc.
 
-Update Content Channel
-
-Content Channel
-
-You may want to provide updates on the status of your opportunity. For example, if your opportunity is a mission trip, you might want to file trip reports. Or if it's a project, you might want to provide updates on the overall funding level or project status. This setting allows you to configure a content channel to manage these updates. If you don't provide a channel the updates tab will be hidden.
-
-Enable Commenting
-
-Boolean
-
-Sometimes you want comments, sometimes you don't. When enabled, a notes block will be added to the opportunity detail. Just remember that there is no automatic email when new notes/comments are left and no approval process. These features may be added in a future release.
-
-Registration Instance
-
-Number
-
-This is what ties in a registration to the fundraising opportunity. You must provide the registration instance ID (currently there isn't a registration instance picker).
-
-Registration Notes
-
-Memo
-
-This short description will show up on the opportunity details page to provide any quick notes about the registration (e.g., _A $200 deposit is required_).
-
-Allow Individual Disabling of Contribution Requests
-
-Boolean
-
-Opportunity participants can have their own personalized fundraising pages. Some participants may want to use this page to share the opportunity and provide updates, but not want to communicate the financial needs. This setting allows you the option to allow them to disable the sharing of their funding status.
-
-Allow Individual Editing of Fundraising Goal
-
-Boolean
-
-This allows individuals to set their own fundraising goals from their external fundraising profiles. The default for this is not to allow editing.
-
-Cap Fundraising Amount
-
-Boolean
-
-This setting determines if an individual can raise more money than their goal.
-
-Financial Account
-
-Financial Account
-
-This configures which financial account the fundraising opportunity should use to track their money.
-
-Allow Donations Until
-
-Date Picker
-
-An inclusive date that specifies how long to allow donations to participants. Once this date passes no more donations will be accepted by Rock.
-
-Show Public
-
-Boolean
-
-This flag determines whether the opportunity should be displayed on the external website. Since it's common for an opportunity to be displayed long before it starts, and for a brief time after it ends, this flag is used to determine when an opportunity should be displayed.
-
-Participation Type
-
-Single-Select
-
-This is where you select whether the participant is an individual or a family. This controls much of how people interact with the group, as noted throughout this chapter.
+ |
+| Update Content Channel | Content Channel | You may want to provide updates on the status of your opportunity. For example, if your opportunity is a mission trip, you might want to file trip reports. Or if it's a project, you might want to provide updates on the overall funding level or project status. This setting allows you to configure a content channel to manage these updates. If you don't provide a channel the updates tab will be hidden. |
+| Enable Commenting | Boolean | Sometimes you want comments, sometimes you don't. When enabled, a notes block will be added to the opportunity detail. Just remember that there is no automatic email when new notes/comments are left and no approval process. These features may be added in a future release. |
+| Registration Instance | Number | This is what ties in a registration to the fundraising opportunity. You must provide the registration instance ID (currently there isn't a registration instance picker). |
+| Registration Notes | Memo | This short description will show up on the opportunity details page to provide any quick notes about the registration (e.g., _A $200 deposit is required_). |
+| Allow Individual Disabling of Contribution Requests | Boolean | Opportunity participants can have their own personalized fundraising pages. Some participants may want to use this page to share the opportunity and provide updates, but not want to communicate the financial needs. This setting allows you the option to allow them to disable the sharing of their funding status. |
+| Allow Individual Editing of Fundraising Goal | Boolean | This allows individuals to set their own fundraising goals from their external fundraising profiles. The default for this is not to allow editing. |
+| Cap Fundraising Amount | Boolean | This setting determines if an individual can raise more money than their goal. |
+| Financial Account | Financial Account | This configures which financial account the fundraising opportunity should use to track their money. |
+| Allow Donations Until | Date Picker | An inclusive date that specifies how long to allow donations to participants. Once this date passes no more donations will be accepted by Rock. |
+| Show Public | Boolean | This flag determines whether the opportunity should be displayed on the external website. Since it's common for an opportunity to be displayed long before it starts, and for a brief time after it ends, this flag is used to determine when an opportunity should be displayed. |
+| Participation Type | Single-Select | This is where you select whether the participant is an individual or a family. This controls much of how people interact with the group, as noted throughout this chapter. |
 
   
 
@@ -2831,29 +2562,11 @@ Group Member Attributes
 
 The following group member attributes are available to help configure the opportunities.
 
-Name
-
-Type
-
-Description
-
-Individual Fundraising Goal
-
-Currency
-
-This allows you to provide an individual goal that is unique to each person. This attribute is only available to internal Rock administrators and cannot be edited by the individual.
-
-Personal Opportunity Introduction
-
-Memo
-
-This is a short message that the person can provide to provide a personalized note on their individual trip page.
-
-Disable Public Contribution Requests
-
-Boolean
-
-This allows an individual to hide their name when listing people to fund. It also hides many of the features on their personal opportunity profile that are intended to encourage someone to give. This allows them to use their personal page to communicate updates if they are self-funding the opportunity.
+| Name | Type | Description |
+| --- | --- | --- |
+| Individual Fundraising Goal | Currency | This allows you to provide an individual goal that is unique to each person. This attribute is only available to internal Rock administrators and cannot be edited by the individual. |
+| Personal Opportunity Introduction | Memo | This is a short message that the person can provide to provide a personalized note on their individual trip page. |
+| Disable Public Contribution Requests | Boolean | This allows an individual to hide their name when listing people to fund. It also hides many of the features on their personal opportunity profile that are intended to encourage someone to give. This allows them to use their personal page to communicate updates if they are self-funding the opportunity. |
 
 [](#fundraisingfinancialtransactions)Fundraising Financial Transactions
 =======================================================================

@@ -1146,45 +1146,17 @@ Line Chart
 
 This block displays a line chart for the selected metric. Options include:
 
-Title
-
-Description
-
-Name
-
-This is the block name. It is not displayed anywhere on the output of the block.
-
-Title
-
-The title that is displayed for the metric.
-
-Subtitle
-
-The subtitle for the metric.
-
-Column Width
-
-The number of Bootstrap columns the chart should use for its width. (A Bootstrap row, by default, has 12 columns.)
-
-Chart Style
-
-The chart style to use. These styles are defined under Admin Tools > General Settings > Defined Types > Chart Styles.
-
-Metric
-
-The metric to use for the chart.
-
-Partition Filter
-
-Determines how the chart will get the series partition value. It can be either hard coded or determined from the page context.
-
-Date Range
-
-Determines which values are displayed on the graph.
-
-Detail Page
-
-This optional setting will determine which page will be loaded when the graph is clicked.
+| Title | Description |
+| --- | --- |
+| Name | This is the block name. It is not displayed anywhere on the output of the block. |
+| Title | The title that is displayed for the metric. |
+| Subtitle | The subtitle for the metric. |
+| Column Width | The number of Bootstrap columns the chart should use for its width. (A Bootstrap row, by default, has 12 columns.) |
+| Chart Style | The chart style to use. These styles are defined under Admin Tools > General Settings > Defined Types > Chart Styles. |
+| Metric | The metric to use for the chart. |
+| Partition Filter | Determines how the chart will get the series partition value. It can be either hard coded or determined from the page context. |
+| Date Range | Determines which values are displayed on the graph. |
+| Detail Page | This optional setting will determine which page will be loaded when the graph is clicked. |
 
 [](#piechart)Pie Chart
 ======================
@@ -1195,45 +1167,17 @@ Pie Chart
 
 This block displays a pie chart for a given metric. Options include:
 
-Title
-
-Description
-
-Name
-
-This is the block name. It is not displayed anywhere on the output of the block.
-
-Title
-
-The title that is displayed for the metric.
-
-Subtitle
-
-The subtitle for the metric.
-
-Column Width
-
-The number of Bootstrap columns the chart should use for its width. (A Bootstrap row, by default, has 12 columns.)
-
-Chart Style
-
-The chart style to use. These styles are defined under Admin Tools > General Settings > Defined Types > Chart Styles.
-
-Metric Value Type
-
-Determines what metric value types should be displayed on the chart, goals and/or measures.
-
-Metrics
-
-The metrics to use for the chart. Each metric will represent one slice of the pie chart.
-
-Date Range
-
-Determines which values are displayed on the graph.
-
-Detail Page
-
-This optional setting will determine which page will be loaded when the graph is clicked.
+| Title | Description |
+| --- | --- |
+| Name | This is the block name. It is not displayed anywhere on the output of the block. |
+| Title | The title that is displayed for the metric. |
+| Subtitle | The subtitle for the metric. |
+| Column Width | The number of Bootstrap columns the chart should use for its width. (A Bootstrap row, by default, has 12 columns.) |
+| Chart Style | The chart style to use. These styles are defined under Admin Tools > General Settings > Defined Types > Chart Styles. |
+| Metric Value Type | Determines what metric value types should be displayed on the chart, goals and/or measures. |
+| Metrics | The metrics to use for the chart. Each metric will represent one slice of the pie chart. |
+| Date Range | Determines which values are displayed on the graph. |
+| Detail Page | This optional setting will determine which page will be loaded when the graph is clicked. |
 
 [](#lavadashboardwidget)Lava Dashboard Widget
 =============================================
@@ -1244,37 +1188,15 @@ Lava Dashboard Widget
 
 This block renders the metric values using a Lava template. Options include:
 
-Title
-
-Description
-
-Name
-
-This is the block name. It is not displayed anywhere on the output of the block.
-
-Title
-
-The title that is displayed for the metric.
-
-Subtitle
-
-The subtitle for the metric.
-
-Column Width
-
-The number of Bootstrap columns the chart should use for its width. (A Bootstrap row, by default, has 12 columns.)
-
-Round Values
-
-Round Y values to the nearest whole number. For example, display 25.00 as 25.
-
-Metric
-
-The metrics to use for the chart.
-
-Lava Template
-
-The Lava template to render the output for display.
+| Title | Description |
+| --- | --- |
+| Name | This is the block name. It is not displayed anywhere on the output of the block. |
+| Title | The title that is displayed for the metric. |
+| Subtitle | The subtitle for the metric. |
+| Column Width | The number of Bootstrap columns the chart should use for its width. (A Bootstrap row, by default, has 12 columns.) |
+| Round Values | Round Y values to the nearest whole number. For example, display 25.00 as 25. |
+| Metric | The metrics to use for the chart. |
+| Lava Template | The Lava template to render the output for display. |
 
   
 

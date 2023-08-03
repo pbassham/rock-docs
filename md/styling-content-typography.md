@@ -26,9 +26,9 @@ Styling for common inline HTML5 elements.
 
 You can use the mark tag to highlight text.
 
-This line of text is meant to be treated as deleted text.
+~This line of text is meant to be treated as deleted text.~
 
-This line of text is meant to be treated as no longer accurate.
+~This line of text is meant to be treated as no longer accurate.~
 
 This line of text is meant to be treated as an addition to the document.
 
@@ -74,21 +74,11 @@ This is uppercase text (.text-uppercase).
 
 This text is capitalized (.text-capitalize).
 
-Class
-
-Properties
-
-`text-lowercase`
-
-`text-transform: lowercase;`
-
-`text-uppercase`
-
-`text-transform: uppercase;`
-
-`text-capitalize`
-
-`text-transform: capitalize;`
+| Class | Properties |
+| --- | --- |
+| `text-lowercase` | `text-transform: lowercase;` |
+| `text-uppercase` | `text-transform: uppercase;` |
+| `text-capitalize` | `text-transform: capitalize;` |
 
 ### Font Weight
 
@@ -102,39 +92,19 @@ This is text-semibold.
 
 This is text-bold.
 
-Class
-
-Properties
-
-`text-light`
-
-`font-weight: 300;`
-
-`text-normal`
-
-`font-weight: 400;`
-
-`text-semibold`
-
-`font-weight: 700;`
-
-`text-bold`
-
-`font-weight: 900;`
+| Class | Properties |
+| --- | --- |
+| `text-light` | `font-weight: 300;` |
+| `text-normal` | `font-weight: 400;` |
+| `text-semibold` | `font-weight: 700;` |
+| `text-bold` | `font-weight: 900;` |
 
 ### Underline & Strikethrough
 
-Class
-
-Properties
-
-`text-decoration-none`
-
-`text-decoration: none;`
-
-`text-linethrough`
-
-`text-decoration: line-through;`
+| Class | Properties |
+| --- | --- |
+| `text-decoration-none` | `text-decoration: none;` |
+| `text-linethrough` | `text-decoration: line-through;` |
 
 ### Line Height
 
@@ -160,26 +130,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia tempor
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.
 
-Class
-
-Properties
-
-`leading-tight`
-
-`line-height: 1.25;`
-
-`leading-snug`
-
-`line-height: 1.375;`
-
-`leading-normal`
-
-`line-height: 1.5;`
-
-`leading-relaxed`
-
-`line-height: 1.625;`
-
-`leading-loose`
-
-`line-height: 2;`
+| Class | Properties |
+| --- | --- |
+| `leading-tight` | `line-height: 1.25;` |
+| `leading-snug` | `line-height: 1.375;` |
+| `leading-normal` | `line-height: 1.5;` |
+| `leading-relaxed` | `line-height: 1.625;` |
+| `leading-loose` | `line-height: 2;` |

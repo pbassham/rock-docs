@@ -91,61 +91,7 @@ where:'GroupTypeId == 25 && IsActive == true'
 
 Pretty cool right?! But there's more! Our example above uses 'equal' but there are several other conditions you can use including:
 
-\==
-
-Equal
-
-!=
-
-Not equal
-
-^=
-
-Starts with
-
-\*=
-
-Contains
-
-\*!
-
-Does not contain
-
-\_=
-
-Is blank
-
-\_!
-
-Is not blank
-
-\>
-
-Greater than
-
-\>=
-
-Greater than or equal
-
-<
-
-Less than
-
-<=
-
-Less than or equal
-
-$=
-
-Ends with
-
-&&
-
-Conditional logical AND operator
-
-||
-
-Conditional logical OR operator
+<table class="table table-striped"><tbody><tr><td>==</td><td>Equal</td></tr><tr><td>!=</td><td>Not equal</td></tr><tr><td>^=</td><td>Starts with</td></tr><tr><td>*=</td><td>Contains</td></tr><tr><td>*!</td><td>Does not contain</td></tr><tr><td>_=</td><td>Is blank</td></tr><tr><td>_!</td><td>Is not blank</td></tr><tr><td>&gt;</td><td>Greater than</td></tr><tr><td>&gt;=</td><td>Greater than or equal</td></tr><tr><td>&lt;</td><td>Less than</td></tr><tr><td>&lt;=</td><td>Less than or equal</td></tr><tr><td>$=</td><td>Ends with</td></tr><tr><td>&amp;&amp;</td><td>Conditional logical AND operator</td></tr><tr><td>||</td><td>Conditional logical OR operator</td></tr></tbody></table>
 
 Think of the powerful queries you'll soon be writing!
 

@@ -22,50 +22,14 @@ Helper Variables
 
 During every for loop the following helper variables are available to assist in building magic.
 
-forloop.length
-
-total number of times the loop will iterate
-
-forloop.index
-
-index of the current iteration
-
-forloop.index0
-
-zero based index of the current iteration
-
-forloop.rindex
-
-number of iterations left
-
-forloop.rindex0
-
-zero based number of iterations left
-
-forloop.first
-
-boolean set to true if this is the first iteration
-
-forloop.last
-
-boolean set to true if this is the last iteration
+<table class="table table-striped"><tbody><tr><td>forloop.length</td><td>total number of times the loop will iterate</td></tr><tr><td>forloop.index</td><td>index of the current iteration</td></tr><tr><td>forloop.index0</td><td>zero based index of the current iteration</td></tr><tr><td>forloop.rindex</td><td>number of iterations left</td></tr><tr><td>forloop.rindex0</td><td>zero based number of iterations left</td></tr><tr><td>forloop.first</td><td>boolean set to true if this is the first iteration</td></tr><tr><td>forloop.last</td><td>boolean set to true if this is the last iteration</td></tr></tbody></table>
 
 Influencing Iterations
 ----------------------
 
 You can control the number, starting position and direction of your iterations. Don't believe us? Try these attributes...
 
-limit:int
-
-limit to the number of iterations
-
-offset:int
-
-starts the iteration at the nth item
-
-reversed
-
-let the last be first and the first last ([Matt 20:16](https://www.biblegateway.com/passage/?search=Matthew%2020:16))
+<table class="table table-striped"><tbody><tr><td>limit:int</td><td>limit to the number of iterations</td></tr><tr><td>offset:int</td><td>starts the iteration at the nth item</td></tr><tr><td>reversed</td><td>let the last be first and the first last <small>(<a href="https://www.biblegateway.com/passage/?search=Matthew%2020:16">Matt 20:16</a>)</small></td></tr></tbody></table>
 
 Let's see that in action... all at once now...
 

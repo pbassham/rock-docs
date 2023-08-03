@@ -71,9 +71,9 @@ Small Installs
 One server with the following specs:  
 
 Server requirements for Small Installs
-
-Server
-
+| Server |
+| --- |
+| 
 *   CPU: 2Ghz dual core or higher
 *   Memory: 2GB or higher
 *   Storage: 1TB
@@ -81,6 +81,8 @@ Server
 *   Software: SQL Server Express 2014 (free) or SQL Server 2014 Standard or higher
   
 *   Note that the server versions above are the minimum. We would of course recommend using the latest versions if you can. Starting with Rock v15, SQL Server 2016 will be required at a minimum.
+
+ |
 
 Keep in Mind PCI Compliance
 ===========================
@@ -94,21 +96,23 @@ Medium Installs
 Two servers with the following specs:  
 
 Server requirements for Medium Installs
-
-Web Server
-
-Database Server
-
+| Web Server | Database Server |
+| --- | --- |
+| 
 *   CPU: 2Ghz quad core
 *   Memory: 8GB or higher
 *   Storage: 1TB
 *   Operating System: Windows Server 2016 or newer
+
+ | 
 
 *   CPU: 2Ghz quad core
 *   Memory: 8GB or higher
 *   Storage: 1TB
 *   Operating System: Windows Server 2016 or newer
 *   Software: SQL Server 2014 Standard (Starting with Rock v15, SQL Server 2016 will be required at a minimum)
+
+ |
 
 Large Installs
 --------------
@@ -117,21 +121,23 @@ Large Installs
 Two servers with the following specs:  
 
 Server requirements for Large Installs
-
-Web Server
-
-Database Server
-
+| Web Server | Database Server |
+| --- | --- |
+| 
 *   CPU: 2.5Ghz quad core
 *   Memory: 16GB or higher
 *   Storage: 1TB
 *   Operating System: Windows Server 2016 or newer
+
+ | 
 
 *   CPU: 2.5Ghz quad core
 *   Memory: 16GB or higher
 *   Storage: 1TB
 *   Operating System: Windows Server 2016 or newer
 *   Software: SQL Server 2014 Standard (Starting with Rock v15, SQL Server 2016 will be required at a minimum)
+
+ |
 
 SQL Server 2014
 ===============

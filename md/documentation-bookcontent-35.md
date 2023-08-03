@@ -251,36 +251,13 @@ Considerations for Embedded Reports
 
 Rock includes the awesome ability to embed Power BI reports right onto a page, which provides a great user experience without end users having to learn or use a special reporting client. However, this power comes at a cost. We have compiled the various options for utilizing Power BI reports in Rock and what Microsoft charges for these features below.
 
-Product
-
-Price
-
-Notes
-
-Power BI Desktop (Windows app)
-
-Free
-
-This application can be pointed at your Rock database to run BI reports at zero cost. Reports are not shareable and exist only in the local instance of the Power BI desktop app. Any number of users in your organization can run this app for free, but each would need their own local report templates to run (meaning, sharing of reports is difficult.)
-
-Power BI Professional
-
-$3/user/month (non-profit)
-
-This is an Office365 subscription that is necessary to publish any Power BI report from the Desktop app to the cloud, which is necessary for sharing any report. You will need at least ONE license of Power BI Pro in order to publish to the cloud, and any additional users that want to see those shared reports would also need a license (unless you embed the report per below). You purchase these subscriptions within your Office 365 Admin portal.
-
-Power BI Embedded
-
-$1.0081/hour ($3500/yr non-profit Azure credit can be applied to this)
-
-This is where you might get sticker shock. While embedding a BI report into Rock is pretty amazing (and easy), this feature does not come without cost. While Microsoft lets you get an "embed token" for free, these are ONLY intended to be used for dev/testing purposes. For "production" use, you're supposed to purchase a Power BI Embedded Node via Azure. This concept is explained in the [Power BI FAQ](https://docs.microsoft.com/en-us/power-bi/developer/embedded-faq#how-many-embed-tokens-can-i-create) and the pricing for these nodes can be found [here](https://azure.microsoft.com/en-us/pricing/details/power-bi-embedded/).  
+| Product | Price | Notes |
+| --- | --- | --- |
+| Power BI Desktop (Windows app) | Free | This application can be pointed at your Rock database to run BI reports at zero cost. Reports are not shareable and exist only in the local instance of the Power BI desktop app. Any number of users in your organization can run this app for free, but each would need their own local report templates to run (meaning, sharing of reports is difficult.) |
+| Power BI Professional | $3/user/month (non-profit) | This is an Office365 subscription that is necessary to publish any Power BI report from the Desktop app to the cloud, which is necessary for sharing any report. You will need at least ONE license of Power BI Pro in order to publish to the cloud, and any additional users that want to see those shared reports would also need a license (unless you embed the report per below). You purchase these subscriptions within your Office 365 Admin portal. |
+| Power BI Embedded | $1.0081/hour ($3500/yr non-profit Azure credit can be applied to this) | This is where you might get sticker shock. While embedding a BI report into Rock is pretty amazing (and easy), this feature does not come without cost. While Microsoft lets you get an "embed token" for free, these are ONLY intended to be used for dev/testing purposes. For "production" use, you're supposed to purchase a Power BI Embedded Node via Azure. This concept is explained in the [Power BI FAQ](https://docs.microsoft.com/en-us/power-bi/developer/embedded-faq#how-many-embed-tokens-can-i-create) and the pricing for these nodes can be found [here](https://azure.microsoft.com/en-us/pricing/details/power-bi-embedded/).  
   
-As you can see, the cheapest option is A1, which costs just over $1/hr, which comes to a whopping $735/mo if you let the node run 24x7. This puts embedded Power BI reports well out of reach for most churches. The node _can_ be paused any time you don't need to use it, and thankfully you only get charged for the actual time you have the node running, but this obviously makes consuming the embedded reports in Rock much less useful, because you'd need to manually start/stop the node every time you wanted to see a report. Unless a way can be found to automate the pausing/starting of the node whenever a report is requested via Rock, this is the current reality for embedded Power BI reports in Rock.
-
-Power BI Premium
-
-$1998.00/mo (non-profit)
-
-This option is so far out of reach that we're only mentioning it for the sake of completeness. Power BI premium also allows embedding reports (and gets around the need to purchase an Embedded Node), but the cheapest P1 version is almost $2k/mo so is a complete non-starter. If for some reason you want this version, you can purchase it via your Office365 Admin portal.
+As you can see, the cheapest option is A1, which costs just over $1/hr, which comes to a whopping $735/mo if you let the node run 24x7. This puts embedded Power BI reports well out of reach for most churches. The node _can_ be paused any time you don't need to use it, and thankfully you only get charged for the actual time you have the node running, but this obviously makes consuming the embedded reports in Rock much less useful, because you'd need to manually start/stop the node every time you wanted to see a report. Unless a way can be found to automate the pausing/starting of the node whenever a report is requested via Rock, this is the current reality for embedded Power BI reports in Rock. |
+| Power BI Premium | $1998.00/mo (non-profit) | This option is so far out of reach that we're only mentioning it for the sake of completeness. Power BI premium also allows embedding reports (and gets around the need to purchase an Embedded Node), but the cheapest P1 version is almost $2k/mo so is a complete non-starter. If for some reason you want this version, you can purchase it via your Office365 Admin portal. |
 
 _Prices are as of this writing and subject to change._

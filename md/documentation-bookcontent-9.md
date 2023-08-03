@@ -706,27 +706,11 @@ If you'd like to make changes to the services used by Rock, you can under:
 Admin Tools > System Settings > Location Services.  
 There you'll see a list of services that Rock supports. Not every service supports both standardization and geocoding.
 
-Service Name
-
-Description
-
-Service Type
-
-Cost
-
-SmartyStreets
-
-SmartyStreets is the default solution because of their high-quality results and free license for the Rock community. [Find out more on their website](http://smartystreets.com/).
-
-Address Standardization & Geocoding
-
-Free
-
-Bing
-
-Microsoft's Bing mapping service provides a free geocoding service. The service does have a few limitations. You can only make a maximum of 5,000 requests a day and 125,000 in a 12-month period. For most organizations, this will be more than enough. We've even built in a daily transaction limit, so you won't have to worry about going over on any given day. This service requires a key. To get your free key, follow these simple steps:  
+| Service Name | Description | Service Type | Cost |
+| --- | --- | --- | --- |
+| SmartyStreets | SmartyStreets is the default solution because of their high-quality results and free license for the Rock community. [Find out more on their website](http://smartystreets.com/). | Address Standardization & Geocoding | Free |
+| Bing | Microsoft's Bing mapping service provides a free geocoding service. The service does have a few limitations. You can only make a maximum of 5,000 requests a day and 125,000 in a 12-month period. For most organizations, this will be more than enough. We've even built in a daily transaction limit, so you won't have to worry about going over on any given day. This service requires a key. To get your free key, follow these simple steps:  
   
-
 1.  Go to the [Bing Maps Portal](https://www.bingmapsportal.com/).
 2.  Sign in using a Microsoft Account or create a new account.
 3.  With an account set up, you'll need to contact Bing Maps directly to get a Non-Profit key. Reach out to [mpnet@microsoft.com](mailto:mpnet@microsoft.com) to get in touch with the Bing Maps account team.
@@ -736,17 +720,8 @@ Microsoft's Bing mapping service provides a free geocoding service. The service 
 
 While the Bing service provider isn't a true address standardization component it will do some format cleaning of the addresses you provide. For instance, it will put your addresses in the proper case and fix any minor missing elements. It won't, however, add zip+4 information. It also removes apartment numbers from addresses.
 
-Geocoding
-
-Free
-
-StrikeIron
-
-StrikeIron provides a paid option for geocoding data. You can find more information on [their website](https://www.strikeiron.com/product-list/address/us-geocode-information/).
-
-Geocoding
-
-Must request a quote
+ | Geocoding | Free |
+| StrikeIron | StrikeIron provides a paid option for geocoding data. You can find more information on [their website](https://www.strikeiron.com/product-list/address/us-geocode-information/). | Geocoding | Must request a quote |
 
 Want Even More Options?
 =======================
@@ -782,107 +757,44 @@ Mailgun HTTP
 
 Mailgun HTTP is the quickest and easiest way to send emails. This transport sends the email to Mailgun with their newer HTTP API. Below are the settings Rock needs from your Mailgun account.
 
-Setting
-
-Description
-
-Base URL
-
-You can view or change the API URL from Mailgun.
-
-Active
-
-This setting turns the Mailgun service on or off.
-
-Resource
-
-This will be populated with a URL provided by Mailgun.
-
-Domain
-
-Enter your organization's domain for email.
-
-API Key
-
-The API key is provided to you by Mailgun.
-
-Track Opens
-
-If enabled, this setting allows Rock to report whether an email was opened.
+| Setting | Description |
+| --- | --- |
+| Base URL | You can view or change the API URL from Mailgun. |
+| Active | This setting turns the Mailgun service on or off. |
+| Resource | This will be populated with a URL provided by Mailgun. |
+| Domain | Enter your organization's domain for email. |
+| API Key | The API key is provided to you by Mailgun. |
+| Track Opens | If enabled, this setting allows Rock to report whether an email was opened. |
 
 Mailgun SMTP
 ------------
 
 This transport delivers the emails to Mailgun with their SMTP API. Below are the Mailgun SMTP settings in Rock.
 
-Setting
-
-Description
-
-SMTP Hostname
-
-This is the SMTP host. The default setting will work here in most cases.
-
-API Key
-
-The API key is provided to you by Mailgun.
-
-Active
-
-This setting turns the Mailgun service on or off.
-
-Domain Login
-
-Enter your Mailgun provided username.
-
-Domain Password
-
-Enter your Mailgun provided password.
-
-Port
-
-Indicate the port on your server that should be used for communications. Ports 587 or 2525 are often used, especially if you're encrypting the sending.
-
-Use SSL
-
-Set whether your mail server supports sending emails via an encrypted SSL session.
-
-Track Clicks
-
-If enabled, clicks on sent emails will be tracked.
+| Setting | Description |
+| --- | --- |
+| SMTP Hostname | This is the SMTP host. The default setting will work here in most cases. |
+| API Key | The API key is provided to you by Mailgun. |
+| Active | This setting turns the Mailgun service on or off. |
+| Domain Login | Enter your Mailgun provided username. |
+| Domain Password | Enter your Mailgun provided password. |
+| Port | Indicate the port on your server that should be used for communications. Ports 587 or 2525 are often used, especially if you're encrypting the sending. |
+| Use SSL | Set whether your mail server supports sending emails via an encrypted SSL session. |
+| Track Clicks | If enabled, clicks on sent emails will be tracked. |
 
 SMTP
 ----
 
 Below are the configuration items that are needed to enable SMTP emails to work. If you're unsure what these values should be, consult with your ISP or your organization’s IT support.
 
-Setting
-
-Description
-
-Active
-
-This setting turns the SMTP service on or off.
-
-Server
-
-Provide the SMTP email server that Rock should use to send the emails through.
-
-Port
-
-Indicate the port on your server that should be used for communications. This will typically be port 25 but port 587 is often used if you're encrypting the sending.
-
-Username
-
-If your email server requires you to authenticate to relay email, this is where you'll provide the username.
-
-Password
-
-When enabling authentication, this will be where you set the password.
-
-Use SSL
-
-Set whether your mail server supports sending emails via an encrypted SSL session.
+| Setting | Description |
+| --- | --- |
+| Active | This setting turns the SMTP service on or off. |
+| Server | Provide the SMTP email server that Rock should use to send the emails through. |
+| Port | Indicate the port on your server that should be used for communications. This will typically be port 25 but port 587 is often used if you're encrypting the sending. |
+| Username | If your email server requires you to authenticate to relay email, this is where you'll provide the username. |
+| Password | When enabling authentication, this will be where you set the password. |
+| Use SSL | Set whether your mail server supports sending emails via an encrypted SSL session. |
 
   
 
@@ -989,34 +901,18 @@ When setting permissions, you'll add either an individual or, more commonly, a s
 Let’s look at an example. First, we’ll look at a case where a page should only be viewed by staff members (and not volunteers or other individuals accessing Rock).
 
 Incorrect Permissions:
-
-**Name**
-
-**Allow / Deny**
-
-**All Users**
-
-Deny
-
-**All Staff**
-
-Allow
+| **Name** | **Allow / Deny** |
+| --- | --- |
+| **All Users** | Deny |
+| **All Staff** | Allow |
 
 The above setup might look correct at first because both roles exist with the proper access. It’s true that staff should have access and other non-staff users should be denied. However, remember that Rock works through security from the top down. Because Staff are also Users, the system will stop at the “All Users | Deny” level and won’t allow access.
 
 Correct Permissions:
-
-**Name**
-
-**Allow / Deny**
-
-**All Staff**
-
-Allow
-
-**All Users**
-
-Deny
+| **Name** | **Allow / Deny** |
+| --- | --- |
+| **All Staff** | Allow |
+| **All Users** | Deny |
 
 Now the logged in staff person will match on the first rule and be granted access. Processing of the subsequent rule won't occur for this person, so even though the staff person is also in _All Users_, they will still be granted access. An individual without the _All Staff_ role will cause the system to keep checking down the list, where it will find a match at the _All Users_ level and deny access accordingly.
 
@@ -1212,50 +1108,24 @@ A percentage is then calculated by comparing the number of points scored to the 
 
 There are several _cleanup_ reports that have been created to help you identify records that need your attention. Feel free to add your own reports here. Each report that ships with Rock is documented below.
 
-Report Name
-
-Description
-
-Self-Inactivated Individuals
-
-This report lists individuals who have inactivated themselves from the database. This usually comes from using the unsubscribe link at the bottom of bulk emails. You'll want to go through this list occasionally to inactivate the other individuals in their families. You'll also want to read through the inactive reasons to get a pulse on why individuals are leaving the organization.
-
-Pending Individuals
-
-When someone registers on the website, their individual record status is set to _Pending_. This allows you to view the record and determine if it's a duplicate record. Once you go through them all, you'll want to bulk update their statuses to _Active_.
-
-Individuals with Duplicate Phone Numbers
-
-This report finds different individuals who share the same phone number. You can also use this report to identify individuals who have the same phone number listed more than once on their profile.
-
-Individuals with Duplicate Emails
-
-Like the duplicate phone numbers report, this report finds different individuals who have the same email address. This may be common, especially for families.
+| Report Name | Description |
+| --- | --- |
+| Self-Inactivated Individuals | This report lists individuals who have inactivated themselves from the database. This usually comes from using the unsubscribe link at the bottom of bulk emails. You'll want to go through this list occasionally to inactivate the other individuals in their families. You'll also want to read through the inactive reasons to get a pulse on why individuals are leaving the organization. |
+| Pending Individuals | When someone registers on the website, their individual record status is set to _Pending_. This allows you to view the record and determine if it's a duplicate record. Once you go through them all, you'll want to bulk update their statuses to _Active_. |
+| Individuals with Duplicate Phone Numbers | This report finds different individuals who share the same phone number. You can also use this report to identify individuals who have the same phone number listed more than once on their profile. |
+| Individuals with Duplicate Emails | Like the duplicate phone numbers report, this report finds different individuals who have the same email address. This may be common, especially for families. |
 
 [](#workflows)Workflows
 =======================
 
 Workflows can be set up to help automate the process of data integrity. Feel free to add your own. We've outlined the ones that come with Rock below.
 
-Workflow Name
-
-Description
-
-DISC Request
-
-This drives the DISC assessment request workflow.
-
-Person Data Error
-
-This is the workflow that's accessed from the _Actions_ list of the _Person Profile_ page.
-
-Photo Request
-
-This drives the photo request workflow.
-
-Request Assessment
-
-This is the workflow that's accessed from the _Actions_ list of the _Person Profile_ page.
+| Workflow Name | Description |
+| --- | --- |
+| DISC Request | This drives the DISC assessment request workflow. |
+| Person Data Error | This is the workflow that's accessed from the _Actions_ list of the _Person Profile_ page. |
+| Photo Request | This drives the photo request workflow. |
+| Request Assessment | This is the workflow that's accessed from the _Actions_ list of the _Person Profile_ page. |
 
   
 
@@ -1493,59 +1363,26 @@ Once you're subscribed to the service, you'll need to configure the _IP Address 
 
 With your configuration in place, Rock's _Populate Interaction Session Data_ job can start using it to sift through your interaction records to populate any missing details in the `InteractionSessionLocation` table. Below are some of the properties available on this table.
 
-Property
-
-Description
-
-Example
-
-CountryCode
-
-This is a two-letter code that represents a country.
-
-US = United States  
+| Property | Description | Example |
+| --- | --- | --- |
+| CountryCode | This is a two-letter code that represents a country. | US = United States  
 CA = Canada  
-MX = Mexico
-
-GeoPoint
-
-The geopoint is the geographical location (latitude/longitude) associated with the IP address, telling you where visitors to your site are coming from.
-
-\-121.88996 37.33262  
+MX = Mexico |
+| GeoPoint | The geopoint is the geographical location (latitude/longitude) associated with the IP address, telling you where visitors to your site are coming from. | \-121.88996 37.33262  
 31.1326 -26.31511  
-9.49101 51.29926
-
-ISP
-
-This is the Internet Service Provider that the visitor to your site is using.
-
-Verizon Business  
+9.49101 51.29926 |
+| ISP | This is the Internet Service Provider that the visitor to your site is using. | Verizon Business  
 Google LLC  
-AT&T Corp.
-
-Location
-
-For the United States, the location will be the city and the state associated with the IP address. For other countries you may see a region, province or country.
-
-Sun City, Arizona  
+AT&T Corp. |
+| Location | For the United States, the location will be the city and the state associated with the IP address. For other countries you may see a region, province or country. | Sun City, Arizona  
 London, England  
-Sydney, New South Wales
-
-PostalCode
-
-This will be the zip code for visitors from the United States. For other countries you may see different types of codes. Some locations will not have a PostalCode.
-
-85029  
+Sydney, New South Wales |
+| PostalCode | This will be the zip code for visitors from the United States. For other countries you may see different types of codes. Some locations will not have a PostalCode. | 85029  
 SL1  
-114 46
-
-RegionCode
-
-For the United States, this will be the abbreviation for the state the person is in. In other countries this code may represent a region, province or country.
-
-AZ = Arizona  
+114 46 |
+| RegionCode | For the United States, this will be the abbreviation for the state the person is in. In other countries this code may represent a region, province or country. | AZ = Arizona  
 EN = England  
-QC = Quebec
+QC = Quebec |
 
 Check Your Site Settings
 ========================
@@ -1610,101 +1447,31 @@ Updates are one of Rock’s best features. Many systems require tedious software
 
 Global attributes (Admin Tools > General Settings > Global Attributes) are the basic configuration settings that are used to customize Rock. Each has a default value that you can override. Many of these are set up during the installation process. Below is a list of some of the core settings and descriptions.
 
-Setting
-
-Description
-
-Organization Name
-
-The name of the organization that's running Rock. This was set for you during the install, but you can modify it at any time.
-
-Organization Abbreviation
-
-There will be times when you want to refer to your organization in a less formal manner. Enter an _Organization Abbreviation_ to provide this value.
-
-Organization Address
-
-The primary address of the organization. If you're a multi-site organization, this should be the address of your central team location. Each of your campuses will have its own address elsewhere.
-
-Organization Email
-
-The default email bucket for the organization. This will be the default address used in the _From_ field of bulk emails. This is commonly info@organizationdomain.com
-
-Organization Phone
-
-The primary phone number for the organization.
-
-Organization Website
-
-The primary website for the organization.
-
-Public Application Root
-
-Many times, this will be the address of your external website, if it's hosted on Rock. It's the address that will be used in links that are sent out to the public, such as www.organizationname.com. If your organization's primary website isn't hosted on Rock, it's important that this setting remain the public address of the Rock server (not your organization's primary website) as this setting is used for providing linkbacks for things like images and webhooks.
-
-Internal Application Root
-
-Similar to the Public Application Root setting above, this is the address of the internal Rock website. It will be used to construct links on the internal site. Many organizations configure their DNS to be rock.organizationdomain.com.
-
-Update Server URL
-
-This is the address that Rock uses to look for updates. It should not be changed.
-
-Google API Key
-
-Rock uses Google Maps for many of its features. This requires what's known as an API key to use the maps. While there was a setup step in the post-install checklist, you can change this key at any time. See [below](#creating-a-google-maps-api-key) for details on setting up this key.
-
-Google ReCaptcha Site Key
-
-This is one of the two API keys needed to use ReCaptcha in Rock. To obtain this key, go to [https://www.google.com/recaptcha/about/](https://www.google.com/recaptcha/about/) and click “v3 Admin Console” near the top of the page. You’ll need to log in with a Google account. Select reCAPTCHA v2 as the reCAPTCHA Type and complete the rest of the form. Upon submission, you’ll be provided with your Site Key and Secret Key.
-
-Google ReCaptcha Secret Key
-
-This is one of the two API keys needed to use ReCaptcha in Rock. See the above entry for directions on obtaining this key.
-
-Email Exceptions List
-
-"Exceptions" is a technical term for errors. This setting is a list of email addresses that should receive an email when these errors occur. Keep in mind that errors do happen, and don’t worry if you get a notification email occasionally. Rock also keeps a list of every exception in the database, so you don’t need to keep these emails. Just think of them as an FYI.
-
-Email Exceptions Filter
-
-Oftentimes exceptions will occur when search indexes (like Google or Bing) scan your site and reference pages incorrectly. While these exceptions will always get logged, you can use this setting to prevent a notification email from being sent for these (and any other) types of exceptions. When any exception occurs, Rock will evaluate the client's HTTP Server variables for any variable you specify in the Key. If that server variable exists, and its value contains what you entered in the Value, the notification won't be sent. In addition to server variable names, if you use a key of 'Type', 'Source', 'Message' or 'StackTrace', Rock will check to see if the current exception's values for those keys contain what you entered for the value and if so, the notification won't be sent.
-
-Grade Transition Date
-
-The date your organization uses to promote kids to the next grade level. Grades are calculated in Rock based on the future graduation date from the 12th grade. This date is used to update the grade each year. While the default date of 6/1 will probably work for most organizations, you can modify it to match the needs of your community.
-
-Email Header / Email Footer
-
-The HTML that makes up the header and footer for emails that are sent from Rock. These settings are only used for system communications. You can create multiple different email templates to use in Rock. See the [Communicating With Rock](https://community.rockrms.com/documentation/bookcontent/8/) guide for more information on best practices in email templates.
-
-Email Header Logo
-
-This is the logo that should be used in the email header. If the logo displays as a broken link, be sure to check that your Public Application Root setting is correct since this is used to help generate the link to the logo.
-
-Password Regular Expression
-
-A secure password means different things to different people. By default, all passwords in Rock need to be at least six characters long and can only contain letters and/or numbers. If you like to require passwords to include special characters and/or mixed case letters, you can provide a regular expression that all passwords are required to match.
-
-Password Rules Friendly Description
-
-When you change the regular expression required for passwords, you’ll want to change the description of the password requirements that people see on the website. Use this setting to describe what a valid password must contain.
-
-Job Pulse
-
-This isn't really a setting; it continuously displays the date and time that jobs last ran. You can use this to confirm that jobs are running correctly.
-
-Log 404s As Exceptions
-
-This tells Rock whether File Not Found errors (404s) should be treated as exceptions. For the most part, you'll want to leave this off. You can enable it if you’d like to find all of the broken links on your website.
-
-Preferred Email Link Type
-
-This setting is used to configure the type of email links you'd like Rock to use. 'New Communication' will cause Rock to link to the New Communication page, while 'Mailto' will configure Rock to use a mailto tag which will take the individual to their configured mail client.
-
-Lava Support Level
-
-This setting allows you to choose your support level for old Lava syntax. In short, you can either allow legacy Lava or not. Generally, and especially for organizations new to Rock, this should be set to "NoLegacy".
+| Setting | Description |
+| --- | --- |
+| Organization Name | The name of the organization that's running Rock. This was set for you during the install, but you can modify it at any time. |
+| Organization Abbreviation | There will be times when you want to refer to your organization in a less formal manner. Enter an _Organization Abbreviation_ to provide this value. |
+| Organization Address | The primary address of the organization. If you're a multi-site organization, this should be the address of your central team location. Each of your campuses will have its own address elsewhere. |
+| Organization Email | The default email bucket for the organization. This will be the default address used in the _From_ field of bulk emails. This is commonly info@organizationdomain.com |
+| Organization Phone | The primary phone number for the organization. |
+| Organization Website | The primary website for the organization. |
+| Public Application Root | Many times, this will be the address of your external website, if it's hosted on Rock. It's the address that will be used in links that are sent out to the public, such as www.organizationname.com. If your organization's primary website isn't hosted on Rock, it's important that this setting remain the public address of the Rock server (not your organization's primary website) as this setting is used for providing linkbacks for things like images and webhooks. |
+| Internal Application Root | Similar to the Public Application Root setting above, this is the address of the internal Rock website. It will be used to construct links on the internal site. Many organizations configure their DNS to be rock.organizationdomain.com. |
+| Update Server URL | This is the address that Rock uses to look for updates. It should not be changed. |
+| Google API Key | Rock uses Google Maps for many of its features. This requires what's known as an API key to use the maps. While there was a setup step in the post-install checklist, you can change this key at any time. See [below](#creating-a-google-maps-api-key) for details on setting up this key. |
+| Google ReCaptcha Site Key | This is one of the two API keys needed to use ReCaptcha in Rock. To obtain this key, go to [https://www.google.com/recaptcha/about/](https://www.google.com/recaptcha/about/) and click “v3 Admin Console” near the top of the page. You’ll need to log in with a Google account. Select reCAPTCHA v2 as the reCAPTCHA Type and complete the rest of the form. Upon submission, you’ll be provided with your Site Key and Secret Key. |
+| Google ReCaptcha Secret Key | This is one of the two API keys needed to use ReCaptcha in Rock. See the above entry for directions on obtaining this key. |
+| Email Exceptions List | "Exceptions" is a technical term for errors. This setting is a list of email addresses that should receive an email when these errors occur. Keep in mind that errors do happen, and don’t worry if you get a notification email occasionally. Rock also keeps a list of every exception in the database, so you don’t need to keep these emails. Just think of them as an FYI. |
+| Email Exceptions Filter | Oftentimes exceptions will occur when search indexes (like Google or Bing) scan your site and reference pages incorrectly. While these exceptions will always get logged, you can use this setting to prevent a notification email from being sent for these (and any other) types of exceptions. When any exception occurs, Rock will evaluate the client's HTTP Server variables for any variable you specify in the Key. If that server variable exists, and its value contains what you entered in the Value, the notification won't be sent. In addition to server variable names, if you use a key of 'Type', 'Source', 'Message' or 'StackTrace', Rock will check to see if the current exception's values for those keys contain what you entered for the value and if so, the notification won't be sent. |
+| Grade Transition Date | The date your organization uses to promote kids to the next grade level. Grades are calculated in Rock based on the future graduation date from the 12th grade. This date is used to update the grade each year. While the default date of 6/1 will probably work for most organizations, you can modify it to match the needs of your community. |
+| Email Header / Email Footer | The HTML that makes up the header and footer for emails that are sent from Rock. These settings are only used for system communications. You can create multiple different email templates to use in Rock. See the [Communicating With Rock](https://community.rockrms.com/documentation/bookcontent/8/) guide for more information on best practices in email templates. |
+| Email Header Logo | This is the logo that should be used in the email header. If the logo displays as a broken link, be sure to check that your Public Application Root setting is correct since this is used to help generate the link to the logo. |
+| Password Regular Expression | A secure password means different things to different people. By default, all passwords in Rock need to be at least six characters long and can only contain letters and/or numbers. If you like to require passwords to include special characters and/or mixed case letters, you can provide a regular expression that all passwords are required to match. |
+| Password Rules Friendly Description | When you change the regular expression required for passwords, you’ll want to change the description of the password requirements that people see on the website. Use this setting to describe what a valid password must contain. |
+| Job Pulse | This isn't really a setting; it continuously displays the date and time that jobs last ran. You can use this to confirm that jobs are running correctly. |
+| Log 404s As Exceptions | This tells Rock whether File Not Found errors (404s) should be treated as exceptions. For the most part, you'll want to leave this off. You can enable it if you’d like to find all of the broken links on your website. |
+| Preferred Email Link Type | This setting is used to configure the type of email links you'd like Rock to use. 'New Communication' will cause Rock to link to the New Communication page, while 'Mailto' will configure Rock to use a mailto tag which will take the individual to their configured mail client. |
+| Lava Support Level | This setting allows you to choose your support level for old Lava syntax. In short, you can either allow legacy Lava or not. Generally, and especially for organizations new to Rock, this should be set to "NoLegacy". |
 
 Editing A Global Attribute
 --------------------------
@@ -3441,381 +3208,73 @@ Jobs allow you to run a sequence of code on a defined schedule. A good example o
 
 Below is a list of jobs that ship with Rock.
 
-Name
-
-Description
-
-Default Schedule
-
-Auto Open Locations
-
-Related to check-in, this job will automatically reopen rooms that have been closed. This allows closed rooms for one service to be open for the next service. You can select a _Parent Location_ to limit which rooms are opened. You can also set a _Re-open Period_ which indicates how long the job should wait after a room is closed before opening it. This job only works for Locations that are of type _Room_.
-
-None
-
-Calculate Family Analytics
-
-This job populates Rock's family analytics. See our [Person and Family Field Guide](https://community.rockrms.com/documentation/bookcontent/5#personfamilyanalytics) for more information.
-
-At 8:00 pm, only on Tuesday
-
-Calculate Group Requirements
-
-This job processes group requirements defined in the system. You can read more about this in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#grouprequirements) manual.
-
-Every day at 3:00 am
-
-Calculate Metrics
-
-This job runs any metrics with a defined schedule. You can read more about this in the [Taking Off With Reporting](https://community.rockrms.com/documentation/bookcontent/6#metrics) manual.
-
-Every 15 minutes
-
-Calculate Person Duplicates
-
-This Run SQL job scours your Rock database on a nightly basis looking for possible duplicates. Those that are found are listed under Rock's data integrity tools. You can read more about these tools in the [Data Integrity](#dataintegrity) chapter.
-
-Every day at 3:00 am
-
-Calculate Person Signals
-
-Re-calculates all person signals to ensure that the top-most signal is still the current one. To learn more about signals, see the [Person Signal Types](#personsignaltypes) section.
-
-Every day at 3:15 am
-
-Campaign Manager
-
-Handles the processing of all configured [connection campaigns](https://community.rockrms.com/documentation/bookcontent/39#connectioncampaigns), creating new connection requests and assigning them to connectors as needed.
-
-Every day at 7:00 am
-
-Charge Future Transactions
-
-Charge future transactions where the _FutureProcessingDateTime_ is now or has passed.
-
-Every 10 minutes
-
-Collect Hosting Metrics
-
-This job can only be activated by navigating to Admin Tools > System Settings > System Configuration > Web.Config Settings and toggling the _Enable Database Performance Counters_ setting. This job will collect metrics related to the usage of resources like the database connection pool. See the [System Configuration](#systemconfiguration) section for details.
-
-Every five minutes
-
-Communication Queue Alert
-
-Sends an email to a list of recipients when there are communications that have been queued to send for longer than a specified time period. See our [Communicating With Rock](https://community.rockrms.com/documentation/bookcontent/8/) guide for more information on working with communications in Rock.
-
-Every 15 minutes
-
-Complete Workflows
-
-Closes all the Workflows of the configured type that are older than a certain number of minutes. You can read more about this in the [Blasting Off With Workflows](https://community.rockrms.com/documentation/bookcontent/12#autoclosingworkflows) manual.
-
-None
-
-Connection Requests Automation
-
-If you have any Status Automation rules configured on a Connection Type, this job will process them and make updates as needed. For more details see the [Engagement](https://community.rockrms.com/documentation/bookcontent/39#automatingstatuschanges) guide.
-
-Every day at 11:00 pm
-
-Connection Request Workflow Triggers
-
-Connection Request workflows that are triggered by _Future Follow-up Date Reached_ are launched by this job. The job also changes the state of these requests from _Future Follow Up_ to _Active_ and adds a "Future Follow-up Complete" action.  
+| Name | Description | Default Schedule |
+| --- | --- | --- |
+| Auto Open Locations | Related to check-in, this job will automatically reopen rooms that have been closed. This allows closed rooms for one service to be open for the next service. You can select a _Parent Location_ to limit which rooms are opened. You can also set a _Re-open Period_ which indicates how long the job should wait after a room is closed before opening it. This job only works for Locations that are of type _Room_. | None |
+| Calculate Family Analytics | This job populates Rock's family analytics. See our [Person and Family Field Guide](https://community.rockrms.com/documentation/bookcontent/5#personfamilyanalytics) for more information. | At 8:00 pm, only on Tuesday |
+| Calculate Group Requirements | This job processes group requirements defined in the system. You can read more about this in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#grouprequirements) manual. | Every day at 3:00 am |
+| Calculate Metrics | This job runs any metrics with a defined schedule. You can read more about this in the [Taking Off With Reporting](https://community.rockrms.com/documentation/bookcontent/6#metrics) manual. | Every 15 minutes |
+| Calculate Person Duplicates | This Run SQL job scours your Rock database on a nightly basis looking for possible duplicates. Those that are found are listed under Rock's data integrity tools. You can read more about these tools in the [Data Integrity](#dataintegrity) chapter. | Every day at 3:00 am |
+| Calculate Person Signals | Re-calculates all person signals to ensure that the top-most signal is still the current one. To learn more about signals, see the [Person Signal Types](#personsignaltypes) section. | Every day at 3:15 am |
+| Campaign Manager | Handles the processing of all configured [connection campaigns](https://community.rockrms.com/documentation/bookcontent/39#connectioncampaigns), creating new connection requests and assigning them to connectors as needed. | Every day at 7:00 am |
+| Charge Future Transactions | Charge future transactions where the _FutureProcessingDateTime_ is now or has passed. | Every 10 minutes |
+| Collect Hosting Metrics | This job can only be activated by navigating to Admin Tools > System Settings > System Configuration > Web.Config Settings and toggling the _Enable Database Performance Counters_ setting. This job will collect metrics related to the usage of resources like the database connection pool. See the [System Configuration](#systemconfiguration) section for details. | Every five minutes |
+| Communication Queue Alert | Sends an email to a list of recipients when there are communications that have been queued to send for longer than a specified time period. See our [Communicating With Rock](https://community.rockrms.com/documentation/bookcontent/8/) guide for more information on working with communications in Rock. | Every 15 minutes |
+| Complete Workflows | Closes all the Workflows of the configured type that are older than a certain number of minutes. You can read more about this in the [Blasting Off With Workflows](https://community.rockrms.com/documentation/bookcontent/12#autoclosingworkflows) manual. | None |
+| Connection Requests Automation | If you have any Status Automation rules configured on a Connection Type, this job will process them and make updates as needed. For more details see the [Engagement](https://community.rockrms.com/documentation/bookcontent/39#automatingstatuschanges) guide. | Every day at 11:00 pm |
+| Connection Request Workflow Triggers | Connection Request workflows that are triggered by _Future Follow-up Date Reached_ are launched by this job. The job also changes the state of these requests from _Future Follow Up_ to _Active_ and adds a "Future Follow-up Complete" action.  
   
-By default, the _Number of Days to Look Back_ setting is set to '1'. This means if the job is run today, it will launch workflows and change states for connection requests where the Future Follow Up date was yesterday.
-
-Every day at 7:00 am
-
-Content Channel Item Self Update
-
-This job helps automate showing or hiding certain content channel items. For full details see the [Designing and Building Websites Using Rock](https://community.rockrms.com/documentation/bookcontent/14#contentchannelitemselfupdate) guide.
-
-None
-
-Data Automation
-
-Updates person and family information based on Data Integrity settings. To learn more about Data Integrity settings, see the [Data Integrity](#dataintegrity) chapter.
-
-Every Tuesday at 4:00 am
-
-Database Maintenance
-
-Performs routine SQL Server database maintenance. See the [Care and Feeding of Rock](#careandfeedingofrock) section for more information.
-
-None
-
-Data View to Workflow
-
-Starts a workflow for each entity in a specified Data View.
-
-None
-
-Get National Change of Address (NCOA)
-
-Triggers a comparison of addresses with the U.S. NCOA list, looking for people in your database whose addresses have changed. This job will trigger new lookups as you schedule them and will process the results after a lookup process is triggered. The lookup is actually a three part process (Export, Submit, Download/Process), which means the job must run three times in order to complete the full process. If your list of addresses is extremely small or extremely large, you may want to consider adjusting the run interval accordingly; it can take around five minutes for each thousand records the service processes (but that speed can vary based on many factors, obviously).
-
-Every 25 minutes
-
-Get Scheduled Payments
-
-This job downloads transactions from the payment gateway for any scheduled transactions. You can read more about this in the [Rock Solid Finances](https://community.rockrms.com/documentation/bookcontent/15#downloadingtransactions) manual.
-
-None
-
-Giving Automation
-
-This job updates giving classification attributes and Giving Journey stages. It also creates giving alerts. For more information check out the [Rock Solid Finances](https://community.rockrms.com/documentation/bookcontent/15#givingoverview) guide.
-
-Every day at 10:00 pm
-
-Group Attendance Reporting
-
-This job will create new Person attributes to track a person's _First Attended Date_, _Last Attended Date_, _Times Attended in Last 12 Months_ and/or _Times Attended in Last 16 Weeks_ for groups specified by a Data View. These attributes can be manually assigned categories and security as needed. This job considers all attendance in the specified groups, regardless of whether the person is currently an active member of the group. For more information see our [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupattendancereporting) guide.
-
-None
-
-Group Leader Absence Notifications
-
-This job sends an email to group leaders in the specified group type with a list of group members who haven't attended group meeting occurrences a specified number of times. See our [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupleaderabsencenotifications) guide for more information.
-
-None
-
-Group Leader Pending Notifications
-
-This job sends out emails to group leaders with pending notifications. You can read more about this in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupleaderpendingnotifications) manual.
-
-None
-
-Group Sync
-
-This job syncs any configured groups. You can read more about this in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupsync) manual.
-
-None
-
-Index Entities (Universal Search Re-Index)
-
-Re-indexes the selected entity types in Universal Search. See our [Universal Search](https://community.rockrms.com/documentation/bookcontent/32/) guide for more information.
-
-Every day at 5:00 am
-
-Index Rock Site
-
-Configures Rock to index a specified site. Includes the option to set login credentials to allow indexing of password-protected pages.
-
-None
-
-Job Pulse
-
-Runs continuously to help monitor the jobs engine. Don't disable this job.
-
-Every 30 seconds
-
-Launch Workflow
-
-Will start a new workflow of the type selected in the configuration.
-
-None
-
-Location Services Verify
-
-Attempts to standardize and geocode addresses that haven't been verified yet. It also attempts to re-verify addresses that failed in the past after a given wait period.
-
-Every day at 3:00 am
-
-PBX CDR Download
-
-This job downloads CDR information for the specified PBX component.
-
-None
-
-Populate Interaction Session Data
-
-If you've configured an IP address geocoding service and if you have _Log Page Views_ and _Enable Page View Geo Tracking_ enabled for your site, this job will geocode new `InteractionSessionLocation` records or link existing records to `InteractionSession` records. See the [Interactions](#ipaddressgeocoding) chapter for more details.
-
-Every 10 minutes
-
-Process BI Analytics
-
-This job takes care of schema changes (dynamic Attribute Value Fields) and data updates to Person analytic tables. To read more about BI and Rock, see the [Business Intelligence](https://community.rockrms.com/documentation/bookcontent/35/) guide.
-
-Every day at 5:00 am
-
-Process Elevated Security
-
-This job calculates each person's [Account Protection Profile](https://community.rockrms.com/documentation/bookcontent/5#accountprotectionprofiles) level.
-
-Every day at 3:15 am
-
-Process Group History
-
-Updates group history for enabled group types. To learn more about group history, see the [Group History](https://community.rockrms.com/documentation/bookcontent/7#grouphistory) chapter of the Rock Your Groups manual.
-
-Every day at 3:30 am
-
-Process Workflows
-
-Looks at all active workflows and runs the activities of those that are active.
-
-Every 10 minutes
-
-Rock Cleanup
-
-Runs a series of cleanup steps to manage the Rock database. You can change the settings for many of the steps, but we recommend keeping the defaults in most cases. For instance, you may want to enable _Fix Attendance Records Never Marked Present_ if you're using _Presence_ with Check-in.
-
-Every day at 1:00 am
-
-Run SQL
-
-This job simply runs a SQL script on a given schedule. This is helpful if you’d like to automate the changing of data on a certain schedule.
-
-None
-
-Send Assessment Reminders
-
-Sends reminders to persons with pending assessments if the created date/time is less than the calculated cutoff date and the last reminder date is greater than the calculated reminder date. See our [Assessments](https://community.rockrms.com/documentation/bookcontent/37/) guide for more information.
-
-Every day at 8:00 am
-
-Send Attendance Reminders for Group Type
-
-This job is used to remind group leaders to take attendance for the groups they lead, for groups of the specified type. You can read more about this job in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#sendattendanceremindersforgrouptype) manual.
-
-Every day at 4:00 pm for the Small Group group type.
-
-Send Birthday Email
-
-Sends an email to people in the database who have a birthday on that day.
-
-None
-
-Send Communications
-
-Sends out queued communications. Communications can be sent in serial or in parallel according to the _Parallel Communications_ setting. We don't recommend changing the number of allowed parallel communications without careful analysis of your bandwidth usage and limits.  
+By default, the _Number of Days to Look Back_ setting is set to '1'. This means if the job is run today, it will launch workflows and change states for connection requests where the Future Follow Up date was yesterday. | Every day at 7:00 am |
+| Content Channel Item Self Update | This job helps automate showing or hiding certain content channel items. For full details see the [Designing and Building Websites Using Rock](https://community.rockrms.com/documentation/bookcontent/14#contentchannelitemselfupdate) guide. | None |
+| Data Automation | Updates person and family information based on Data Integrity settings. To learn more about Data Integrity settings, see the [Data Integrity](#dataintegrity) chapter. | Every Tuesday at 4:00 am |
+| Database Maintenance | Performs routine SQL Server database maintenance. See the [Care and Feeding of Rock](#careandfeedingofrock) section for more information. | None |
+| Data View to Workflow | Starts a workflow for each entity in a specified Data View. | None |
+| Get National Change of Address (NCOA) | Triggers a comparison of addresses with the U.S. NCOA list, looking for people in your database whose addresses have changed. This job will trigger new lookups as you schedule them and will process the results after a lookup process is triggered. The lookup is actually a three part process (Export, Submit, Download/Process), which means the job must run three times in order to complete the full process. If your list of addresses is extremely small or extremely large, you may want to consider adjusting the run interval accordingly; it can take around five minutes for each thousand records the service processes (but that speed can vary based on many factors, obviously). | Every 25 minutes |
+| Get Scheduled Payments | This job downloads transactions from the payment gateway for any scheduled transactions. You can read more about this in the [Rock Solid Finances](https://community.rockrms.com/documentation/bookcontent/15#downloadingtransactions) manual. | None |
+| Giving Automation | This job updates giving classification attributes and Giving Journey stages. It also creates giving alerts. For more information check out the [Rock Solid Finances](https://community.rockrms.com/documentation/bookcontent/15#givingoverview) guide. | Every day at 10:00 pm |
+| Group Attendance Reporting | This job will create new Person attributes to track a person's _First Attended Date_, _Last Attended Date_, _Times Attended in Last 12 Months_ and/or _Times Attended in Last 16 Weeks_ for groups specified by a Data View. These attributes can be manually assigned categories and security as needed. This job considers all attendance in the specified groups, regardless of whether the person is currently an active member of the group. For more information see our [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupattendancereporting) guide. | None |
+| Group Leader Absence Notifications | This job sends an email to group leaders in the specified group type with a list of group members who haven't attended group meeting occurrences a specified number of times. See our [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupleaderabsencenotifications) guide for more information. | None |
+| Group Leader Pending Notifications | This job sends out emails to group leaders with pending notifications. You can read more about this in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupleaderpendingnotifications) manual. | None |
+| Group Sync | This job syncs any configured groups. You can read more about this in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupsync) manual. | None |
+| Index Entities (Universal Search Re-Index) | Re-indexes the selected entity types in Universal Search. See our [Universal Search](https://community.rockrms.com/documentation/bookcontent/32/) guide for more information. | Every day at 5:00 am |
+| Index Rock Site | Configures Rock to index a specified site. Includes the option to set login credentials to allow indexing of password-protected pages. | None |
+| Job Pulse | Runs continuously to help monitor the jobs engine. Don't disable this job. | Every 30 seconds |
+| Launch Workflow | Will start a new workflow of the type selected in the configuration. | None |
+| Location Services Verify | Attempts to standardize and geocode addresses that haven't been verified yet. It also attempts to re-verify addresses that failed in the past after a given wait period. | Every day at 3:00 am |
+| PBX CDR Download | This job downloads CDR information for the specified PBX component. | None |
+| Populate Interaction Session Data | If you've configured an IP address geocoding service and if you have _Log Page Views_ and _Enable Page View Geo Tracking_ enabled for your site, this job will geocode new `InteractionSessionLocation` records or link existing records to `InteractionSession` records. See the [Interactions](#ipaddressgeocoding) chapter for more details. | Every 10 minutes |
+| Process BI Analytics | This job takes care of schema changes (dynamic Attribute Value Fields) and data updates to Person analytic tables. To read more about BI and Rock, see the [Business Intelligence](https://community.rockrms.com/documentation/bookcontent/35/) guide. | Every day at 5:00 am |
+| Process Elevated Security | This job calculates each person's [Account Protection Profile](https://community.rockrms.com/documentation/bookcontent/5#accountprotectionprofiles) level. | Every day at 3:15 am |
+| Process Group History | Updates group history for enabled group types. To learn more about group history, see the [Group History](https://community.rockrms.com/documentation/bookcontent/7#grouphistory) chapter of the Rock Your Groups manual. | Every day at 3:30 am |
+| Process Workflows | Looks at all active workflows and runs the activities of those that are active. | Every 10 minutes |
+| Rock Cleanup | Runs a series of cleanup steps to manage the Rock database. You can change the settings for many of the steps, but we recommend keeping the defaults in most cases. For instance, you may want to enable _Fix Attendance Records Never Marked Present_ if you're using _Presence_ with Check-in. | Every day at 1:00 am |
+| Run SQL | This job simply runs a SQL script on a given schedule. This is helpful if you’d like to automate the changing of data on a certain schedule. | None |
+| Send Assessment Reminders | Sends reminders to persons with pending assessments if the created date/time is less than the calculated cutoff date and the last reminder date is greater than the calculated reminder date. See our [Assessments](https://community.rockrms.com/documentation/bookcontent/37/) guide for more information. | Every day at 8:00 am |
+| Send Attendance Reminders for Group Type | This job is used to remind group leaders to take attendance for the groups they lead, for groups of the specified type. You can read more about this job in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#sendattendanceremindersforgrouptype) manual. | Every day at 4:00 pm for the Small Group group type. |
+| Send Birthday Email | Sends an email to people in the database who have a birthday on that day. | None |
+| Send Communications | Sends out queued communications. Communications can be sent in serial or in parallel according to the _Parallel Communications_ setting. We don't recommend changing the number of allowed parallel communications without careful analysis of your bandwidth usage and limits.  
   
-See the [Communicating With Rock](https://community.rockrms.com/documentation/bookcontent/8/) guide for more information on working with communications in Rock.
-
-Every 10 minutes
-
-Send Credit Card Expiration Notices
-
-Notifies (by email) anyone with a scheduled credit card transaction that expires in the following month. It can also be configured to launch a custom workflow. You can read more about this in the [Rock Solid Finances](https://community.rockrms.com/documentation/bookcontent/15#expiringcreditcardnotification) manual.
-
-First of every month at 7:30 am
-
-Send Data View Email
-
-This job will send a System Communication of your choosing to the list of people returned by the selected Data View.
-
-None
-
-Send Following Events
-
-The Send Following Event Notification job sends out emails to specified individuals when following events occur. When you add a Following Event of the "Person Note Added" Following Event type, this job will take longer the first time it runs.  This initial run establishes "Last Notified" dates for followed people and their notes.
-
-At 7:00 am, Monday through Friday
-
-Send Following Suggestions
-
-The Send Following Suggestion Notification job calculates and sends following suggestions to people who are eligible for following.
-
-At 3:00 pm, Monday through Friday
-
-Send Group Attendance Digest
-
-This job sends an email containing a summary of attendance data for certain groups. The groups must be structured a specific way for this job to work, so be sure to check out the [Group Attendance Digest](https://community.rockrms.com/documentation/bookcontent/7#groupattendancedigest) section of our [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7/) guide for configuration instructions.
-
-None
-
-Send Group Attendance Reminders
-
-This job is used to remind group leaders to take attendance for the groups they lead, for groups of any type where the _Send Attendance Reminder_ option is enabled. You can read more about this job in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#sendgroupattendancereminders) manual.
-
-Every 15 minutes
-
-Send Group Email
-
-Sends out an email to the selected group's active members using the template you choose, with an option to include members of descendant groups. If a person is a member of multiple groups in the tree, they will receive an email for each group. This job works well for sending automated group email reminders.
-
-None
-
-Send Group Requirements Notification
-
-Sends out reminders to group leaders when group members don't meet all requirements. You can read more about this in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#grouprequirementjobs) manual.
-
-None
-
-Send Group Schedule Notifications
-
-Sends Group Scheduling Confirmation and Reminder emails to people that haven't been notified yet. See our [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupschedulingcommunications) guide for more information.
-
-Every day at 4:00 pm
-
-Send Note Notifications
-
-Sends out digest notifications of notes which have been added as a reply to watched notes, as well as notes which were added and require approval prior to being displayed.
-
-Every two hours
-
-Send Prayer Comments
-
-Sends comments added to prayer requests to the requestor. See our [Raising Up With Prayer](https://community.rockrms.com/documentation/bookcontent/11/) guide for more information.
-
-None
-
-Send Registration Payment Reminders
-
-The Event Payment Reminders job sends out payment reminders to the registration contacts when a balance is due. See the [Event and Calendar Guide](https://community.rockrms.com/documentation/bookcontent/29#registration-payment-reminders) for more information.
-
-None
-
-Send Registration Reminders
-
-Sends out reminders to registrants of upcoming events. You can read more about event registrations in the [Event and Calendar Guide](https://community.rockrms.com/documentation/bookcontent/29/).
-
-Every hour
-
-Send RSVP Reminders
-
-Sends a reminder to people who have accepted an RSVP invitation.
-
-None
-
-Spark Link
-
-This job fetches Rock notifications from the Spark Development Network.
-
-At 57 minutes past the hour, every seven hours
-
-Steps Automation
-
-When this job runs, new steps are created and completed for people in a Data View. The Data View is added to the Step Type configuration, so each Step Type may use a different Data View. This job respects the 'Allow Multiple' and 'Prerequisite Steps' configuration options of each Step Type.
-
-Every day at 4:00 am
-
-Sync Media
-
-Synchronizes media content from configured Media Accounts. This is how new Media Elements and folders are added to Rock after you've uploaded new content to your video provider.
-
-At 15 minutes past the hour, every two hours
-
-Update Persisted Datasets
-
-This job will update the persisted data in any Persisted Datasets that need to be refreshed.
-
-None
-
-Update Persisted Dataviews
-
-Runs Data Views marked as "persisted" and caches the results for much quicker data lookups.
-
-Every minute
-
-Update Personalization Data
-
-Updates the list of people in personalization segments. You can read more about personalization and personalization segments in our [Designing and Building Websites Using Rock](https://community.rockrms.com/documentation/bookcontent/14#personalization) manual.
-
-Every day at 1:20 am
+See the [Communicating With Rock](https://community.rockrms.com/documentation/bookcontent/8/) guide for more information on working with communications in Rock. | Every 10 minutes |
+| Send Credit Card Expiration Notices | Notifies (by email) anyone with a scheduled credit card transaction that expires in the following month. It can also be configured to launch a custom workflow. You can read more about this in the [Rock Solid Finances](https://community.rockrms.com/documentation/bookcontent/15#expiringcreditcardnotification) manual. | First of every month at 7:30 am |
+| Send Data View Email | This job will send a System Communication of your choosing to the list of people returned by the selected Data View. | None |
+| Send Following Events | The Send Following Event Notification job sends out emails to specified individuals when following events occur. When you add a Following Event of the "Person Note Added" Following Event type, this job will take longer the first time it runs.  This initial run establishes "Last Notified" dates for followed people and their notes. | At 7:00 am, Monday through Friday |
+| Send Following Suggestions | The Send Following Suggestion Notification job calculates and sends following suggestions to people who are eligible for following. | At 3:00 pm, Monday through Friday |
+| Send Group Attendance Digest | This job sends an email containing a summary of attendance data for certain groups. The groups must be structured a specific way for this job to work, so be sure to check out the [Group Attendance Digest](https://community.rockrms.com/documentation/bookcontent/7#groupattendancedigest) section of our [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7/) guide for configuration instructions. | None |
+| Send Group Attendance Reminders | This job is used to remind group leaders to take attendance for the groups they lead, for groups of any type where the _Send Attendance Reminder_ option is enabled. You can read more about this job in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#sendgroupattendancereminders) manual. | Every 15 minutes |
+| Send Group Email | Sends out an email to the selected group's active members using the template you choose, with an option to include members of descendant groups. If a person is a member of multiple groups in the tree, they will receive an email for each group. This job works well for sending automated group email reminders. | None |
+| Send Group Requirements Notification | Sends out reminders to group leaders when group members don't meet all requirements. You can read more about this in the [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#grouprequirementjobs) manual. | None |
+| Send Group Schedule Notifications | Sends Group Scheduling Confirmation and Reminder emails to people that haven't been notified yet. See our [Rock Your Groups](https://community.rockrms.com/documentation/bookcontent/7#groupschedulingcommunications) guide for more information. | Every day at 4:00 pm |
+| Send Note Notifications | Sends out digest notifications of notes which have been added as a reply to watched notes, as well as notes which were added and require approval prior to being displayed. | Every two hours |
+| Send Prayer Comments | Sends comments added to prayer requests to the requestor. See our [Raising Up With Prayer](https://community.rockrms.com/documentation/bookcontent/11/) guide for more information. | None |
+| Send Registration Payment Reminders | The Event Payment Reminders job sends out payment reminders to the registration contacts when a balance is due. See the [Event and Calendar Guide](https://community.rockrms.com/documentation/bookcontent/29#registration-payment-reminders) for more information. | None |
+| Send Registration Reminders | Sends out reminders to registrants of upcoming events. You can read more about event registrations in the [Event and Calendar Guide](https://community.rockrms.com/documentation/bookcontent/29/). | Every hour |
+| Send RSVP Reminders | Sends a reminder to people who have accepted an RSVP invitation. | None |
+| Spark Link | This job fetches Rock notifications from the Spark Development Network. | At 57 minutes past the hour, every seven hours |
+| Steps Automation | When this job runs, new steps are created and completed for people in a Data View. The Data View is added to the Step Type configuration, so each Step Type may use a different Data View. This job respects the 'Allow Multiple' and 'Prerequisite Steps' configuration options of each Step Type. | Every day at 4:00 am |
+| Sync Media | Synchronizes media content from configured Media Accounts. This is how new Media Elements and folders are added to Rock after you've uploaded new content to your video provider. | At 15 minutes past the hour, every two hours |
+| Update Persisted Datasets | This job will update the persisted data in any Persisted Datasets that need to be refreshed. | None |
+| Update Persisted Dataviews | Runs Data Views marked as "persisted" and caches the results for much quicker data lookups. | Every minute |
+| Update Personalization Data | Updates the list of people in personalization segments. You can read more about personalization and personalization segments in our [Designing and Building Websites Using Rock](https://community.rockrms.com/documentation/bookcontent/14#personalization) manual. | Every day at 1:20 am |
 
 Note
 ====

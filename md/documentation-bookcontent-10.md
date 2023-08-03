@@ -222,47 +222,22 @@ While Individual check-in is typically used for decentralized scenarios and Fami
 
 Let's talk about vocabulary. Feel free to revisit this section as you go through the manual to clarify the meanings of these terms.
 
-Term
-
-Definition
-
-Check-in Configurations
-
-A check-in configuration is what you start with when configuring check-in. All the settings are associated with a particular configuration. When you start a check-in kiosk, one of the first things you'll be asked is which check-in configuration to use. Examples of check-in configurations include Volunteer Check-In and Weekly Service Check-In (for kids).
-
-Areas
-
-This is a high-level collection of related check-in groups. Typically, these will match your organizational structure. Within an area, you'll probably have several groups that individuals can check into. Areas allow you to organize your groups into collections of similar groups. Example areas in the default configuration include: Nursery/Preschool, Elementary, Jr High and High School. For those who like to know how things work under the hood, areas are simply Rock group types. For everyone else, it’s ok... just keep the hood closed.
-
-Sub-Areas
-
-If needed you can create sub-areas, which act as a hierarchy of areas. Even though Rock allows it, we strongly encourage you to keep your structure simple. (Some of the largest organizations using Rock do so without the need for sub-areas.)
-
-Group
-
+| Term | Definition |
+| --- | --- |
+| Check-in Configurations | A check-in configuration is what you start with when configuring check-in. All the settings are associated with a particular configuration. When you start a check-in kiosk, one of the first things you'll be asked is which check-in configuration to use. Examples of check-in configurations include Volunteer Check-In and Weekly Service Check-In (for kids). |
+| Areas | This is a high-level collection of related check-in groups. Typically, these will match your organizational structure. Within an area, you'll probably have several groups that individuals can check into. Areas allow you to organize your groups into collections of similar groups. Example areas in the default configuration include: Nursery/Preschool, Elementary, Jr High and High School. For those who like to know how things work under the hood, areas are simply Rock group types. For everyone else, it’s ok... just keep the hood closed. |
+| Sub-Areas | If needed you can create sub-areas, which act as a hierarchy of areas. Even though Rock allows it, we strongly encourage you to keep your structure simple. (Some of the largest organizations using Rock do so without the need for sub-areas.) |
+| Group | 
 This is the classification unit that a person checks into. A newborn would be checked into the _Infants_ group while a second-grader would be checked into the _Grades 2-3_ group. Note that these are just examples. You can easily customize your groups.
 
 Deeper Knowledge: while classification units are called groups, and they are actual Rock groups under the hood, individuals are not added as group members when they check in, since their relationship with the group is not permanent.
 
-Locations
-
-If a group is _what_ someone checks into, the location is _where_. In most cases this will be a room. Specifying locations makes sense for larger organizations that might have multiple rooms for each group.
-
-Service Schedule
-
-Groups tell us _what_, locations tell us _where_, and the schedule tells us _when_. Starting to understand the structure? Again, this makes sense if you consider that most churches have multiple services.
-
-Labels
-
-In most check-in scenarios, you'll want to print out some form of label or tag. These might be used for a nametag or a check-in/check-out token. Rock allows you to print as many (or few) labels as you want. It's also easy to customize these labels to your liking.
-
-Kiosk
-
-A kiosk is the device that is used to process the check-in.
-
-Printer
-
-The printer is what prints the labels. Rock allows you to configure where and how these labels get printed. More on that later...
+ |
+| Locations | If a group is _what_ someone checks into, the location is _where_. In most cases this will be a room. Specifying locations makes sense for larger organizations that might have multiple rooms for each group. |
+| Service Schedule | Groups tell us _what_, locations tell us _where_, and the schedule tells us _when_. Starting to understand the structure? Again, this makes sense if you consider that most churches have multiple services. |
+| Labels | In most check-in scenarios, you'll want to print out some form of label or tag. These might be used for a nametag or a check-in/check-out token. Rock allows you to print as many (or few) labels as you want. It's also easy to customize these labels to your liking. |
+| Kiosk | A kiosk is the device that is used to process the check-in. |
+| Printer | The printer is what prints the labels. Rock allows you to configure where and how these labels get printed. More on that later... |
 
 [](#individualandfamilycheckininrock)Individual and Family Check-In in Rock
 ===========================================================================
@@ -364,37 +339,17 @@ Let’s ramp this up another notch and look at the types of customization you ca
 
 We've mentioned several times that Rock lets you customize the check-in process in powerful ways. Here are some details on the different ways you can customize the system and the level of effort needed for each.
 
-Type
-
-Level of Effort
-
-Description
-
-Area, Group and Schedule Structure
-
-Easy
-
-In all likelihood no two organizations will have the same areas, groups and schedules for their check-in. Rock's check-in configuration tools make these changes a simple process.
-
-Labels
-
-Easy/Moderate
-
-Depending on the type of customization required, labels can be easy or a bit tricky. Most of this depends on the level of graphics required for your labels. Read [below](#creatingcustomlabels) for a deeper discussion about how to modify the labels.
-
-Look and Feel
-
-Moderate
-
-While Rock ships with several different check-in themes, you can add your own with some basic knowledge of HTML/CSS and Less.
-
-Workflow Process
-
-Difficult (but possible)
-
+| Type | Level of Effort | Description |
+| --- | --- | --- |
+| Area, Group and Schedule Structure | Easy | In all likelihood no two organizations will have the same areas, groups and schedules for their check-in. Rock's check-in configuration tools make these changes a simple process. |
+| Labels | Easy/Moderate | Depending on the type of customization required, labels can be easy or a bit tricky. Most of this depends on the level of graphics required for your labels. Read [below](#creatingcustomlabels) for a deeper discussion about how to modify the labels. |
+| Look and Feel | Moderate | While Rock ships with several different check-in themes, you can add your own with some basic knowledge of HTML/CSS and Less. |
+| Workflow Process | Difficult (but possible) | 
 Rock's check-in process runs on top of the workflow engine. The check-in workflow handles actions such as selecting families from the entered phone number and selecting rooms that match the chosen family member. Each step of the check-in process is controlled by a workflow activity or action. You can customize workflows to do certain tasks, such as checking room balance based on last name or family address. These types of changes do require deep knowledge of the workflow engine (and possibly of writing custom code).
 
 The out-of-the-box workflow is based on over 30 years of check-in experience through first-hand work with lots of organizations. It should fit the needs of all but a few. If you feel that you are one that needs something different, you might confirm that the reasoning is based on strategy, not preference. If it's strategic in nature, you might consider engaging a Rock consultant to assist you with the configuration and custom coding.
+
+ |
 
 [](#sampleconfigurations)Sample Configurations
 ==============================================
@@ -802,29 +757,13 @@ Now that we have many of the details covered, we can schedule the locations and 
 
 Out-of-the-box, Rock comes with a standard set of labels for use with check-in. There are two different types of labels: plain-text and icon-based. The icon-based labels, while more attractive, require that you install a specific font on each of your printers. This really isn’t hard (we walk you through it below), but some organizations may want to keep it simple and stick with the plain-text labels. Each of these labels is discussed below, with some notes on their usage.
 
-Label Description
-
-Sample
-
-**Child Label (Plain Text):** This is the label that will be placed on the child. This is a plain-text version that does not require installing the rockcheckin.ttf font on each printer.
-
-![Child Label Plain-Text](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-child-text.png)
-
-**Child Label (Icons):** This is an icon version of the child check-in label.
-
-![Child Label](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-child.png)
-
-**Note Label:** This label highlights any allergy or legal notes as well as providing a place for writing custom notes.
-
-![Note Label](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-notes.png)
-
-**Parent Label:** This is the label that will be handed to the parents at check-in to be used as a token for checking the child out.
-
-![Parents Label](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-parents.png)
-
-**Name Tag:** This label can be used as a name tag for volunteer or event check-in.
-
-![Name Tag](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-name-tag.png)
+| Label Description | Sample |
+| --- | --- |
+| **Child Label (Plain Text):** This is the label that will be placed on the child. This is a plain-text version that does not require installing the rockcheckin.ttf font on each printer. | ![Child Label Plain-Text](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-child-text.png) |
+| **Child Label (Icons):** This is an icon version of the child check-in label. | ![Child Label](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-child.png) |
+| **Note Label:** This label highlights any allergy or legal notes as well as providing a place for writing custom notes. | ![Note Label](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-notes.png) |
+| **Parent Label:** This is the label that will be handed to the parents at check-in to be used as a token for checking the child out. | ![Parents Label](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-parents.png) |
+| **Name Tag:** This label can be used as a name tag for volunteer or event check-in. | ![Name Tag](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/label-name-tag.png) |
 
 A Note On First Visit
 =====================
@@ -2270,43 +2209,11 @@ Rock ships with several other _Known Relationships_ such as grandparent, step-pa
 
 The easiest way to run Rock's check-in system is to simply open a web browser on a desktop or tablet and navigate to http://\[yourserver\]/checkin. Rock also provides a native iPad application and a Windows application. Let's explore the different strengths of these three platforms.
 
-Platform
-
-Print From Server
-
-Local Network Printing
-
-Local USB Printing
-
-Bluetooth printing
-
-Notes
-
-Browser-Based
-
-X
-
-The easiest method for running check-in, but all printing must be done from the server. (This will only work if your server is on the same network as the printers.)
-
-iPad Application
-
-X
-
-X
-
-X
-
-This application is available for free from the [Apple App Store](https://itunes.apple.com/us/app/rock-check-in/id879253336?mt=8). The application provides a simple tablet interface to the Rock check-in system. It also allows you to print directly from the iPad to a networked printer, allowing the server to be hosted remotely.
-
-Windows Application
-
-X
-
-X
-
-X
-
-The Windows check-in application can be downloaded from Admin Tools > Power Tools > External Applications. This application allows you to print to a USB-connected printer as well as network-based printers.
+| Platform | Print From Server | Local Network Printing | Local USB Printing | Bluetooth printing | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Browser-Based | X |  |  |  | The easiest method for running check-in, but all printing must be done from the server. (This will only work if your server is on the same network as the printers.) |
+| iPad Application | X | X |  | X | This application is available for free from the [Apple App Store](https://itunes.apple.com/us/app/rock-check-in/id879253336?mt=8). The application provides a simple tablet interface to the Rock check-in system. It also allows you to print directly from the iPad to a networked printer, allowing the server to be hosted remotely. |
+| Windows Application | X | X | X |  | The Windows check-in application can be downloaded from Admin Tools > Power Tools > External Applications. This application allows you to print to a USB-connected printer as well as network-based printers. |
 
 Externally Hosted Servers
 =========================
@@ -2343,45 +2250,17 @@ iPad Configuration
 
 ![iPad Configuration](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/ipad-app-settings-v11.png)
 
-Setting
-
-Description
-
-Check-in Address
-
-This is the initial page that will load when the application launches.
-
-Enable Label Caching
-
-This setting will cache the loading of check-in labels, which keeps them from being downloaded on each check-in.
-
-Cache Duration
-
-This determines how often the labels will be re-downloaded. The cache can also be expired by stopping the application and restarting.
-
-Enable Label Cutting
-
-If your label printer has a cutter, enable this feature to automatically perform cuts at the end of each set of labels. See the [Printing](#printing) chapter above for more information.
-
-Printer Override
-
-This setting has the effect of always printing from the iPad to the printer IP address you provide.
-
-Bluetooth Printing
-
-Determines if the Printer Override setting contains a Bluetooth printer name or an IP address for Wi-Fi printing.
-
-Enable in Application Settings
-
-Enables or disables the 5-finger long press gesture to get to the in-app settings screen. You can also change how long a person needs to press before the settings screen appears.
-
-UI Colors
-
-You can easily customize the background and foreground colors of the interface by adjusting these settings.
-
-Camera
-
-Select whether the iPad should use the front or the rear camera for scanning barcodes. You can also adjust the exposure if the image is too bright or too dark. See the [iPad Barcode Scanning](#ipadbarcodescanning) section below for details on enabling this feature.
+| Setting | Description |
+| --- | --- |
+| Check-in Address | This is the initial page that will load when the application launches. |
+| Enable Label Caching | This setting will cache the loading of check-in labels, which keeps them from being downloaded on each check-in. |
+| Cache Duration | This determines how often the labels will be re-downloaded. The cache can also be expired by stopping the application and restarting. |
+| Enable Label Cutting | If your label printer has a cutter, enable this feature to automatically perform cuts at the end of each set of labels. See the [Printing](#printing) chapter above for more information. |
+| Printer Override | This setting has the effect of always printing from the iPad to the printer IP address you provide. |
+| Bluetooth Printing | Determines if the Printer Override setting contains a Bluetooth printer name or an IP address for Wi-Fi printing. |
+| Enable in Application Settings | Enables or disables the 5-finger long press gesture to get to the in-app settings screen. You can also change how long a person needs to press before the settings screen appears. |
+| UI Colors | You can easily customize the background and foreground colors of the interface by adjusting these settings. |
+| Camera | Select whether the iPad should use the front or the rear camera for scanning barcodes. You can also adjust the exposure if the image is too bright or too dark. See the [iPad Barcode Scanning](#ipadbarcodescanning) section below for details on enabling this feature. |
 
 Bluetooth Printing
 ------------------
@@ -2479,29 +2358,13 @@ Configuration
 
 After running the setup application, you'll have a Rock Check-in icon in your Start Menu and on your desktop. When you launch the application, you'll see the settings screen. Unlike the iPad application you'll see this screen on every launch, but the settings you select will be remembered for you. Below is a summary of these settings.
 
-Setting
-
-Description
-
-Check-in Address
-
-This is the initial page that will load when the application launches.
-
-Enabling Label Caching
-
-This setting will cache the loading of check-in labels, which keeps them from being downloaded on each check-in.
-
-Cache Duration
-
-This determines how often the labels will be re-downloaded. The cache can also be expired by stopping the application and restarting.
-
-Printer Override
-
-This setting has the effect of always printing from the device to the printer IP address entered here.
-
-Printer List
-
-Under the _Printer Override_ setting you will see a list of local printers configured in Windows. This allows you to print directly to a USB printer.
+| Setting | Description |
+| --- | --- |
+| Check-in Address | This is the initial page that will load when the application launches. |
+| Enabling Label Caching | This setting will cache the loading of check-in labels, which keeps them from being downloaded on each check-in. |
+| Cache Duration | This determines how often the labels will be re-downloaded. The cache can also be expired by stopping the application and restarting. |
+| Printer Override | This setting has the effect of always printing from the device to the printer IP address entered here. |
+| Printer List | Under the _Printer Override_ setting you will see a list of local printers configured in Windows. This allows you to print directly to a USB printer. |
 
 QR Code Scanning
 ================
@@ -2914,7 +2777,7 @@ Make sure that the check-in kiosk you are using is configured for the location y
 [](#configuringnewgrouptypesforcheckin)Configuring New Group Types for Check-in
 ===============================================================================
 
-Now that you've seen the power of the dark-side how serving groups can check in, we bet you're wondering how to configure other group types for check-in. Just follow these steps.
+Now that you've seen ~the power of the dark-side~ how serving groups can check in, we bet you're wondering how to configure other group types for check-in. Just follow these steps.
 
 Configuring A New Group Type For Check-In
 
@@ -3843,35 +3706,7 @@ The person checking in can see the prior achievements they’ve earned and how m
 
 How a celebration is displayed is built into each check-in theme. Each core theme that ships with Rock has its own celebration, as detailed below. Each celebration has both an animation and a sound effect, giving the person something to see and hear. Your custom themes will need to implement their own celebrations using CSS and JavaScript.
 
-![Adventure Kids](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/adventure-celebration-v13.png)
-
-**Adventure Kids Theme**  
-Watch out for the lion that jumps across the screen with a mighty roar!
-
-![Aero](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/aero-celebration-v13.png)
-
-**Aero Theme**  
-See a colorful display of confetti bursting from the screen as trumpets proclaim the achievement has been earned.
-
-![Blue Crystal](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/blue-crystal-celebration-v13.png)
-
-**Blue Crystal Theme**  
-Watch as blue and white confetti falls to the sound of majestic trumpets.
-
-![Electric](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/electric-light-celebration-v13.png)
-
-**Electric Theme**  
-A burst of multi-colored confetti rains down the screen as trumpets play to celebrate the achievement.
-
-![Electric (Dark Mode)](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/electric-celebration-v13.png)
-
-**Electric Theme (Dark Mode)**  
-Trumpets sound as a flurry of blue and white confetti pops from the screen.
-
-![Park](https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/park-celebration-v13.png)
-
-**Park Theme**  
-Balloons of many different colors float up the screen while trumpets play.
+<table><tbody><tr><td><figure><a href="" class="book-image"><img src="https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/adventure-celebration-v13.png" alt="Adventure Kids"></a></figure></td><td style="vertical-align:middle ; padding:15px"><strong>Adventure Kids Theme</strong><br>Watch out for the lion that jumps across the screen with a mighty roar!</td></tr><tr><td><figure><a href="" class="book-image"><img src="https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/aero-celebration-v13.png" alt="Aero"></a></figure></td><td style="vertical-align:middle ; padding:15px"><strong>Aero Theme</strong><br>See a colorful display of confetti bursting from the screen as trumpets proclaim the achievement has been earned.</td></tr><tr><td><figure><a href="" class="book-image"><img src="https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/blue-crystal-celebration-v13.png" alt="Blue Crystal"></a></figure></td><td style="vertical-align:middle ; padding:15px"><strong>Blue Crystal Theme</strong><br>Watch as blue and white confetti falls to the sound of majestic trumpets.</td></tr><tr><td><figure><a href="" class="book-image"><img src="https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/electric-light-celebration-v13.png" alt="Electric"></a></figure></td><td style="vertical-align:middle ; padding:15px"><strong>Electric Theme</strong><br>A burst of multi-colored confetti rains down the screen as trumpets play to celebrate the achievement.</td></tr><tr><td><figure><a href="" class="book-image"><img src="https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/electric-celebration-v13.png" alt="Electric (Dark Mode)"></a></figure></td><td style="vertical-align:middle ; padding:15px"><strong>Electric Theme (Dark Mode)</strong><br>Trumpets sound as a flurry of blue and white confetti pops from the screen.</td></tr><tr><td><figure><a href="" class="book-image"><img src="https://rockrms.blob.core.windows.net/documentation/Books/10/1.15.0/images/park-celebration-v13.png" alt="Park"></a></figure></td><td style="vertical-align:middle ; padding:15px"><strong>Park Theme</strong><br>Balloons of many different colors float up the screen while trumpets play.</td></tr></tbody></table>
 
   
 

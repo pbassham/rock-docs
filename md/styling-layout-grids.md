@@ -24,53 +24,15 @@ Grid Options
 
 Rock’s grid system can adapt across all four default breakpoints. The four default grid tiers are as follow:
 
-**xs** <768px
-
-**sm** ≥768px
-
-**md** ≥992px
-
-**lg** ≥1200px
-
-Container width
-
-None (auto)
-
-750px
-
-970px
-
-1170px
-
-Class prefix
-
-`.col-xs-`
-
-`.col-sm-`
-
-`.col-md-`
-
-`.col-lg-`
-
-\# of columns
-
-12
-
-Gutter width
-
-30px (15px on left and right)
-
-Nestable
-
-Yes
-
-Offsets
-
-Yes
-
-Column ordering
-
-Yes
+|  | **xs** <768px | **sm** ≥768px | **md** ≥992px | **lg** ≥1200px |
+| --- | --- | --- | --- | --- |
+| Container width | None (auto) | 750px | 970px | 1170px |
+| Class prefix | `.col-xs-` | `.col-sm-` | `.col-md-` | `.col-lg-` |
+| \# of columns | 12 |
+| Gutter width | 30px (15px on left and right) |
+| Nestable | Yes |
+| Offsets | Yes |
+| Column ordering | Yes |
 
 ### Grid Examples
 

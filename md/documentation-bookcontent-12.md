@@ -2348,45 +2348,17 @@ The out-of-the-box workflow entry page is configured with the route of http://yo
 
 When working with workflows and attributes, it's helpful (actually it's pretty much essential) to know how those attributes store their values. Below is a list of a few commonly used attribute field types, with a description of how the value is stored internally.
 
-Field Type
-
-Stored Value
-
-Boolean
-
-'True' or 'False'
-
-Campus
-
-A campus's GUID
-
-Defined Value
-
-A comma-delimited list of defined value GUIDs (if attribute is not configured for multiple values, there should only be one GUID)
-
-Group
-
-A group's GUID
-
-Group Member
-
-A GroupMember Record's GUID
-
-Multi-Select
-
-A comma-delimited list of the values (e.g., 1,2,3) of the selected items
-
-Person
-
-A person alias GUID
-
-Single-Select
-
-The value (e.g., "1") of the selected item
-
-Text
-
-The value of the textbox
+| Field Type | Stored Value |
+| --- | --- |
+| Boolean | 'True' or 'False' |
+| Campus | A campus's GUID |
+| Defined Value | A comma-delimited list of defined value GUIDs (if attribute is not configured for multiple values, there should only be one GUID) |
+| Group | A group's GUID |
+| Group Member | A GroupMember Record's GUID |
+| Multi-Select | A comma-delimited list of the values (e.g., 1,2,3) of the selected items |
+| Person | A person alias GUID |
+| Single-Select | The value (e.g., "1") of the selected item |
+| Text | The value of the textbox |
 
   
 
@@ -2532,60 +2504,16 @@ Don't add an attribute called `FromPhone` to the Workflow action in the pipeline
 The table below lists other merge fields you can use to pass different types of information from the pipeline to your workflow's attributes.
 
 SMS Pipeline Lava Merge Fields
-
-Merge Field
-
-Description
-
-Field Type
-
-{{ FromPerson.PrimaryAlias.Guid }}
-
-The pipeline uses the person's phone number to look up the first person with that phone number. If it finds a match, it assigns that individual's record to FromPerson. If the phone number is used in more than one profile, the pipeline defaults to the first record of an adult with children.
-
-Person
-
-{{ FromPhone }}
-
-The person's phone number, pulled from the inbound message, from the SMS gateway. This will automatically get added to the workflow as FromPhone and will include the country code (i.e., the raw phone number 18645555555).
-
-Phone Number
-
-{{ ToPhone }}
-
-The SMS gateway number where the message was sent
-
-Phone Number
-
-{{ ReceivedDate }}
-
-The date the message was received.
-
-Date
-
-{{ ReceivedTime }}
-
-The time the message was received.
-
-Time
-
-{{ ReceivedDateTime }}
-
-The date and time the message was received.
-
-Date Time
-
-{{ MessageBody }}
-
-The content of the SMS message that was received.
-
-Text or Memo
-
-{{ MatchedGroups }}
-
-If the RegEx expression provided contains matched groups, they are loaded into an array here. This is an advanced feature, so if you’re not sure what this means, don’t worry. You probably don’t need it.
-
-Typically, you fill in a text field with a merge expression of a single result from the MatchedGroups array.
+| Merge Field | Description | Field Type |
+| --- | --- | --- |
+| {{ FromPerson.PrimaryAlias.Guid }} | The pipeline uses the person's phone number to look up the first person with that phone number. If it finds a match, it assigns that individual's record to FromPerson. If the phone number is used in more than one profile, the pipeline defaults to the first record of an adult with children. | Person |
+| {{ FromPhone }} | The person's phone number, pulled from the inbound message, from the SMS gateway. This will automatically get added to the workflow as FromPhone and will include the country code (i.e., the raw phone number 18645555555). | Phone Number |
+| {{ ToPhone }} | The SMS gateway number where the message was sent | Phone Number |
+| {{ ReceivedDate }} | The date the message was received. | Date |
+| {{ ReceivedTime }} | The time the message was received. | Time |
+| {{ ReceivedDateTime }} | The date and time the message was received. | Date Time |
+| {{ MessageBody }} | The content of the SMS message that was received. | Text or Memo |
+| {{ MatchedGroups }} | If the RegEx expression provided contains matched groups, they are loaded into an array here. This is an advanced feature, so if you’re not sure what this means, don’t worry. You probably don’t need it. | Typically, you fill in a text field with a merge expression of a single result from the MatchedGroups array. |
 
 [](#usingattributesettoinitiator)Using Attribute Set to Initiator
 =================================================================

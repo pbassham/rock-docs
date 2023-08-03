@@ -139,9 +139,7 @@ At the top of this page, you'll see a few details about the provider you selecte
 
 To enable a new entity type, click the row of the entity and select Enable Indexing on the dialog that pops up. This entity is now enabled for Universal Search and a request has been queued to bulk index this entity.
 
-This button will do a bulk re-index of all the documents.
-
-This button will delete the index and re-create it. This is good if you want to ensure all of the previous attributes have been purged from the index.
+<table class="table table-bordered"><tbody><tr><td><span class="btn btn-sm"><i class="fa fa-download"></i></span></td><td>This button will do a bulk re-index of all the documents.</td></tr><tr><td><span class="btn btn-sm"><i class="fa fa-refresh"></i></span></td><td>This button will delete the index and re-create it. This is good if you want to ensure all of the previous attributes have been purged from the index.</td></tr></tbody></table>
 
 [](#keepingentitiesinsync)Keeping Entities in Sync
 ==================================================

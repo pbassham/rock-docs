@@ -27,41 +27,7 @@ Below is the basic usage pattern for 'if' conditions.
 
 The if statement takes the following operators:
 
-\==
-
-equals
-
-!=
-
-not equal
-
-\>
-
-greater than
-
-<
-
-less than
-
-\>=
-
-greater than or equal
-
-<=
-
-less than or equal
-
-or
-
-condition A **or** condition B
-
-and
-
-condition A **and** condition B
-
-contains
-
-checks for the presence of a substring inside a string
+<table class="table table-striped"><tbody><tr><td>==</td><td>equals</td></tr><tr><td>!=</td><td>not equal</td></tr><tr><td>&gt;</td><td>greater than</td></tr><tr><td>&lt;</td><td>less than</td></tr><tr><td>&gt;=</td><td>greater than or equal</td></tr><tr><td>&lt;=</td><td>less than or equal</td></tr><tr><td>or</td><td>condition A <strong>or</strong> condition B</td></tr><tr><td>and</td><td>condition A <strong>and</strong> condition B</td></tr><tr><td>contains</td><td>checks for the presence of a substring inside a string</td></tr></tbody></table>
 
 Checking for Things That Don't Exist
 ------------------------------------

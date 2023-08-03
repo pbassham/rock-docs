@@ -1166,70 +1166,23 @@ Out of the box, the directory is configured to display a simple search screen. H
 That's not all this block can do though. Let's check out all the features found under the block settings.
 
 Block Settings
-
-Setting
-
-Description
-
-Data View
-
-The results of the directory are driven by a provided Data View. This gives you the power to use the block in many different ways. You may implement it to show _All Members and Attendees_ (which is the default) or perhaps limit it to group leaders, or youth. The sky's the limit.
-
-Opt-out Group
-
-The block allows people to opt out of being shown in the directory. This setting allows you to configure the group that will hold those who wish to opt-out.
-
-Show By
-
-Here you have the option to show the results as individuals or as families.
-
-Show All People
-
-This setting determines if all people should be displayed when the page is loaded or if the person viewing the page will need to first search to find the results.
-
-Person Profile Page
-
-Adding a page to this field will change people’s names into links when viewing the directory search results. Clicking a person’s name will then take you to the specified page.
-
-First Name Characters Required
-
-This setting determines the minimum number of characters that need to be entered in the _First Name_ field for searching. These types of limits are helpful if you'd like people to be able to find people but not be able to see or print the entire list.
-
-Last Name Characters Required
-
-Like the first name setting, but for the last name.
-
-Show Email
-
-This setting determines whether the email field should be displayed.
-
-Show Address
-
-This setting determines whether the address field should be displayed.
-
-Show Phones
-
-This setting determines which phone types should be displayed.
-
-Show Birthday
-
-Determines if the birthdate field should be shown. If shown, only the month/day will be displayed.
-
-Show Gender
-
-This setting determines whether the gender field should be shown.
-
-Show Grade
-
-This setting determines whether the grade field should be shown.
-
-Show Envelope Number
-
-If applicable (see [Rock Solid Finances](https://community.rockrms.com/documentation/bookcontent/15#givingenvelopes)) you can select to have a person’s envelope number shown.
-
-Max Results
-
-You can limit the max number of results to display with this setting. This keeps your server from crashing if you have hundreds of thousands of records.
+| Setting | Description |
+| --- | --- |
+| Data View | The results of the directory are driven by a provided Data View. This gives you the power to use the block in many different ways. You may implement it to show _All Members and Attendees_ (which is the default) or perhaps limit it to group leaders, or youth. The sky's the limit. |
+| Opt-out Group | The block allows people to opt out of being shown in the directory. This setting allows you to configure the group that will hold those who wish to opt-out. |
+| Show By | Here you have the option to show the results as individuals or as families. |
+| Show All People | This setting determines if all people should be displayed when the page is loaded or if the person viewing the page will need to first search to find the results. |
+| Person Profile Page | Adding a page to this field will change people’s names into links when viewing the directory search results. Clicking a person’s name will then take you to the specified page. |
+| First Name Characters Required | This setting determines the minimum number of characters that need to be entered in the _First Name_ field for searching. These types of limits are helpful if you'd like people to be able to find people but not be able to see or print the entire list. |
+| Last Name Characters Required | Like the first name setting, but for the last name. |
+| Show Email | This setting determines whether the email field should be displayed. |
+| Show Address | This setting determines whether the address field should be displayed. |
+| Show Phones | This setting determines which phone types should be displayed. |
+| Show Birthday | Determines if the birthdate field should be shown. If shown, only the month/day will be displayed. |
+| Show Gender | This setting determines whether the gender field should be shown. |
+| Show Grade | This setting determines whether the grade field should be shown. |
+| Show Envelope Number | If applicable (see [Rock Solid Finances](https://community.rockrms.com/documentation/bookcontent/15#givingenvelopes)) you can select to have a person’s envelope number shown. |
+| Max Results | You can limit the max number of results to display with this setting. This keeps your server from crashing if you have hundreds of thousands of records. |
 
   
 
@@ -1992,29 +1945,13 @@ Each of these settings is a _Defined Type_. You can add new values for each of t
 
 The _Connection Status_ helps categorize a person’s relationship to your organization. While many organizations will want to modify these options, the following statuses are available immediately after installation.
 
-Status
-
-Typical Usage
-
-Member
-
-This individual has completed all requirements established by your organization to become a member.
-
-Attendee
-
-While not a member, this person is a consistently active participant in your organization’s services and/or events.
-
-Visitor
-
-This status is used when a person first enters through your first-time visitor process. As they continue to attend, they will become an attendee and possibly a member.
-
-Participant
-
-A participant is indirectly involved with your organization. For example, if a family is part of a church’s youth sports program but doesn't attend that church, they would be entered into Rock as participants.
-
-Prospect
-
-Prospect is the default status given to any record that's added from the website. Watch out for duplicate records with these!
+| Status | Typical Usage |
+| --- | --- |
+| Member | This individual has completed all requirements established by your organization to become a member. |
+| Attendee | While not a member, this person is a consistently active participant in your organization’s services and/or events. |
+| Visitor | This status is used when a person first enters through your first-time visitor process. As they continue to attend, they will become an attendee and possibly a member. |
+| Participant | A participant is indirectly involved with your organization. For example, if a family is part of a church’s youth sports program but doesn't attend that church, they would be entered into Rock as participants. |
+| Prospect | Prospect is the default status given to any record that's added from the website. Watch out for duplicate records with these! |
 
   
 
@@ -2161,73 +2098,24 @@ OK, this is where it gets fun. Rock allows you to store different types of data.
 
 Let’s take a look at some field types and see how they can be used.
 
-Field Type
-
-Description
-
-Boolean
-
-That’s just a fancy term for True/False. Use this for situations where the options are Yes or No, Done or Not Done. For instance, the _Baptized Here_ attribute that comes with Rock is a Boolean. You were either baptized here or you weren’t.
-
-Campus
-
-Don’t use this to denote which campus someone attends. There's already a common element for that. Instead, this might be used to track which campus someone started attending or where they were baptized. Each of these could be different than their current campus selection.
-
-Campuses
-
-This allows you to pick several campuses as the value of the attribute. Perhaps you could use this to track every campus they have ever attended.
-
-Date
-
-You can probably guess what this does and how to use it.
-
-Date Range
-
-Tracks a start and end date.
-
-Decimal
-
-Stores a number with a fractional value.
-
-Defined Value
-
-Defined values are reusable lists of valid values. _Marital Status_, _Phone Type_ and _Record Status_ are all examples of defined value lists. You can use any of the pre-defined defined types or create your own. You can read more about defined types/values in the [Rock Admin Hero Guide](https://community.rockrms.com/documentation/bookcontent/9#definedtypes).
-
-File
-
-Allows you to upload a document into the person attribute. This is helpful for storing scanned copies of signed membership covenants or other documents you want to keep on hand. If you think you’ll be uploading a lot of documents of a specific type, you might consider adding a new _File Type_. You can read more about this in the [Rock Admin Hero Guide](https://community.rockrms.com/documentation/bookcontent/9#filetypes). When considering storing files in Rock keep in mind the storage implications of the files you’ll be adding to the system.
-
-HTML
-
-Allows you to store a fragment of HTML that's specific to the person attribute. While this is uncommon, it's useful in some cases.
-
-Integer
-
-Stores a whole number (no fractions or decimals).
-
-Memo
-
-A larger text field for entering multiple lines of text.
-
-Multi-Select
-
-Allows you to specify a list of values that multiple items can be selected from. You define the list of values by passing in a comma-separated list of items (Red, Blue, Green). You can also choose to store a separate value than the label by using the notation _Value^Text_ (1^Red, 2^Blue, 3^Green). The items will be displayed as a checkbox list.
-
-Person
-
-Allows you to tie the person attribute to a specific person. Be sure to consider using known relationships before adding a person attribute with a field type of _Person_ as they are often a better solution.
-
-Single Select
-
-Are very similar to the multi-select field type but only allow a single value to be selected. The single select field type has the added option of displaying the list as either a radio list or dropdown select.
-
-Text
-
-A simple single line of text.
-
-Time
-
-Allows for the entry of time to a person attribute.
+| Field Type | Description |
+| --- | --- |
+| Boolean | That’s just a fancy term for True/False. Use this for situations where the options are Yes or No, Done or Not Done. For instance, the _Baptized Here_ attribute that comes with Rock is a Boolean. You were either baptized here or you weren’t. |
+| Campus | Don’t use this to denote which campus someone attends. There's already a common element for that. Instead, this might be used to track which campus someone started attending or where they were baptized. Each of these could be different than their current campus selection. |
+| Campuses | This allows you to pick several campuses as the value of the attribute. Perhaps you could use this to track every campus they have ever attended. |
+| Date | You can probably guess what this does and how to use it. |
+| Date Range | Tracks a start and end date. |
+| Decimal | Stores a number with a fractional value. |
+| Defined Value | Defined values are reusable lists of valid values. _Marital Status_, _Phone Type_ and _Record Status_ are all examples of defined value lists. You can use any of the pre-defined defined types or create your own. You can read more about defined types/values in the [Rock Admin Hero Guide](https://community.rockrms.com/documentation/bookcontent/9#definedtypes). |
+| File | Allows you to upload a document into the person attribute. This is helpful for storing scanned copies of signed membership covenants or other documents you want to keep on hand. If you think you’ll be uploading a lot of documents of a specific type, you might consider adding a new _File Type_. You can read more about this in the [Rock Admin Hero Guide](https://community.rockrms.com/documentation/bookcontent/9#filetypes). When considering storing files in Rock keep in mind the storage implications of the files you’ll be adding to the system. |
+| HTML | Allows you to store a fragment of HTML that's specific to the person attribute. While this is uncommon, it's useful in some cases. |
+| Integer | Stores a whole number (no fractions or decimals). |
+| Memo | A larger text field for entering multiple lines of text. |
+| Multi-Select | Allows you to specify a list of values that multiple items can be selected from. You define the list of values by passing in a comma-separated list of items (Red, Blue, Green). You can also choose to store a separate value than the label by using the notation _Value^Text_ (1^Red, 2^Blue, 3^Green). The items will be displayed as a checkbox list. |
+| Person | Allows you to tie the person attribute to a specific person. Be sure to consider using known relationships before adding a person attribute with a field type of _Person_ as they are often a better solution. |
+| Single Select | Are very similar to the multi-select field type but only allow a single value to be selected. The single select field type has the added option of displaying the list as either a radio list or dropdown select. |
+| Text | A simple single line of text. |
+| Time | Allows for the entry of time to a person attribute. |
 
   
 
@@ -2452,35 +2340,12 @@ It's possible that a family can start and stop being an eRA multiple times. To h
 
 Would it concern you if someone who has had regular activity in the past suddenly becomes irregular? Of course it would! You’d probably want to be notified or send them a communication, right? Well, we’ve thought of that for you. The _Family Analytics_ job can be configured to launch a new workflow (you’ll still need to create the workflow) anytime a family enters or exits from being an eRA. To help simplify your workflow, the job will pass in the following information:
 
-Attribute Key
-
-Attribute Type
-
-Description
-
-Family
-
-Group
-
-This is a reference to the family group who has entered or exited.
-
-HeadOfHouse
-
-Person
-
-The head of the household of the family.
-
-Spouse
-
-Person
-
-The spouse of the family (could be empty).
-
-Campus
-
-Campus
-
-The home campus of the family.
+| Attribute Key | Attribute Type | Description |
+| --- | --- | --- |
+| Family | Group | This is a reference to the family group who has entered or exited. |
+| HeadOfHouse | Person | The head of the household of the family. |
+| Spouse | Person | The spouse of the family (could be empty). |
+| Campus | Campus | The home campus of the family. |
 
 A couple of things to think about as you configure your workflow:
 

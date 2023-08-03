@@ -24,136 +24,37 @@ There are two primary types of avatars: icons and initials. Each of these types 
 
 All avatars share several settings. These settings are outlined below.
 
-![](/GetAvatar.ashx?Style=initials&Text=TD)  
-![](/GetAvatar.ashx?Style=icon)
-
-**Style** The style of the icon to use.
-```
-_Samples_ 
-    <img src="/GetAvatar.ashx?Style=initials&Text=TD" />
-    <img src="/GetAvatar.ashx?Style=icon" />
-```
-
-![](/GetAvatar.ashx?Style=initials&Text=TD)
-
-**Size** The size parameter determines how large the resulting image file will be. The default value is 128px. It's best not to change this unless you need a larger avatar as the results are cached. Keep in mind that you'll want your results file to be 2x the size of the image to support high DPI displays.
-```
-_Sample_ <img src="/GetAvatar.ashx?Style=initials&Text=TD&Size=40" />
-```
-
-![](/GetAvatar.ashx?PhotoId=52453)
-
-**PhotoId** In most cases you'll want to display the individual's photo when one exists. To be able to do that we'll need to pass in the PhotoId of the individual.
-```
-_Sample_ <img src="/GetAvatar.ashx?PhotoId=52453" />
-```
-
-![](/GetAvatar.ashx?BackgroundColor=ee7625&Text=TD)
-
-**BackgroundColor** The background color to use when there is no profile photo. If you only provide the background color without the foreground color a matching foreground color will be calculated for you. _Be sure to not include the # symbol in the color._
-```
-_Sample_ <img src="/GetAvatar.ashx?BackgroundColor=ee7625&Text=TD" />
-```
-
-![](/GetAvatar.ashx?ForegroundColor=ee7625&Text=TD)
-
-**ForegroundColor** The foreground color to use when there is no profile photo. If you only provide the foreground color without the background color a matching background color will be calculated for you. _Be sure to not include the # symbol in the color._
-```
-_Sample_ <img src="/GetAvatar.ashx?ForegroundColor=ee7625&Text=TD" />
-```
-
-![](/GetAvatar.ashx?Radius=8&Text=TD&Size=40)  
-![](/GetAvatar.ashx?Radius=circle&Text=TD&Size=40)
-
-**Radius** The border radius to use for rounding the corners. Use the value of 'circle' to make this a perfect circle. In most cases you'll want to do this with CSS, but in certain use cases like HTML email this is a handy option.
-```
-_Samples_ 
-    <img src="/GetAvatar.ashx?Radius=8&Text=TD&Size=40" />
-    <img src="/GetAvatar.ashx?Radius=circle&Text=TD&Size=40" />
-```
-
-![](/GetAvatar.ashx?PhotoId=52453)
-
-**PersonId** If you pass in a person Id to the avatar it will provide all of the needed configuration for you (gender, photo id and age classification). This is a slower way of loading the avatar as it does need to query the database on each load (caching is only considered after the database load to ensure newer profile images are respected).
-```
-_Sample_ <img src="/GetAvatar.ashx?PersonId=5" />
-```
-
-![](/GetAvatar.ashx?PhotoId=52453)
-
-**PersonGuid** If you pass in a person Guid to the avatar it will provide all of the needed configuration for you (gender, photo id and age classification). This is a slower way of loading the avatar as it does need to query the database on each load (caching is only considered after the database load to ensure newer profile images are respected).
-```
-_Sample_ <img src="/GetAvatar.ashx?PersonGuid=8e0de326-4d3f-41e8-841a-c69750ec14aa" />
-```
-
-![](/GetAvatar.ashx?Text=TD)
-
-**RefreshItemCache** Set this value to true to clear the server cache for the specific avatar configuration. This requires that the current person is in either the \[RSR- Rock Administrators\] or \[RSR - Web Administrators\] roles.
-```
-_Sample_ <img src="/GetAvatar.ashx?Style=initials&Text=TD&RefreshItemCache=true" />
-```
-
-![](/GetAvatar.ashx?Text=TD)
-
-**RefreshCache** Set this value to true to clear the entire avatar server cache. This requires that the current person is in either the \[RSR- Rock Administrators\] or \[RSR - Web Administrators\] roles.
-```
-_Sample_ <img src="/GetAvatar.ashx?Style=initials&Text=TD&RefreshCache=true" />
-```
+<table class="table"><tbody><tr><td><img src="/GetAvatar.ashx?Style=initials&amp;Text=TD" width="40px" class="mb-1"><br><img src="/GetAvatar.ashx?Style=icon" width="40px"></td><td><strong>Style</strong> The style of the icon to use.<pre><code><i>Samples</i> 
+    &lt;img src="/GetAvatar.ashx?Style=initials&amp;Text=TD" /&gt;
+    &lt;img src="/GetAvatar.ashx?Style=icon" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?Style=initials&amp;Text=TD" width="40px"></td><td><strong>Size</strong> The size parameter determines how large the resulting image file will be. The default value is 128px. It's best not to change this unless you need a larger avatar as the results are cached. Keep in mind that you'll want your results file to be 2x the size of the image to support high DPI displays.<pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?Style=initials&amp;Text=TD&amp;Size=40" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?PhotoId=52453" width="40px"></td><td><strong>PhotoId</strong> In most cases you'll want to display the individual's photo when one exists. To be able to do that we'll need to pass in the PhotoId of the individual.<pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?PhotoId=52453" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?BackgroundColor=ee7625&amp;Text=TD" width="40px"></td><td><strong>BackgroundColor</strong> The background color to use when there is no profile photo. If you only provide the background color without the foreground color a matching foreground color will be calculated for you. <em>Be sure to not include the # symbol in the color.</em><pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?BackgroundColor=ee7625&amp;Text=TD" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?ForegroundColor=ee7625&amp;Text=TD" width="40px"></td><td><strong>ForegroundColor</strong> The foreground color to use when there is no profile photo. If you only provide the foreground color without the background color a matching background color will be calculated for you. <em>Be sure to not include the # symbol in the color.</em><pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?ForegroundColor=ee7625&amp;Text=TD" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?Radius=8&amp;Text=TD&amp;Size=40" width="40px" class="mb-1"><br><img src="/GetAvatar.ashx?Radius=circle&amp;Text=TD&amp;Size=40" width="40px"></td><td><strong>Radius</strong> The border radius to use for rounding the corners. Use the value of 'circle' to make this a perfect circle. In most cases you'll want to do this with CSS, but in certain use cases like HTML email this is a handy option.<pre><code><i>Samples</i> 
+    &lt;img src="/GetAvatar.ashx?Radius=8&amp;Text=TD&amp;Size=40" /&gt;
+    &lt;img src="/GetAvatar.ashx?Radius=circle&amp;Text=TD&amp;Size=40" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?PhotoId=52453" width="40px"></td><td><strong>PersonId</strong> If you pass in a person Id to the avatar it will provide all of the needed configuration for you (gender, photo id and age classification). This is a slower way of loading the avatar as it does need to query the database on each load (caching is only considered after the database load to ensure newer profile images are respected).<pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?PersonId=5" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?PhotoId=52453" width="40px"></td><td><strong>PersonGuid</strong> If you pass in a person Guid to the avatar it will provide all of the needed configuration for you (gender, photo id and age classification). This is a slower way of loading the avatar as it does need to query the database on each load (caching is only considered after the database load to ensure newer profile images are respected).<pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?PersonGuid=8e0de326-4d3f-41e8-841a-c69750ec14aa" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?Text=TD" width="40px"></td><td><strong>RefreshItemCache</strong> Set this value to true to clear the server cache for the specific avatar configuration. This requires that the current person is in either the [RSR- Rock Administrators] or [RSR - Web Administrators] roles.<pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?Style=initials&amp;Text=TD&amp;RefreshItemCache=true" /&gt;</code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?Text=TD" width="40px"></td><td><strong>RefreshCache</strong> Set this value to true to clear the entire avatar server cache. This requires that the current person is in either the [RSR- Rock Administrators] or [RSR - Web Administrators] roles.<pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?Style=initials&amp;Text=TD&amp;RefreshCache=true" /&gt;</code></pre></td></tr></tbody></table>
 
 #### Initials Avatar Settings
 
 Below are settings for avatars using initials.
 
-![](/GetAvatar.ashx?Text=SM)
-
-**Text** This is the text to use for the initials. Only the first two characters will be use..
-```
-_Sample_ <img src="/GetAvatar.ashx?Text=SM" />
-```
+<table class="table"><tbody><tr><td><img src="/GetAvatar.ashx?Text=SM" width="40px"></td><td><strong>Text</strong> This is the text to use for the initials. Only the first two characters will be use..<pre><code><i>Sample</i> &lt;img src="/GetAvatar.ashx?Text=SM" /&gt;</code></pre></td></tr></tbody></table>
 
 #### Icon Avatar Settings
 
 Below are settings for avatars using the icon style.
 
-![](/GetAvatar.ashx?Style=icon&Gender=0)  
-![](/GetAvatar.ashx?Style=icon&Gender=1)  
-![](/GetAvatar.ashx?Style=icon&Gender=2)
-
-**Gender** This determines what gender icon to show.
-```
-_Samples_ 
-    <img src="/GetAvatar.ashx?Style=icon&Gender=0" /> 
-    _Unknown_
-    <img src="/GetAvatar.ashx?Style=icon&Gender=1" /> 
-    _Male_
-    <img src="/GetAvatar.ashx?Style=icon&Gender=2" /> 
-    _Female_
-```
-
-![](/GetAvatar.ashx?Style=icon&Gender=1&AgeClassification=0)  
-![](/GetAvatar.ashx?Style=icon&Gender=1&AgeClassification=1)  
-![](/GetAvatar.ashx?Style=icon&Gender=1&AgeClassification=2)
-
-**Age Classification** This determines what age classification the icon should be.
-```
-_Samples_ 
-    <img src="/GetAvatar.ashx?Style=icon&Gender=1&AgeClassification=0" /> 
-    _Unknown_
-    <img src="/GetAvatar.ashx?Style=icon&Gender=1&AgeClassification=1" /> 
-    _Adult_
-    <img src="/GetAvatar.ashx?Style=icon&Gender=1&AgeClassification=2" /> 
-    _Child_
-```
-
-![](/GetAvatar.ashx?Style=icon&RecordTypeId=1)  
-![](/GetAvatar.ashx?Style=icon&RecordTypeId=2)
-
-**RecordTypeId** This displays a different icon for people and businesses. You only need to provide this if you think you will have businesses in your data. _Note the your values for RecordTypeId will be different from server to server._
-```
-_Samples_ 
-    <img src="/GetAvatar.ashx?Style=icon&RecordTypeId=1" /> _Person_
-    <img src="/GetAvatar.ashx?Style=icon&RecordTypeId=2" /> _Business_
-```
+<table class="table"><tbody><tr><td><img src="/GetAvatar.ashx?Style=icon&amp;Gender=0" width="40px" class="mb-1"><br><img src="/GetAvatar.ashx?Style=icon&amp;Gender=1" width="40px" class="mb-1"><br><img src="/GetAvatar.ashx?Style=icon&amp;Gender=2" width="40px" class="mb-1"></td><td><strong>Gender</strong> This determines what gender icon to show.<pre><code><i>Samples</i> 
+    &lt;img src="/GetAvatar.ashx?Style=icon&amp;Gender=0" /&gt; 
+    <em>Unknown</em>
+    &lt;img src="/GetAvatar.ashx?Style=icon&amp;Gender=1" /&gt; 
+    <em>Male</em>
+    &lt;img src="/GetAvatar.ashx?Style=icon&amp;Gender=2" /&gt; 
+    <em>Female</em></code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?Style=icon&amp;Gender=1&amp;AgeClassification=0" width="40px" class="mb-1"><br><img src="/GetAvatar.ashx?Style=icon&amp;Gender=1&amp;AgeClassification=1" width="40px" class="mb-1"><br><img src="/GetAvatar.ashx?Style=icon&amp;Gender=1&amp;AgeClassification=2" width="40px" class="mb-1"></td><td><strong>Age Classification</strong> This determines what age classification the icon should be.<pre><code><i>Samples</i> 
+    &lt;img src="/GetAvatar.ashx?Style=icon&amp;Gender=1&amp;AgeClassification=0" /&gt; 
+    <em>Unknown</em>
+    &lt;img src="/GetAvatar.ashx?Style=icon&amp;Gender=1&amp;AgeClassification=1" /&gt; 
+    <em>Adult</em>
+    &lt;img src="/GetAvatar.ashx?Style=icon&amp;Gender=1&amp;AgeClassification=2" /&gt; 
+    <em>Child</em></code></pre></td></tr><tr><td><img src="/GetAvatar.ashx?Style=icon&amp;RecordTypeId=1" width="40px" class="mb-1"><br><img src="/GetAvatar.ashx?Style=icon&amp;RecordTypeId=2" width="40px" class="mb-1"></td><td><strong>RecordTypeId</strong> This displays a different icon for people and businesses. You only need to provide this if you think you will have businesses in your data. <em>Note the your values for RecordTypeId will be different from server to server.</em><pre><code><i>Samples</i> 
+    &lt;img src="/GetAvatar.ashx?Style=icon&amp;RecordTypeId=1" /&gt; <em>Person</em>
+    &lt;img src="/GetAvatar.ashx?Style=icon&amp;RecordTypeId=2" /&gt; <em>Business</em></code></pre></td></tr></tbody></table>
 
 #### Tips
 

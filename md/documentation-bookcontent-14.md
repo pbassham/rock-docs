@@ -149,7 +149,7 @@ Rock RMS was conceived and built by web designers and programmers just like you.
 ==========================================================================================
 
 1.  **Rock will never have all the features of my current CMS.**  
-    Yep, you're right. We'll never be able to have every feature that your current CMS has. Although, they probably don't have every feature we have either. Rock makes creating powerful websites easy. We’ve stolen borrowed the best ideas from the top CMS out there. We've leveraged our years of experience building sites to create tools we’ve always wanted.
+    Yep, you're right. We'll never be able to have every feature that your current CMS has. Although, they probably don't have every feature we have either. Rock makes creating powerful websites easy. We’ve ~stolen~ borrowed the best ideas from the top CMS out there. We've leveraged our years of experience building sites to create tools we’ve always wanted.
 2.  **We'll never be able to find someone who knows Rock; everyone knows xxxxx.**  
     We're working hard to establish an ecosystem full of vendors and freelancers who can help you. Not only that, but documentation like this manual makes it simple to quickly bring any web designer vendor up to speed. You should probably hesitate to use any vendor who resists using the tool the customer wants and instead uses their favorite tool. Remember, you're the one who needs to live with the site.
 3.  **Rock is built on Microsoft .Net. Come on, no serious CMS uses that.**  
