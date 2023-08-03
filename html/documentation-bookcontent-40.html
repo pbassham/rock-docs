@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXAlXTFsDXEQEF11cWxYHR0lO","queueTime":15,"applicationTime":65,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Hyper Scaling Rock RMS | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<link href="/Styles/fluidbox.css?v=637945608860000000" type="text/css" rel="stylesheet" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./40" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Plugins/org_sparkdevnetwork/Documentation/Scripts/sticky-kit.min.js?v=637618953640000000" type="text/javascript"></script>
+<script src="/Scripts/imagesloaded.min.js?v=637618953660000000" type="text/javascript"></script>
+<script src="/Scripts/jquery.fluidbox.min.js?v=637957064360000000" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="LMhSPCfuO+YrjtNekn42v48qtyh+VaegX+2qt9lQ4c6BJMNwPylE7fUV4WZi5EeT7/GJQwVGolifTh8/jhVk05M2wLiiwFPVnZwdmIbcqLlIJRaSINCEYTgdolGIg/EQGmljmCnduCEFmLMZeKkXotxz5+Sp28g1VbCwmV3wXMbQ7j+PDr+KGPEeiCgy3O/pGFSgaFRQTm0dlZHGN3qYHRtsn9yPnyhC5bZ+gtXYC/H/r8847lLTBjElVApz0zzguHJ+3elJvEYzabL/rTwCTchz5b7TBILqaoxhGzTrpi+29spf/pN6J58xApvXFKIQnCPQdmt4kd9O23QDNWoXhQ==" />
+    <div id="page-container">
+      <div class="community-ui">
+
+          <!-- navigation -->
+          <div class="community-sidebar">
+            <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2609" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl17_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+          </div>
+          <!-- / navigation -->
+
+          <!-- content -->
+          <main class="community-content">
+            
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+            <span class="topbar-text">
+  RX23 Content Subscription available to order now.
+            </span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+  
+          
+          <div class="scroll-vertical">
+            
+<div class="header-row">
+    <div class="col">
+
+        <header class="community-content-header community-content-header-absolute">
+            <div class="row align-items-center">
+            <div class="col d-none d-md-block">
+                <nav aria-label="breadcrumb" class="align-items-center">
+                <!-- <a href="../../index.html" class="breadcrumb-back" title="Back"></a> -->
+                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/documentation" rel="rocknofollow">Manuals</a></li><li class="breadcrumb-item">Hyper Scaling Rock RMS</li>
+</ol>
+                </nav>
+            </div>
+                <div class="col text-lg-right">
+                    
+<a href="/login?returnurl=/page/1296" class="login-link">Log In</a>
+                    
+
+                  </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+            
+    <div id="zone-main" class="zone-instance zone-instance-full"><div class="zone-content"><div id="bid_2608" data-zone-location="Page" class="block-instance js-block-instance book-shelf-book-contents-v2">
+	<div class="block-content">
+		<div id="ctl00_main_ctl02_ctl01_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl02_ctl01_ctl00_pnlDetails">
+				       
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divBookContainer" class="rockversion-1-15-0">
+                <div class="book-header jumbotron clearfix">
+                    <div class="book margin-r-lg">
+                        <div class="img-content">
+                            <img id="ctl00_main_ctl02_ctl01_ctl00_imgCover" src="/GetImage.ashx?id=40503&amp;width=710&amp;height=919" />
+                        </div>
+                    </div>
+
+                    <h1>Hyper Scaling Rock RMS</h1>
+                    <p>Increasing scale for increased impact.</p>
+
+                    <div class="bookversion clearfix">
+                        <div class="bookversion-heading row no-gutters">
+                            <div class="col-xs-12">
+                                <a id="ctl00_main_ctl02_ctl01_ctl00_hlPdf" class="btn btn-default btn-xs margin-l-md" href="https://rockrms.blob.core.windows.net/documentation/PDFs/76448ceea0bc4fe2be382d37ca4c3a36_HyperScalingRockRMS.pdf">Download PDF</a>
+                                <div id="ctl00_main_ctl02_ctl01_ctl00_divBookVersionSelector" class="bookversion-heading-tab pull-left">
+                                    Current Version: McKinley 15.0 <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bookversion-details" style="display: none;">
+                            <div class="row no-gutters">
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-4">
+                                    <div class="form-group rock-drop-down-list mr-1">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlVersionsSince">Show Changes Since</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlVersionsSince" id="ctl00_main_ctl02_ctl01_ctl00_ddlVersionsSince" class="mr-2 js-bookversion-versionsinceselector form-control">
+							<option value="" selected="selected"></option>
+							<option value="1.14.0">McKinley 14.0</option>
+							<option value="1.13.0">McKinley 13.0</option>
+							<option value="1.12.0">McKinley 12.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group rock-drop-down-list ">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions">Version</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlBookVersions" id="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions" class="form-control">
+							<option value="293" selected="selected">McKinley 15.0</option>
+							<option value="271">McKinley 14.0</option>
+							<option value="252">McKinley 13.0</option>
+							<option value="253">McKinley 12.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row"><div class="col-md-12">
+                        
+                    </div></div>
+                    <div class="row documentation-content-body">
+                        <article class="col-md-9 col-xl-8">
+                            <div data-type='update-summary' data-update-tag='1.15.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 15.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.13.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 13.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.12.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 12.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.14.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 14.0</h4>No updates made.</div>
+            
+                            <section data-type="chapter" id="Introduction"><h1><a name='introduction' href='#introduction' class='book-link'><i class='fa fa-link'></i></a>Introduction</h1>
+
+    <p>
+        As digital ministry continues to grow, scaling your technical infrastructure becomes more and more
+        important. Larger organizations may have unique needs to handle peak loads. The goal of this guide
+        is to provide you with instructions and tips for scaling Rock to meet your needs.
+    </p>
+
+</section>
+
+<section data-type="chapter" id="RockWebFarm"><h1><a name='rockwebfarm' href='#rockwebfarm' class='book-link'><i class='fa fa-link'></i></a>Rock Web Farm</h1>
+
+    <p>
+        Large organizations soon reach the point where a single server will no longer be able to
+        support peak loads. When this happens, the need for a server cluster becomes evident. Clusters,
+        however, add several unique challenges, and their implementation must be approached with a healthy
+        amount of planning and strategy.
+    </p>
+
+    <p>
+        The goal of this chapter is to provide an organization with best practices on how to implement a server
+        cluster in a Rock environment and to cover the web farm features built into Rock.
+    </p>
+
+    <section data-type="sect1" id="ArchitectingYourServerCluster">
+    
+        <h1><a name='architectingyourservercluster' href='#architectingyourservercluster' class='book-link'><i class='fa fa-link'></i></a>Architecting Your Server Cluster</h1>
+        
+        <section data-type="sect2">
+            
+            <h2>Scaling Directions</h2>
+            
+            <p>
+                You have two directions when it comes to scaling your environment. Scaling up, sometimes
+                referred to as scaling vertically, means that you increase the size of your server by adding
+                additional CPUs and memory. The other direction is to scale out, commonly described as scaling
+                horizontally, which is to add additional servers to your environment.
+            </p>
+            
+            <figure>
+                <figcaption>Scale Up Scale Out</figcaption>
+                <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/40/1.15.0/images/scale-up-scale-out.png" alt="Scale Up Scale Out"></a>
+            </figure>
+            
+        </section>
+        
+        <section data-type="sect2">
+    
+            <h2>Components of a Rock Cluster</h2>
+            <p>
+                There are four major components of a Rock cluster. The following diagram outlines these
+                components with further details below.
+            </p>
+            
+            <figure>
+                <figcaption>Components of a Rock Cluster</figcaption>
+                <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/40/1.15.0/images/components-of-a-rock-cluster.png" alt="Components of a Rock Cluster"></a>
+                
+                <dl class="callout-key">
+                    <dt><span class="callout-number primary-color">1</span> Application Gateway</dt>
+                    <dd>The application gateway’s primary job is to direct traffic to the web server cluster.
+                        It ensures that requests are load balanced over the various servers in the cluster. It
+                        also ensures that if a server goes down, that traffic is re-directed to other servers
+                        in the farm. The type and configuration of these gateways will vary depending on your
+                        cloud provider. For those using Azure, we recommend using the Azure App Gateway. One
+                        important configuration for the app gateway is that it should have session affinity
+                        enabled. This means that traffic for a specific client will always return to the same
+                        server. This is important, as Rock’s check-in uses session state.</dd>
+                            	
+                    <dt><span class="callout-number primary-color">2</span> Web Server Cluster</dt>
+                    <dd>This is the group of web application servers that are participating in the cluster.
+                        More details on the configuration of these servers can be found below.</dd>
+                            	
+                    <dt><span class="callout-number primary-color">3</span> Database</dt>
+                    <dd>The database in a clustered environment isn’t that different than one in a 
+                        non-clustered environment. Some organizations choose to enable a database cluster, but
+                        this isn’t required. The specifics of setting up your database will be unique to your
+                        cloud host. Whether your database is clustered or not is transparent to Rock.</dd>
+                    
+                    <dt><span class="callout-number primary-color">4</span> Message Bus</dt>
+                    <dd>The message bus is what allows the various Rock web servers to communicate to other
+                        nodes in the cluster. The details of these conversations are discussed below. Two bus
+                        services are currently supported by Rock. They are:<br>
+                        <ol>
+                            <li><strong>Azure Message Bus</strong></li>
+                            <li><strong>Rabbit MQ</strong></li>
+                        </ol></dd>
+                </dl>            
+                
+            </figure>
+            
+            <div data-type="note" data-note-type="note">
+                <h1>Redis Server</h1>
+                <p>
+                    Previous versions of Rock clusters relied on a Redis server. The message bus now replaces
+                    the need for the Redis server. We highly recommend moving away from the Redis solution to
+                    the new web farm features. Support for Redis clusters is deprecated as of Rock v13. 
+                </p>
+            </div>
+            
+        </section> 
+        
+        <section data-type="sect2">
+    
+            <h2>Benefits of Clusters</h2>
+            <p>
+                Server clusters have two primary benefits: increased scale and added redundancy. Let’s
+                consider each in turn. 
+            </p>
+            
+            <p>
+                Clusters obviously provide additional computing resources for supporting your digital
+                strategy. Modern cloud environments have no problem providing large servers, but when hosting
+                web applications, at a certain point the law of diminishing returns kicks in. In a Rock
+                environment, CPU is often the constraint. Memory, though important, usually isn’t nearly as
+                limiting a factor as the CPU.
+            </p>
+            
+            <p>
+                The second benefit of clustering is redundancy. While outages are rare and quickly recovered
+                in a cloud environment, having multiple servers provides a failover capability. While this is
+                a great benefit, be careful. The added complexity of a clustered environment can actually
+                reduce the up-time of your application if it isn’t well architected and managed by a team who
+                understands the new infrastructure and services required.
+            </p>
+            
+            <p>
+                Though not a primary benefit, some organizations use clusters to partition their traffic.
+                This allows dedicated servers for traffic to support things like the internal portal,
+                external websites, check-in and API hosting. By providing dedicated resources for these
+                services, you can limit the spill-over of congestion from one service to another.
+            </p>
+            
+        </section>
+        
+        <section data-type="sect2">
+    
+            <h2>What Makes Clusters Difficult</h2>
+            <p>
+                Implementing a Rock cluster drastically increases the complexity of your environment. Below
+                are several factors you should consider before moving forward with a cluster project.
+            </p>
+            
+            <ol>
+                <li><strong>Increase Infrastructure Knowledge: </strong>As you’ve seen, there are several new
+                    infrastructure components required to run a Rock cluster. Components like application
+                    gateways can be difficult to set up and support. Be sure that your team has the necessary
+                    engineering knowledge to support these environments now and in the future.</li>
+                <li><strong>Rock Updates: </strong>Updating Rock is more difficult in a clustered 
+                    environment. Currently, each server will need to be updated manually (or through custom
+                    dev ops automation).</li>
+                <li><strong>Rock File Types: </strong>In a clustered environment, it’s important that all
+                    Rock file types are cloud or database backed. If you use the ‘File System’ type, files
+                    will only be available on a single node in the cluster.</li>
+                <li><strong>File System Sync: </strong>Besides file types there are other opportunities for
+                    files to be uploaded to a single node. For example, the HTML editor allows files to be
+                    uploaded to the ~/Content directory of a node. These files will appear as broken links to
+                    clients pointed at other web application nodes in the cluster. There are tools you can
+                    configure to sync these directories, but they represent another service to configure and
+                    maintain.</li>
+                <li><strong>TLS Complexity: </strong>In a clustered environment, we recommend you use a
+                    provisioned wildcard digital certificate instead of an ACME certificate. This represents
+                    an additional cost, and you’ll need to remember to renew it.</li>
+                <li><strong>Limited Partner Support: </strong>There are a limited number of Rock Partners
+                    with familiarity with Rock’s web farm features.</li>
+            </ol>
+            
+        </section>  
+        
+        <section data-type="sect2">
+    
+            <h2>Recommendations for Rock Clusters</h2>
+            
+            <p>
+                As you consider the design of your Rock cluster, there are several principles you should
+                consider. Below are our recommendations to consider as you plan your implementation.
+            </p>
+            
+            <ol>
+                <li><strong>The Best Cluster is No Cluster: </strong>Simply put, server clusters are
+                    difficult and add complexity to the environment.</li>
+                <li><strong>Prefer Fewer Larger Servers: </strong>As you plan your cluster, we recommend
+                    having fewer large nodes than more smaller nodes. The fewer nodes you have the less
+                    complexity you have.</li>
+                <li><strong>Scale Up Not Out: </strong>If you would like to add additional resources for
+                    critical timeframes, we recommend you scale up the existing servers in your cluster
+                    rather than adding new nodes to the cluster. Adding new nodes requires complex dev ops to
+                    create node templates and deploy them as needed, whereas increasing the size of a running
+                    node is typically much easier using existing tools provided by your cloud service.</li> 
+            </ol>
+            
+        </section>    
+    
+    </section>
+    
+    <section data-type="sect1" id="ConfiguringaRockWebFarm">
+        
+        <h1><a name='configuringarockwebfarm' href='#configuringarockwebfarm' class='book-link'><i class='fa fa-link'></i></a>Configuring a Rock Web Farm</h1>
+    
+        <p>
+            Before getting started you’ll want to complete the following pre-steps:
+        </p>
+        
+        <ol>
+            <li><strong>Web Farm License Key: </strong>Running a web farm requires a unique license key from
+                Spark. This is necessary as the web farm feature has an additional cost to help support the
+                feature without the need to use funding from donations. Reach out to Spark at
+                <a href="mailto:info@sparkdevnetwork.org">info@sparkdevnetwork.org</a> to obtain information
+                about how to license the web farm.</li>
+            <li><strong>Infrastructure Configuration: </strong>The configuration steps below assume you have all
+                of the needed infrastructure configured and Rock installed and running. It’s outside of the scope
+                of this document to provide step-by-step guidance on configuring the infrastructure, as these
+                steps will be very different depending on your cloud hosting provider. Reach out to a Rock
+                Partner 
+                (<a href="https://www.rockrms.com/partners" target="_blank">https://www.rockrms.com/partners</a>)
+                if you need help with this configuration. Below is a list of the high-level components that
+                should be configured:
+                <ol>
+                    <li>App Gateway configured and working.</li>
+                    <li>Database server configured.</li>
+                    <li>Web application nodes configured and running.</li>
+                    <li>Rock installed on each web application node. Be sure that Rock jobs is only installed
+                        to run on a single node of your cluster. This is set in the server’s web.config 
+                        file.</li>
+                </ol></li>
+        </ol>
+        
+        <p>
+            With these steps complete, you’re now ready to configure the web farm. Below are the steps you’ll
+            need to follow.
+        </p>    
+    
+        <section data-type="sect2">
+    
+            <h2>1. Configure the Message Bus</h2>
+            <p>
+                If you haven’t yet configured a message bus in Rock, you’ll need to do that before proceeding.
+                See the 
+                <a href="https://community.rockrms.com/documentation/bookcontent/9#messagebus" target="_blank">Admin Hero Guide</a> 
+                for more information on configuring the message bus.
+            </p>
+        </section>
+        
+        <section data-type="sect2">
+    
+            <h2>2. Activate the Web Farm</h2>
+            <p>
+                Navigate to 
+                <span data-type="action" data-action="action-navigation">Admin Tools > System Settings > Web Farm</span> 
+                to enable the web farm feature. This is where you will activate the web farm and enter your
+                unique license key.
+            </p>
+            
+            <figure>
+                <figcaption>Web Farm Configuration</figcaption>
+                <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/40/1.15.0/images/web-farm-configuration-v13.png" alt="Web Farm Configuration"></a>
+            </figure>
+            
+            <p>
+                The remaining settings can be left as is. The additional configuration values are discussed
+                below in the section on how nodes elect leaders.
+            </p>
+            
+        </section>
+    
+        <section data-type="sect2">
+    
+            <h2>3. Restart All Web Nodes</h2>
+            <p>
+                Once the configuration is set, you ’ll need to restart all the nodes in the farm. Once
+                restarted, the web farm is fully configured. You’ll want to ensure that each node is displayed
+                on the <em data-type="reference" data-reference="reference-page">Web Farm</em> page.
+            </p>
+            
+            <figure>
+                <figcaption>Web Farm Nodes</figcaption>
+                <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/40/1.15.0/images/web-farm-nodes-v13.png" alt="Web Farm Nodes"></a>
+            </figure>        
+            
+        </section>    
+    
+    </section>
+    
+    <section data-type="sect1" id="TheSecretLifeofWebFarmNodes">
+        
+        <h1><a name='thesecretlifeofwebfarmnodes' href='#thesecretlifeofwebfarmnodes' class='book-link'><i class='fa fa-link'></i></a>The Secret Life of Web Farm Nodes</h1>
+    
+        <p>
+            Behind the scenes, the nodes of a web farm communicate with each other over the message bus to
+            keep each other in the loop on what’s happening inside the cluster. These messages are related to
+            two primary types:
+        </p>
+            <ol>
+                <li><strong>Cache Invalidation: </strong>When a node changes a value that lives inside of the
+                    Rock cache, it must notify the other nodes in the farm to also update their cache.</li>
+                <li><strong>Node Status: </strong>As the nodes start-up, they elect a leader of the cluster.
+                    One of the roles of the leader is to check-in with each node on a routine basis to ensure
+                    it is still up and running. Any discrepancies the leader finds will be reported in the web
+                    farm log.</li>
+            </ol>
+    
+        <section data-type="sect2">
+    
+            <h2>Node Start-up / Shutdown</h2>
+            <p>
+                As nodes start-up, they report their status to the web farm log and mark their status as
+                active. They also report when they shut down and change their status to inactive. This notifies
+                the leader which nodes are expected to be running. 
+            </p>
+        </section>
+    
+        <section data-type="sect2">
+    
+            <h2>Leader Responsibilities</h2>
+            <p>
+                As noted above, one of the responsibilities of the node leader is to check the status of
+                every node marked as being active. This status check is run on a configured polling schedule.
+                On each run, the leader sends every active node a ping. If a node does not respond within a
+                few seconds with a pong response, the leader reports the node as having been marked active but
+                no longer responding.  
+            </p>
+        </section>
+        
+        <section data-type="sect2">
+    
+            <h2>Leader Election</h2>
+            <p>
+                You may be wondering how a leader is elected by the cluster. The election process is a
+                sophisticated algorithm that allows the nodes to jointly elect a leader as well as trigger a 
+                re-election event, should the leader go AWOL. Let’s take a closer look at how the election
+                process works.  
+            </p>
+            
+            <p>
+                As a node starts-up, it randomly selects a polling interval to use. The selection of the
+                random interval is guided by the configuration of the web farm. The configuration settings
+                tell the node the minimum and maximum interval value. Using these values as boundaries, the
+                node randomly selects a value somewhere between. It then checks the database to see if another
+                node already has a similar interval (what constitutes a similar interval is also 
+                configurable). If a node is found with a similar interval it tries another random interval
+                until an acceptable value is generated. This interval is then stored in the database for that
+                specific node.
+            </p>
+            
+            <p>
+                The leader of the cluster is the node with the smallest interval, meaning it will be the
+                first to send out a request to other nodes for a status check. As each other node receives a
+                status check request, it also notes that it has been contacted by the leader and therefore
+                should reset its timer to ping other nodes. If the leader goes offline, the node with the
+                next lowest interval will reach its status check interval and assume the leadership role.
+                These changes of leadership are noted in the web farm log.
+            </p>
+            
+            <p>
+                When a leader node comes back online, their smaller interval length will kick back in, and it
+                will regain leadership within a status cycle or two.
+            </p>
+            
+            <p>
+                The current leader of a cluster is noted by a small icon in the upper right of the node card. 
+            </p>
+            
+            <figure>
+                <figcaption>Leader Node</figcaption>
+                <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/40/1.15.0/images/leader-node.png" alt="Leader Node"></a>
+            </figure>
+            
+            <p>
+                In the above scenario, the leader node is randomly selected. If you prefer, you can specify a
+                particular node as  leader by setting the interval value on the node’s 
+                <code>WebFarmNode</code> record in the database. Setting the 
+                <code>ConfiguredLeadershipPollingIntervalSeconds</code> property disables the random value,
+                which currently must be updated in SQL. Placing a value lower than the minimum will ensure
+                that the node is always the leader when running. If that node goes offline, another node will
+                still step in until it comes back online.
+            </p>
+            
+        </section>
+        
+        <section data-type="sect2">
+    
+            <h2>Node Names</h2>
+            <p>
+                By default, the name of the node will be read from the service's machine name. If you prefer
+                to use a different name, you can provide it in the web.config file with the app setting key
+                of “NodeName”. 
+            </p>
+            
+        </section>
+            
+        <section data-type="sect2">
+    
+            <h2>Node Metrics</h2>
+            <p>
+                You’ll notice that basic CPU metrics are provided for each node in the cluster. This provides
+                a quick way to confirm that the load is being roughly balanced across your nodes. If you find
+                that these charts vary greatly across your nodes, it may mean that something is not correctly
+                configured in your application gateway.
+            </p>
+        </section>
+    
+    </section>
+    
+    <section data-type="sect1" id="CurrentLimitations">
+        
+        <h1><a name='currentlimitations' href='#currentlimitations' class='book-link'><i class='fa fa-link'></i></a>Current Limitations</h1>
+    
+        <p>
+            Rock’s Web Farm features will continue to grow as more time and resources become available to fund
+            resources. Below is a list of known limitations.
+        </p>
+    
+        <ol>
+            <li><strong>Page Routes: </strong>Changes and additions of page routes currently are not communicated
+                to other nodes in the web farm. These are updated nightly when the AppPool restarts. If you need
+                them sooner, you’ll need to restart each node in the cluster.</li>
+            <li><strong>Job Runner: </strong>The current feature set will not prevent two servers from running
+                jobs.</li>
+        </ol>
+    
+    </section>
+
+</section>
+
+
+<section data-type="chapter" id="rock-context"><h1><a name='rockcontext' href='#rockcontext' class='book-link'><i class='fa fa-link'></i></a>Rock Context</h1>
+
+    <p>
+        Some organizations may find that it's worthwhile to maintain a separate database for Rock that's only
+        used for reading (and not writing) data. A read-only database gives people a place to go besides your
+        primary database, helping to lighten the load on that database.
+    </p>
+    
+    <p>
+        You may already have a database for this purpose. Any Azure customer using a Business Critical or
+        Premium SQL tier is automatically provided with a read-only replica of the production database that
+        matches the compute and storage performance of the primary server.
+    </p>
+    
+    <div data-type="note" data-note-type="remember">
+        <h1>Data Views and Plugins</h1>
+        <p>
+            Some plugins provide data view filters that make updates to the database.  
+            That won't work in a read-only environment, so a  
+            <em data-type="reference" data-reference="reference-highlight">Disable Use Of Read Only Context</em> 
+            setting will appear when editing data views. This allows an administrator to disable the 
+            read-only feature for that particular data view.</p>
+    </div>    
+
+    <section data-type="sect1">
+
+        <h1><a name='updatingconnectionstrings' href='#updatingconnectionstrings' class='book-link'><i class='fa fa-link'></i></a>Updating Connection Strings</h1>
+        <p>
+            Rock needs to know that a read-only database exists, so it can direct traffic there when
+            certain blocks are accessed. This will be done by updating your 
+            <code>web.ConnectionStrings.config</code> file. You'll want to leave the existing file 
+            content unchanged, and add the additions shown in the examples below.
+        </p>
+        
+        <p>
+            The RockContextReadOnly context will be used by Data Views and Reports. An example
+            connection string for this context is provided below. Aside from the "name" you'll 
+            need to update the other parts of the connection string, like "Data Source" and 
+            "Initial Catalog", according to your setup.
+        </p>
+        
+<div data-type="example">
+    <h5>RockContextReadOnly</h5>
+<div style="color:Black;background-color:White;"><pre>
+
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">connectionstrings</span><span style="color:Blue;">&gt;</span>
+    &lt;add connectionString=&quot;Data Source=localhost;
+    Initial Catalog=RockDB; User Id=RockUser; 
+    password=123456789; MultipleActiveResultSets=true&quot; 
+    name=&quot;RockContext&quot; 
+    providerName=&quot;System.Data.SqlClient&quot; /&gt;
+
+    &lt;add connectionString=&quot;Data Source=localhost;
+    Initial Catalog=RockDB_READ; User Id=RockUser; 
+    password=123456789; MultipleActiveResultSets=true&quot; 
+    name=&quot;RockContextReadOnly&quot; 
+    providerName=&quot;System.Data.SqlClient&quot; /&gt;
+<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">connectionstrings</span><span style="color:Blue;">&gt;</span>
+
+</pre></div>
+</div>
+
+        <p>
+            The three analytics blocks listed below have been updated to use the RockContextAnalytics 
+            context:
+        </p>
+        
+        <ul>
+            <li>Giving Analytics</li>
+            <li>Attendance Analytics</li>
+            <li>Pledge Analytics</li>
+        </ul>
+        
+        <p>
+            To make use of this context, add a connection string like the one shown below to
+            your <code>web.ConnectionStrings.config</code> file. Again, you'll want to change
+            the "name" to RockContextAnalytics and update the other items according to your
+            setup.
+        </p>
+
+<div data-type="example">
+    <h5>RockContextAnalytics</h5>
+<div style="color:Black;background-color:White;"><pre>
+
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">connectionstrings</span><span style="color:Blue;">&gt;</span>
+    &lt;add connectionString=&quot;Data Source=localhost;
+    Initial Catalog=RockDB; User Id=RockUser; 
+    password=123456789; MultipleActiveResultSets=true&quot; 
+    name=&quot;RockContext&quot; 
+    providerName=&quot;System.Data.SqlClient&quot; /&gt;
+
+    &lt;add connectionString=&quot;Data Source=localhost;
+    Initial Catalog=RockDB_READ; User Id=RockUser; 
+    password=123456789; MultipleActiveResultSets=true&quot; 
+    name=&quot;RockContextAnalytics&quot; 
+    providerName=&quot;System.Data.SqlClient&quot; /&gt;
+<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">connectionstrings</span><span style="color:Blue;">&gt;</span>
+
+</pre></div>
+</div>
+        
+    </section>
+
+</section>
+
+
+                        </article>
+                        <aside class="col-md-3 col-xl-3 d-none d-md-block">
+                            <div class="sticky"><div id="toc" class="book-toc">
+                                <p>Table of Contents</p>
+                                <ul class="list-unstyled">
+                                    <li><a href='#introduction'>Introduction</a></li><li><a href='#rockwebfarm'>Rock Web Farm</a></li><li><a href='#rockcontext'>Rock Context</a></li>
+                                </ul>
+                            </div></div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divReportIssue" class="report-issue"><i class="fa fa-bullhorn"></i> Improve</div>
+
+			</div>       
+
+        <script>var bookVersionOrder = [ '1.15.0','1.14.0','1.13.0','1.12.0' ];</script>
+
+        <script>
+            $(document).ready(function () {
+                $(".sticky").stick_in_parent();
+
+                $(".bookversion-heading-tab").on("click", function () {
+                    $(this).closest(".bookversion-heading").siblings(".bookversion-details").slideToggle();
+                    $(this).find('i.fa').toggleClass("fa-chevron-down fa-chevron-up");
+                });
+
+                $(".report-issue").mouseenter(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-4px",
+                            opacity: 1
+                        }, 500, function() {
+                            // Animation complete.
+                        });
+                });
+
+                $(".report-issue").mouseleave(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-84px",
+                            opacity: .5
+                        }, 500, function () {
+                            // Animation complete.
+                        });
+                });
+
+                $(function () {
+                    $("a.book-image").fluidbox();
+                });
+
+                // reusable function to get query parameter
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                var scrollPercent = getParameterByName('ScrollPercentage');
+                if (scrollPercent != '') {
+                    var bheight = $(document).height();
+                    var percent = scrollPercent / 100;
+                    var hpercent = bheight * percent;
+                    $('html, body').animate({ scrollTop: hpercent }, 1000);
+                }
+
+                // highlight changes
+                $(".js-bookversion-versionsinceselector").on('change', function () {
+                    
+                    var selectedVersion = $(this).val();
+
+                    if (selectedVersion == '') {
+                        // clear all update highlights and summaries
+                        $("div[data-type='update-summary']").slideUp();
+                        $("[data-update-tag]").removeClass('show-update');
+                    } else  {
+                        var showVersion = true;
+
+                        bookVersionOrder.forEach(function (version) {
+                            console.log(version);
+
+                            if (version == selectedVersion) {
+                                showVersion = false;
+                            }
+
+                            if (showVersion) {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideDown();
+                                $("[data-update-tag*='" + version + "']").addClass('show-update');
+                            } else {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideUp();
+                                $("[data-update-tag*='" + version + "']").removeClass('show-update');
+                            }
+                        });
+
+                    }; 
+                });
+
+            });
+        </script>
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+
+          </div></main>
+          <!-- / content -->
+        </div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl14" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 149,
+    pageId: 1296,
+    layout: 'Documentation',
+    baseUrl: '/'
+});//]]>
+</script>
+ <script> 
+                                                Sys.Application.add_load(function () {
+                                                    $('.report-issue').click(function() {
+                                                            var s = $(window).scrollTop(),
+                                                                    d = $(document).height(),
+                                                                    c = $(window).height();
+
+                                                            scrollPercent = (s / (d - c)) * 100;
+
+                                                            var windowWidth = $(window).width();
+                                                            window.open('/documentation/issue?WorkflowTypeId=20&BookId=40&BookVersionId=293&ScrollPercentage=' + scrollPercent + '&WindowWidth=' + windowWidth, '_blank' );
+                                                        });
+                                                 });
+                                            </script>
+<script type="text/javascript">
+//<![CDATA[
+
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1296,"ActionName":"View","BrowserSessionGuid":"b457b494-44eb-4e2f-a927-4904218566eb","PageRequestUrl":"https://community.rockrms.com/documentation/bookcontent/40","PageRequestDateTime":"2023-08-03T11:03:41.2519705","PageRequestTimeToServe":0.062486,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.240.109","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXAlXTFsDXEQEF11cWxYHR0lO","queueTime":0,"applicationTime":44,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	The Long & Short on Shortcodes | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<link href="/Styles/fluidbox.css?v=637945608860000000" type="text/css" rel="stylesheet" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./content" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="JCalVqAkqmQEu6SdV/s0mbp5sOmfojCJBNZ+JGu1Tuzyn3jANVjl2wGp19dZ85X3FIxIdAFGutYGw0Hvi/h7Ejl87qJy4f6Q4In5x1n7MkQ5ACYIV50+42L/cfp+uv+8+m8/uIWc+Mqla/bzRKj0kwvQodgLqmfvOdVmE86En7tnI3/XZxqvlkA3h/bguKPELlWuy++zPMIeriAV1g6w3tS/i0oblK+Hbvuks6woiuSGi/6Cg1njMI/6YQT1RacxAM3oSagXyLASoOpzVniJ3n3LS6rYZRvDmDy8Hu4Kh1nIZ5h2ndoK5aqj2WNjtPPEEoIz/zf9GXGZLcQLwuPKsG46M7b8YqaYG4MLeXziA71AMyYmriIyZfbFKPEIahqkRDjHIu6O/98b5pmDCa5F+/JJ0NVAI79Pk7Wdvdvm3//ma5TIsDj5M6toVbjOBR9i1dJxPFRq0FXttQFOlMf+mcS6xxugftoFrpML7y+C5nf1qYrydlwCejhIvJ84wFkZxINoOJYJrLr+6z4kCD6FctTB1+Wl4PudThhWCg0YzUV8gKbwGHUgNGhcITS0v+Q9E+74Q5Y7fR0YCaBC/plCC2CKjm1KMA8ndHLVRzG+8vlj7XV6rnvrz6qI4+VZ53Mbae+4SSgQmZevKNGMWY/t+VFRokDzexxhPZjWeL6g64v0OHo1KJ6g4iwkIawmoIC3FYgLTnw/ia907kKUThkiiSF/ooblrg+/ROx2dLvY7wfewuNkAKbYVgIDiM4Bkq9i/b7+Rj50qQZZaGjeGkMACHKG19nFdTAhqaTqwzE/GfokE9htQTSLWwl6IIKu0lasljR0Vg8eUaNmi0OxDjFy2YMa/MU/PVDsE3awNqexdXMx96FVW9VF9HyxGzk8yRKfrBxYMelSKStY1Glvny+Fl9/T4ZDuEzn2hy5K7YTid9BiedsmHXxGxbY0zfpQitpz1wPdQmxQ2PdWiHjh3MXpGThr28cDwDgfmNghzKMP8vTjzG+s+LUJ/k0oD760C4I8j4XJfoJbxNtG7aUSsOs2v794LzJYTJU2YUJiafghVIGuAeRO39p3xyXfkzGJTLkqCs33tHxENhuy9185GqifIz6DvHlQXuUHiCfr+iWi1M/CI2lCnEerlcWA495Hpt91k/oRmPJnFidbZlduuIqook4yUULU31jMQpe5bpHDmjE2DIE7AB9dfrfmnmzvDpFwtyLhuGhTMfTBpfcCQP1oRcrxE9cvl14kVbUTT9teKYjCFK29LL9rE2rMOqkNjz7txFW/FOGJqD//rUB9LqhbtUn0gJDj82CwIvS+7OmqwsiDP7MncGfULYPQ8V19sWfA43olGeBgGHx9M8YZs3+epD60fEHeU+/pF2EiIyuahB/oGSSPzstRslQhz8NyXeDs5P0SoeDQH6ta/mnWhS8dy5Ip14ZPPGj61yxuajl5KI2kWbNMK1QhkClOxF7TrWqcbjB53qnwRZJf6vEpVeJ4XKTPTGNw4pEoSdTA3e/ix2tKldKYXrH5rZAJPea2/SQStjhTcjCX/weldbXddbe9DAT6sprl+5w/xhkKi/YAVKFUBcF+VGGvRGc+TnlIoXmXK6/38bPrw3JZr5dz5tJJrZaGIDZiOzUuhTchDCaNcFGYa8LGj8MXkKRci5q7vlwp8tb0jnOlpJ4YX5zRP3pxbWoP5ma1gp6Sbk0o6SokL0KHYeP9LpMEjlr1yDKBK7djcTVPahDVpSWzeBYnYFQc2AWJYr8V7HuJciOL+iBLenrPh24evgzxQ1onQ/zVJvKoXgwSjkoscgk0pkfw2i/2GkCiMsOgcNDrClfHy/bc78oh1F7s7yG//dk4bd8NSmGVcT+oaOcOTYFEn+Tfbrm9XIiviN/uw8GjiVjctogbQcWZrCiE2fQlOm0M17qcZVbBQF1Vo8hqnnSRElvoFtKkyOig6FSVGJ0XL59J3eNjjRnnRJiB4OeCznXFEmLkQg5LCZHRcyUKFFZShJrPcXDjOb++apmKdI4XBMJzgFiaWRhMwDA1GSvXehBz2boUvOYh4auMe4NK0f4Ph1uDVTbrQphM+H1rXmSZpley8mJRny5agJCSQdtrx7DUa0b7oC00U4pN7PG+OoGxn0NVtj0j9t+NfJ6/8tIpu7lBOpmm5NwSuX4HNV6SFE4mC2vXfW4CLSJahKao8FCYpi8TJkJ1PO4gJVuTgie1WTmGdD+7Fslote5eh/qTWmxj/6UKOJ3XESQfHDVoVBPC7CrsX9SXHcoWvO1/MISv5rMiVD+3WGuL4eWJpYTtfWXq8iYyW6tHkXQjw+7tCDy5idNt9LIRsDKzrPDX0kF40mk1eWbH5cGY+fZ4s0BlICF5KX7yreLrTPkNKPjOG13/ffIOXUf3NGl3p64q1aoGLUHlzzfJkbJ+FUEHy25w7T8RpQ95ziwVvnDL2iP0tbZQKgKnzzEDEAPFm2Kggt4291q4tC/yTnGjqnI+yBzeeMeOpFA7N2mtHaeWTH4kYqciHotzWpHoLHruOtXEiNWxJtN5hFQlbTyYQjifsAGdt1AJNkaXmAwVrOfjGza8xVFYjdfZ5x2OjBrC/Fn+K2uZMqZzkNpDgsvTGW6xBPxvT07qKXnJRPMNl6CF9qS63vISzP8kBHDzrB/MJXO+2dBWV77B2sCBwxOWeIxwiKIOFnlsHMZq35reT02rDlIDisqg1Tx170hyX0TQeH7aA8EMGZh5uHG9LpwD/go4/b7em7bemOvaLGydydRKCpFBWbDI6cosZdX0T/XMGDFgVOWwWVMWRz093JSHL+G8p7CUEsxM2Ufbwf/MRLk9fW1BgClrxm3gV2VMm8sDbWFiK62lyPXDyCk1dZx+4VM8f0EaPsET8HvTMMclU6C8VdkBtMh7nNHxz7B2YHfQzPklhyTl3qtmZo72bWyj9/hY6KIMeYDIHWrRi75BpI5URuaPI7DVcJfFCm+YJjnMVzTr3B5xU4KahXmhYQeQGrOxLhNxWnjoK9t6tV6WSZqqQrcEpBtFntTkBXQ63kyQZs4d8XIstIpkVFAHORDfUPi4JDy7im9vomChPV5P/USUNjxeMqPZ7MY3TlAxkNKD22shTakgv76fGYfS12AV41L7EuMdRv1XkHMC3CMBbGWCwZIfS2IwstCrYQmuldL32jhkLRlyq7WBMY/h6b2WxvmSNKlJuwxpXR07dTeVCXet894Gpg+YiRhpz6H9zoLWPlBiR2q93MtBIAquk0mqde9aBHxsUdAz5AnW5zNORm0DPdwPTjvrbWWKtusTxaxYsIXPAM3IaPzI6+wLPnd+2hPCxynSzh7NMDccRkAcXem+ytjvzFX7oeimlAFpWgcwQRyGB95F1kE6dK4skd7Jr+vAAPXYQapjnT1KE/95+/2trMe81aaM5z+g+bzc1cHphAtZE3Bc9n2vnhgL1vg4/RA1pjfiY1eL2WIQIzwOlxkx9Xb5d25QVu3ic9tZRlp0ibK3agiVsQEB6VzTng1blefbAmmV4E54VTQIcpSgGsTwZGJbsAAF0ZEHR8C36/u/GHAYkcRTCiOA42LMPAUPc1TEg74RlzdiQP6uGHtYmw7vYuYBUEnbV5aclSrOOhUBF7fW04M7KWErU6jay8jDZ5Sl1d7Qd7jabqIRG+wFRGtBk/gPxtPE1R1uhLzYDShAhSKTyjM1sp/YkTnR2S9RIj4Ts5MaS6duVD66hRxHsMix8JVu47Z/H8kn2vaHXk4g7rwrJKnXMX13Wclg+FR4BI8NAg0pz7Adrbv+1gDZ1OAWAkFxRtD1nltN1tegYHkyuktnCMoY/qboDLrBjrp7Mvt95yxpZmHiNlnADv8YFO6ufA1i5IzuFz64BTjHnrc2UIj8gdAcF+GdXnRYOPoADa18BR4Zf3yo0CNoNEI/lZm48L0paroucFWDnp0euaMKx33//Ib3lS3j1FFtOX0OOOVAOXqySJ+/MuiUPWaDfhU4Q87MB7qJtSAHfZiwkqjHs7xSA4IB/HM9b2Y+Yagr2poj3HCuH1JLTvH81w6fnSjh7boLTQh7JGh7vB2nnhkd0EjH2OildpxZX5GKzz825u8Y0yC8wnK+eLqPXpOk/VkfHtwgnPZS98JoTdoZTfAzN2ocYD3rSId7zB14/Ko7IGtbi1OfkRyPevavuEz/PlAslE/8h4MIYwUCs/SYjO7bykuXx8z82heGjfGWJ++CulgKLERYFeXAs8CZ9l+a0jHIGGu4Pq9VkxlJd2XbncFcIdIPKLRQnbUq/eCAWYR385V4/Blo+/5kLJrwinnzpGyDP2g4U31zVcGNpuJC9q6xmJr9DSswsKgsenRa391sgsaFfaLWIuuK7wZkihinOpCUmi/YaCGU7OI+sUKXGxK0xAJnnK7riTm7DQLIUDPRztrFcg7voWD10YoCqAzBZo3aMOGjV9c37EeebA/77mn7arJuL/ftgWrbjyv22cIbTjEguOAhKsCJ40j+wqmvlMZsJP4C0b/zRFdWGl1aGpKCu+6azhRWEB9+TFqZXke87PY3zV72wp4SIfcYTDjE0CI1Ae5PIxZGkpgvN0ZB+A1BOfZj5QCL1QAVgNzloo2JCf4wFA5PmAkodFChVJbIgOLfiEdor4Z3a/7OtK4WX0eKCla6mP1TaIWkVRMKRVSIwJv7TvZD3CSkLlWiXR2VTM3xo2B4zE6EWAISmPlzbYPkD3Y82K/PZPHqqqtuaSVTkVEjh3ndOEfuA92zeRhwOM1gL8N2RQ1XDiqav8Ozb2+JcFTKorPwb/UBem5HtNcMLLMG/6q4/L38uH4xo4RW9r7RJJ26iMpTVqKO6sjvXWQWKJMAJ4IScXMHeimV8e8R6P6u5vHd4U3dtvseFz+77Xlo1UQ/iIf9xJ1DxkDWzidS2EXjSEFUfDe1L/+lOQ5NJjfgd5jBZg76G9HR2A+Muw1N/yNUQGF2wUUL5lWT7SHuX+fs2WmHDeerJo70zyp5pk1etm77dKDnABPGUVTM6pSBnyS5F2c8oNaCg7irKFM7TffcFLQKc2TY1cyK/gBt6IUKBNIVrAJtSzXLyNT2YLbmImuYD+Ev5exIgJfxPZ93Z9yEZoZ+Iz5msYAEng7hJ8S7nXEfyKsr2oZMWAapSP9+AuVy/TZkgX+Add4DlRQ3spqqA4bvKTrFJ1ZbfetFL37H61b4HfdJJnRd6mNJL6JYa5OIfiFTJ+18Y7Mwa/itEMpHSunKl+cyFZAPeaEyc9kyyhV/9Ky6TF+GBW3+o7ZlsGw1rHrbDzQF2X6+HvWOFYau/MPYzdqgR3FK2K/iU/wT1OYVDw6Viqdq3SyC+7IRfqv3R126j/0UzU/n+DIxgHfuE588fYrzcEy1AzukhRGWsoOjMK4Kq/rkFh2IDmDvffiCq/9uWhiXRXQ/2m4cOmOE68T4l3A/YTdRnw2V+zCnzP7PMwrbQdollY+KGDklJdev99KqMOVdFdRiPGDlxO+/mUOW/my/CNLPUYWZzqcWj1DKSK/biL7C2pdI80j0BPop7NtjCHe7KKTJjn3s7TdMcKyUNlqv9nDCQdoWU2KUbnuNEzdEMYEt6JdGr4ba/Q0hSNQL5TxlhCYslS0VNEhFHW6m9cZa2hSXg/rwcUGhc9r1u3DmWquMsioAJ3ERqXg2dCnvhKAIxTqAVMuIXo7Z9QzhPY3cH60JAmqQOvCycHlaSL3dECYf2lbXxLJjk6txCjjvb3gHNktgr4F/PTPZSnVESvM5o5m3jTY3D/FEPHmAP8UebMUIvHaPGupmVj+loCIkJV7g4F/MkIYwUr09sL0O4fkAAvdAkour2ShUbqNzTS3/dYjytvOsPskosA0HEKjXpsZ0PatxzjpqJTEQ7d3WgkC0FBanzt55Va6TqTgQQfuP8aJPqGSZLFxuf8c5EG24FoONut3juwCXs0c+h4UdTl63j+RzArShsABaCV6jXzHSPldIS2koCXWoG5sgw9jOIL04BX156Ua8j1KP6yt1rIjn/mfKsArYWvS4Mo6vyKPI+hX1NBtC+jfvZmkkNB9Wnrbrx5GnH6Y8QQ5oEjJA+4RjPpTMM3955FRoe9hDCHSFwhXTZS+J5Dh/9/B73Mz0VyKADtEVhusTJrQquUZHQV8IkpQV2FsIFcWoNBFDHL9fcgel8BsaNCgc8UJJ2c3hxsPjLyA77aVvXQggH99DMKoTvujirlcmnwCiBk+fOnQhfogfA73/mfPe80KpOMj6RuGSq9SSQ/G6KkEvjawT7xPWbAzKwhJWsckoA8kBdLIpkpKeoee0rSMJep+PKzHKNzpiAQKThcucMl+dJJs3gBbC+/Xn7dd0rBXMs3nqJulC2whwJsJ8bM4FoWMHrq46ByKDxsS/R9gQX274bEFXh1eKR9fea7aAJJEN4uw/d/ipNu/Rs9px8CXUuSVONiXr1a3s79RLdB+D66yRGT96matCqKuJWtN64717ZarfmFL0DQgUfEsCo7ke3DMRnbhlISxSrJ8dyddgQg81KCykpAqE9voBAlD/h1ju9c2Fewq+zNoIK0fqRob3PWjI7Tkm7YWOBoZlRIxyo2lKafEQ2qnakyslThfHOyeSHkQalgrvg1amV/Y1Y8TMUaYm39knA0yRUneEsrOEz59t7y9JLmGnmj+oVIO5cQLnbSQp5ropS5fcyf5Tgn5ZzmMjJxrLOknwuTj9uEUuEd7vKF1ZW2IDGUF9Gz95kbUzxiXoQejMCHxVqRKxpYtZFXE4TlnPR4k9Sv3mLGAhcGaFvjsWGUMy5XR6bh9TVbZKRUh2xQBxzVOnXm/O1mqd+cJYiGmqnSqv6nGeTzJvcZqA7SOf3qt/DJsvSf2edHVzKwc46pYpQeDeSHcOvjkZnOvyPT+CazM5qVuisL5oX4+mUNSCYe8O1wOndxV8W/VuvgT7TqvaMKJwckiLHG7W6I7DZYRBbKwldYmxrBPqeWr18kBTwRmBxIjwr7AfW/3vJxPRkXtLmGw7b/XNUxd+hJc382MmNpsD9FMZdz7Ejo7csWalMLDlUz/9ePknayim5gdFobTCjx1yKuotWiuan30Y7DROIEu78vP/2IXqxuxNsiKUfMHtgYF207l2Hsu9WUjeg/jRYKYuziEB5eX8A/iDteejQ0f5BpiM1voWlqNwhizD3Jx3ZC72m46syjOqpVhz6XhGT8Nw5rGMIfp5ewmDhl2IEbQYq09UCYFNJL9V0Zma4GsHrJZMjzTVvg5GquGJOBujWOBrMYJEEkPUTCDUXJ6OodhEfWJoMZ+6uUJ7/r2GCutV0xUgtfWGdQkewaewDzVJUiHz1o181YFhHeYA/G3DwX2Y5D2Sjm+MfeCfVupzmeWQtDGA1whcp4CEqdY67z+Bvo9gqWydyeJ407kFdNnUjpLQ0pi28gTTDvdHfWJuGQNZNB513lKIcudMbw/BhYXTBzNaDFslOqz0YDPscNyMtJqTLCVOVWPnTORHZTZkMkrowfJnSZGgjEJRlykCGigcubnn6sPOlq9rPjnL4vZWXFSrhSqw9B6sNy/6oQYxaRvYdOCjrgZlPyVP7KvFy6gbJPrAd3ASKqo2JHJRkfEi1iN0WF4K2CPcfsgJw51EY6zcdnC/vpfOrBcE1neCYyVej4RMsiODQIXS/hTfyaiy50SLXLDu+vMUPO5fn6K3+Pp/NEeSIXxtFXGlxUW5DYDnYiMdKOBGG9CyFix+knRTSCNmeCHEtUHXKl+FOAYXLwz/5K0slxaZLZ9nPr6j6HA2NWqaVD/RRF8DYqf+STBxYX21j9DsdqRD0v6NVIm/YO7E+8cMbBMirETSic6XDqs0H40ZutzTjvwpB2tgS18LEJcnG2dOHdnrLK9p0X/2GIMVratURIGFCeVvRK+rdX+jTk1Giy01XgOQNaxyE5fxiOb1OZNbVVDK7gfZDA7xI1C1juyfp2QpPh41bM+QrRxIZ4lLXWFCd4PebCozOcrXp1o3MS94zSofNMPRBj7+s/IwDaFgGwE5CP6Mk16qc9IvlrNgfZNJc33vPbRszngUVyS3QuWHPQh9BZVEMVia06jktbEeR38YFVZ26zmWwVshobHibXNTg4J+QUZWY73NbbhL4OnU242QB6uMQ4KWwhGO5fwElsT5E02bj6eQmLbtBgNk0eU5Jd3f+zLBP9IoSceP5cu6R+NcnUCPHq/rc7QkuJ4tSZLTSA9EW/hhQ+dKo6kzyNkTmhjhNDVMM35XRk/m7JiCNbStuWhZKWfdx+nqnWiQheSvi2BGC26+7OlYuaIqmDC5i6Q94cHdPDhvFrr4qUdcwU+CxcznrBT/nyrqvZ4CuAviUTWnd3kby83RSPr3dpbeJq83whKGhtoXo4aeDIiDg2oDspB55e1sXSh5HixJyqogPPQvL9ZhKLLXcVsEDyBAKL8Yejw0AbKnnh2ax7bxiGLLCAObAFYrnKOcEUXYp7ipvzNuZXeubQEon3FPyo3CTG/EIzY3KqYGWL9Dv4RZW3XmAQPc8eWJDrMLvy5M8x9Di26Yap/j6KOMjg7r1+Dlddx3Fwmq/vSJVGIMiPDTOg7374XBUL+aaEANKJStSRNcUbby2L7DvnF6RutkUNeVudryUyY7uqkan0uj5/xbgR6Tc6/pe7S2CeD/xiDM0uEomGZXxVbSOFTL4bzzBsXYJcmY/QvHq4llyVWT7R8reh5d4E9SGTyiTxGKig35iAi6W9GRtgc/gtpNDVZkUkt8+XRQuCHS2DKV1qONqKJDxwoc/+1AXrpQMIXvQQ0YiN+9177tk5PbTsIcBecSWh8b8HptczgRrrOnCZAcW/EUMqE/wgQUxCDVaVDohvdRK5IFATDFRUuvuehKdbnhcM+I1uFvFK8HkNue1FZpFNgMkdGVVw9b261+DFIuIi2MtFNmoDUybk8zmcnyBqygyKMvxy265/Xo0id3PSkm7fszCSwe/hUHa2X0cMvRZLCN7xNnz2j8RmO9FS9dBQDFoRXQiNGmTki9U/FyFZq0CnLFIkZ1x3ka3xln+Q2ukp6bXmQW4GV6cjTqLawA9wvagEIK5h29gRXhN/Pbv+EDsrTbLW+NPCk11Qq39iMxKv69iCY0/ZpMByi8M0KzaeeqwluGPSG/Q66NQPhyuCQhGVY/vCoxHMq0OckTPezSsXAuBI4DJEPMkczlg6b2taS1vG8R38JQcB0QIT0G1Jw+/8+2wCZjlhCY3TnMOOoea7u/8h02h/iQVcInDgwI8MRXNv7Mq6kRp5rqTwvX6gmyjIby0LmzM9YHt6AddXZF1setZgrWecKRetKWxKz32glCCnY7xUmTI/Apu5vW3oWokOFdWYfqoXOPHVUkb/jGF8nvECNpLsIwUUJo2cZ0CLE84csxB9ofdUvxX0mfm+fLXstNIl6Y2e/vXlMIKM2/6g4WNhZGlx6leesr779VkzCZnFLMhS2ZXzIdOc2PSDyMFC5hq9CRUQbQTLPcnoEKMOG8/D4zsw4xUAWLqvpGyLoGuD1T7+zuIyt2b/8h3snipFyyHdP/UKz+aBQikyFnVuNU2D4eN5V9Pdkaqg3aJbpFBPI5vDJtY1yvfLKP1MXu5Y+pLFt0ATcjGYMbSlndAeLvq2AoVR3oer9tUz8bgRAFewMuOsMAUzdPZNkP/D+xYMKm0kz6gSDeKKnZ8+IyFzbA7OC5EsDL/TAcg+kUU3EoSpPPoBkAo2Q2poGFKHXCh2HGIB4Nql0FKiXpwjjpeNi1KL5LDOcgRVLXPGemVurx439GnYOiaSJLi7Y2A0BVS2uZypQ4mycobm95pEK5Oun8K/q7mi5PUInQBwAgZA4zM+apcuI/BOGQhgeP60rmEuJBXd0Et/JqEtYg+8nq9aFz0sEap9+OEYfxx4xeSRLdKL7kslqyAMrxhlL7rw9FBS+5yIWEDDdF/9TplCbDRWMdzGnUWDNOTEUlANTx1Qewzohh7t78SgKBQU8ewgs5m0t7VtAH7cL/pqjxAas/DPfDeFYjin2Gus1/ZwnPB/l3upJ7cSB0OU5aAH1r6ErcG45+WdlcU+GElzx7bZ7ok3hZDStxpc3Qbr+0TBAFaWek4BI7uT4T7QfRYbHCfBLnJUWFDtL9qyuIKEbxTn//2GfbPSHCylfqsTkI2T/C4bmmPyP7ziukDbRAoLJivXloG8QQR7ma3kdMl6iFOFTILQhCyYJl7CU+kdESphrXcWJGrRNj0CxBcNFy7gV79m0oVvLzU5aTlEeP7ekHLhzY+zCrRNy9JqSNPDGawFAdgTOTpldL6C3t7m8CRct6dtfIB6/XBheWP/c1Nj5WlvFspNC4RRa3p48bhTn5ASnA7ZqfXoWjyXhV6Jm9hQ+PKUWdA001IokJftm/9Ecs0cCTi6t3b2bXyzaS5kVP9i+0yXhQucrEitzfFjCfNLGrerYhyAXD/ly14DYFfk72wkia1mdkL8+gPzbyZEk0/GSoqw22sCkow4OkehheZFHDuIdikmifbQIOkaqX3wvQnRcVj85wKcXZ0f/QpbwsdmfiUfmdEUE8zX/3oAxytpg70efaR/dLJ3/aECy6Ke6E9cHaMjGetuBQw+0s9Ovg0rJ9T58h2s1hhLNjXw490mFctc4SWqLKSFb3lFhKMNYYtlJySdWJS+iSQ94bshb+Cg1dmOcSSfg51wTpjpAhIvDYu74SJwHQ/GD53/eRUuCMZA+Q1CtDueYRGrTsKdVe5e2OocXozyNCO4rV7zy/701gNaCZ6qIcJOVsyWOXZ7+BPP8bip9KaRyaRyt7lZD0nmfQxTLu7KYkyhNYkYFrkeVpHFDZYODwP1Fy6muC+QgA8nW6u3DMTHlhxxmxRlr2Oyki34/6qkicBpRA18AYDJXAjHr5uXWEUTCCf1eVr0AhTLLQoG55eHBheg+c1z4FN9N5ZsQqqPf4WfjTCLZNWqEza4+vfnaJPk/Oh2WMEK1mPb1z1DLwUm1LZ3m72LpGdfdWNZ9MySJNEgsgD8N4gWvpMDKqLWu2ZN5gvPzIuNsmX/BtbUsCLH9ealwJqPk1Cj4Bxt2Z129VP6kah7irUuzChh/wbyYhVminlXPZNUz5ejn0TrXIq9tW54MMonHWQzkAbZYOVT7VsANF2CHG498InQ38E/fdXD4DpE+dqryi3rFcop1yGul4yVPOcACZJ0vPnda44bSencQtYHyGdvFLfHhokVaC+527URuWwCJXGMw+HhAIFCmz0NpGXtHs4vVmz90EZ8aI0UXZNGWvMS6JUd2ybH47geMx15HBHksflHyz4SqaAKOCw1pS4+jQpPWQR1RGXJzcEUdg6emKMy6FRvqnwcRw45Ep1H5xtmEESEXYHdUAl+MHK1Ym/Gz4vPSceuYasoKvpRTMU9RPvX0ucqDdRMd74JO8c74rjutzHjpLA6oQTbHowqyEW1UIXvocx98oxrT4OOxgRNPzrr6zrEzourlrm9KR5q249aw4DlkqPF1W8k7WzRQ1bUq/CWCw3HhIPW/UfDnKjMeJVFcOnWpX4bJHub2oWYBeOER3wIwyMY9qzvt+qL01rCRtPhFjo+OVRwKhuwjR8Z2ExG8EpjFAWi+/Q5phBAH7WI6xnnqi4P/MFFpKnLJNBiH1eyPI5f2KzT5twg6ooMPg1THpZDacfycqM+91lCklnm7qxpjtWaz8gZ3uUzzjpIdOdKAJfY9uow0Fo8zUm+awAFptWVX1+k5kEpg2wlU7QKG11HnDYwkLuAXQW1aMtWC3Ba8Ar3FevJYNAG12l6pp9GfuqLaSqy+2WHOnZgtU2z8aH82OvkGV7f9tBOPpVszEjHxE2TmHd1NanVe9Oi5mafB7K+gXCjr0QQl9omC/sdYlaPcECVDiE4AvEmIRshq7EH2ENPfsK0wK5sV7jxf3nLp8F55tbTDfB/w1TbqBpdmpHtV2AqIlOsP/qCHkLqwbGnFCBLyvVrcCSH0KQQO0u2NhteQhDUOgy+yTovMeOPOwwV/6AujNiHQDr1Cwkavzw5jX8NhWKLii7HQ+qBCnvmMyC8WHJxGmxWWqi6azza7OLDKnGhPLJoD5z4glHdmCJIU6T+VhrdIFASt3UbM1najIDta6DRmIi/TpS1RRqFXfsh5G/BA0Vpy6HfzgdYtwr9SQtz8bReZzxxmMO7KOPikBYHkK7pDrvcHEDilcdpPsOh7HLQvPLuxcb4zSPaP/ONgSZcBHhEIymt54aBMchy2qI9LiQ+v+r2YXsKp349GBO3kwOAfhGVsWh7pMlKrjZZnZaSu60OF0NY82FvGrAK6o5c6/btbSrA2ZvgpwgYALEnLbkoHpaRr3DAkKiwuFyGtS5XCiADmjmzZK6c07oLxbDaxW2Jqli/3jDfuieqjyMvIZftFD6HM/ID9DABP6TpHngKEYzwvanLPS451a29o9wPMfGv9S45qHH4JFBU568PEsG6E4Xw0mJcqcA5iVrVA2FhRsqhRF+LtrsHXM8xkTkE06syS311fTXksW+cuW4SKw36T8AJaWGskqphOWF4a45+p89jMNRz5plncXBXR2dRYTwhIbpQMttmDUcSFHCPam9Q+fL26tc+Kj4xV825Ptqw70FefOaaJck9ReVCb5qBu+Scvsh5ck3Js8qX2OxEMuZy21nsZ6Q7YQuoHBa7O7GFrZ9Iw0vAI1jAY3ygbSECyyULItTJkUPuPhDzGIjnaCt/sEgdKH6R6fzBkWyUKfERc1n2dV8eI+BBkHnTyFvwzShdrpjCCzqluJI8Ngz6/uozQGkePP++ksDTM5E7cdx4JowHLD4Q0xOH19oVpKHjK3JTuKJl7vX46816hfLhM5nR3F4LrQAyqMNd+0GOd0GXGfqyidv+bV47kMzSKPxiO42aXGzbkM30ERxPyRiZlv3Y6yRtAUOzO3kulJJ9ln14cUnSxQlBhW6IBUhj8DfBBURcQD+FfgcIdMwbA+43hGYoFADjdn+ELilEX1Lke7R7rHhVTWuDHs77lkBJMQgHQInPKoIXDcMEpY/WiuSoNIgGUI0vpvnz53inrGSwwA1QjtYZSCoVXOPXqJcTMS7/fvQNHnCoqYANwfziOFVA5FKhjaewbq9bHZ3/fZVo4reHTOyD2wZy7p4IUt4pPdQ01BNiJ0kD/REZ0Hxz1ZY1+iR/DREXcPj7TJZPDnwsZ7V6sg3wu8AufbqXDy4ITZRGJiey17YbnjiYbE42nFvWvYkpNinQSFpTKVmxSLNNyPWCxoJCJ/AAiPGACcQRD030ihEx9r7oJjD5bdSMY8FGXaq8L1lF6Vshe/lSJtstl6h5nWsmX/cgYa4u7soRTOmVZVS89htT9pMZVZkHr1oEr71gbs7GMJ23CT3wXWyficM++gZkK+i6J6Nn4qNyXpot7Qedcd+YuqXqny7XMZgTXyhC1vHFgU50zTvB7F63ZuZLJGRkzR2KshbsZMMas/SULw2ZEy9K8i758YClIGh5jq3FAxW1J/TMp1SQUkOAjMXFBheXetjF1opYpEMsVk2YoZLhraXGA/CiOIZqDBUvxeuTJcYPxph2Kvs7PS63+VOi9EgxOYiY6W/kXMJai6/TE/eWUVYeiBbwJHBKY4GO7wVVvKuJY6AhtRUSO3UeK/ssWYEHeJw2RWGqC+vpQmxDuwaM6bgOdZv2LBNzfNh5CaWA+REMMqgspQCPhlDSVo0M2NZm8f5PgzhyQc5EgJsF4mpKEGhjcBCiaaUwliC9ob1oB4Eb73NWl0d6rkk4b6Ukdt9tsDldc0HuFMr9XiEp8z+AKqkkfkdEr1+r9zSxpOiDD0Lxu4YvadfrI+CxozufNnswMP6KDf+LT5FtLfM6oUO7INWwDbqJLF8gNnMkXDeFBxWjGYlIXn/uCJzc0xAj09iWTe9dCzwdgE9+CVvx+VBn2tIbydalSe8ZU4wP3pTS5jzincxy5eHM5b44eqrPvWN5LZn5Xt5O1nndNDrFHhShgw7lHAlqycgjPJSstT73UrT4q4vRGujjnPkKI/F2q4BvpSjMqgL8Pn7IBevsoXvuR/fdDwBcqHP40Tbus42zJnYI9erivEM6iKfK88zWrBXfClWXgz6JJGl8aIu4dEESIG0y+BIdsAMmg7rPG9cbAaKcKG1GgtVBPS/rC6GTVWp+wzXG3arn1+da3JiraX9Sav5BPc1VnJNUSSqa7Hz8dZYWSePb4EBeLBIZYz5AKvxJNvZ71w5qgAlWdCEwobtxqVzm5fpWUpYjF87/XnMCpDJWyqR0ToIzke5jea/PhxZ2nLsLKvrqqdkuvOTviE7S6Og1siXyFrZnSRqRRpf4eLoK3SV7mFAk0VFcFtmY+7kFx77i17+GwZ/GAnEXb6/BRmbE2iwCffzo3Wk2TjrQY1SzJiipIFgYPYlMeYsKyRyIXW+wsKkx9LYEnGwTY9J1rBfzHp0Hyfv64v3V8SkbC0I6TJv8+0vS/4L6+Likg00cb0PElR2sGR31dnA0S+JZmxZS8uu7n6/iZ+qglhhclqFTYQb/plgr8qrIaGX6Rnt6liy+eDfjRmn8i8doVmedmaKRFzi545M7w3Cs03YnxSgzLXAyJ/gmSZr3MEXoZH2jaD0+Y8ADY85ct2EOGnmJD/MfO4lApF+gWJfw4l/jdrjJ1wnIoB8yZxHr8zKeKCVPtRDAX9RBlD3LAcuNWfqsgprlwn35jW10lQu3onjkF/NYuovH/4BiLPc9GHyLHiYJxuVVViAFFsJYcb7XLy5PUcIkgiJyaCc3ZEW71KLqjS6zlraoUK9d5yEC69nROnZhWu2q9gK7g7n9FOJWiY7ZC4jcgXhRnT7+WHjbTkeRbZBCB9NROimyZ9byFosLFx9qFmvCebtfkw0OEF/i7G5FDMeq3scSU2FN2P+kO4FQnVGm3wT5F80X4avSS3rb/CJH4NunstSBK7hRCjyrEFD0C7XLnMyslqexB0DPWEDxXWUtTXMjio0jrCQLelh195JuOF3JgkOLS/S11oolxglgAfFl2cuMT7aZF5VpUX5ABfa+e1g/TcESs/LmldpL1bEv5VSnrNQswO+iHzFQB9SLhd4uDbEgffxE8BCvu8IstOzkgMyoakSTlvkUKb5yxzojoEXT8oWCZDiI8LKyHsmLHz4TuDlW+L3Plv2EmUsIiZpvjnVGhpr5rAzxMHHcw0fsos6Jrh/y4ZfMPxF/j82kGrj39zwek2YaFSOIQcd6alDW6r28d3A3cXywj7MPcYNcGdwXEmMxiPeNhWfsVgIIhdUgi9/rJsrT8LWaya8pVEC7fAKYUdVarkdXjpjKf+f89qqTdW1iKcEE6xgykH2rDOz+WdHrYulrBCQjnyOh5mdkpqwQq8mCNEUuxr5QswR8IQ0vkfYGjwPxhpjbRRgvbusiTlFn4i9i7RQmDHvPvtxBhJsHZXOthrDSXX9qPOOo0ut7qUYV0A6GqOJ3D8ggrg0CPSlwbPpKTgUU1zO4tXpyf+m9TJ20PRBYpOYh60V/Ipjh15/x0kq5wGnN72PZHUD/8AnybcVsLaTDvWBwObpqDs8IIgUz8AIDDRzQD34CCiPWiRlipc63as1Rox87KaFrYyyJaUnuzg48oDQJzGOS8n0+9lNfURqgjryz3TWxP7iD7jnGNS+oOy8c4XNGufE6UBUsPsUxguJAeSTL7+s4qfOK0660ynqRXtcBr9rWz35FS9YF+PGSn3Mzg7nZLYt6zxpDPN1jQyHE1pJ90A3FFry2hw2Jf9oGeG4oCIx0Uv3vz99tbEzxQb1uUwW1dRgRnixVa+ZqmLOBy88XxKuhrupAqvIO/spiQBJ0BsNlSRmXVnKCbigsoOpLw/Hp+LYlOgDcmfSaIqUSWgTBi3myYl1tupInf6KJ14IBDIY7lGvnTR1rKhhAyAfphTrPPDi5GhtQXmDCu2fflmRSgUIpVSjQivfd6pM8yaFqiP8HfEuMGhjWXjOeUrbItd+XPoilnuXGhp4gL5qj4Dvmf57il5BHo6bozr8Rs+8yv6pBkaLXqbnr1qW7/dunsQlO4jaDsT8L18JTUMeI2N+ZNMs3la1LNmA7BxO2bpD2cxYjr2xrT2cOlLMXtMGn3ZEKmkf4WxHUc3iFsmnloNMkqEtQxzV+v1RAkOjoLAyc3TiyeKijIG/Zb/KRaTvUATP/OGIHUN127sntS3zc9uhD48pzgWVy/uw6DRAaCcHzwpg9FqvvUnv+xXb7fisdSbM8v4p8xvJvK/nX6iGjOWO+6vEQBdcehM2gfbKRy9xspLveEEG88g7J+Gq35mHTzxPcZuXQhqOcOXN984/rd44s/iltwHYWoOmU24crkUNQnsPxwLQKLvgakWHtYyg5QdQOX97tmr5eVHHb6pwdLKYY+5e4B3qGgMwKuc2ryIkGjQtxuXqPPVIB+qBa5nm7lu4SicV4uPhjSTi09djkcIg3mHIzp9ECziLVLMfl0XI2p+dTexGalDxF6Z+wOtBN7WWk6KSVm4m+Ers6kmHbRDycki91cc3rWcRzYV4rKhruBvUG3a1SYR4nDvrVLkVHAkMfXZL/fmL/pn89mRewNO+yqbkQwG/gLjIuK/gKE9K4FR5BK8Aw74HpfITedIIhR3wM1O5Kzkmd5pXQdJSk0W9DTvZdXkmQaF8sh047noJD9jMV2zQdOKWHisMltmePCH2rllZeUutnsQsYuYyE9LNzka2hoLlv/Ri63fQnyBQf6GCXOBRT+1BXif1Vl45I7o7HmQYqou9RDgWGlAMB3TVHzc9iorGIAJtOrsH5GMneliDOQ0R757c98f+KOokfl2hY0TzmhZakN15pN892FefUa/QYlrV/XwAerX/LocDfVs+xwvmI4U6gjcJPVeEgBlUc5jmljdoTywDQwGv/VW2f8WpGjWrtq6Utaw9C2LTTSA6uC4Gv0CVJmgtq0ZRr2FaHRFBbGttU7UIycl/+TGxaO8+wVc8c19V9n5th5AcHogEIoMViIq3Afv1jfOywMo4d6RB/a8kT8jzeaVqqygQt9gW23gpLrf/dcHarULnf1Y7Fe66IZ8CTKXseSxPVqm03nnWxDwNhXYC/LZCyuFZ9UecudDMm1ol+S91ew2PaT2qOjWi7vDxUaBoK3134Ugszl4aiQu4ADyCnm+HcXtY0H4H9Xtb7ULeGuWF4baohhI58YxIIMsRYIfpTk9ITN4wwzawPveDDvHFCPb9ZlDPgzZYo6kcjQj++1gtuiosvXyqLxpdAIo12xTOB03NgEV/AFImGv7lyfSMxl1nvq+EAW3W0MM26mWdvBxWXWlxvvw6Xn52mX/RBiblaM67Xwg+/OvJFcpPA3PT2+jpp7Z8QAyDiyZOiyr0Tn1AkWGD5uDOh22coNKW7qqjcP244nvqAWUKHUfwyvO3yGsH0/KJjDfaxRqKgFdxwekmW59NjsuIbSChmlPNJUvkdZX2HCnBnW9NQhWOkSUKOUjIuwP+tvTLVe1c7KdlP0cPnXZeTaTTHtKOWOoh9nvAhWr5KL+ugohm2o2UFgKIbF9o0+Qz2SGY92Kq++nuEfru7hjmO68DXVv6IREu9x74lJjndpevNQzhJO+bJkc0yF6U6RhD+ZWLp69LUntZ+TRdclNjDJnodH3/sayb98YpVObcU/WZx/GqIwItZ7fPER7YAgHbhNpcu+hCUKHbRi464UYXZtDLgAKMt/KcqLkI/1tjgAL6aAWuU9PuRmGMODr2K1iPvo5VDyxixEAb6zcmQYHlwjesOvxns+UHl4DLUiSHrr7bjI3opSMYZ4FbE1awVexR76+lsEspiDPyZPdEcY9L7aUfaqFGNAoJCRvQQWMqt/QelBJbJMUrtE50fJLelmpXX1sehwHGEnJJXE4klyIM5oh1pJUgckRHgvax751UzzofO5GY0FLlUHGua16YdYoUu1Qf6pI77BVZBOovYIXkJpPYyXOsD1vcUFfpDI2VaAiRrOdEgxkdBNPv3MwBElfRmvAC77/ySaZRXSWDi2Tmj5N3vEbe+T5A7EBC/6RNKmICFvOI058/PbTghB7G9/YmI5cwMYNljdKcGmuFoVgR01GLHkFOvAZCQeTh6zFw1xEN1q9tVrLjU1FWT55Ll1jSPGrIJR/En89Y1uzsv7ow8U0qX/qiu7aQMg/q2XfXVjfsPbYJGYHbzyTIXq01FBuW2MRLiy8/ulpEI7MVGHwHis8IOY8+CxWvHS8kptfNZwQcdKg4bo8dYp/XekMV+bJtrwDMBAeptly+V2rA3jUwSRjZbloP9cqMYr/saJR3WUAqg9UiWrnD/hU1ILz8t1KLm4og/D98yqfi0fz6OFeoM7zEArjU2MaZLk/TKQE6cOZOhXD5lOqwEpW97/UXZMXEz4ZCzQXpwxh9dbZ0vKGk15VX209pG2Q7k4/CY5DmutMBtYDqhoRIiLRu+vgr9fQeZYJcswp7nDMK5f8zyvI2XJZjx6WsV1pZY5L7CH0b4BphJnmK0o/O+I2TQ7XFNead81RYqsdAssRSMNwwA6+mh8kQbWBF8UoedxwKbw286K4xLSnHiYzhrFuTlYbAgPh3JuQQSCbBIU3oXdX+sLIRdaqYAHQb8Dv8nxCSkopfsIvR4nji2F9usbAdhNTVE5KG1pu35aEA7vtyULk7Ea1kz3CWMarOVAD2/0sWE3SfOfS8TvB2JsBM6142ZDqE6R4hJo9ZspOPkz1230srSkGXGgd2SegSHDOXJNMbQKHHLzxBvZfXYZnIYGhVIb+j+K8xiG7gW65vOAt8uWLNI/V5LL18ZVLIT0Kiw9bQRrDZWD/nl3Ua6P6nlopki6TzkR6gJ06gks/MlYHbl8L2+He0pnwJyYN+1wsVAxs33fs7ai9ugOmOimz+BtD1X1Rip9Nz2zznAmbT6g1bPL+X/FCiMxWP61UG9rWtUMlhLwcIw/Dnv3qO4+IRQVy8fpz30vEJcacmuJxU+Iro+zmAQG4NbOvVYAcTkl9bhNr2u/rK6bb32KB+qdW4A2EWOUOLtEYcdfmjoOsrf7V20uqAN9cGkh8VcQBhjHhlbAsOkpBZ9+z/l+oON8rO2ojA0PiFfFycPHrn/PD0vcugKcCWEZ+GTZEwwwRcZfE38YOoAkx6pH5pYhdPBrWYr5hRJDvhuEnf1SACG5vtWm4kgEiawer3Gz8sAKWp5pibr3BvO6kEIKjLxGduGvlQKI3/LN6jhzmBd0YEt5q0GxMkbddRtnKP9uhxDzYEFmf7l8/UmDCvsRd6eSahuouYNFcjLtQQs6lm6NAM9xpVl8q4mgz6S3lqqtdUHa7iFX1S28BA7XG59NdAcrPicZJTJXfi36T3RFPgI22sRpjz1MheWxAsIvcRhkcO03lAP+VguvA/cDwP7R3wBLEybWgdj485LwpKEvWIZSeHxeyfujkXne7YJQFBM9wIjnE6KgC//DZW5BgxzaqnQl4WckT5D6gAzP5KZVUUqEJY58lkSSF4TaIaBdcLxA7a1CB+BGyxBJOnEQJagnKVbT7faKk+JbO7dUxPlpNKWsuVUab4AdkRgdHPBmTzNY2skSH8Rf3RsO3MuZlHqbQ8bajPae/xHCg8XI2BhnKTHLGOl5F9WrjmABf0kK/xWKWg9xHiGpfWDl2t84fQVS/Urvb6nWeVwMOs0AD8o/ilL8sZvz+P8iR7TZ6RJTGj0XOnxU0wlrW5whIPCBwxvuP9ZQrN7ehVVzrnM4z8zFLS+MhrGNOqcHfxpfCc8Miq8s47J54VUWDytOKIY00NX4QIx/qkrY5NI1PbHg4WDLn/MlOE1q3t4AwzgPdmIUFxfnItXte9FENcWLyM1usdO+A80q/rP4DanmgWOYzPCEhfKJpBflwEGjwTkHyJf6q7anaFDGyGUaMXGMVRhKd2tZ7Oycv+8baTWgsn7oa4Scvjq0LbWjUetYRVEXplgwjow7FP/hxoXI9PfPSWtpQyu2B91y0Spq5eFYKl9ScICWOv0v6CDX3ToMkB82AbEH+kUx1QY2udvOdCuZ1NychLFcbp8UX4MJcPwudKxaq4+s5uPKVrJSPU1/gxjJeS+mKb4kkwuksCTzRvHp/OMgzGJd3EJDoDfHHs99beZOPN12xJsdWgk/6DnJQUkPo017gYQg+J/f1f58RSCYYo5l66SBdq/Vq7l318nkprkRB7K7aBd3+xACkr6SVrs8oWFm6c/nDK7V+si/zyFEkRhQWrpIsXMCLZDAPeNhtpIXF3S9GjIInkxlgxYeBiaflp49RfYllVN6btGX6RXu/FcfmC8zNSVqqbOS1tHtJ0EhYcGEC04BphFJAkoJAmhBKuheSykk4RIBC3EcZgWm9IvkNz+ptbMhTWNEj9ldZnUGmwVxyl3ysQh2tOn1BPems7yVH3noFkrqi9APPl4Z0V7Tfzod81fzcdEL2H8W/8tNBQQJFTLBPEcrIjbGuSNh8lwMItk3ERq76RqyJhrii6V4N3oVZRXIbwTsxqv0ma21kvFcNf8o1cFWM8G4jlIanQXtvPtn9n0rt3gChRijDhr3amp72qlIPP2Wxj9j87yekyKILFhsZB7ovGYxiQxyHK4UZF1Cv3uSzfsBIlkhxocykuJTqw5djft6JchRn3rLrh7BMITzGU6rpU03cqpaJpbWFsOJRxmdQaa810kyM8bQkSjMJ6qZrQ57YqbiBC1DzRA0vK+Q+skoWcMMkq2jF8/stNxXUyCdzIaEm6xcF15t33Ti5oPoy2R1uAfgESSxHdhKUMAXwOKjuwqDuRu1XxyzT9yqliWp7lYz5/6skRjDGM39QH91gJ25KaKdg3W6EUBdmq/4hhr0MA5ZGytvZBqNPMF9VpAm7h6H7Ll8TCEnItJEva9ewgB5FunYLG9DH/3GHfYEP6hjhSo9Y/Uiy1B0b1B8NIRpAPAyzOYAhuwypTdpTnFyjo7Qm4quIxG0a2yfEBy6eafZpoecC9lZgMaCXGBMeHA1F/hTeJtUI+E93+Ebh1x4Qog1tcaRnUkP5Xdf5QqPT1EYTENJXC+08uEkEgiwKFbRMzrg0yS/LeFbsOdruLy+1ERjG5xaDceNm/PUodfJEcHwINstH93un7QfaZ/SqZY/UUAaztVSVcAsHTPk9tFmAjK8VReugaCBdXvZO9T1N85puvpKqmQoJ6jYIh4f8l/lPbMeINqjVhrMSlWrwxc6RvdWp993IQQBtdrErMk27UGXnFBcKsc4eX+sGHaPCwO7rbWbxg8BosLARsDUcS3Gar0viksjMdp4D1SiEcD+52yzm9LjTZIXVEN2m2+tcsMkojP2pQmUO6YwI3bT0G0/+Rzn3ZxlX+GcaEpORacYTpRgdU0DJQAH3janUK1jhaR0DmMEI4ylL3Hzh8OMfI4Qflb1f5RKwGbq9ZpBmx3zguoqtcSnwP5SmAV6qe9ZxyQ0qbfVZy/Om/vdur8kRKTtouv+ocgkRu9SifjAw6bIcEFQhzEsLBG3FqyUE95WxSfxKMzvWJk8SawncwjZutKX40lrhZaNnDTJRM1aOoY/svPJ53daenqkNVmf5RXhw+MkqbUvPjFoVOmDisiksIsMGKsWZgrly8wbRNDH4ZzWtFUAUTvR46lZUt1gXZSX2fE8VLgA/I06RV5JakI5mFLAJt7cC9prTuC/m3EHX4XIc7tKu7hFtBQV8WOeEgj+adl/0zHcLCzTerf56UtrWCzNRxyH4oO+qT1L2j7hhXuTBfjhIK2a88Inp+dZAHM7RuyEbKvW5qKP3sKA6qEfmokeIY10r+Q6KVqhlK2ckEhGWZCPOgkKyMfPNf36mBp2nnCZ6usi92l3UuCDoidfLwXvtxAU+UO7wGsE9K42t1h2N+H6yyBXUvflS4ibuQYvYtflcEbfJen2nIZ7X0NHjpmbkam+JpRDV3BCRA4HqL/nez0VhytqN1LmR9NliMmsVjmXD98xFp5ioE3KRfMS7cbjxcgyPyAOFwJINly9nYEbNar8RK5pb17MhunEYpRn8cWzFPRcLsMzuqJQflsvo27wCWGbYiXo2oMSAOMzs7TJqzq9iWTRRIYxyFRkNN7ox7iWk2rzBuyikOIyvToXFJn5sOwM7EBlgYu23qvvm1/WWOyM=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Plugins/org_sparkdevnetwork/Documentation/Scripts/sticky-kit.min.js?v=637618953640000000" type="text/javascript"></script>
+<script src="/Scripts/imagesloaded.min.js?v=637618953660000000" type="text/javascript"></script>
+<script src="/Scripts/jquery.fluidbox.min.js?v=637957064360000000" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="jHLXQifl4FSmRmpk8Crw2VnNS+8ep4jlYP3WJZoy1X3LNvcrFaAh+gxr5XY9lZAcIyrLTelBxJXDZHzkSjad5XuS3vynyb1OORklWD17uSyFCy1J7CCqExircYNrVE870pUorFXafujN/TNfBOi9wDc2pyG51KLWcx1xbTVn52eyV52QRDksy0UYtoW6S7fO" />
+    <div id="page-container">
+      <div class="community-ui">
+
+          <!-- navigation -->
+          <div class="community-sidebar">
+            <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2609" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl17_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+          </div>
+          <!-- / navigation -->
+
+          <!-- content -->
+          <main class="community-content">
+            
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+            <span class="topbar-text">
+  RX23 Content Subscription available to order now.
+            </span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+  
+          
+          <div class="scroll-vertical">
+            
+<div class="header-row">
+    <div class="col">
+
+        <header class="community-content-header community-content-header-absolute">
+            <div class="row align-items-center">
+            <div class="col d-none d-md-block">
+                <nav aria-label="breadcrumb" class="align-items-center">
+                <!-- <a href="../../index.html" class="breadcrumb-back" title="Back"></a> -->
+                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/developer" rel="rocknofollow">Developer Resources</a></li><li class="breadcrumb-item"><a href="/developer/book/33/121/content" rel="rocknofollow">Book Contents</a></li><li class="breadcrumb-item">The Long & Short on Shortcodes</li>
+</ol>
+                </nav>
+            </div>
+                <div class="col text-lg-right">
+                    
+<a href="/login?returnurl=/page/1336" class="login-link">Log In</a>
+                    
+
+                  </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+            
+    <div id="zone-main" class="zone-instance zone-instance-full"><div class="zone-content"><div id="bid_2616" data-zone-location="Page" class="block-instance js-block-instance book-shelf-book-contents-v2">
+	<div class="block-content">
+		<div id="ctl00_main_ctl02_ctl01_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl02_ctl01_ctl00_pnlDetails">
+				       
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divBookContainer" class="rockversion-1-7-0">
+                <div class="book-header jumbotron clearfix">
+                    <div class="book margin-r-lg">
+                        <div class="img-content">
+                            <img id="ctl00_main_ctl02_ctl01_ctl00_imgCover" src="/GetImage.ashx?id=4314&amp;width=710&amp;height=919" />
+                        </div>
+                    </div>
+
+                    <h1>The Long & Short on Shortcodes</h1>
+                    <p>Shortcodes are a way to make Lava simpler and easier to read. They allow you to replace a simple Lava tag with 
+a complex template written by a Lava specialist. This allows you to do some really powerful things without 
+having to know all the deals of how things work.</p>
+
+                    <div class="bookversion clearfix">
+                        <div class="bookversion-heading row no-gutters">
+                            <div class="col-xs-12">
+                                <a id="ctl00_main_ctl02_ctl01_ctl00_hlPdf" class="btn btn-default btn-xs margin-l-md" href="https://rockrms.blob.core.windows.net/documentation/PDFs/d37316a820a446d4af41d1706556baa6_TheLong&amp;ShortonShortcodes.pdf">Download PDF</a>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="bookversion-details" style="display: none;">
+                            <div class="row no-gutters">
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-4">
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group rock-drop-down-list ">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions">Version</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlBookVersions" id="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions" class="form-control">
+							<option value="121" selected="selected">McKinley 7.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row"><div class="col-md-12">
+                        
+                    </div></div>
+                    <div class="row documentation-content-body">
+                        <article class="col-md-9 col-xl-8">
+                            <div data-type='update-summary' data-update-tag='1.7.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 7.0</h4><p>Below is a summary of the updates for this version.</p>
+<ul>
+    <li>Added Shortcodes documentation and screenshots.</li>
+    <li>Updated Shortcodes List screenshot and documentation.</li>
+</ul></div>
+            
+                            <section data-type="chapter" id="getting-started"><h1><a name='gettingstarted' href='#gettingstarted' class='book-link'><i class='fa fa-link'></i></a>Getting Started</h1>
+
+    <p>
+        Shortcodes are a way to make Lava simpler and easier to read. They allow you to replace a simple Lava 
+        tag with a complex template written by a Lava specialist. This allows you to do some really powerful things 
+        without having to know how everything works.
+    </p>
+
+    <p>
+        While shortcodes are super powerful, they're also easy to develop. Everything you'll need to get up
+        and running is right here in this short manual.
+    </p>
+
+</section>
+
+<section data-type="chapter" id="types-of-shortcodes"><h1><a name='typesofshortcodes' href='#typesofshortcodes' class='book-link'><i class='fa fa-link'></i></a>Types of Shortcodes</h1>
+
+    <p>
+        There are only two types of shortcodes: inline and block. Selecting the correct type is important as changing them 
+        in the future will break other people's Lava templates. Both short code types use the syntax: {[ shortcode ]}
+    </p>
+
+    <section data-type="sect1">
+
+        <h1><a name='inlineshortcodes' href='#inlineshortcodes' class='book-link'><i class='fa fa-link'></i></a>Inline Shortcodes</h1>
+        <p>
+            The first type is an 'inline' shortcode. This is a simple shortcode that does not require an end 
+            tag. Just reference the shortcode and provide a list of parameters and you’re done!
+        </p>
+
+        <strong>Inline Example:</strong>
+        <pre>{[ youtube id:'8kpHK4YIwY4' showinfo:'false' controls:'false' ]}</pre>
+
+    </section>
+    
+    <section data-type="sect1">
+
+        <h1><a name='blockshortcodes' href='#blockshortcodes' class='book-link'><i class='fa fa-link'></i></a>Block Shortcodes</h1>
+        <p>
+            The second type of shortcode is the 'block' type. Like other Lava commands it has both a start and an end tag. The content you 
+            provide inside the tags will be passed to the shortcode for use in its template.
+        </p>
+
+        <strong>Block Example:</strong>
+        <pre>{[ parallax image:'http://cdn.wonderfulengineering.com/wp-content/uploads/2014/09/star-wars-wallpaper-4.jpg' speed:'0.2' height:'400px' position:'top' contentpadding:'20px' ]}
+&lt;h1&gt;Hello World&lt;/h1&gt;
+{[ endparallax ]}
+</pre>
+
+    </section>
+
+</section>
+
+<section data-type="chapter" id="authoring-shortcodes"><h1><a name='authoringshortcodes' href='#authoringshortcodes' class='book-link'><i class='fa fa-link'></i></a>Authoring Shortcodes</h1>
+
+    <p>
+        Writing shortcodes is simple. They're just Lava templates. Below are a few points to keep in mind as your write your own shortcodes.
+    </p>
+
+    <section data-type="sect1">
+
+        <h1><a name='selectthepropershortcodetype' href='#selectthepropershortcodetype' class='book-link'><i class='fa fa-link'></i></a>Select the Proper Shortcode Type</h1>
+        <p>
+            As we already mentioned it's very important that you select the proper type of shortcode before you start using it. Changing it in 
+            the future means having to update all of your Lava templates that use it. The biggest factor in your decision of which type to use
+            will be how much data your shortcode will pass and if any of the data has repeating sections. Let's consider a couple examples.
+        </p>
+        
+        <p>
+            The parallax shortcode needs to access a large amount of HTML to place inside the parallax section. While this could be passed through
+            a standard parameter <code>{[ parallax content:'...</code> this would be limiting in a number of ways. For example, the content could not have
+            any line breaks and it would not be allowed to have any single quotes. 
+        </p>
+        
+        <p>
+            Consider next the googlemap place holder. It allows you to enter a variable number of map points. Again, you could 
+            use a single inline parameter, but this would be very difficult for the person who wanted to use your shortcode.
+        </p>
+        
+        <p>
+            Finally, think about the youtube shortcode. In this example only a small amount of configuration is required, so
+            an inline shortcode works great. 
+        </p>
+        
+        <p>
+            It comes down to how much data is being passed by the shortcode. For larger amounts of data, use the block shortcode type. 
+            For lesser amounts, use inline.
+        </p>
+    </section>
+    
+    <section data-type="sect1">
+
+        <h1><a name='configuringparameters' href='#configuringparameters' class='book-link'><i class='fa fa-link'></i></a>Configuring Parameters</h1>
+        <p>
+            You can configure parameters when setting up your shortcodes. While you technically don't need to configure parameters,
+            any parameter that another person adds to the shortcode will be passed to your Lava template. Configuring the parameters
+            when you write your shortcode provides two advantages.
+        </p>
+        
+        <ol>
+            <li>Configuring the parameter guarantees that it will exist when it's passed to your Lava. This
+                means you don't have to check for its existence. Instead, if you need to check if the parameter
+                has a value, you can do a simple check to see if it's empty.</li>
+            <li>Configuring a parameter allows you to provide a default value. Again, this simplifies your Lava and reduces
+                the number of lines of code you'll need to write.</li>
+        </ol>
+        
+        <p>
+            The Lava you develop for your shortcode is passed in all of the parameters found on the shortcode tag as well as
+            any parameters you defined as the author. Rock also provides an additional parameter 'uniqueid' which is a unique identifier for
+            you to use for things like CSS id's and variables in your Javascript. It takes the form of 'id-4535a4a9-1b82-4d5b-9120-8c9c41eefcd6'.
+            You don't need to use this identifier, it's just provided as a convenience to you.
+        </p>
+        
+        <div class="alert alert-info">
+            <p>
+                <b>Heads Up!</b><br>
+                Your parameter keys need to be all lowercase for them to work properly; this is typical practice in Lava but is enforced here. Keys with uppercase characters will always return the default value that you provide in the shortcode definition and will not be able to be set from the HTML block where you are calling the shortcode from.
+            </p>
+        </div>
+    </section>
+    
+    <section data-type="sect1">
+
+        <h1><a name='enabledlavacommands' href='#enabledlavacommands' class='book-link'><i class='fa fa-link'></i></a>Enabled Lava Commands</h1>
+        <p>
+            You can enable certain Lava commands to be able to run within your shortcode. These commands do not need to be configured in 
+            the source block to run. For instance, if your shortcode is being used on a web page and requires the RockEntity command, 
+            the HTML Block does not need to have the command enabled if you've configured access on your shortcode. 
+        </p>
+        
+    </section>
+    
+   <section data-type="sect1">
+
+        <h1><a name='addinglavashortcodesinrock' href='#addinglavashortcodesinrock' class='book-link'><i class='fa fa-link'></i></a>Adding Lava Shortcodes in Rock</h1>
+        <p>
+            Lava Shortcodes can be found at <span data-type="action" data-action="action-navigation">Admin Tools > CMS Configuration > Lava Shortcodes</span>.
+        </p>
+        
+        <figure>
+    <figcaption>Lava Shortcodes</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/33/1.7.0/images/lava-shortcodes-v14.png" alt="Lava Shortcodes List"></a>
+    </figure>
+    
+    <p>
+        Pictured above, as of Rock v14, you can assign categories to your shortcodes. This lets you
+        group shortcodes according to their function, and allows you to filter the list of shortcodes
+        by category. A single shortcode can be assigned to multiple categories. The categories for 
+        a shortcode can be added from the Lava Shortcode Detail page, pictured below.
+    </p>
+    
+    <p>Click <em data-type="reference" data-reference="reference-page">Show Details</em> for any of the shortcodes to view its summary, code and parameters. 
+    To add a new shortcode, press the <span data-type="action" data-action="action-os-button">+</span> button. This will take you to the
+    Lava Shortcode Detail screen.</p>
+    
+    <figure>
+    <figcaption>Lava Shortcode Detail</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/33/1.7.0/images/lava-shortcode-detail-v14.png" alt="Lava Shortcodes Detail"></a>
+    </figure>
+    
+    This screen is where you designate which type of shortcode you're creating, which parameters to use, the actual Lava markup code, and any Lava commands
+    you want enabled. Remember, it's always a good idea to supply a description for the benefit of other users. Click  
+    <span data-type="action" data-action="action-os-button">Save</span> when you're done. Super easy!
+        
+    </section>
+
+</section>
+
+<section data-type="chapter" id="the-power-of-shortcode-blocks"><h1><a name='thepowerofshortcodeblocks' href='#thepowerofshortcodeblocks' class='book-link'><i class='fa fa-link'></i></a>The Power of Shortcode Blocks</h1>
+
+    <p>
+        Shortcode blocks are very powerful as they allow you to provide advanced configuration options. Rock
+        does a lot of the heavy lifting for you to help parse the configuration.
+    </p>
+
+    <section data-type="sect1">
+
+        <h1><a name='blockcontent' href='#blockcontent' class='book-link'><i class='fa fa-link'></i></a>Block Content</h1>
+        <p>
+            The content (everything between the start and end tags) that the user adds to your shortcode is accessible
+            to your template using the <code>{{ blockContent }}</code> variable. For instance, the parallax
+            shortcode would use this variable to place the content inside the parallax section of a page.
+        </p>
+    </section>
+    
+    <section data-type="sect1">
+
+        <h1><a name='blockconfiguration' href='#blockconfiguration' class='book-link'><i class='fa fa-link'></i></a>Block Configuration</h1>
+        <p>
+            The block configuration can also be placed in the block contents using the syntax: <br>
+            <code>[[ itemname parameter:'value' parmeter2:'value' ]] content [[ enditemname]]</code>
+            <br>
+            When Rock is parsing your shortcode, these options will be parsed and removed from the <code>{{ blockContent }}</code>. They will
+            then be provided to your template as variables. How these variables are created is super powerful and will help reduce the
+            amount of Lava that is created. Let's dig deeper to see how this works by looking at some examples.
+        </p>
+        
+        <p>
+            As you've probably seen, the syntax of the googlemap shortcode is:
+        </p>
+        
+        <pre>{[ googlemap height:'400px' scrollwheel:'false' draggable:'false' ]}
+    [[ marker location:'33.640705,-112.280198' title:'Spark Global Headquarters']]
+        &lt;strong&gt;Spark Global Headquarters&lt;/strong&gt;&lt;p&gt;
+        It's not as grand as it sounds.&lt;br&gt;
+        &lt;img src='https://rockrms.blob.core.windows.net/misc/spark-logo.png' width="179" height="47" /&gt;
+    [[ endmarker ]]
+    [[ marker location:'33.52764, -112.262571']][[ endmarker ]]
+{[ endgooglemap ]}</pre>
+
+        <p>
+            After parsing, your template would have access to the 'height, scrollwheel, draggable' variables just like any shortcode. It would
+            also be provided an array of 'markers' using the variable name 'markers'. (Yes, we know... clever...) Each 'marker' in the 'markers' array
+            would have a variable for 'location, title, ...' It would also have a variable called 'content' which would contain the text within the start
+            and end configuration tags (in this case, the HTML for the Google Maps Info Window).
+        </p>
+        
+        <section data-type="sect2">
+            <h2>Single vs Repeating Configuration Items</h2>
+            <p>
+                You know which configuration items can have multiple values (such as the markers on the maps) and which
+                should only have one (such as the map style item), but Rock does not. To deal with this, Rock will provide
+                an array of items AND a single value for each type of configuration item it finds. For example, in the case
+                of markers there will be a 'markers' array variable and a 'marker' variable. The 'marker' variable will have the
+                first item in the array. Your Lava template can use either based on whether it should be a single configuration 
+                or multi-value item.
+            </p>
+    
+        </section>
+    </section>
+
+</section>
+
+<section data-type="chapter" id="passing-objects"><h1><a name='passinginobjects' href='#passinginobjects' class='book-link'><i class='fa fa-link'></i></a>Passing In Objects</h1>
+
+    <div data-type="note" data-note-type="note">
+        <h1>Version Note</h1>
+        <p>Passing in objects requires Rock v10 or above.</p>
+    </div>
+
+    <p>
+        Up until this point we've seen how we can pass primitive types (strings, numbers, booleans, etc) into our shortcodes. What happens though when 
+        we want to pass in a Lava variable? For instance, what if we had a collection of groups, loaded from an entity command, and we want our shortcode
+        to format them. No problem, simply drop the quotes and Lava will pass the contents of the variable into the key you provide. Let's see an example.
+    </p>
+
+    <pre>{% group where:'GroupTypeId == 25'%}
+    {[ grouplistformat groups:groupItems ]}
+{% endgroup %}</pre>
+
+</section>
+
+
+                        </article>
+                        <aside class="col-md-3 col-xl-3 d-none d-md-block">
+                            <div class="sticky"><div id="toc" class="book-toc">
+                                <p>Table of Contents</p>
+                                <ul class="list-unstyled">
+                                    <li><a href='#gettingstarted'>Getting Started</a></li><li><a href='#typesofshortcodes'>Types of Shortcodes</a></li><li><a href='#authoringshortcodes'>Authoring Shortcodes</a></li><li><a href='#thepowerofshortcodeblocks'>The Power of Shortcode Blocks</a></li><li><a href='#passinginobjects'>Passing In Objects</a></li>
+                                </ul>
+                            </div></div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            
+
+			</div>       
+
+        <script>var bookVersionOrder = [ '1.7.0' ];</script>
+
+        <script>
+            $(document).ready(function () {
+                $(".sticky").stick_in_parent();
+
+                $(".bookversion-heading-tab").on("click", function () {
+                    $(this).closest(".bookversion-heading").siblings(".bookversion-details").slideToggle();
+                    $(this).find('i.fa').toggleClass("fa-chevron-down fa-chevron-up");
+                });
+
+                $(".report-issue").mouseenter(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-4px",
+                            opacity: 1
+                        }, 500, function() {
+                            // Animation complete.
+                        });
+                });
+
+                $(".report-issue").mouseleave(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-84px",
+                            opacity: .5
+                        }, 500, function () {
+                            // Animation complete.
+                        });
+                });
+
+                $(function () {
+                    $("a.book-image").fluidbox();
+                });
+
+                // reusable function to get query parameter
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                var scrollPercent = getParameterByName('ScrollPercentage');
+                if (scrollPercent != '') {
+                    var bheight = $(document).height();
+                    var percent = scrollPercent / 100;
+                    var hpercent = bheight * percent;
+                    $('html, body').animate({ scrollTop: hpercent }, 1000);
+                }
+
+                // highlight changes
+                $(".js-bookversion-versionsinceselector").on('change', function () {
+                    
+                    var selectedVersion = $(this).val();
+
+                    if (selectedVersion == '') {
+                        // clear all update highlights and summaries
+                        $("div[data-type='update-summary']").slideUp();
+                        $("[data-update-tag]").removeClass('show-update');
+                    } else  {
+                        var showVersion = true;
+
+                        bookVersionOrder.forEach(function (version) {
+                            console.log(version);
+
+                            if (version == selectedVersion) {
+                                showVersion = false;
+                            }
+
+                            if (showVersion) {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideDown();
+                                $("[data-update-tag*='" + version + "']").addClass('show-update');
+                            } else {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideUp();
+                                $("[data-update-tag*='" + version + "']").removeClass('show-update');
+                            }
+                        });
+
+                    }; 
+                });
+
+            });
+        </script>
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+
+          </div></main>
+          <!-- / content -->
+        </div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl14" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 149,
+    pageId: 1336,
+    layout: 'Documentation',
+    baseUrl: '/'
+});
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1336,"ActionName":"View","BrowserSessionGuid":"f48ce68b-d729-4e87-9049-51b47a8401ae","PageRequestUrl":"https://community.rockrms.com/developer/book/33/121/content","PageRequestDateTime":"2023-08-03T11:03:23.3300203","PageRequestTimeToServe":0.0312215,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.77.107","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

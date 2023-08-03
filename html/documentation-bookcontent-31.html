@@ -1,0 +1,754 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXAlXTFsDXEQEF11cWxYHR0lO","queueTime":0,"applicationTime":50,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Rock Solid Azure Hosting | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<link href="/Styles/fluidbox.css?v=637945608860000000" type="text/css" rel="stylesheet" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./31" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Plugins/org_sparkdevnetwork/Documentation/Scripts/sticky-kit.min.js?v=637618953640000000" type="text/javascript"></script>
+<script src="/Scripts/imagesloaded.min.js?v=637618953660000000" type="text/javascript"></script>
+<script src="/Scripts/jquery.fluidbox.min.js?v=637957064360000000" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="YjCUhACX1Mg3skGJSG+HH4SLeTfaetaJBzvvDzxntPEAk2vJa5SMCa0wFQqQyVwdtrxrY7wqYS0kXlWrKKIrNFYHxKdy+YcRt1620WlHcIYvjWOkxkXHWIlmawCQZ794GDrd78/mvv1U7AtUUrb9g88pWcDfFa1SjFy+FY/tmKvNEyPzRQSH6fT/y8UMwmYWmjMVA+0C/nyzcxjD5yFFuuUngMWToAFUuHjmiC+Xl4IlNNFH7D5lc7bko/+uT3NoQumlR/nsc0aRqv3Q1psKgsBSXd5/yXHHNvDfE8XU4kZJPAtly/kAYuf7AO2Riy/20FnuJkniW/a63H66yq8xKw==" />
+    <div id="page-container">
+      <div class="community-ui">
+
+          <!-- navigation -->
+          <div class="community-sidebar">
+            <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2609" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl17_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+          </div>
+          <!-- / navigation -->
+
+          <!-- content -->
+          <main class="community-content">
+            
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+            <span class="topbar-text">
+  RX23 Content Subscription available to order now.
+            </span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+  
+          
+          <div class="scroll-vertical">
+            
+<div class="header-row">
+    <div class="col">
+
+        <header class="community-content-header community-content-header-absolute">
+            <div class="row align-items-center">
+            <div class="col d-none d-md-block">
+                <nav aria-label="breadcrumb" class="align-items-center">
+                <!-- <a href="../../index.html" class="breadcrumb-back" title="Back"></a> -->
+                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/documentation" rel="rocknofollow">Manuals</a></li><li class="breadcrumb-item">Rock Solid Azure Hosting</li>
+</ol>
+                </nav>
+            </div>
+                <div class="col text-lg-right">
+                    
+<a href="/login?returnurl=/page/1296" class="login-link">Log In</a>
+                    
+
+                  </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+            
+    <div id="zone-main" class="zone-instance zone-instance-full"><div class="zone-content"><div id="bid_2608" data-zone-location="Page" class="block-instance js-block-instance book-shelf-book-contents-v2">
+	<div class="block-content">
+		<div id="ctl00_main_ctl02_ctl01_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl02_ctl01_ctl00_pnlDetails">
+				       
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divBookContainer" class="rockversion-1-10-0">
+                <div class="book-header jumbotron clearfix">
+                    <div class="book margin-r-lg">
+                        <div class="img-content">
+                            <img id="ctl00_main_ctl02_ctl01_ctl00_imgCover" src="/GetImage.ashx?id=24942&amp;width=710&amp;height=919" />
+                        </div>
+                    </div>
+
+                    <h1>Rock Solid Azure Hosting</h1>
+                    <p>How to Rock stewardship by hosting with Azure.</p>
+
+                    <div class="bookversion clearfix">
+                        <div class="bookversion-heading row no-gutters">
+                            <div class="col-xs-12">
+                                <a id="ctl00_main_ctl02_ctl01_ctl00_hlPdf" class="btn btn-default btn-xs margin-l-md" href="https://rockrms.blob.core.windows.net/documentation/PDFs/6def85e3b76741f28c72a50edddf76fe_RockSolidAzureHosting.pdf">Download PDF</a>
+                                <div id="ctl00_main_ctl02_ctl01_ctl00_divBookVersionSelector" class="bookversion-heading-tab pull-left">
+                                    Current Version: McKinley 10.0 <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bookversion-details" style="display: none;">
+                            <div class="row no-gutters">
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-4">
+                                    <div class="form-group rock-drop-down-list mr-1">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlVersionsSince">Show Changes Since</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlVersionsSince" id="ctl00_main_ctl02_ctl01_ctl00_ddlVersionsSince" class="mr-2 js-bookversion-versionsinceselector form-control">
+							<option value="" selected="selected"></option>
+							<option value="1.9.0">McKinley 9.0</option>
+							<option value="1.8.0">McKinley 8.0</option>
+							<option value="1.6.0">McKinley 6.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group rock-drop-down-list ">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions">Version</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlBookVersions" id="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions" class="form-control">
+							<option value="214" selected="selected">McKinley 10.0</option>
+							<option value="150">McKinley 9.0</option>
+							<option value="143">McKinley 8.0</option>
+							<option value="119">McKinley 6.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row"><div class="col-md-12">
+                        
+                    </div></div>
+                    <div class="row documentation-content-body">
+                        <article class="col-md-9 col-xl-8">
+                            <div data-type='update-summary' data-update-tag='1.10.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 10.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.6.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 6.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.8.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 8.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.9.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 9.0</h4>No updates made.</div>
+            
+                            <section data-type="chapter" id="introduction"><h1><a name='introduction' href='#introduction' class='book-link'><i class='fa fa-link'></i></a>Introduction</h1>
+
+    <p>
+        The big factors in deciding where to host are cost and quality. Microsoft brings the best of both worlds to non-profits by offering a 
+        generous $3,500 annual Azure hosting credit. That's right, you can get premium hosting services with an industry-leading cloud provider 
+        at a significantly reduced rate. Depending on your organization's size and needs, your hosting costs might even be completely covered by the 
+        credit. We've got all the details to get you started in the <a href="#hosting-credit-for-non-profits">Hosting Credit for Non-Profits</a> 
+        chapter below.
+    </p>
+    
+    <p>
+        But remember that cost isn't the only factor. There are hosting services available at a fraction of the cost of Azure, but they vary
+        widely in overall quality when it comes to running Rock. This is where Azure stands out. As a part of Microsoft, they 
+        are true experts in the foundational technologies (Windows, .NET, SQL Server) upon which Rock itself is built. We're not saying you 
+        can't or shouldn't host elsewhere, but this is certainly an advantage of hosting with Azure.
+    </p>
+    
+    <div data-type="note" data-note-type="tip">
+        <h1>Feeling overwhelmed?</h1>
+            <p>
+                Unless you have a background in technology, all this talk about servers and hosting can be intimidating. Don't worry, that's 
+                perfectly understandable and not a problem at all. We have partners who can help get this all up and running for you, so you can
+                focus on other aspects of your ministry. Visit <a href="https://rockrms.com/partners" target="_blank">rockrms.com/partners</a> for details.
+            </p>
+    </div>
+
+    <p>
+        The rest of this guide will help you through the steps needed to get Rock up and running with Azure. As you'll see in the next chapter,
+        there are different Azure hosting options available depending on the size and needs of your organization. Be sure to consider these factors 
+        before deciding on a service. If you haven't already, it's also a good idea to check out our 
+        <span data-type="action" data-action="action-document-ref"><a href="https://community.rockrms.com/documentation/bookcontent/2/" target="_blank">Planning for Rock</a></span> 
+        guide to make sure you're ready to get started.
+    </p>
+    
+</section>    <section data-type="chapter" id="sizing-and-service-options"><h1><a name='sizingandserviceoptions' href='#sizingandserviceoptions' class='book-link'><i class='fa fa-link'></i></a>Sizing and Service Options</h1>
+    
+    <p>
+        How much power and space will you need for your Rock instance? It’s difficult to predict the perfect configuration. Fortunately, we 
+        have some suggestions based on our experience and the experiences shared with us by the Rock community. We've provided recommendations
+        based on average attendance.
+    </p>
+    
+    <p>
+        It's important to note that while average attendance is a good starting point, it's often too simplistic of a measure to be applied in 
+        every use case. For instance, a medium-sized church might run their website on Rock and heavily use most of Rock’s features in a 
+        significant way. They may need more resources than an extra-large church that is only getting started with Rock.  Keep this in mind as 
+        you consider the recommendations below.
+    </p>
+    
+    <table class="table table-bordered">
+        <caption>Azure Hosted Services Sizing</caption>
+        <thead>
+            <tr style="background-color:#ee7725">
+                <th></th>
+                <th>Small</th>
+                <th>Medium</th>
+                <th>Large</th>
+                <th>Extra-Large</th>
+                <th>Above</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Max Weekend Attendance</td>
+                <td>500</td>
+                <td>2,000</td>
+                <td>5,000</td>
+                <td>10,000</td>
+                <td rowspan="4" style="vertical-align : middle;text-align:left;">Custom</td>
+            </tr>
+            <tr>
+                <td>Web VM</td>
+                <td>B2S</td>
+                <td>B2MS</td>
+                <td>B4MS</td>
+                <td>B8MS</td>
+            </tr>
+            <tr>
+                <td>Azure SQL</td>
+                <td>S1</td>
+                <td>S2</td>
+                <td>S3</td>
+                <td>S4</td>
+            </tr>
+            <tr>
+                <td>Est. Cost / Month</td>
+                <td>$48</td>
+                <td>$108</td>
+                <td>$218</td>
+                <td>$436</td>
+                </tr>                
+            </tbody>
+    </table>
+    
+    <div data-type="note" data-note-type="warning">
+        <h1>Price Updates</h1>
+        <p>
+            The prices discussed in this guide are estimated costs only, as of the time of writing. These prices tend to change frequently.
+        </p>
+    </div>
+    
+    <p>
+        If you need more resources than the recommended "Extra-Large" configuration, pricing will vary. As the size of the church increases 
+        by orders of magnitude above the sizes we've listed, the price is likely to increase at a faster rate than the table would imply. 
+        For instance, a church three times the size of an "Extra-Large" church might expect to pay much more than $1,300 per month.
+    </p>
+    
+    <div data-type="note" data-note-type="tip">
+        <h1>Running Your Website on Rock?</h1>
+        <p>
+            If you're running your website on Rock, we recommend that you move one tier to the right on the chart above. This will help ensure
+            you have the resources needed for a smooth and performant web experience.
+        </p>
+    </div>
+    
+    <section data-type="sect2">
+        
+        <h2>Demystifying Terms</h2>
+        
+        <p>
+            Microsoft offers <i>Infrastructure as a Service</i> (IaaS) and <i>Platform as a Service</i> (PaaS) hosting options.
+        </p>
+        
+        <ul>
+            <li>
+                <strong>IaaS: </strong> With IaaS you're responsible for setting up and managing SQL Server and the Windows Server operating system. 
+                This gives you a higher level of control and flexibility, but also requires that you have staff with the appropriate skills.
+            </li>
+            <li>
+                <strong>PaaS: </strong> PaaS is a comparatively more hands-off option because more services are managed for you. The only drawback is 
+                that you have less control over your platform and infrastructure.
+            </li>
+        </ul>
+        
+        <p>
+            Our current recommendation is that you run your Rock Web/Application server on a Windows VM (IaaS) and Azure SQL (PaaS).
+        </p>
+    
+    </section>
+    
+</section>
+
+<section data-type="chapter" id="hosting-credit-for-non-profits"><h1><a name='hostingcreditfornonprofits' href='#hostingcreditfornonprofits' class='book-link'><i class='fa fa-link'></i></a>Hosting Credit for Non-Profits</h1>
+
+    <p>
+        So you've heard about Microsoft Azure's $3,500 annual hosting credit for non-profits, and you'd like to give it a try? 
+        Good news; those who have gone before you have marked the path to success. 
+        First, though, let's go over a few things we need to know up front.
+    </p>
+
+<div data-type="note" data-note-type="note">
+    <h1>How Do I Receive My Credit?</h1>
+    <p>The $3,500 credit allows you to "spend" up to $291 per month with approved Azure products, 
+    and you'll be able to track your usage and the remaining balance in regular statements. Although the 
+    program expires one year after you set it up, Azure for Nonprofits has stated that they plan to 
+    do an "annualized refresh," turning this into a perpetual donation. Thanks, Microsoft!</p>
+</div>
+
+    <section data-type="sect1">
+        
+    <h1><a name='prerequisites' href='#prerequisites' class='book-link'><i class='fa fa-link'></i></a>Prerequisites</h1>
+    
+    <p>
+        Yes, prerequisites. While Azure's hosting credit is an exciting prospect and a good fit for many 
+        organizations, it may not work for all. Take a look at this short list to see if it will work 
+        for you.
+    </p>    
+        <ul>
+            <li>
+                Organizations must be nonprofit or non-governmental organizations with 501(c)(3) status 
+                under the United States Internal Revenue Code.
+            </li>
+            <li>
+                Religious organizations are allowed.
+            </li>
+        </ul>
+    
+    <p>
+        What does that mean? It essentially means that you must be licensed as a 501(c)(3) or NGO and you must 
+        be a US-based organization.
+    </p>
+<!--
+    <p>
+        To sign up for the 501(c)(3) grant for $3,500 annually you will need to:
+    </p>
+        <ul>
+            <li>Register for TechSoup.</li>
+            <li>Register for Microsoft Philanthropies.</li>
+        </ul>
+    <p>    
+        Below we have the links and steps on registering for both of these.
+    </p>
+-->
+
+    <p>
+        To sign up for the 501(c)(3) grant for $3,500 annually you will need to register
+        your organization with Microsoft using the steps below.
+    </p>
+
+    </section>
+
+    <section data-type="sect1">
+<!--
+        <h1>First: Register for TechSoup</h1>
+        <ol>
+            <li>
+                Register for a Microsoft TechSoup account 
+                <a href="https://www.techsoup.org/joining-techsoup/registration?Q29ubmVjdElkPWM1Y2FhYTUxLTMzODAtNDE1MS1iNjY3LTRlMmNjYzU5MWJlZiZyZWZlcnJhbGlkPTEwNDU0OA==" target="_blank">on their website</a>.
+            </li>
+            <li>
+                Follow the directions to get set up.
+            </li>
+            <li>
+                To complete your registration, request your Validation Token from 
+                <a href="https://www.techsoup.org/Login" target="_blank">TechSoup.org</a>. You'll need this in the next step.
+            </li>
+        </ol>
+
+        <h1>Second: Register with Microsoft Philanthropies for the Azure credit</h1>
+        <ol>
+            <li data-update-tag="1.9.0">
+                Register on the 
+                <a href="https://nonprofit.microsoft.com/register" target="_blank">Get Started page</a>.
+            </li>
+            <li>
+                Sign in using your TechSoup Validation Token.
+            </li>
+            <li>
+                Register for the Azure Non-Profit Sponsorship.
+            </li>
+            <li>
+                (Optional) For a little extra help, set up a free online meeting with Microsoft Support 
+                to get your Azure account set up.
+            </li>
+            <li>
+                (Optional) If you already have an Azure account, it is important that you submit a 
+                support request to have them merge your Azure accounts (so you can use the credit with
+                your current setup).
+            </li>
+        </ol>
+-->
+
+        <h1><a name='registerwithmicrosoftfortheazurecredit' href='#registerwithmicrosoftfortheazurecredit' class='book-link'><i class='fa fa-link'></i></a>Register with Microsoft for the Azure credit</h1>
+        
+        <ol>
+            <li>
+                Go to Microsoft's 
+                <a href="https://nonprofit.microsoft.com/en-us/getting-started" target="_blank">Getting Started page</a>
+                for nonprofits.
+            </li>
+            <li>
+                Begin the registration process by clicking
+                <em data-type="reference" data-reference="reference-highlight">Register Now</em>.
+            </li>
+            <li>
+                Follow the on-screen prompts for providing your information and creating an
+                account.
+            </li>
+            <li>
+                (Optional) For a little extra help, set up a free online meeting with Microsoft Support 
+                to get your Azure account set up.
+            </li>
+            <li>
+                (Optional) If you already have an Azure account, it is important that you submit a 
+                support request to have them merge your Azure accounts (so you can use the credit with
+                your current setup).
+            </li>
+        </ol>        
+
+    </section>
+    
+
+</section>
+
+
+<section data-type="chapter" id="next-steps"><h1><a name='nextsteps' href='#nextsteps' class='book-link'><i class='fa fa-link'></i></a>Next Steps</h1>
+    
+    <p>
+        Whether or not you qualify for Microsoft's non-profit credit, your next steps will be about the same. Azure hosting includes Windows Server 
+        and Azure SQL Server, so you don’t need to worry about obtaining separate licenses. Once your account is set up with Azure, you're ready
+        to start provisioning.
+    </p>
+    
+    <section data-type="sect1">
+        <h1><a name='provisionyourservices' href='#provisionyourservices' class='book-link'><i class='fa fa-link'></i></a>Provision Your Services</h1>
+
+        <p>
+            First, create the <i>resource group</i> that you'll use to group all of your Rock services. A resource group is a logical 
+            container that holds related resources, like having the files on your computer organized into a folder within a directory.
+            If you need more details, Microsoft has some recommendations on setting up 
+            <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview#resource-groups" target="_blank">resource groups</a>.
+            You can name the resource group anything you like, but we recommend something like "rock-rg-production" to ensure it's clear
+            and easy to identify.
+        </p>
+            
+        <p>
+            Next, through your Azure portal, you'll create your Web VM (virtual machine). We'd like to provide detailed instructions for this, but the 
+            steps and screens change often. Choose the resource group created above when prompted. Like the resource group, what you name the Web VM 
+            is up to you but we suggest "rock-vm-web-production" or similar. This server is your new Web Host, where you'll configure IIS.
+        </p>
+        <p>
+            Lastly, you'll follow similar steps to create the Azure SQL server and database. They should be in the same resource group as your Web VM. 
+            Again, the specific steps and screens change frequently, which is why we don't document them. We suggest a clear naming 
+            convention such as:
+        </p>
+                <ul>
+                    <li><b>Azure SQL Server: </b> rock-sql-production</li>
+                    <li><b>Azure SQL Database: </b> rock-sqldb-production</li>
+                </ul>
+        <div data-type="note" data-note-type="note">
+            <h1>Existing Licenses</h1>
+                <p>
+                    If you already have licenses that you'd like to use, see Azure’s <a href="https://azure.microsoft.com/en-us/pricing/hybrid-benefit/" target="_blank">hybrid use plans</a>. 
+                    However, keep in mind that we still recommend Azure SQL over a VM running SQL Server.
+                </p>
+        </div>
+    
+    </section>
+
+    <p>
+        With the above in place, you're ready to head over to our <a href="http://community.rockrms.com/documentation/bookcontent/1/" target="_blank">Rock Solid Internal Hosting Guide</a> 
+        for instructions on installing Rock.
+    </p>
+    
+    <div data-type="note" data-note-type="tip">
+        <h1>Need Some Help?</h1>
+            <p>
+                Without certain technical knowledge these processes can be a bit confusing, so it's normal if you're feeling intimidated by all of this. Luckily, we 
+                have partners who can help get this all up and running for you. Visit <a href="https://rockrms.com/partners" target="_blank">rockrms.com/partners</a> for details.
+            </p>
+    </div>
+
+    <p>
+        Before you go, don't forget to review the other <a href="http://community.rockrms.com/documentation/" target="_blank">Rock guides and manuals</a> to ensure you get the most out of your 
+        Rock experience.
+    </p>
+    
+</section>
+
+
+                        </article>
+                        <aside class="col-md-3 col-xl-3 d-none d-md-block">
+                            <div class="sticky"><div id="toc" class="book-toc">
+                                <p>Table of Contents</p>
+                                <ul class="list-unstyled">
+                                    <li><a href='#introduction'>Introduction</a></li><li><a href='#sizingandserviceoptions'>Sizing and Service Options</a></li><li><a href='#hostingcreditfornonprofits'>Hosting Credit for Non-Profits</a></li><li><a href='#nextsteps'>Next Steps</a></li>
+                                </ul>
+                            </div></div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divReportIssue" class="report-issue"><i class="fa fa-bullhorn"></i> Improve</div>
+
+			</div>       
+
+        <script>var bookVersionOrder = [ '1.10.0','1.9.0','1.8.0','1.6.0' ];</script>
+
+        <script>
+            $(document).ready(function () {
+                $(".sticky").stick_in_parent();
+
+                $(".bookversion-heading-tab").on("click", function () {
+                    $(this).closest(".bookversion-heading").siblings(".bookversion-details").slideToggle();
+                    $(this).find('i.fa').toggleClass("fa-chevron-down fa-chevron-up");
+                });
+
+                $(".report-issue").mouseenter(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-4px",
+                            opacity: 1
+                        }, 500, function() {
+                            // Animation complete.
+                        });
+                });
+
+                $(".report-issue").mouseleave(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-84px",
+                            opacity: .5
+                        }, 500, function () {
+                            // Animation complete.
+                        });
+                });
+
+                $(function () {
+                    $("a.book-image").fluidbox();
+                });
+
+                // reusable function to get query parameter
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                var scrollPercent = getParameterByName('ScrollPercentage');
+                if (scrollPercent != '') {
+                    var bheight = $(document).height();
+                    var percent = scrollPercent / 100;
+                    var hpercent = bheight * percent;
+                    $('html, body').animate({ scrollTop: hpercent }, 1000);
+                }
+
+                // highlight changes
+                $(".js-bookversion-versionsinceselector").on('change', function () {
+                    
+                    var selectedVersion = $(this).val();
+
+                    if (selectedVersion == '') {
+                        // clear all update highlights and summaries
+                        $("div[data-type='update-summary']").slideUp();
+                        $("[data-update-tag]").removeClass('show-update');
+                    } else  {
+                        var showVersion = true;
+
+                        bookVersionOrder.forEach(function (version) {
+                            console.log(version);
+
+                            if (version == selectedVersion) {
+                                showVersion = false;
+                            }
+
+                            if (showVersion) {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideDown();
+                                $("[data-update-tag*='" + version + "']").addClass('show-update');
+                            } else {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideUp();
+                                $("[data-update-tag*='" + version + "']").removeClass('show-update');
+                            }
+                        });
+
+                    }; 
+                });
+
+            });
+        </script>
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+
+          </div></main>
+          <!-- / content -->
+        </div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl14" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 149,
+    pageId: 1296,
+    layout: 'Documentation',
+    baseUrl: '/'
+});//]]>
+</script>
+ <script> 
+                                                Sys.Application.add_load(function () {
+                                                    $('.report-issue').click(function() {
+                                                            var s = $(window).scrollTop(),
+                                                                    d = $(document).height(),
+                                                                    c = $(window).height();
+
+                                                            scrollPercent = (s / (d - c)) * 100;
+
+                                                            var windowWidth = $(window).width();
+                                                            window.open('/documentation/issue?WorkflowTypeId=20&BookId=31&BookVersionId=214&ScrollPercentage=' + scrollPercent + '&WindowWidth=' + windowWidth, '_blank' );
+                                                        });
+                                                 });
+                                            </script>
+<script type="text/javascript">
+//<![CDATA[
+
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1296,"ActionName":"View","BrowserSessionGuid":"467a6f07-de07-4c0c-95a7-671237a3af38","PageRequestUrl":"https://community.rockrms.com/documentation/bookcontent/31","PageRequestDateTime":"2023-08-03T11:03:38.6581555","PageRequestTimeToServe":0.046843499999999996,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.240.108","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

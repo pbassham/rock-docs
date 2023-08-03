@@ -1,0 +1,914 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXAlXTFsDXEQEF11cWxYHR0lO","queueTime":0,"applicationTime":47,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Packaging Plugins and Themes | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<link href="/Styles/fluidbox.css?v=637945608860000000" type="text/css" rel="stylesheet" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./content" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="zlskdRJyvQ2EnOO2J3kl4Slw/iV97DhRet+puxBaT6J8RlQsXVbWCLw7tJUk2h28aa3T+FtU8mD5HnVJJVj0NwKz/zVSOxiR8g21lIZCLJhUaKMYoQ1jLEl+70t9o0h/D43hnVebnZ7fLM2ELbmdG7v2XghOTqP+Zd4UG0NezGEZ4iy1YFOzDkst2L7OERnx8pDrUMglfuFkR0pvKy72guE+6mVpiOkDt57j/ruIJnyU9aCvBEiKJHYoxiWr0lRJpaRM1tkYg25FwaOGZpYWwSjMZ+9j1+ln21W06dLFukRxBp3cgQRiizWfAvMPs+7BqxcnURbtptLpNGbVbFD+mRTgd9LQUl0Myd2lAPmxIySITgnJJ8FL3w9NWQmpeHSm7mV7v9giRccTgZlMCXsoXmhTGwCXzFxxWkqEMdKLQkZ7ZMn9Cvz7x1VteGqDEqVMGX60PLa8mYqXSRGQKanuFUCP7PMZoOA78jhdOOhawzKFgR25tk7/Y0sxREM7ASaBvwsOb9wBbTUrAHDd+ikht5ZUTFyg2WJE+gX3JERA6W58E4tugecWPLRqjtjTfJt6/4B/32KEvnloUlq0xDvzZpGX87YuYHlvywHxha2K9EhCrjUMUSRMjSipAejdEyoWAqo/pykqKAKCb5Vu9a37wPyu1oMOdmXY/9uFhoWvjrfTj11o3Kw7GIwnKNBZs40pXLFovTWqEpGOki1TPFCofKeEZyXB5DHyyKI30qnKtMadx7Otopf1qoqYBOCDksUWTOUym5lGPjtEAFn2M8UL2oU2sS7sWb9f1GA+uAImOCjWaWyztHZoOb0teThVplUhXwb33opB6Itasn5KCtFbbQiHL2Q4+x+6/LRLwJruUEADRFjnQJPD8IEP8QVMVyEl00w/5WMK75OiEvFb1vwudtZ3qiOJ2FsClXSW/QtoShfHGnTh9v0eOUyKnMWi1M4ABso58KH8Dgrj56xm/4Wr74w7uXlWooW3sX2RSbYUCfQFmfy900N2MCrrFJKqQ4FwKpFOiy2Y7YbE3lVXrnMilvSagSui89B+w0yrxeqPbyZbWPnr05yUGRD1ZMiL4Mn6iH/WHiSipZuVI3PwfLehpRvLgxxCUJWLXcZRN4FNj4t57fPK7RDDBTkt/AP2gm83g5zRf+5xwxQO15xQskdzAXklkUKNPE5qJZeaBZi4ngPK3y9sBd7uDHXvNaSmSAN8rpD7C9zySbRM9RuscFRPfLfSr/GW51Qrz29+aBQ7s9U8dZUvb7lQ5VfZvF72lJ7iBS6q/fO7OeMf7k5ZUs06pEzjKE9Vb2c3ac3K2Goqt0l5vg61Vv4oqRYdFKj17BFxxEoJZfsn55o0uNevZ8pV6X/LfnR2IxA+GlFFbzTVVcZGkjrUNMUxiV6eWol4usF9SrYXgBZtzSMerqugZ+7OrxMO1O+qEOUziMXX2Basrj3VCD2kxYfsYiI6fvdZ4kxEwA+9s9xWutLEJwhf/4U3BKDhsfRN/SV967FPQuvLzOvy5Crr9lVJ9M2saBXIhhiSdkog86/o5GgvXq1uzU7Q5y/SstFgY8voCvClHW6Pb2KGP0J6ZF9KBlubRWEpWqSCVS77QWXSXQ5U1GZO6J+9Z+wq6syZVqLInr5kpvLA51daaRR6CdrYoOslnnyRiG9BztBjet2Lsm15GR0MgYu6DsyVSv68N7lL7vYxisyTno0+RbIwPnvfWoqgsgADnDQH3Zjp8qWqzuHd2TyVxG0D9M4SUJvCmRleCJAyAVDig4wgu5nwXCcyrbJ1WsFeZnV8ZAqY+4qDTlvvsb2cdRPPe0gukP/vR8iDnUfd4/ZxtLBXTe4FFwNBtNui0fihpfaiuV300kVWhJJPeoRxFC3xEvZ2dXZLYRvbam5Ww5xUdUWnxJivEcdgvBI8bM9jf5GjOXbHRy9VX7aSrmDTvJNP7remM3J7zjLsVoDz5DU+6zIiBZ9ZukLcuQ3rRybr8EIKvM9wqX65H6QnUG3FXio/Yf0ZGcIs/mmy6W9P3SjirjbszWuthuKd/3VaQ0JvkddU3CwhqPEM+DlM3DzEoHA9CRw/Xc3mnOal3KxogaaqonO/Y/xwKv7jmizm/5zzJPs1/rv7Zla0a4aDp2vUXWh4M9bpossEJwi606GZELgFtOdnrAkwEaVnQcMXTvxCmWhLTJViocjFU064H0l8jAucf7nS8UNQym4f0QD/c7K8Dyofe0kFZix485P7VaOVRIBSnyZYDrqWQa1BT5zM6W07r++PO7P7wqBOLZ3LoPb/qV9RwHSLRNy4QZKlxE4UpWWy65sg82pK5g9LyhT30I7688dAsg8tgbuGe/xhgbJ9nRFa2or21TUaI3gg/7WRVKrqGPYqaQlaK2edWj73fjMhaf5S0wuVUydeaqKkYtqvzHxwWH/a34yDx+8Szw+vc3XBBdgIlAcM9YOP0gLXnS4KigqwvMvc3erBZLPoUOYMPx12iGLn/zHoses4LUJG7dWO89SgtIkrVXMXVdaQK4hb3hOpKykwLCByzEnLZrxhIkoKe2FZ/qItkyDX/nLdv61Ai5uRXcAhPa1RA1ruRuNonmt4InN4uKfDM6/4+u711hDVO8Yw7JK7YLOzqq91F+lvkb+yFa377PmIm0+5OfW4F1KUCrJKOs5xKjgYpSrG7yUELaNgQm1M32WXLkE38ImjqsTqQZHnuNnLyjcdGEVA7ATmlLrysT1RPqMS0EfFXLoenUCTp0YlHvThoQ169KNsgGiURX5SgB0eGP+u9AG7+5FAhJN/GbbDN4om1e6RSgrKrhXfrsdlp55IADvJGNNZXsNhP0wgWhTSx0E6Q9GpftfdYOVJXUYDgc8A0Fzga9dD4pUJ6CihbeL+aOOWXWkldP8eMI7tWV/cBZWc6PfFlHwhxEqJY7FhG7ce3PGVUL0Da1QNFySEvdEgfUoE2J9TbUiD3WdIVttzrzQD9yVaLso+S71eXzjbtZXRU0BCBqoe6pyfDFzvdwYrxRZmXnDf8gB65CMKpj4fG34Qznaj+1oroMtcfqBPUhLgavtwkXN/toSr5bTE0Sx1yG3eNgJtRYlsvx0/28Ya8ZzsnmY04aRvDhncLgueUIlb8TLSO2dpWzfLLdden+68gJXB674m9CBT7tyWQfRhaTRKnfHLtRaPPtSW778RSZXFjQUILWMQZdJwx7UpJ9qYawcW/8iJrLrVmlhNmBE3j8cqVKwdGK+Q+qNyJOaAjdES92mA7IYnaa8YGSWdu3lVwDBNG1vQzrEA9oaoLKhhNUp9ZDOXsopYJSJcTc/rORm/jPk3jB2NYe3L3EqBvdkRBzw0/nRJ0ohaTP/UyG/Qqvq8jxSjd8ROZ7Y2p/wNefo+Fg0uL6Tb07ERV60suYNhZN38P4deHZDXePQdkbVXkzU0SgL+I0ZfZT8OM+XVeSP+CWpEdIy/Omdk4kqnQT/8N6zinhxh1Gi6Odb6TQlRAycsUnIg1Ar8lG2bLSnxnVSqLrDpNH6ymEO/9vH3MmEEMKZTaeEvUwN0khu3/oRlGZ8QKQymtjw3/0HJCDV2y8w8X73kdEJzHmw/finFAysL9Lpwfu/QCbwj8j+g+KE5k27s5YgXYXg+su1/zl3TREoXBdgcnFL2KVTJFOr7hRglTjG7R4/T39QLubqSo6IlEmS3bXExeKlhpXrsuj+8/rH60afUWJjV9T/Aw2gg/vkj99CJgsYZQe8zSmg/Et6etOna0P19XC3Rohyg6zmXV8ZRC2kQAmoHhr1L32YWC7AEK1d9ClHFVme6Rv3bOrD6hpVpfbrDT809YuDRSUDNNYOB8Hxg7lX7tLNbpZgTYAdMEs9BDm5nak/9I2XpM7bb/E+8R0lOjELkOxgEu7BOk2HzgEJSF13isRzwU2GuERvpx9FO39t1XXGBIHT7g9Tkc1B4vMH5Ppq6SRhmpX43Ti6AoKzOG/a2/4kEInz9V+wZOxwIU8ZRckJtGCAKfi5CaZYKb/hikIuNkyM+IdFcAGTGhpBI4NmBoZw3Yl0GipilSvCXDRaVqIVwMyf/AhujjIWRAZleNX4VMgXFPjKx2/y2dgaIE91JmEa0pX36hthJcgSXvkwvz9ZxgYAF92EmCuShzem5r7a/sksydoXXzoRZkc1BXmcBGsnUFJ6LHsFla5wXDgcDCkqp/yr+BVSLkLXB5ky0IsQlennbdMJvcxoSQ+EBvXBHDlQ3F1SvcfssZLOmOGdp6qxA/TzRQTiV3k1z2A1yrkET/Z6Ph4SoG5tmIn1FfEd04p3Mc2HxYdES9bRw6hVk47q9Ns4oiRooW1aOQoB6BRSsMfA/aZjLrm8eMRzxde6hMd2+05ibYlMMS8eo++5f2pcYzdsh/BhNRG19RRNJbwvjmTkYyuD1lolOAkScd24xPWM91wRsqsviMBlSq/UsJkphHh3Gb9lUDUt+rtDa5RzxSHcO4qC4ryBr6/kKj8rmTYzbNHHWi4Rs4m2svmgJ4S+Yzx4xZrfXWZn9Nd4EAhZmf3TNRrpBGVljludDoX2XIqKH4QLpZcxm4UD7R6Om9cPFRrc15QNZFN8iBkE8GEvQYzeWRjvd0ADSWuCm1PuDahvJ729ajhR0JH+Y4g0lpYKlXYN8E9mFYT8P5f+wXolcim2wVANtVnlMNkDJmJKnDbQxI/eEK12RgRjeBEjR5eZoWFSu3AbTiScN2V70ZBIY3ZHhO49kgh5WquFOvqy6IAxzD4QLQyYHfVkovTOZYqFZNkhShuHS6vb5oZ2zfBSE54lbuM7xVl29uPGaK0ayYSaHG1KAR6w4+P+JiCSQKM7cUXzxcHtMU1naIdtDj94icvhZZ1j6GlEPBV5DPNhiXrOUCj5Ys/hO84pexYKj3+18wGdENhBDcmatlUPARyoOPsSpY+hP3w4khyIwceRnEHDjuK3cjIp5U3SA7oH7IkBvQClq9GFiWTzsMZyedKcNEKhalST8S/D40pH5b8e3Z8vzHPa8h46gsLlQ7yCR/uyeS3MZrji+dZP2AUdY3NTU1TVAWqpE/uOsRO29S5eEBMhWMoaarK1D+rQSwneFELOCn4GtXt3P3C7+mi1jWfFqq52ipF2iPlZzRWtrx7gPwko091B4VDwsgOqAilRTAQoAy5ZTyLYPOMvDgZ7EbhuIOKp5x8JkqzOXjB1HF47erk+wTiXJbHmp/GoE08q6VH1Ei0m4AN2xj1vuuA/4+dt4mmXGFxFqnCMI/XN3r8BeWd6rrAypZboAEaCHG11P49ryL7FJOpUKhVxoI7XqDtgtGjA/GMeLMzJPt2Pj3eMdAEKG12su2cBPBFmWZoCUmorKoeqWuxQfnVEG2kxaF0cTHaq9ltZ/krQwjdF67zh/1VtfkA5n9i9+baOcDzbKoSD19M8aqLgFsvwwBof/MM2XZ6IK7I8EU+rmXBXMIm0LPaVebCRm7y63dRi2f7GXWkCRDKNRl05Ip3Ub4JiKL3c3L3/HZPVzQxV0/lNrFd8WRdkW2+TQB/26qvtcpIfWa4uSH4apeSiZ2UFm2kGn5IvBHQIodacfSg7p0jns4Mx6vb4APGsFiVmK6k98eco+MQ2jx7T0Zfm4G4t8DeH+eJ9r8E9pieyyIpma/WzE5cXfmV/HjL6sXMdUTDTDe8v5ujd/UmwD+gTGRLcbnFGKA6JBPDKCzKTfgrSYtpqJlUqu+mv0WVHpp+3GHaXukL7aoZrErp1c6IOXSePMS8UcBOvsLuXdg/0qRykhafuYGBVAEhToQ/O/xzO04mG8KM6QIi7tQG1W2R7alev3OAAA0Npm9YJtzbPks6UgbfMdk0MeV8LGK4qR3ysIz5t9rwj7G1ca35Fxiz4KsHMkaM326zrsy9gV8wYubscJBmCBa0KSVuKdBd5/eK49SWKO+xAo/HnVdgwYbwieoT1FEpkJO4wPtXn4idW3csHDowqDf2yVGuZEwYjzTYVc4wZk1kygfV10md0qsqr/3fVRelrkGDV0oV3RIzkRf+kkMhXOnbkZ/hJZ7y87Q2HZpanQ4SuFrhQlRMGZoglG5QUw2ilcWZfr1N1bsa/VONwuR3s328+V4KsrqL7ZrO+52z5Lwg6JFYy7n9sLktxxjcd0DE2roxc6ylIswt4p4/k6xhnQcMBRSeAG3SrHMLRp6c6xJtErHzTCLsUdnqD1smBt4yo+YXLvNnSVpRmCID0ww0DVTo8nNkxIJaejSOJUczApkNLqhss6MCK2dUPwfgtuSAq5RG48nmnsZnA1vAVZ43PLqRSeZB7sZV2pn1JA4aU3PVqkIz8f30lFilO99LLzXHZC/uM5Xhc5ues7MajNPrFCBhQRJmyiyjWiFcZcq+dhPbGLocijEi4Q+86y7YvovjLZBrmWwmLsEWEaXrd5YvIQW2lm4iXTKLClAzGSN0Agq+VW+ojjxO1e2u064K9d4Cy1kMlMZqHwQ2DMwrkFJocX/qBIWa2m3+stRyJ29HpHq+YXb4SwW0FLu9/NB6YB32/qUA4ekn0asaK3Hz1f7e3FtzyvvbETNt6B4h9lWdHYIgkLN3XgywlvXU9S9U1KbitRnqmeY6LZuhcfmyL+mUDj6KZs69w2KJyv/nJdvwwCm6zalaS3shqOKL23YqGwYOfZ8j3/H5VbWq4A+sulpD7Qf1QdXcBVyZYzMkuF+0aOkloGq92xAgy5Y4cv4lpflGpfFBoDiYj5MubsCg2RNbyYPorLEdJmF/mmgijZqAKECni1UlccQfl8tLPWhEiKV5gMgJaEsMyhPFB7fMn6CW57oqaEf469imYdBWX7mrvpn90C3XPfcgrnHoSz8hJtL+UZMsSrXCrl44XNAnfqcKQagdAWQkJNbWYZx/NKyqWYG++u8xAOgIG3rRQu1udscfIO5ws4fMHEWqERJ03Jy0hj1ozaddCGfwS11JzUv08U1KOdwMW/UbqriNHXnjic89MLYGcfsavbclVPTG7q2LtFS8qdHlaaQ2n27qaaEZBHcRwzPgvusvpOYkoq7TWW3Bq/cepjF+kypb7gS3a7QT/x+B3Q5biC/W4f0kxXxtqxLlEfcQp16tWeIYEgINAw4Xi4C4nQ3UQyZEzFDgdW0wvtKohTJteGW1nAmMvMxQhsy3ETKgKFE/SxgunSdqcFQeFV+hAl6ilXkbAH7yKUk/MfGGsnXE4IEmc9tGFieibsVRgeSBLTuUPZNzOxrkhYkA9Wv2Wzkhl/F0ea9ur/AIBX/OJkOSbCswvDJ8k/eKANgJ1En/NCHpktmhBSeEIaMMhJth3JqGbugxgaY0dHvq+EJ+2uNMnuQup/Eg0Jj0VG9BPHc8PBOhZU4zGTvNDIWxysRvgLax1fBjfGmFQ/DFD0lr6XlutTanGCFLddqxy0AarQB9ugCX7yO720jP3EnbdsfiMa4xyZZ/KzbQjZDIoCnBniIOEOr56KHTrbdq2U30hq/mlI90cLmyABQ/7djgPCpSmWeIgS17BNbBdSwx79DaGeTeSUYmO82H7Y89s6zSZ5wmm5j0ZaMPsAJdwJEDZVIOmrSAUvvU53gHU0u17BKaZw7d6A9ZJEIYacItF8k0hXfvBFjrYS0A/e8DjCcmiFH+NKPjhGByjAbarROIAYjRFswgRfSNmxcLUwk9ZJnMC0oyN+QeEZ5dBJ7iA3YNRHDr4A283fsi53qGAOm2RdnQ9uQdak8mjrEUkbYz1VVgoNxc+s7msL/PsPMX5ohApswFODNcfO0oDqxS2T4WrbSSihdzbDgetb1h9AptozSbPlZ4WFTJ4SRhlS0Mo/lL4uHvBsxU+TB1rdvQAM/1U55XSYxJCjBQ9STuD/YslKgsJCGy4skJqyjhTyDGts/r2oouoZ2JWE1tBaSaYLs/hQuklvypBj4CLR1FcqWPHvcjVGGV3Ah6S2uAr7EysGs9hqk5W58gyp4EyZtEPfALMDoxeuIvSGaWo0NP58i60X1arfeDlizDuN+njT1ODZbD0on1PF5arNLYTJWL8JcBO7YQnX7D6sAtEY4Fe/GuYQW+wnWAYR9MU/7QR3KIQudnDW2lPG8JRAavhhCyqxs9cpXeGgyhXPjLgZuFRq9ympVWyTi9U1ljaQAshS2d3FcMfDSSliANvxnz9rZVy/CYwHpKUxXpUul9bIkeehM2AHuYdQYlCnKI/Tuu2Xx3kYxP8n5i2nzX8niJvZghwXl81Wt7Iv5DNyuY/9ZOUSGN+4kSoXCPZ+HVxrWfLv23UdEOkqxsbBhz+hi+9RulE00t91FT1lvNDm3bFm3nkpqJBcqgyE3As2seoNBFJiuGL8DhUI3xaJ+n6W0MDVhaWpcaAUlQihWHmRaae/whyD146dAa820gPRxmJ7pv31X8yiWRcx5ryxqlT8fOkCkxCCqZn9SmW4X3rtFsAvwCa5GCJ6mZ0Hz2AOtUcFdTns+7wrsFqag3g7HgMfMx7jFjkFEjixPD0GKTEMIeR5nWTfIW7iZtyW40BmIRGsNC/xzn7PyLqlAiIWx7AuMPIx8Q8Sb0Nkb4vvkj+P5Vou1EFLK/grtd5V2+ilQEfFTR4oHmUjIPZRe4qXlZAm7+Ytql12hhpND77osSSt+IsaCu74+EiZqzfOnCzyZCkFhbIeodbiwICN5r2XDj5Iu+UfUR19+JUxHAVbYcjQIM5fxPzcRpEfIcftD2fyolvWn6bUdNDLGmkBgL4HdUJVfk3iDadkqwbhpw4ctOJcsxF+1HooIR7dPHWANbtxYKoMq4XJikGg3+wKtjm4bpWDN8TNwX3avSrLMWxYXQ2gnqOdl7d8CNmNAoCCSwYpVzxfWLHPvOxLbPaZVKIqfI0cKZ4cRE7Xneet9QpUGYLkY6dcsfY5ur2E+2QEQw+b8Vj8SxUyo5zv65TjDvpujsULcL4eyfUP3ILca1LvgyfpJ6XWGo3UjC9L2haXVoltmjBJO7JWhIDuFfxZygeInFrGdG4Zd/2xXUUe7m4QmMiPukcI/J8IdNKDbiZ1XvY9/7zK6lrSlnTsTd/uXE1dpYOyfrzNwdoBfJD+4CjWj2z0C5eZycbZCUAOBV8AAO6MBDbM7DAirylFVbHzvpSTeBYsprJsqZWLl/8Q8DUgk/Utk1wT7Yq3iijHlq2hp/iJ6BTHME8F9cSac5u0h0v0zqGi16eSaZTY1R0lHdgF51r3ZN4at0qLI3G5syBBayQKapQs6tURMNAtAL7UtPAWPJXzhYfbPtCLE8o6KpszxVPc6oqMlzgVWRbOwmWGovv2Ojbycurxphkxmw5igt1VU1t+bGoLQBpcaYjypVMnXI5XFdosnpgKtNtQNmKo7ye0smYhIHrmqQ+INaJQwUmIIpbGxP9U4Gj22iFWcESE5MmOBaWf4/vHahZJY3QoXKTJgGDnFfh+SmKEdlMmlz42O3HMaSpOj3kA4O8rMLy+DY+AH6ZIu2n2fRHullZuHrupuW/hf+fTGRVKETqCc6qTTcV+mrtnfTPpfkK4pIYk5YNFTUJdGTizvtn6+e/n0FLaz36G+55iEzv7wSMQ6UMdft4+7GhVkQygdzJAeVLtT/WW8KuPD1JjHyN9ZINb0MBJxj7ouRJmYRwuFryqPAkJQ0lyVyhekWoTCm38FXC17Y2xSFgtla82NVraODJlSJbjlXV2j0FldTffv/lMfx7wftZPOE2oEfKEKon5s6Top3Y1I6Xe+QrgxFIPn9L1wphrTFmNKhN7yXladqCX6yWbxUd3KSfUGx6Vv47jk0QW2EeqzrCQ2Kiv9Oa+0dk3TTyHjJsHcCRLb3v7SHugVYLBnFoJLDEMv8r/+O/MGh19NjHdFTbL6LMajy9+rteONu7uASRH4O1LL7UD3NDarbXwap0FdO5ydtVx7smxtDC2pZaNLD6WSLuOYR9WYrYvExGTzJK4qHze7qqK2/5ghOGRr1S3tZATwVnk10eAFnmRMvCS/1dXfnx//z/tWcQEPkhHXavBXNEGoFgjl1x66epJHSnVlEM1K9sluL3cfafEW58QV4n5oNlnqjIC/myrhumBkZzHgwkhC1Ld0qWgEhab3p+V4ga+ID0h20TNGFUH4ScJfz5SstDWy1OkdnNEBPRSqxdSJN8IN6cH2UpOEKFlhtROt1xp4e2+1LOb8RMtcow92AeijmQVM1tc+rWzQBzYOMIXWbc8nwzlvDc9LV0fNXYy8ga1n75DWMC84nxgfZb9kt2gGjnHn/tVSQ5Km9PK/e488rZcY4Qw0V/XlNxmgxeAo2KCKoq/FMtl+Hka2jkpOR87vHr1a64kuqTKddgsSpIbgxBWYZojpHAdCLRpMC9mVP7f5ALPUgMpS8cakECSAR4+eO75NDVDhcTw87tkYI4tRFISJeHBvvycoUi3wdLtCFBPtWVJARRcLYDtYpINiT1wxJmJnLpIk7OZGZZ9pUDxRnkEHvkoWnL98PzgNPMSWmDy88omMoImeKdOMrWyn3PYW1Jwnk6lXqzTfB0geJWbtL+FMHpbQZaiLfN6xarqHHoq062ojxYS7L8O+g0ktp56OpqUEZg/cu025vCLlq8+y2IsJpOc3s6XNdJOG8gp5+rRLTv/FcjlKf4VSIG7ZgQNbIgZ7mmFMHWIol+L7oD0xGmt/psjAn/99f2Hf0IWTZCwuC3t4gJWbefIoi/vB+FH56g+O29uXriojdZWwVxEdw1Ix9d/62axp/ThBZEGNJvF0ViDbMluyTG1njnW+FL8SHrTDRVb5RAjxj91DOWLURp/z2SVh0vJodhMRBrAeZ+albACXzSlqm2OvM9HPYUZ3pUYW1hpNqLdVm4R/O3LqSOX+TR9xZkz2Q0dUh8mQ8IvulvAKr37DFV4cgUquc6lBLXLfO+DCL8IAUvxy9IOI6DgkkH2quqKBPmdRcpZH7zviIRR1pCMwvaze10yP9ZYbxx4tS3qcMwFkfuvNpi9fhExG6I6Cvi/N1ayIvvLDHcPURvufMA19MjUVt6mdrcqcHJZQS0CkvF1NNO6kxfJDhTCEA4Hsy9nrhMQfFgI5Po15UEDwJYe6ddyNdhkTrYJ79fw6/8KYr5n0i84ZbsAJsa/il9ym9XBknVZTaSwGk1YDnheTk8rwRJG/PhWWWWr5IXAhQo4mbz/lsqvL03E1yFk6XsIalbUwoVIJRH1msbxTQF22z6Cz4ramrlrfu+8kEfK0EIgGAl8qOdFt3eWOyoWrT/jdN3B0mqfS1XAu/ncANXyi1uTwJjNa0fX5umbi4y15hGNV8ZNRKeokzECkVOj9ZUAZyxWB7qfx3Au58ziYT6Bkwoluii3nHD1yTL4sUW3juB9bBkJelrAwNBIc9u6wvRzJXBBFx9DTIv92UbJoPG+apfcFqr8m9DotfzYQdSF948rWHk+/264OBKS1cpMr/iem/Qv0bsmuw5CZuYqqcIKH8mZ5ZIPeePRpi54xzFqQjvAonXlZk+k16fjYhRvBM+EDWVh37uIx/ajVuQ0Gyu/wNjQSPo3F8YHlJyBUehYbj9O8CrkKyoJOJyMl0QVAntMysCGu0kH/puiEPsb4d482jKhcgeVXz66EKHc/YzkxX9K5Zc4LY2Ul+yz+0sNedqP/wK3jZZaEYN6hkBXnO26kT/7pDYL5f+PgSYo1XVKj/esbJqh8v6BWMkdDnMTdQzi5zLh/QUgt7cxzQKHHFN66ivG/7dRdoFU5B6IBE61LUHhLK3+2UrxYNXL9YoStw2Qrfw6++le2OAzDhsIQsrwtAVaCeIGRW5l4PPvw/gLX9Wad5mkGbPr7M2qW8+T/VwJp90jB0r29p5fRp7Q13Q0YHIl5nSYJRvc5IuQ9voXz3/7VMB6+yPu3k0RR6FFjIqe7qoaL/w5Psqt2EYOb8gdoAteBEafVkxxJGOWnInKYFdejkEsjr6OD+1EsU4fV3jM5tYPLtObowmJJEm8uEbnSyO7NEWzuQU3ghdwft+wAi8t8zd9ktj8i12Uk9B6xvqoyfr/7KIRIBxPkA7rJUdfGQSTrIv3jrLh0j66fZt172OzNr8meswVhKnRbWOwKfe4alrYRrkGLlJJ5rzXvZhyKsGJE0sGxguE51dyW2qqnZjZtRdGoxYy9HSTnUGWC/qYoS/AXO95zMCFxy01JI5/JYq0L/AOFYFw7m0vmDvTrZD5EuQfaWP8tHjJFYU6/eFbLXOBEmtmFMVR69BxtI3PPhT5bGqqe2hmRu+fkmWmoddNB5XiWJREAy2BsXi5iUHnBYXECw1gXSbxJcN/+a5TYYahnYKHWpt4yJ/BQutwCn8gXmmDDZKsSpFuxUOiiJlOJWpKmjFLVpHs9YC3sWWb5hyCsWVjEchxRAqTLkiCmrLC+AVqZxXjc/3AAM/Tg6F+JYHYNqllV4zq1zvFZb0cKKG/VehXC/TPQ8u087e8+EL3sunjcy+TgCiG8ZuWe51DJivKWr8nf3C6hcSF58yi+CNKkksvpPIU55xBcxDAD73RRvrNYEAZmyckEpb/HHrfVteTV47muEb4t+LDW6z30N7u2elJ9iAPz6rndSPd/7tI4bsN1OlFFSUao7PUa/lgOu+WnoQ2f/UFaysyomDBdu+eFZn4JwRzkVRnwK8yl58swqIF4zy4UPXmmMwOERSbIvuZDsMzPOIB2tVJ2CmbqDvlXV5A5+ayLTHYW2dm9aEDI0OA32kUPhpKep7YNsVau0oSW8SE7F+Yqf19ZrmU3Wrdq0ApVdnsF+DqBiE7SuSPAMxc7dBRcGBvJHi0raESYvaG9y4RGoA9IfGWlF64J0jlk/nDnxx25Z1QnVftHizBOgOrKssONbxiJ79uocjFluFl3lfOS8iqN1QiLPZufmZo1IqeaMhXmAroW0ZhZPDTwwxxjuHj/ZQAwFnuHhIrNQMWimmQ6gjmeu508hjixlN0OTUtLoMqlsQRSTjkXLwVp+9/vQ6fU9QltKPzX1ws6TobscdZ4RyC3xx4U2tydE7/vfEyQ1VokAC5RRb+U69Uscz8Q0fmZkZb+ErBLJh96LispHk0IggQfJPXDpWcNysNlQW+m/Kbl53zgEvyW/jBGM5t9FZCrxy8J1eDSrA7pKdosGMyCn1swZVCqKHPilqPL7nEQofwC3mW5Iv4nCPZBXqyHfMmz4agutZJVjW3/CtaZszzgYum4ujvh4NrYw+AGhIz2JUXo5cOOd7My1K6ZsShoT8UwJrbDVy+eGY53Smvpd8BMezvVzLeCGgZdlPAXkm/Lc0QOD16vf+zCt+FOSpxukE0V2P2GSp0ilUgtC5Pc5AtbMS6i/Lyjf/KsZ3R3a/60KHaoxVCAS07q7rppa+Sc7Fm228a0zmodCyQ05CO5Umb7xntk/sr8fjRVgFclLBAyNljlM2GwUFrIGh7tET11s3Iu7NQt1nQKMeaVKM72mKAPWZJnH0qUnH8Fu3EfLSLUHl3TELNqIZ+C3G0sMiKdjI0d946dOwu0GcEpyJrlEmqzjVh5ZBNrPJUkyZy/H+P7TNX1hNFqA1bdpQVtMetO1TEIS5BLUILEbnKi9AMf3lXsKGhYMU5KkTyG5yiOOd/7lNMMs/pSXJI3oLi1D3nTyxPFq8hou1ZN69IOcXbnvpaFYHGFGzZR3mI0VyVqwivJ3No0NvEFfx8jYVx2ioQ58ERjjNEeSWU32PDLrF6+1cUItzpX45e/8SGqa5nvIcFbakKajnN10EPd+be4ZM185zfSheEsuO8xI3h5SGrxjB04tCND2VFBC+wxKKUdjRN6bt7dXNKCGpuBpHl99U8Fq46PS88+iXOC2uZf+09x5rYN6N0dWaKi3dUIfS5XNiHl2M1ebf1Xx1TCpVERbphtsGdWjg3xJ1p6i0JB+3qZRCphBJ5lIHH6kX/VWbuMMpqaNMiSElAgQnGLsh6U7Y7v06DR/U7qHhAYDL3ALj7rbpRnJDR8LNH7WFXsXCVKPUlba9MrCH8JyxaHuamIXo6k1t/sEXJqruEXL16y9Q3SkkvBTOzstb+XLX0XBO/QkmltDt7UojqmlXblMRGuQUfxBi77iTc7Vl982qGjiQqS1VG89z39SN/7Z/hM/Mbkd3J5EBsR5wpX5QW1mUMW2ZDTTZnhE+7e4/8sGmIGFCiq2hSYBpHQ/QdzwjbDFxjPJNx1/unz+Ge+YP/zUf9NOCi82DdXCN8H3DYpbE5DESwUv+4xBUvmVSoVggzD8ijaUah30U7m7Wa4Rwkr1xAFx4o6XbFgvEkGQpniF2dTQI4uZTQ2AWoAEOX+Cwk43t3rafDczDZvMtvqbENSeiEb6Up19XQSurRx13KTDGVORN0oveUM9Eufv1AaZEdLNTwuNH4c4zAwROPKnti0W1aZZ9z9pzNa9h7iEygJLMYWsT1Knvb5hd+1Wh8pkC+LaXotrvRMcNg+sY84iuCDPvw0RIy32OSoi2z9d6NmtjX64G1EcO8dTgqDW8bGzBf7g5N3Y7TOzXsk8I6ogcSNfNIMmKrnrcaoX413G+uDL6Jamv2JOxtNawbfX6Mr7Hu6IOkMDlgoBF9kR6e2C7/tDB+rHAVJDMeyMsgjsXkUEFItw4mIRX4efYtbPcj9SmpV/4uNsfwiqBfTYb9FzGWzEWilJG/i4uExEdFpalwfH1pnmu206bc1TuSA9eo8fr4obeImK0k6fLqNNxctn/bwCdRoDecmuqrw9aahnukU+oe9p9qGy1umfHQxlwBWnkowcyuUNKViidbh21p9eHoeFo1qVjZuLrfK/TEHXg4vLn8d9gaWjIf3Tpbe/NDS1eXWOkIY5zZPDswGbAzldj5d/IqxTAmRXWOBRrVfk32IIpE03CQGupyPVHQtcnAn5Njr0cnrvXHUsvnZTQ4lEUuNAtUYD4F+6ZKCUpuFyVDlQ514g+j5/EzehooplScYTYB3mczus20lUMcZTqs/wuhrqKY2pqZF4Z6mq1l8/QWDFjltxSmJMxUbx+PgF6I9GSQhfXVAPIlb2GAR2OdaTcSi2N8r7RaBUnfRdbjhjTeEfA3caK1I5vfr8n7SRjDQeAzAhpN0aDzc5JvRXxA0fQzAXEbtevw74kEkFnEyrQF/Pvpg39oTypg3NJ5FF26Jy65OBedA5AEZodgTi4oOn4rlJUg3Gt0IaHnxVYTj4P2iVHJt7kHnXeBBNfQsvan/CPOTuhurQ5a3b40nEKZgkaHJL0DITh5vIL+WxTSgWyBSmRiKXraoyPpfqYydq22fy+sbbJS5b7OSV7Ko/FtWECd04p6+itKRYTAnZ9G6qNo89d4uNLPEGuDlt2rc+R+/c5uRNgcRM4qijWC2pGfuGoLIJwmqnXHWZqUMDkVNA/pz7Bct2lcFU3wF7iNn3DJi8DgWJF7I7Awf6xP+LJcSJdj9YQgVkcsUe7vcOEO3hdwhXlnzc0qGDxQ0DATvcq9HUmpXi/JMpXKGgwwteGHJseo8e3Te96oelsqQgyFzw/Bt31v9GPxHweC1JKYwNnnZZXI3CYX8uUxfZCGf01oDTtiNArM3oZsp895dkq/kcagiKLYwJ+ewzICrcEfsiPKECkTA9dEs5nAoq8oMSKZ1iuugRve4Mf6uxpCNN7pFT4et3yTt37YthCn6Eoc49VVT8BAUQ1E/YT4SXy7liinyPiNjf/kt+1j+j9ktpc9ai70K4s3LJ7TuQiaYcogiz0uW31CakPqqFfi83C5U8UfYHOVCUtnE7rmR6mJoleyB/YZ6nWy/46UUJBWzqor7dYiIW+T6Oy/6zjtJs4eEY5L3+HxYWwK8fMUVVCKlXMSf2gyw405KnkGB+qK5j66+OWgmrQw9NOQXfttp9DDfjw4gxnA83Yd2r5L4pbwxlxb/AUeVGf5RDOHLTfnQZvQ+L1W6XeZMkB071L0320fQH7JRlb0a0mH0RrT+BNuemxSTkxUA7rWgwibhkXZeK6f9aGO1wWM9oq24qiN6m2Cy7DXFTwPAH1cZwtQZB/kgk+cOGBfyaB/KynYzrVKNNt3GATYS7IzYz3wca0pJ589zlyvW8rZtCxqlIQo1PsYA88TpKo2JUb9WMMA50kXZC9wfW1rwD+UYtsKb6mE/mhPDIo9ZVkJGb3ylE4YEaoIFypl0DgK6EgBfPRa6d5mOo9R6WAPMTfFhUAcYWHRZXR0A7VpPHcfwdVcs1KT2irNXmmELKlJezwKcGFVg4vLDI3VpUWpXyeZGLhy3VbOc3tk64zwEXFaim6vYym/4y3aAyXKbK3jcPR8Vo33XLXXeWe0v0JSINEIrR9Z6nessbI+jImU84J+gwVoOsQPexS9jFoQFE+vLcsmcmleG3FtSb44DKPahxRjCSkHAu110nS0zsiPEUefCW2kbWimRTjMGTI7U3m8P/PREgspx6/tMYfi3sw2/jN8BB4rS6CssGAiJl4DrsEjhSV4YOG5bD4Qpyia5uCvjw+cOB38b2kCdG5gNpi1DecxXR5PHHKk2i/HUldJOU30Lh0gKHgYp1W4XitfKRCA/oc8rAdKvBSaBt/HyI6LoWOYm8yXeM5V8Gdi0lMCe8bys/dXr4YGnFOtJ62bbgs0nP8txeKOj1UwTpHhFWOM6+mC+X3mEXg6WxQXDRMEwAFEW9B+T24Y4bGV4OmFStpVi3w6waM7mgO/qtRF6vn6pDRV/yhLfK3KKbFNHxrJXb9FQa4KnlnizTRred/jjRU5L2tV5e/9HQ5upJalepGJhn4Cbbc7dLqIslT2lmoy0JWLalVKWF/8udfkv1ShdfzXBUtVwlXU9wQoL6auNarmhUo6xL1BzgGFuO1hdvKnHANEoo0ZOsVa0hEr4veWZ7ryBpNDWvo4aHhXtvPk8rDOJRtp90dAUtRkh8CdT+mz95tf0vb981fRqZgcvUv70k9OipYyYRv5mkJnHjKz2Tm/OUtoO9vR/hDFaPtLyms7F8n+MPhTsFZ4E4KWbgGu6iuQSkyJY5FCeh7shWsAZMo3t2e+Rml/rcH37TzV1xJsvbFEyH/0v8o5aF/mxCRrvw+KAl362HX4rkK2U0W3Ho8NP2aT+Q3Ylw1S0udVf5KS0WLXtA0jDpVYW6OgF7nbM+uxm/HTaiP7sYMwo6RYH78aHypsve04XCyUiBHc1Jxc/acS2LYSwXcowGFE1TG9dpu//I8DS8FToEfSr9D1oW9F3yqXkPZ25XSul6lRbZZPpgAxz6HjTFyKVzs+kj0Y2QciTglTMU77XzNgWb0hQcml5qJ2UDtOUEN72uSq7GEOeGG+kUmlB5YsIFpJ5z+4cH3sCVxIfL6osyemdlBKraSHfk3/VVkxrHec8qqHKdx7ebPLk71RfiTjslTDi1873Zdmi7Ivgh6vRLytwU4NLiiFH/H9vu/Sutvc1VWod9ES5+jED6cq8M07Rr8C5KCi9Z/mqSpGtCRuVl6hCh5oWjam+sq+jCoidi1utVd1iZf6+ngHae85m9VMfyVOpPg3o2xlZvHSbS+TT4CWEq75XatTYXLlAAd56Db72LgqcDCPZpCVCm0LIEKHrGEhmcsBbqmYNh1pd4Wn+dvtg1LHkGcHYc0OpMaJ/1T36lmARrnYAdZvskJ6S1hUmYtlJuLC3mHTQrtYe8Ii4ne2pSaCsuua9iNC+Y9ncySOlys2NJTMNtr8s3amwBH7/k23Hb58jYzvLJ8KhhLx/4m93qBBCThu5f1CYlzcBWhwFxd033KKNLG+h2ODukY9xknHRIVb03kTS5LsgrZiQBWe/5RHedKqbpRBgimGwS2qHHWc6Y4PkFrMCJYgGPwj9OoKlT0FpdUw0bgWpN5FskJhE381XzoqK2KKhimFvasvIqPhpYC5QH8VmX1nvqhQDvOskO3iQzzT18JAZE5WleA/rBkWkmEoTwqP9p5b+qz97oDrv7xdhA0U5q7iEtJOThbvgO2lLIReE8wGgYztHoe3PBfcA/Dq8QRtd/qZzAA1OB23ryL/9HNbg+BQj0JjYjf5MpeTk9oncqOjWGQ8COt5AtCmNE0+3UGw/jSONGh7fjOrx4v48z1ChDA/yS6C5Hx/22y5MhIr8IY42inEaPZ9OenE6fkCj6j2KDPRqAAv2sMH9ZONqKPqeMpLWV3f/llLy817xphxzaDeB0t6Lf1IgcLLOl8feIiz4p4zVATn24q3HXliOkIpKR6+IQrhDOM2i/MTZzSsv1l5zDRH58+CHlJp9ewVq6TOlbAZX8LW3z4yTy/KMVyEFisYaiY0F5JZOzFH9cTERfaUX1tQ0JQcjW7zbOjpN4nxQMnvHkuLhkVtRT6jcc9RV45pcEoc+FXxExhaFUHxsb+098hCy0gVkBko+VrOj/8jJzTuoEe1rOpxPJ2BFk7Z/jcoPbHYtSQ0w+74V+iEiEAjHqtEBx7MWiRI2385EoRUgIWVHLV6XoQF4uw0iAEbkkVlYWnWaFZ/Gw1CQyrxRe8SxYGkmM5QdvEb37yFMOohkBtu1+AIaiMwMnHgUqCyJY0YolyNRJ5ZegP97nYeAjWmlCrDjsQPollOlxKfMQp4TTT/V0vd8pVjn3567e/srwuwljiE0B2o+BeXokQkq8cn68Dd543rDgieVuXRpq/I5quLV/CV/J+XXrMlBQtgqbyAOUhueJIukFuhnHbtDuP5RFGFzMsqqB7svQYgtvZRFhE6OZyTjX1YgDFz7i4q6eyZbvXK9jqk1lc7e9+vqd+izaZzALWVm4HT1SaZlXtjuHTLcHw8oROijXlTffQRhLkVd3fuQc7lxHEI5Zjg16z3gsfpWPkoJMnAyL2AUsvi1lkd9VlzTGVYevDmy9RKkqU11eeVvPI32CtCVNbOETVnAU/0vKYKZVrANa213Pzr6w7c2BD4tdEYGAJeTvdl2TNP04Bvq3n6IvtNs1yP+0ghCdB7ig6Mgt34DsXwlF0i61+L7XL/g3JvrDoTDAwdrlkSUX4GNTwnRXuTkVtB2Hrl6yBcKh8vhglPid5N4roF0gDvvjuw5HhnZlrV9ia3gT7kUe+/y/2EiPH8drYAa2JGhOYp/fkMHPZlBGqShYLJBqP+t+iL70iQ5nagKCOOreMau6ttPZgMuWU2sxfkjpqeIyC2awcoG6ghgodo11JTmoI3jE95+HklPbRa3+74CkRJYqzjSAR4sHTbpXb0I2TvPO5zfnoLA2tmIMg4CvoigdlnpqwgeMtoWNhzXIwTsmYr4XlfxmIDRxzF5NX7sxTa3pHr8i9VjUHB3TiJcDBBdTfkbcCr2wYmnOa7NX4ZVHlP8DsXeo49pXefZ+N/yw+r5tlR6teeG502ZmKi7Ta/PwwqRadncJJru1+cUjejii1A1+rMWlEOiDw+2a3xCqsGcRzM6GkL4ri+2JlUof2McHUDRi/bcLLEKv2g3Ik6TmBONDo1b6jVsyaGsp0aqe5zi9LiD8T5fg4XITtVWUMYWpfV2hooaHzBeOdPPXv+c2n2yh/TBdNi284F13p2ruMT0BrwFd+5mG4uQfiPloPiiSfb5+aE4lVQ6e0dPKvzCLz26smckiKGEn+IeH9QvqZDPADD606PVC3kQ7SlX+p8S9gY7Mdx0c26Gv2QL6S9aIz5b8cMQ31oXCi7LNMaJYz2Ti/anQW2CPLsWerHtjY0CJXXVqKlojKl4PKqrROhFsMSYs85Z6EGvuRHOiI062B+DLRfC+IcP3TplBRFi77f09ZTwfEUuP8NPkaJWS+R/7Goe7l3PlovyvntckKN9H3xFwfAERELex3oG98WwuysbyHqpZ7ZqGsLbgeN0Wg8aMCcn5GyeIABtqPpdplY2QYnEINzUqbP7p852WTQQILxgJpmeF71m75bOiTq05/sru2Ll1aDDJP3qt99esPI9GhETl8TCTeFNl4YVIvFDhhlfUL0tYoF+w5WD6E/kI/e0vRwxGAfNGcXWAj8APt/u+BzTAVUtVVp36ccdAOH+75EyfNrofAqp024gpeOo3CNVH5Y7gOXEF04L0xMnPwsuuF5nRDJHL6Y6CLgJf4VhWQlcw2Cf/okkS+yIOS3Q8En13SUa/QWh5NFcxWZJ4Xj26X2HYSewlmSP3Pv9d2TXYD4ILu1y832Dn5uvtLbN19pNAE2+qUFa+6IVwyzbt5HY2q5eras2KxO2UM2QEVsGXoC+EJWpRWFI4+I2ti5HcUQVGGIGZ7O/A/qeWc85450T2q2woulpgt8tcQtjBrbQkSN1vJMMEZGnNg8PkMpeHBJch5tZ5beqoLCHJdl24/Y8M+MOkmEsdmO9hlhKEXgMXgWd5l2cdTda0VKgccA5Z4RqCkTGC/rjyiOB+1ZmlYxL2tTbLQTV5Lswiglfv5VAPEj21tOweT4q2hIzY+UgwwH1RXY37uhOC9GsGhboTYg3hSr6zwQqdf6rW43auOF5x7JoqV+hVa08QYpCzr2eW/I7MlFxxAQ2R2hFPXiqV9P6wBBjzRCLpNvwyUN97Zcnp/7XMOXgRi8nBfeAYhslPwn2zxvNqSSjSTuRvGqftmtGsg99+LhJyVn7iY/9lBBpTB7prfFgJz8hSb51uZlPkexAGcdAbKCjMNj3C6GM9ZyhrB1pQ5APcC3Fr42Qy+/aTSLO90iRJiaC8r4e8vwFx3aveQJ937A3WKiXf0kdfHA95TS8etxfhA1NlQRsQpkIQyF0kc2e5X3F4EGVpv92xQPWgab48ViJAGj2B532mb+lleaydd+y5B7rCMEpL836HUYZIm4fI6UPgZXSIsnXR2cBOfLL+zts4+PCeszvzhr/LLzSzHxBgDEibHPeB3MeFgYLQgIe9AiWE+NDWdZ7XYQ4bOWMLrH7o7epHXBEO1/ssFdS4Wmv8uIVqo8qpxdhMWqgDSwHjy4jHAHZyloEX080k7o89BoKZoKFmZC+JCmdiybUzUaF+665WJ6O9kvyWtR3E2p52ow5wC8S9VY4i1UKtdvN5oFnvThqy8zELinRyv0Fq3+R0q1JdS1MJhIv9qDgFcJmiMqitJU2gYeHE46HbCyiIeH/dR+n6pFF9skIVpB4daLN5Ii/sKku7+ql62wOyeousp/WS5P1ClghyZzi2C7NtkGKx/TSxZ35Gd40IuxNL1qS6vncNTSnotEgBla3xM74Pji1rvoHCwsMA3y2mXQ3lNnRt7T8RikMvp4J9JsQ4RzXNQVlHYJ2Mn/QmLlz/cw7CZG/yH4/e1WwPlaraR3M92qCp9qIW7gNXm7rCqcxTgMRaE3kgApBLbzOeI7Z9kIUYiBTf+UQtfHqdz4U1KN6CHUQnDMoLu9Q/uBbGMcw2CSGPBXSrC7Qp6wDBo8l0NB40Xt9EU4M8IhnuIrOpAnz+IsU17d0Ep9GR/nReKiG/XKNa+kIuKwbi0vacJ83rULCDco6jlgqfTe98tt/3dYKzku/imuITbo78JUekVUBJDkbIjqQtckF236gprvSURvzN2LCNWi4JlVccI9mxCMVoICRcJli/Wci5LEwmTTCdJVcCelUL9Z7lsHAGdcY0/7AYLkYk6LXwEOWpmlBb97af3mtJUsLUv5/V3SZEOn7uy9ODofA0Tl6ntJMR56QSqkyJIIuG34H9Gnngcl+SR78Gzck+lbO9vrxt7okhHqIG14kMkV2MMKrOMQG/IPYSCzS8nYye0UNIDX3Mbxfvmopj1l+g4ZW2GJ1eIxc5NjOboDjDMaLtwP8kFpjAIE7YvrN8qqHKXpb8UT4hweRiqDJKvl/7ZZ+UNCqeA71AqyYsngW0T0B98DD/p24my793p8WirZ68DpfahlUe4G9ZzrO69v8Fmh7Zh1KUOCFwmw/CY9tayNp9JT422hTj899hksPnsUFjCxNebsMNC+K2aAbwwMU/f3/oTruuaNPmrVE62agAF5QAn60DztTKSdAXhyW41+5RQu3OSEsmhJIf5oEfMQWDtPJ7N0hQ6ktfQHFQif9Pukv2nC3QvhYWjzOwIEfULGUzCGXvAau49PMzRl7RHL5DM0p9cOlZ0nS9J+59A3dQvMrLGfnNlGi4WWWz/uSEG0+aeJ8tpsPnoXRJe6oTRHBYmvE03qS18qblomRelaaptkuRK0sEQiD2mj16qZJEGLKDj2NWEIay4aXGfD6qh+5n54y4AtN6xxPO8gqWSH0xl+bwVr8G9c8AJlufHlC3APRijf0+jLRnv75liwe49XrDJnCA/KxdcxjuKAWJzKx9JAESM6Lrt6qE3CLWcfnk49JEjFJFh6pFfieis5dFeO/qYpnnbW3LLghXfXilUlE8h2+XdZb73gpClkeAnR7Mjxwr+6N2WiILjb0l+MpwjcUhr4pLHQbaOBRzhiIFXayTCfubwLu3/hJP59poUtbPdA+hW6mSdBu8JyXcxQw4f9xPMw6x5XIxu+O2tr67iC3DPRXFcJjseZjijXNC1MeNJ98gIZQcK8glWm5ZDUsR7UMO3No4SakduttjZbJmulwaKP3hme/L+T/CSXpJOp7Oy4ZlKY8q/dMjLWpSaNjRq5FLtiZ4qUEbvXGiEA14QoD3k+ycADSI7i2HW1yGgc30bdhCQBO3DPLoVugfKgAB9PyIrv2Mhe8tAnVcDW9wb0RyejMJlVSy6JExbqHrckevdk855YSuCv5edNOjufYxflU/GDrD0jQHniWU1cA0Kl3f0spbvxPpq3jiIdvJYEojWOfnrAyP0T15wgh8xnbzJNaodEI58X1a4y1uOSYBZIsd6KsB1L7ZjqQfROAZfIgGTpITOiYF/MXCmwQJAQsBIlLEpL4nHlzL7Y6tiJnx6jjzXMBkLYimpvO7/8D87b3BkD+qpVmrUZsorXLQ/1t6R4wml8AN+hE1uqE3Csjx8Petnyfvs3oPdGFmVqt4lNc42C2hUSHC+Fzs1wFYbbm0v3ZbsTzlCR4+9rn5f7zXNk0PkTWPhBXQMUStxCf4IWqKl7sv2TxqXdEgGbN5XkG0Y+4+cfBcmpKoJ1y//QvBIrXs1SNgI+fVWGADIV/VwfkM836nGJiHNCmG0nWfRC0QJcbYsqks4N05QOXWPHagr+jzgIy6/AaHLaeLPNaMc87ZM3n1iXn8LKWwX8cXex8FF2k59wZlnRS6I8BEG+2ql70p/ep58q8JTrlc+KBZWMkUKfYhOx6xi3p9JPq9O+W+B1eIPCY5lyOm9zWR/CEPX0UXf3HsqmjTfo0c+3uLw5QnkrdiiERQBMLFbJ+S5vEbScb3Y/u+kyXOeXh8xAMa66FI2mAwZiiUh/EafPzprSN5NgbW2wcpRG9uhQjNYOnwjVRc0HWQLwe8SWJWfYzxu/79ZFJF+bxOX9Xa/jZ5Qlg2ncbB3bVKXvB5TVEcE5FvAM7KvK7tqWOsgZAT86ycifPWoDaFSpt0wc9/cSgEiFyNe+MnnecNbWyQfUvuVfPuQmMoU9gzkP9YxjuVY3wJV4YFidyodwfiSMG99GN/JUAxWRndksBQv/W8GmJHbkOIMnKseQCHvbwXFqxZrZ606X650DgLlCcGQvylClUCJ7DzvmugF9q/PdEPIzkCvY2kDSk001kECbIRRX9F+761/VzH8aZuncpF3QFUH818gAUptasXv6i90pYjV2Nqc9pRCFAjIaicheBK2hkH5lyalt5ze2kE+cOd6/GBoTRCovTJW5Lde5lYmSuzq5pKPhPMOM8hn7e/PLZEXIzzXlUjoIYH8RK8alIyZoU2omJLdfR0rpbMvXyScLDJWicwinpPWNRkf3kpSUkRyjhPvirEPoscSYhziLdaGrAaarpGwLI8h3aYXI3NNWB5Nr7usv+DtW2djGnl8OhT9QQ5PubdFTVvSOO2y/oCUmBlrOdMJouiLzyb25lAWAMTaqtRNhjtqm6PVM4RKBRhOXQ8DIJ+9O7EotFcBjRP0xbzH2tn+v+twBISuCQMRwGZ9/+CkVfkVt2Q1oOgkmpW16Z4h3LmCKaZK4zeveTPubdU43TBWp9qsSlzi8c6FH+2/oGK0ncr7zuV4Lo65f5wwMkrj2xrkI6pYPZrTTGYrIkDthxBzwq6e+mMmuJcUO8u9nJrStSWboPp6FraJ+RIDbQd+GLeKF9ZK3z15aQohZfSdSRJ1JT0FFlLa++hxcXZi5UOgMC2SXt2sf9raHKjAOEdYCRv5Jin5ux8k/3Wy8zIckhni2rVOkEFd8uj15WEncj6zLW297FyJQL6VywKdhwh/2W/Os2DI/Ch6EncEvGJDK7tZHW4y/J78YqjDdPA+2rK67fBJWd+USLxq9TdDm+swGVVXQpWthlH//YNHKcezbrWusiFDK2VdPGwIs/6W9vNRPrbGLyEn05kS4ka4RmmMCnRHDh+o+gSM8EhFycpaYKNwXLLhMdM96Tp+dn/N1RSROWurp2k1Rr5Wpo8MSo2mhzuu9lxWot0zjXAj3BvrCd7jAXtFAHfsW/TSjxAsHuRNvQ/u9qdYlab28BRztJcBUftIZFYut/ru8BmcsW3mz09MeO3u1oC+89+ENYI70/itMbkbBFdxDl6CLdBGD1gBxcgj8ELDr/i7aIt/Npe93OIo8HTtyxw+NBS4l8AUk9AIk1E3f7vLvJiiQKHMWco1qnYmzpXt7cgPRbiFQjzK8f8mxJ1xvprCEIE+fhB8lnTbQeZnpC7R3XBA9x3aIyInbKPKay4mDfFh58zMJjudnI5pdsfCdNv9BVQo/4N9qZtzmeKl1e4KbS+nplV1po0ETCK2LXLn/KL8VrRAi0p+MT71JWttW2Q2fRnpuJek7GYy6XvAdGT5b315Lql2DE5MhBl1fw5nP5SEXrrUfinrKeNbt2P8wz6q0ZPky2/xSMmIWeNFoKKYsOru4axpFqw+Rm8hg/wGQe1u6Fjk8pWK4jcdZZHNX8WHBGbbRrEhpYBUUMjXY/av9bEfRgmztTWXNZR/Z7Bs+bsEPeL2GzY5rBJ/6UMrJwXX3klLyKSoghBkdH5hZmbeX4kPN0T4GtD5klwrWAgvpEmkCzbgE+TCSIgERvhB6zx9rOstkGG89FhuLAqhgIy9x6fhlEZHt3+x/rgfggEaz/RgDLJYtTpsb8gs3Ztx8EXLH2m8CUaIxwVA8aK4brMQf17YsdffLzc5PQuSDV2k1TtcqB5k+T6GRO/S54CRE2tvRqEVA9e6106xtG3RWSn3BhKiLZteSbCZk8x3PMWDgan5NUCONOPfwr9086Uu+ig1Ijx+huSNbCZiCitOp9InNB3FnJ6EzMKAfVFSuCcqLXk+JEluPJr1i9VKDrpaXfqRFyWXABNij5Kk2Xj0fgp9VyoOWOG6pUvDF8OxcqeI4h3pEidhMdhBT/VZCSEcahmL3pzuvgaYOv4p98PzbhvLlZYQNY+wM2vQC3C+tZKMpnGVh7QBOIBN+YcRlITh8BKa3cgFqcRge0P5xR2WQm3MXzGBfR5iqIvZRPdQOfPRqmQ42YhVXnI6gPtEjyqO/ClKVVClnY5GyT9rHBerQESTOPsCrR6/T2huPZ/zNYQmOHiATDXIfbul6gjLlqMZH6pbB0T7HEe2e0ESLcNUoCT3JmMxBIETWvnaK5pNhh/7swFRcr7qLG9W8GPjlzwkzfJY2bb7IPUcKb8e8NwHNr471nNPMqSTm8NR1l1fqyEs33qkJ73pfvenSXsIcEhRulWG8BSnWc9AWVa2gVji0/i2lThXE000TuTzcVdXpCL9HUEY1GfNHhvHPLvbBrSsyxfrMgq54gDh4iPMG0Sv5XGRaHg+N77WGZv+U1zsEHKJS0FtZYkekT5EKB7FShfL45XU4DSZa542EkaTnVuTIVS/pltWi/AR8w5YRi69qOF/Hz6M2+KLPTv/DbYZVYbadJzaO/1Cx4xWJzJJaCozPiNA8Ivxz9NOySSRFQJZBVcDL2RZlnmliaywZpxquNRCP2tbv7VT49ERNpufHFiAEu64mWX9uCxd1HihwUsqc786uky5+9ha2jOd4uSnLwWck/QAc7S4T2E+Mctt5LqOzIc371sEyUfXwm/EoHn4Xrp9SLOl1jqn9g7VEmSoQlBJ/qk4bz061wUfPDQb6e1zqKBWChi+g8CoaXpxiQRvpqRVkIN9XIoINsiFENdgV0ADDo51L/jZc5SKT8tWODp0JD9fxqpSKTDgJrrWl3GPXhYZc5a3gK5Z5DVNlx+vtoZK2Rhb9wCeUjIksho+I3llq8GIwDM+sVT1MV/nA6m1aImW4tgXt/nnmVDzN9DzQcqTaNYcbJJb0zY/2OfTQ/76jBjvIpK+340mjhozs5FuxZrBXD8jPGtmnixeVColLzPvQi7qWDYoxxoS2sZ9Vfk9UIHevvktj5dZUuqQcnDtLexAy4iJyZ3a9sRYUqIu0KT0eSWDhrkuXeoI8L/FKQywfvpd9VNK+A8efPxzLLwEDCGD1cTFXGJ2HlNtQTMBy946k1z4RqmO+bLZc0OodSVWUUrOKSR/OGujxeriPHloEKgX72ievnKO+WHBvIxDp0HPYNIF+tPGCeAiDLPq7pB0OMLATznHegFqv6MNjk5I7sCpV6eN/bMx4kI2npBxVmeub69s8lrhXv3CUhJ3XSz2No3YKxe2ZIRU5Ni7GxiLWgFaXIq4OQYwFJzEokDzqIy0nQMoL3rRATPuf0pK4g/GWV9DAbpGFtbPJw5ZI7IFumm7bcnLTyUzy3j87ahnZAL0JrAbjOGoDPqBXkA/fSdai769RLzSbPrJF/bk1GX72xjwJCATeaKdVZSf6lcGSPqjaYM9KlR1+Ge7s4PujcipRVn54QsWO4BOfAPKt6BlEtgClgjqJ6U8B2E9BD1DkpatuhPEbtModhHoJT31u8g9gzzkh8hKXiRj19PvJnW3KNwtjiL0lEHD2FrVBJMkICbAmfe84n+uyvJur9GlDhYMRtDYBJ8NfjD25rvehuqZly3R9VSjvacFdaCKn5pQ8sAvrKl36K0Hbn8w/loCYMhR8m7MlabM/TbO29E42d5a7n3sSrQ/H53KaQyKTtyS3bdml7p/i0o1GIyA7IoYiY9QAKgOsldTY1wp7T0EjgMbnZ+iaK7B0+4PaOhSqd3cgpIVWZPXZDb+hBeGqBOvu/zm9CnVVYM2wTvHIOa7M308IpfKe3HnXQhr5z1HPLyNF2zzH/SJVgIETsoplTaTSf61ewlrMasvrX+yeWqrGJi0b1WGjpcaJGPPTqEuoCQrkWFkK+oTv6VSnM1jWBmI390Ht/Jth6MgiLviCQyFomvMRc9WXIrTQqQEcDbS6f1+rhgKLYAZJD7q3vqCmNmMHkpLM7Kt4gQO28Y57kHFKb/8p5kAF8dwVvVBuAuaYrqhdX/4hKu/gxmBEnC6NckMg1X3TicvGr2yaRsSX3kRcGo5IFd0rEbawQmCVHTGV7H1jWfK5nmyQT6Y8lW9gTwxtqiX4XS2+abQVV6d2JlN4aKKaE6gjTvIIgC3LJrTkZpVDzVU9p6cM6HPQRrlZTtOz8qO6JFOhDhofdGUsqlGZZ/dtbyKVFjdYUyDTt6q5ODGIk5d9jTVxAq0UMfP4qaCeEO8WOFH/yYMORZWPPPlD+aU26wVjgXM7UkRW2fwg8Jzojc3TWTgHqVge08Nzv4cQSIV1szmVRuF2INKuGz3wq82u3L+soNNnybOdCurWm9M1/B656PZCFKMHywJdK/VYARinyBpBde47NOZyak986JpP9L8RNlfZDM49OCU4HXBkNGFSHHw1SkHic3L5ruslXgd4hwAAZTYfBdSATkB3lKUc595BAZ8Jj6+hSkATuql6qlnGqk8GOwOuUDNzfaVM5kP2e9m4N/e8At1aI1EGPbZJCsleFCjpPF+t18Ev2y44D5ssq1G6+V147vR7pTdPjS8r9fxp8lU0Ton3JLlmIs6m43BV+SrJCCktq3oD0SGklX7TCvicAidkFmdaGfKaOFSHgrlIINJP1YgEF8FQRK6SVqMNsLXVd6qfNDjoLVoTET2IhGQoD3C1ewk8uNsRdzWlbPeAKPBSLhzcNY9CmNrBRZhYBWBc8CvivXBMMJ6cF0cDBYNpIhMQYkTWA8JrZBIXt5VjMUtqxvqxl9vbUpYEIiA6S7uZpZWso87VoYviNAPCSGNKmrj2jIzlCj6Jj7VG/PO+DwOvHFqmXW9MeeVmVKOg2TG4fBNf6K/ePvUa/Ld5CYQjq5QuyrUZvOXJjvMxwlH8Zzy/rIxhS/L9d8MdBVFLIgkQkzr+jyd5VX+nWvuM5gbLpkzKVNDCSa57Yv82sL51DdskcCCaRFj3Ub7XD1rwc4BcyGO0NbwaskoCZ0ZSSaQdRhqv/Uk2/7i98Ilu5D3QiFoxGbQ1jsVMmnITHd6NXMQ2kbA6POBzuvY2aAm8djynsc90YGQ5cZFxhm4hW+kfz6hoJ97P/d4x8Qg8YrFbghs8tiIatgeJEDDPcFuEwefpA61VRVwwrwsagFaU98C5fafSaoQ0hgx0odSL/YUtifvbU6w9q3podxzMgKB3j+4dOjrnXiuKuNigODVKQM1DXc4wVVrEIW8SQ54/98Ud9JYgvogKgwXAi8AmM7B6ccKH0rTtUO4FVv3/HysPwgmkaXaMt3fAWBntEvcNYZdu9p2zcgQHGzv7snGtfx7KVMratxZOtW/GM6ZAr0p1YLOy2TuKeKP22a3Q8CvfLWWJ0UdP4hJGVi9w9xrgyJpmKPUPPmzeL4Ej180KiJMfp4VwGh3bVCWUGtmhfb+ISjmeQXGoT8pGnIPdgxG2qHFpPtW4UNj7f6uurMUCQjdNNndQ3wagA84T0nJv4clDSzREf/4SI2uiv2IhQnArT/ppikylowPxbAWJg6QHmA6lwWkjwfmZbmi5W3h6FhpfTsulUS9CbClCvLiCwAbPl7y4bOhrKIhjf+wwL7w1NbeDasd7VpKMqqEBodwAv0SjXDd1zhAT70kea+ntIE+1GKw/jA4j2ir4s3+Bsw+vIgEkjqOorNidU6fsz0xy265FIqqDb+VEPsk9oE7IK9w4SGNFBzHBfAi/b6OEXErq1uRtzvl3tMhRB6YjVHR7us5F2LhnAajQTPxsCprx8rRaW0cTzcFp0i687/zu4ZvFuU8OG3ke/CFxYs0gRKM4FrhY189PVi57gZGFegFzFjjEG4w7ib9j+5JfgDlWltMbdlmEI5phulty5WhNZBpsL+to7kXLg/HkV8PEWW3qajtSkcgN6BLOd7R/Z/cp1g6f3Qn7ed0Dxqyh7kbnDns9kYuoqYA2BlBwRJ2VwprEABOhQ98cA5W4TzPxWkS3TdojfJVqB5ySTeVnKqz0SBPjR2kMJtg2Z90FkvvmVZaEdL+gr23SIFX4i3v3swORoJ8wJmWDLjNgzAZtlrue5Uzko9k/7SmDbpuqbispCoPmew11K7LoEnIOlm1fm/ipZG6pJ+1PbW4sbDP2p+f0ewlRMq+tqoEl5PeJmAXvZIeqxOYBTQvjJM0B1wu1VgzzdLzdCLxFvtgHUbAk0ZxnEnEdu1BgLvu0DlF6znr2en5RCaTAgdySUSJPFqoZqjqVMUFDFtB2shK9aWwBPn+eAvuTnOfyW/NJk1FPrCgPrAYwNf63Z8H3YsH3gRk6le4RLZfpNlF5LiMyd2/R1ZEdPHam4/gwEf3KgvL8drTdRnx/o06595zyp8BE2WzdyiIZK+cucZw0JJ2qKkwb+9JhiIgbCb/J2m92w1Fh6rDtEL46ds+c7gE93gqaTJwkFapzt0Z9j6cyg1LvtXxvLP7pPdiBJEcVo80IUbAZxHNgHagtuF8oa5pDC2KRF0TxbOZ6OCl3i2UXA06jFsom/UtGN63OUvZmb5I1Bqh9bE9NLhV9JfNhHhKCh8OdQymhyfdxBTH94eeiDMfDl3tjSW9npNCxvR6akxfCE5LH1glb2YWCb8ZDTIiEBiu+lato3FSG5Zx8hmy04PccgjN/vRdS/rJrfUM5DVyeHH+3rFOz46UkN6mZYXRLuf6lGi2VgjhQDe5RxcMI+RrQK6mnOQtmcroqxl4BrCu2B+nu5fewvGOvudA34loZtiQ7O+Ttq1tVtiWoN9ahHFDpx6D2UZ89ACS5jNwkPhwhr63p0UWFErzGtYFKbPAqnv52cDpGKy9ppw5QQAcMNXpvoPQggdXuF4FUbQMBaRKBI41MEM+3pVvkq11q7gGuEfy2yAZTWhguRI7eu9b1drYLQNc3xFXsNzFH98lIciTGRM0gZ2IjBq2jSDOvSiN8xPJfpzRdU5GJMwlevscQgqQK1vrZFN8ZemUTvQtqpeAc+JnGfJ9fiGaDCeEyuQoboHOixmxJOejxiJtRdDHK8Q7FPdGBHzb/aBd2VOfcE4+ASIicm5vQZ4eS6DkpAqWvMIC7DKm9ZiumrWG2Em1TeJVedwsvVbXi18L18d5L6KhVNLPcrgEsm+gz6AFLi1Uy1sFqSzFxdRXdJB0XS1fVCSU9zzMt+FNCk268aRabResvX7VIgkKxcz9OhG+efyXRUVoE3z4P0nnAkU0RE/KG/Tq0TXPSz3PfhK+8JopVUZJOT2crCjRjk0cGdKvOZSLkPXid6N/qbssSSnqjgf4taZ+02jBPy15qgPBBQO8chRNuCjlCCcNEOtT2mekjsn9B9KvL+CiktmXkHHG0hy/s8Jmp6PoJ2KKL4fOf7TLOQqLKXVMcgMY3ed3G/GD1s7fOrLKUcXkjQza0E0ee0g1Un53a9RPT5xsPfkGrWvzHhWggGzpCgP06S3n0zeV7XgMXbQkoEaqgHd9F7og/3nt3JenbeGYZ8JdOqlcf5IYSpAOKeoenW38DWc/sKRvkKzfLr8wpSRSV3o+JLY56H2kpFOwqXQcY+XH0IcYQjaSjOuZo1WAAbc1uJ/7lmgsrWxJyTHkPKRiRNJ6EpmSkp+grI31I4QU7nFDQwCyBAHZmKOwu+sInNKinGb5x5vtoWFuVd+gxR6Cy/2xOxgtck3z0LE3RvCiDlDpgZGzwsjaJ5pQxzfXEcXuswsKZS/SsocMKmkOEytigYisGz8BwCP1EDaD1aui0o9TynuAyLqWOuDGffSmg0vPoe4YnbCMsxWbomRXuM9jCDKTAO8oZaVncz/nWhMYoYMroVLP+Fq9NHgWm8wBKqh9boFW/mf84R68+Q0ly217gPKcRalFJH4J0eVXroQ3Q1uKHTNaN3hud1W8cEeXUXiqsECtkyk5+TIVAfVT1CqdMbIa6x0JpWJzWBfBgWL2eyrO6Swwin12bzVFhrXaoLb5HoOIg8xaozH99zvNUoO5rI9UOPwyeYv52eCS5HFJibOBNFEkNlbrfiTOGDieRJCnjIY4swNgpx1wPfyckAFxR8pPkETxDuKOIoywSmzj2b8plz6qML2gAGV4yKrNLj/64cJyE9+/1Em7X1+/M4KCwRyMuz9YaZV+aUHjXy0QUiKMCnd/Kq1EaLG52ze2l7p+ErWabmmdfieZUppgFJHzg7wZrFyxh6vKsYjbb3qstNMrsj626NYJVi1rEFM4UL+hMw38aNAPC/1diGq+fWKxEEg/3MrcislVnjRpmDM/jQfrb7tywo5VY5FmTLtdlBbIP+QBLrgR3Uk8HOk8vqgcbux5JW2YZZ/1rao3YcNM2b6tyGKfWxArEU9DHJvZc5vErBhYl978wS7Z13MMOjfL5KM6VYvTo+wrvF0L/i45zoqyXHkf2JAOcni4yATo9XVXnwd4mgiydO6RlGy+pikFyqunWiu7VmQ+PaCALlUr1mCW4Rk1U/3JWCc+IN/YST3KT2fr/nwMKNaNzRwSft+Uw1D2iQbkW50vNpO7ppFQOM28v1zUik3rZ0z60DCWdvdMWhPvxCHYUKnHTSW8qSW/Gl/7xl0PWRVkb3mm7by+1O0zMoYZJoer/RtWF5x97vzJ3XkzlYWgyJhDGdI+GxZvCyYEzNMJmjrni59L3ABRzri9KJjyN/QjYhn9FUT9y2kQQlkUw9TrsGarOGnp3PKzVE6A02ftpp2Ctws3xIwOLobUrh0GYDRWtWtqLl4HjXobZOdVPpmWGHopGP0RsH/atMyK5EnnMxthsLNlWWip1IUyEOSu1xM7wmI3aGl9aznbb0QDYrr/JTtya3x3bp2mklV5we4jUPxobQdZnYDasqrRxR+NvphnqvTV9CAt5Ys91SB6tll0qgAwjZd+fuZllxHT3krDCUjdIIRPEB6mAK14e21sFB1anmWytwlHvsKrptbQo2FZL/herSwPdrSGKQIV/EgXfODWlxlGM3tT17cg6WpJRYL9BIeG7biPD3jNQuoK/m0rFr9H/ALTkx9J71UlFIfL/Z4ieFvHCtCMPpKgktj20OI9/NAKuMPjPh2Lkfx9lHDfToIASuX5htyoCg78J+0/2+3+NW9J+Y43B2ceWY6Z2pzURdWvj+RR4IwuaJW+2fFaYGbk5evDwTJ0Wi/icL4LgtP4jdse0gCpFpKuXHRP0qHdtalYKJoZCp/dbIAKnD6KClvdBIKnSS6QHlV7Yiut6dmuSye/DfbYaCvt+blEdGoS4t8lOcZDbQ/KwG9Xbi8iA6pCsWrEMZx596H85XHJ9HIKPah6CrlEA/oIxMQPERjZWcYwsmM5845qsdf/8bOHBvrMby05uTDluVhbeLcRZ6F7Zd294y9ugx3/11GQitQ0dPEC4UPmBp/Cpz5CRsFrYu3zwEr7rNIGs0SUrizSWit3hiwuaMEpiFdW0FpZLfcc8FARSZJ4Zflb3ilwl7a7wladPnI7dsUcpxCL8yJWBAU1Uthb7zMye7SFC+SSwQnDV5cS2LTqS66pnzXsFd6so23sL7Bze5VPTWX2QTa45Gta71ezt70xGTI3GM2BnnFR9i845yKRP3AjY1NEBCoMoAW7CqqkNQnmMtgIGX/xehbMexKgG+nGgXh9Xg/26FqOhiLnS0hvzZDtewp5VS9ehifrSUTrEoqhDtlYyQIMclZaMM4FHaqIXWTwA1OYq0Xu0oAh7kVSLE4m/plIbZDPA0IOoyXrxubv55wq7/gfCV0sRZ3Vbi71ovi5coIpdAGzRVi/b+Ypop5t25fC8MGFnKxKkVmceDsUvZlKnvswwpr/eJieei0DtFQexxhzbjQsgqtteC3Fm23CMIjtkYciaxMW+/cd45mvrGHJLBWTYEwsZt597mXiiqAijD7eetLgBkxmzEeDVcj6BMueitOmrr/A+wHN5aEv2xH261Gho0fW+54SpAjr3aC6EHQomdpGjRkzdIJAyT3XMmPZESnYOtDol4i3OIMK/BHHcPzVzuekkX+7IZd5/4WGahUKlCBUYR7TBVEU7qDP7CNUyyKtFJmYsFDh55/vtNylDE8hvBB7U7dFAmXcPsJk2eI0YHTMT+ENuFV8GEjt5F/bqNK3onEEiJ0wyXyt1XFZ2L78xzStcYriMdbnJJlyWLf5XkllOkZfsxI4igca0Xpi+AMjLm/C2MHS/NvXOArDYfCkrXYGo08TcKzsg3SHRSaMJUqjzWZ5VP+a7woEBfFe35GzgkyXUO3VllMZ6VlzfY8AKRQt43nRDMnOQOWZshfbXGLbOtKYWoT2wV0sF05iBa7ykg5+pgwJvViVF0N39+/yQOZWMQJ1qqcRbgq89xvMurueVdo5Cf7l3PoWq6p+4tACEdRFIKGeZ/eo5imGjEr8C7hjNqVMq84SnlVYfShYEhH5usc3Z3h57LjCm0NCqnqxPCYrgk0KcLcNUky0YTq+6IO6+1Z/hcjoMhx9G1OIatTzi3rOFR4DWf/F6Uv/SyIctKrhzeoaq+B8Si29A7aQ8u1c9Cx1zet/6oKE2B77qEXVCBaOq1IlQzEsWxnY9b+TSOJ5E0OUb0jLmLjWmLTFgBJkBJcTISAUU+WNg0t7FCIgE7YlyqD0OxC7430OWGw2EAE44+tY++ozz5Ggji2JAnf4/IugCHiH7bsxn5uVvXGjVoyi68x/2bL0I4ltYOwp1C1IJe6HPeho9H0E6mTqyDW3jpqNuRani160z9D+Wbz7PxAk9pjoJztNrfTC/racqy3yHZYQ29ZjGAS5Rf1MSO03ClUCHXdvJC2CoOAC9vZhmJXlI2pvAOds6spMS4oJppluDbJC9klBNWrl/+g0YDklcRdA/9wvjkjWQAaOLEnUlhhZoGoC6cjjrWf+DVDMc+1fTJfGV4LuXkc0prgltqPN4/rKnNUMxE7mQ4Wmzj5BSv/oINpBZPkVfemhF9nTLAp6jBYDQUJRG3dRM8QojXUrjgbtmIvql+tOLQgS1ywpdBBbB9gxPsgrP2nP0mYXQ0pnUfmyJI1/QkYXkrVCliBy68xFCtoMnsoMsEB3GFY2uiwXzeTRevgVkD2yDXiAGt1+01QBJg9wOjmhrwIfE4mhHth5lNp4/6GBmcYcsIaW7lt/YuxnA/zqbgbWEfdXa9lkhQ8zh4+/iRIrMXCjlhtDFUk8lgZ3dkDlA+pJNkMoTB7RKNm/UT6C7DHj2CUSd29dtuYZs5TPIaltAxWSHEMFZhoFxpEhB6+R2Rd2eONcfwjTx8avvJBMfQtDus7p0cbF4MObbfWAw5OUf2Jt44PJQ6VvvFNgrq8TUFi0O7I3Jn1AZJdC3OYT4BBpOep4k39DrEeYY1Uou30XLT0RaC1YVYETmpygdMmHW3p2W9TPg8FTkQv0/CTAAHAM0s4RL5Q49kZXs2C84qSF0YMCeA21dsiHGy+WU7M6KF61iEWNjoeMX5ALukTv0rA7E0guFuvXrmB45i1VjezG0EWQPSe37Va31rzi+C0apbPVWDLXafUirhkIp4/pmBiRjagc0FqCh1gZmXxA3vHDdjwTvjZw3oHlXIBG4maAk+gokAUHaa74Dx4iDTw/t5WFdehc2jpk5D2QLsyL2XMEThXXy1LONJKIm8yorF6TKDexvQWwUSFhI5S99OTAolWaCwg0eAsVYY6LDBvBcCER/k+0oNXO8H368p0eGXDF7Q/llsPxPI8t2lvrkCWFbWm96ZtZOzh8/owtL6VRj4n9b19upmkl3IgTdRUvHD/AEagmRm65V+sdmzH/xADoWdEs0/xRHgEYOadpQpZwanl1a1sSDMi/4c+6kQFzHX86T8eOJMQILmmF+fDt0fm6PpyR8R4jEE9c0uZPhU3iF2jJXNDtH0PaVruNeyuN5E5YLjkOA/KVZKFJ2LG6mp7XDhA7SrrMVwxGUX67DyHyrwtQ0pipf+YLsx/vdhEA7cpvqqyJWjnHx5SFIWhPhnlFhEQzrUUaHndXIOkZY7TEP6VK/ZeUuiS2iLw/W2eR4kDw6phncxkfacokBs5h2ojlE6fhT1Ni1PVjQRyxCMBJKEotkw0ikzmfijLbKmaSNXHXKF7ccZQ2dJXyEs+qPTSzWMF3LC97yEErSKo8Q6y0V0Ope7cnt1irdZLxsTfkDdPxDTa/MYoYPwg/FLIARfgSpS/8gWOQgAAiVTEF6In7GawMs5Kbe43q6/eY27H+POjRUcxk3tI4vbjjvbjapMMW/Uo5dO/A4QyY2QFkpp9ntOO4KrlHn9TodgVPxicO6dF7mBnKQ2RrY2gj1IkiOqUZk1w39j44cc44pRw2Wh+rruwpJhLfn3V/8jqB7aQsz0IgPnUrVjUC9Bdhp2REyfbB8JzqOxsOcRiCckuVwTVgT8E4rzZOV/ilPlDDNutvfDLWMTNqPhhtNP2ScQ7EnmBqq8CVwnOlvM6XjCB1hb1vbEzFUiNHEiI3SYqgMj/jFsjBDI+5g4MPSju7xvgKyuW3OOFCxr/XiTGCTEr8EAAQojOjLHEbV3edQrm18W0FHogLUU57SlsG/e/PjZ+MRK+vBMrUuPrfdvutI8yBuhlx5tzwqfTOvUNn1hy8VU4ag1TP+yo5icOqXRfujZWC2SeB8MOeF8kUqMlMRRMpjT8ng85LEIZxS55ZX9XyrF/x0Otl/8DECA/TDTGEnHKkMVECMKpobXDSxcLbhJsv2sHzgF/tvIrfOe2GIWDpOIbnC7OkTyM8xW7f4ybj5hvvpCszuUg8GbSL7Nae9yjxpVIEkOoQPVFyzk4hwPCa9y54lHo88tAG0wUGn89OEM6wcqgv1mPzhDUS9+ZEqBWTBCVOmN+w7p/d/BLoykBMWmlje0yi1vQOr3kaMamobroh+Mcs0sAwxuvRTiQRyquRn+aYg0a6L0uMJ3IhaHzrCA/RvpPbkgFUj41lCuJ1lQ3rXhMAAc7ui0AgxIqvXLpNlxnqb4GF/oW+T5GZ4ULYB4CXGFeQY2x2SQbLrD3/+Bcq3Z2kDOGNkpf6TBP6zxQz7mO4k0Nq7RU/m4+P9ZX+rOzrf+qmKzJLW4hdeE59XTgofKDidexcks4Y3sqGhtv3ax9g0hlKbczAcSJrPFXkRksntTm8KtS9h4um7gemSTgzhKurNsJvLez5nUpDAmYrSf06XkgHWRBBfdMIe/bS/yWS4Ad8MVKvyRuM3Pd6tZHqOiyBqlvLGa1o5wpA2tFkzSO562dUsJZ7MseZCgH1bXMImFWH+LHpt1sfr3EJEj6XUomZhUienmIr1xBIqtkBOY/ik51i2NBDM/P3QPCoPQNQtr+fafi6d64DyRHgJQehb2/VcV6mY61HiILiJe56PfoKDB//tL19nmlhlz0KdgSWcK+OEteZxVlA10SDu3MuvrP4o1+mR2o/KxWnXhhHpWJI8p8REJVubd9RgaOY/gYpoBD18Rb/NUyiCxkMrATFM/19K5ndA76Fo1zFqgKjfEyf9Pf/8crTyqilb4RXzmZQuAdvLGR6ThuqBmz3tSs61zkNejMVFJa1dkDsuRBsv22HCOzloObVBFROHrhEG96AciRtnu9epyBtaC2fdoZRChgqSNelo9RFZg7dFxdGlKchYzd5mgycxYv8yj5liIwDiEfP4V2DqNbqCHu1UJt+RnkDz0G8pkglst63l7Ht7kgpxKPYLi6z3ImC0Hrczvq/7Q07fdnN9lQQMeP9aXcKSRNG1jsdFmBeCjUuhJATZTomfk42aLnazahHvExKSqpZ0MSMFdOCiZ9CZbh7xCx4WdjJkJEPhcDUBr8EUrkcdwe2lnDDVM4ExtlndI27M9ZPIfnhTvrOp19tKf4+rICpNscl0ywg9yvpoykib//HOUVlfx3r6OWvpd9d5q7da9egniEIbxxCAko14FWduwHSTcyGRd24Y7w/uuyPXhUQBp/q0mbnCRmH3EJ+gJ4dgpqCkbTdY7rMfRSTLgTVq/9D1oYRgqsOrrXLMyX0+SWMejJCj5lvpoMrNgy6lepRaIZBtovm9WZLV4kAPnLPZklsyMOlk+oRZ39YVYURnu6aJSt+9vF/0bosEl7efH2qzQQsLrjX4e7NJhuFWPAdPVHgAX7aPqdDREXZpD+i8BE2kSQEybjwfEc+sN8U3LiEO0Tf6GJP6lEphIHrMhuO65XNGIOOTViFXA1f9dSNjQiCwietDW1zu57ZORsdT3qVSJeN1Ue9XM2zTIRx0Z1VtFkwg8eQNpmC8DKWkbbuAEmT8kGBBRsMFV+3+FpeQ59ch61xB+aXjhlIvrfpWGaGZiXXY7DH1sIsalSR9U9wnqr5O/UurAIHqK2qb3PAaEc562GN83/Rq9NWQOf1s/cMQcae13mfzuRjBFu3VcY2sCoPp6Of/eiE2gS2jwsiCKUYfgh3RnaDoYeHFYp3t63IVyW33XF222wxODqwwK5uIlSj63oygggAtskzGcMO5m3a8WqWooj/yMW0ro9F5hc4AldZA6bAvAEG6ZLCdqbhcmLaIg+3faJ6HgSjauTfh5tmRAQ2/XVnStKAWutj/UU07DqGaps2yeSNf78n3PdjgI6GDCEjE3bFQu5i0xCQrirphL2o6KRD4fXwn9STiF3XzrXjz5l9GVVsvNwJSOCo3QTi8kfiI/d9c5ays2wYhIWwHv46GSKyd9CKlcaIX72z8h8K1X4WNUw1iK9iycZNNzyX01VhjCRExQ+d8i8RxHR4TLOhRbCHZufHyfGid61Lfmo1KLIE1XmRUA3oDb3s3NWohSYd4HhN64fYyW4Mg0b2WbhYP83DH+wbPWPwaxtLGgLLAgRxHElwW8VJNyH/bPiaktgNL4qZ+x4Lt1TJJuWC0rffNdMp+y3EOOQ3bAciwkaNZrKXsjD0WHEX4d/lFNj86KVGShBHd8S5EbM2Z52tMOxoobhWLs54plJ4UJO3PNG/WK2tfjnOUn1bMpMJ09Y5u9PPAfQ5yneXCRsthVm0+S5b4ngJEXlVzzfHjADTGhnmjtlJNJErM5mIWVVYl/+on6riGGCxAR/sQ0tzdg1tJQ1ta3ClKHxRIYhajuxvbjQKPOHYwQCXoKve69nTgCHaVfJMMTsTp5I6aLzdIqxov0T87LIcrb9idHe30emPrWaXp74ARz0IXsnqTFxXAkLJPYECiXO4jgGM2fnqqmQRA7IPkbzTDGPJa2VcznUWY9lDveZkrZWx8pixja4ZxvcA/1HQAhbzh2qgY1pbeniq5ool+s91GsxFVqv2HWSUjCXEktT4NX4YwHicwPKZNCqVz/4m76IRkQNEs6ovDWKbGViXrry8VfCUWrIHEqN1iDUIStjEuMyC+se+BPlEqJKMiuo3Y+/HhWh8ooFqPGeUmZ6eO9V+ZfDuN5sTKqdX7eUl4eLqODeyebzR3t7o9v0i2EpV/0S0K8u/tMGOk6op7ImzMpi1kH47H2KxTvr9chc/WOFTFsj5vTgXMPh0CUuPN+5sP1SPnpG21m4nk2/aeKIdLzacZGoneXD5CJsx+LzEjan1gXUGDGjaqNH2pRE8I9kdAXtDodFAOCT3HNrnkqpUVDqsdyl5SfxSmWlCinyP/kDvdBhglAZVr7oX0iqbkW16s7S/0eDtkJRXLI33R6YAtPCmJS1l5AiMu7ikEPiljT8qohHaTIZ2/ewUivE5thmB65UdZVV674SDInseQGWb4+6oM4L50CnaWGQ1xuHdyU/z8Iti6jclUEuqwq2JH/illlWVXypHKQKEf6xZNn7KlmnPrOsIXZngnjfzFAPhVQZcaeqZv+qLKsHoiT+PG8MsdVVK8Obn1MkAwm3IlOLwozPF4xUD/o7ghX0N+unj1ZTg2Ug+cVBIg8qzdVKInF8LcTMl1kbj1pvZscLNsWhmIrXT1FHJ8O6XMLZNh4oXpV3mWpU0Eojk6K9QKepDDga1fjNbM/yrY7W2SGVhtIG3hLfwPI5bgPyaWX36rfYJo4S8ORpvPykA9+yUiZqAGaqd2NeimagjW6IApvgTzZCtftGegtndswLUnds0wMiaqHwo0FbOUZ3h48F+LTnfMoFyG2fviBBawbF3a64vfVwE1TNhdVUCDSV1/CTHiSp2GNZ3i9GDuW1tIzyb1QrV6o9EXFWsjVrbK9qkfk1h7oZGhqn8KNbSrd0fZ18NYrBZhFhPt8kahgD2SKIQq86VngoQBxmWtRZeB9BOVarS738USHlw4le8U0ImEJYQ+4plka+xUqW5zAFaN5LuL0XOAMAiEnHYyzeFoF5uEnGxWBb/sbjn36DxzY1QF3atzI1BWfxqG9g0icr60asUwtpMFkJ0pjTlYqF/cEwfBYA9mG2dz+fWi1kGETvgz9mjrIoOGvD4gY7L2KzCAcU5fNyq86z6AnMFgNASSzrbw2oOafuc3va+GgKSNgIUHevKH06if/X787l3tRG96SMUSCxKWR3tz8mF4P4krs888euBLrKn/r+PAI+RRT6oSwoeN496c0hy2Q9H4GrooXCVQTFuE96WA/953YfTYi/BF2fDOIzuyU3AVdTW+kmdpX0ZwyfbL74Wb2oLeWk0km7SpqiFD/xQRY4J8k5Y3p10j41jZYBv7XSEE9eG0FjwbSJRyFU/iKnd3MR38OlSszyPvRDYBHmrDgrKAzElm0XbkPAAwFRCDWsGhwsPnjFakL8flXAtwBiWnJUPBI4V7YmhQjV1lkURba+Ufzin+q/C/+3aE4/TG5rjcuN9WujfLg3ZAhO/QYMlUcqC1oZwEHaCO+Hz1C6rztQklpWROL2jQxkdWE+pX0To5Gn8SdHQFTljHxnoS+A2ZNMEsI8DwKs54Odj457TV5O94aSaWG/tXlgrvthZovKj19KbtmXKvCagTVfV/am4meiX43Bi39AMqd1cROY7UW9IjD00/dQGmlf63zZ/rzNXgojQNGDoGTYwOZeZ6zFqi+Czq9Y7BBnlFMV9FmI/D5VK/5iffWn6EUO2JxU4i9cVZ/P3roN85ABeQ5BUDRT372dLhEovD6fVgIIAdnHftQYZnsHKJWh369hJbck2mg9sHooYFGi/q4orTDeg/hutDWU8xUB/mgpLpqumEYwwX3iGkUAsYyt5m3jS7HCpfvUyC+2htEEWUZTpnug83EypfljS/gv30hYmNFQuEKvm6O1BrITfAKsVuw+gUpnecC7px8srElBzrjV+lGdxOgSq/ogjnYm8kCSJwq2RjjcEY+iU6d8pDwy30B3djFcnRBFNkKqPHez4b8clpq0v6j7N34g8NbHBWygioYJXuAwRYfaHY+q7ilfPIusoPJLFd+5w8/cE6SLo/Eh4g2jZ6JF6QJQ9UlyzxYr97VKZG7IPBBdy06dlavqpRJAH/18/7Pkjv/Lyq2p/G4zkgH+cE6zH199Ya0aVhO0AIuSZg6bYyYlZdcojMdgjU7cVBfrn6tVuO/rD6SxDAKEbA6M5c0jGK/EdAqdz/INvC5dFRoYYlxkZo9d1tb02/G7QWMOZRr1jzvyFVACNiNvreQn2NKEmxvNbX/q7OEXq+wP7gBsZYxaxHO/C9Og0H3o59T+FvBF9UgcJ2VwOM2TD6tY3i8FQnICZoszb4hTuJucGbDwnj3azEC4ZarnUshdQZc0WS9UHwv8qn+i7M6ZCIEGs9/i2Ks9Wbz8YicvVVX3CdfgcrHUVK7qlPE1GelnSv0edglxtT7cJQQjppnA==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Plugins/org_sparkdevnetwork/Documentation/Scripts/sticky-kit.min.js?v=637618953640000000" type="text/javascript"></script>
+<script src="/Scripts/imagesloaded.min.js?v=637618953660000000" type="text/javascript"></script>
+<script src="/Scripts/jquery.fluidbox.min.js?v=637957064360000000" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Uis03qenmt4GuX8YEa4awczRemqA+Sdh8FtGCIT/bjfXUkn55AnJH9KmfMnQIjEFpLYVUqLeBPp/PR4Rjzw5KNvyqiIhiaPqAKTQNtWLqB1ZneuQe/8xHj3rTt6jk2+gnf1x1rXMi6vjRzAVeF7044FAI5CHjzVrW+63fsTtPGFEBKBt4kPl7l5446OFxNaO" />
+    <div id="page-container">
+      <div class="community-ui">
+
+          <!-- navigation -->
+          <div class="community-sidebar">
+            <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2609" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl17_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+          </div>
+          <!-- / navigation -->
+
+          <!-- content -->
+          <main class="community-content">
+            
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+            <span class="topbar-text">
+  RX23 Content Subscription available to order now.
+            </span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+  
+          
+          <div class="scroll-vertical">
+            
+<div class="header-row">
+    <div class="col">
+
+        <header class="community-content-header community-content-header-absolute">
+            <div class="row align-items-center">
+            <div class="col d-none d-md-block">
+                <nav aria-label="breadcrumb" class="align-items-center">
+                <!-- <a href="../../index.html" class="breadcrumb-back" title="Back"></a> -->
+                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/developer" rel="rocknofollow">Developer Resources</a></li><li class="breadcrumb-item"><a href="/developer/book/26/26/content" rel="rocknofollow">Book Contents</a></li><li class="breadcrumb-item">Packaging Plugins and Themes</li>
+</ol>
+                </nav>
+            </div>
+                <div class="col text-lg-right">
+                    
+<a href="/login?returnurl=/page/1336" class="login-link">Log In</a>
+                    
+
+                  </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+            
+    <div id="zone-main" class="zone-instance zone-instance-full"><div class="zone-content"><div id="bid_2616" data-zone-location="Page" class="block-instance js-block-instance book-shelf-book-contents-v2">
+	<div class="block-content">
+		<div id="ctl00_main_ctl02_ctl01_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl02_ctl01_ctl00_pnlDetails">
+				       
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divBookContainer" class="rockversion-1-3-0">
+                <div class="book-header jumbotron clearfix">
+                    <div class="book margin-r-lg">
+                        <div class="img-content">
+                            <img id="ctl00_main_ctl02_ctl01_ctl00_imgCover" src="/GetImage.ashx?id=124&amp;width=710&amp;height=919" />
+                        </div>
+                    </div>
+
+                    <h1>Packaging Plugins and Themes</h1>
+                    <p>How to bundle up your goodies for sharing.</p>
+
+                    <div class="bookversion clearfix">
+                        <div class="bookversion-heading row no-gutters">
+                            <div class="col-xs-12">
+                                <a id="ctl00_main_ctl02_ctl01_ctl00_hlPdf" class="btn btn-default btn-xs margin-l-md" href="https://rockrms.blob.core.windows.net/documentation/PDFs/e74568b8d7ec406ba4b775f1917863cd_PackagingPluginsandThemes.pdf">Download PDF</a>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="bookversion-details" style="display: none;">
+                            <div class="row no-gutters">
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-4">
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group rock-drop-down-list ">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions">Version</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlBookVersions" id="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions" class="form-control">
+							<option value="26" selected="selected">McKinley 3.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row"><div class="col-md-12">
+                        
+                    </div></div>
+                    <div class="row documentation-content-body">
+                        <article class="col-md-9 col-xl-8">
+                            <div data-type='update-summary' data-update-tag='1.3.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 3.0</h4>No updates made.</div>
+            
+                            <section data-type="chapter" id="welcome"><h1><a name='welcome' href='#welcome' class='book-link'><i class='fa fa-link'></i></a>Welcome</h1>
+
+    <p>
+        The power of Rock is that it isn't limited by what the core team provides. 
+        Instead the community is able to extend Rock to the furthest reaches of their
+        creativity and abilities. Once you've made the next big thing, we make it easy
+        for you to package it up and share it with others through the Rock Shop.  This
+        guide will show you how.
+    </p>
+
+    <div data-type="note" data-note-type="note">
+        <h1>We're Just Getting Started</h1>
+        <p>We're still in the early stages of deploying plugins using the Rock Shop. We highly recommend that you
+            talk to us before you start development of new plugins so we can guide you through the process. This 
+            can save you time and frustration as your prepare to develop your first package.
+        </p>
+    </div>
+
+</section>
+
+<section data-type="chapter" id="what-can-go-into-the-store"><h1><a name='whatcangointothestore' href='#whatcangointothestore' class='book-link'><i class='fa fa-link'></i></a>What Can Go Into the Store</h1>
+
+    <p>
+        Basically anything that you think could be helpful to someone else in the Rock
+        community can be considered for the store. Generally though we're looking for:
+        
+        <ul>
+            <li>
+                <strong>Plugins:</strong> New blocks and assemblies that add new functionality to Rock.
+            </li>
+            
+            <li>
+                <strong>Themes:</strong> Website templates that people can use to skin their 
+                external websites.
+            </li>
+            
+            <li>
+                <strong>Workflow Actions:</strong> New workflow actions that the community can 
+                use to extend their workflows.
+            </li>
+            
+            <li>
+                <strong>Jobs:</strong> New scheduled jobs that allow organizations to perform 
+                online processing.
+            </li>
+            
+            <li>
+                <strong>External Applications:</strong> Applications that extend Rock to the desktop.
+            </li>
+            
+            <li>
+                <strong>Documents:</strong> If you have a significant document that you
+                think would be helpful for the community, you can place it in the
+                store. This is really only necessary for documents you would want to 
+                charge for. Free documents can be shared easily through the community
+                tools.
+            </li>
+            
+        </ul>
+    </p>
+    
+    <p>
+        We highly recommend that you read through the following documents to learn more about the legal requirements of the Rock Shop. You'll
+        be required to read and agree with them before submitting your store items so it's best to review them now before you get started.
+    </p>
+    
+    <ul>
+        <li><a href="http://www.rockrms.com/Store/SalesAndRefund">Sales & Refund Policy</a></li>
+        <li><a href="http://www.rockrms.com/Store/DeveloperAgreement">Developer Distribution Agreement</a></li>
+        <li><a href="http://www.rockrms.com/Store/Terms">Terms of Use</a></li>
+    </ul>
+    
+    <p>
+        If you have an idea for the Rock Shop we highly encourage you to communicate
+        it to us by emailing info@sparkdevnetwork.org before starting development. 
+        While this is not required, it can save you time by allowing us to point you 
+        in the right direction. We want to help set you up for success.
+    </p>
+    
+    <div data-type="note" data-note-type="tip">
+        <h1>Sponsored Apps</h1>
+        <p>Paid Rock Shop packages donating at a rate of 35% or more will be included 
+        in the "Sponsored Apps" section of the shop homepage.</p>
+    </div>
+
+</section>
+
+<section data-type="chapter" id="package-guidelines"><h1><a name='packageguidelines' href='#packageguidelines' class='book-link'><i class='fa fa-link'></i></a>Package Guidelines</h1>
+
+    <p>
+        While our intent is to not have a lot of rules about what can go into the Rock
+        Shop, we do reserve the right to decline a package's inclusion. Please see our
+        <a href="http://www.rockrms.com/Store/Terms">Terms and Conditions for Rock Shop Vendors</a> for details 
+        on our policies. Communicating with us before development will help improve the
+        chance that your package will be included without delay.  
+    </p>
+    
+    <p>
+        In general, the evaluation process will include (but is not limited to) the points below:
+        
+        <ul>
+            <li>
+                Make sure your package file meets the specs. We'll especially be looking
+                to see that you are not putting files in core folders and that the uninstall 
+                steps you provide are accurate.
+            </li>
+            
+            <li>
+                Check to ensure that your plugin meets all of the guidelines below.
+            </li>
+            
+            <li>
+                We will do a very quick visual inspection of the code to make sure that
+                it's in good standing. We will not be policing code heavily for quality 
+                nor will we be looking for bugs. We just want to make sure that it won't
+                adversely impact the performance or integrity of the customer's system. 
+            </li>
+            
+            <li>
+                Check to see if all of the proper information is provided for your package
+                and that this information is of reasonable quality.
+            </li>
+            
+            <li>
+                We'll also check to ensure that the application functions and performs 
+                as advertised and documented post install.
+            </li>
+            
+            <li>
+                While we don't anticipate this being a problem, we will, of course, not
+                post packages that are inappropriate or not germane to Rock's intended audiences.
+            </li>
+                
+        </ul>
+    </p>
+    
+    <p>
+        Unlike many product app stores, we will not reject packages that 
+        <em data-type="reference" data-reference="reference-highlight">compete</em> 
+        with features already in Rock. We believe that choice is good and that rising
+        tides raise all boats. 
+    </p>
+    
+    <p>
+        We do reserve the right to reject a package from the Rock Shop for reasons 
+        other than those listed above. Again our intent is not be rigid, but to ensure
+        the quality and reliability of the packages that are in the Rock Shop.
+    </p>
+
+</section>
+
+<section data-type="chapter" id="anatomy-of-a-package"><h1><a name='anatomyofapackage' href='#anatomyofapackage' class='book-link'><i class='fa fa-link'></i></a>Anatomy of a Package</h1>
+
+    <p>
+        The unit of work that you share is called a package. This could be a set of
+        custom blocks, a website theme, custom workflow actions or even an external 
+        application. Each package has versions so you can add additional features and
+        fix any bugs (should they arise).
+    </p>
+    
+    <section data-type="sect1" id="packageversions">
+
+        <h1><a name='packageversions' href='#packageversions' class='book-link'><i class='fa fa-link'></i></a>Package Versions</h1>
+        <p>
+            Each package version has an install file associated with it. Upon purchase
+            (a term used even when installing a free package), the install files are 
+            downloaded to the client's server and installed. When there are multiple 
+            versions of a package, each version's install file is downloaded and installed
+            in order. When releasing version 2 of your package, its install file is only
+            responsible for making the changes needed to upgrade from version 1.
+        </p>
+        
+        <div data-type="note" data-note-type="warning">
+        <h1>Package Versioning</h1>
+            <p>
+                Although we've <a href="#adding-a-package-version">provided a place</a> to 
+                annotate a 'version' number for your plugin, this number is just a friendly 
+                label.  It doesn't control the order of, or relationships to, other versions 
+                of your plugin.  
+            </p>
+            <p>
+                If you've already published Version 1 and Version 2 of your plugin, you can't 
+                create Version 1.5 to fix a bug found in Version 1.  Instead, you'd have to create 
+                Version 3 or Version 2.x to deploy your fix. Package versions are always simple 
+                and linear.
+            </p>
+</div>
+    </section>
+    
+    <section data-type="sect1" id="thepackagefile">
+
+        <h1><a name='thepackagefile' href='#thepackagefile' class='book-link'><i class='fa fa-link'></i></a>The Package File</h1>
+        <p>
+            What makes up an install file? Well let's look inside one.
+        </p>
+        
+        <figure>
+            <figcaption>Package Contents</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/26/1.3.0/images/package-directory.png" alt="Package Contents"></a>
+        </figure>
+        
+        <ul>
+            
+            <li>
+                <strong>Content:</strong> Files and folders in this directory will be
+                copied into the Rock root directory on the client’s server. You may only 
+                place files in the following folders under the Rock root: bin, Plugins,
+                App_Data, App_Code, Webhooks, Content and Themes.
+            </li>
+            
+            <li>
+                <strong>Install:</strong> This is where configuration files specific to 
+                the install process will go.
+            </li>
+            
+            <li>
+                <strong>Uninstall:</strong> Yep, files for uninstalling the package.
+            </li>
+        </ul>
+        
+        
+        <p>
+            The <tt>deletefile.lst</tt> files should list the files to delete relative to the application root. Example:
+        </p>
+            <pre>bin\com.myorganization.MyPlugin.dll
+Webhooks\MyWebhook.ashx
+Plugins\com_myorganization\MyPlugin\MyBlock.ascx
+Plugins\com_myorganization\MyPlugin\MyBlock.ascx.cs</pre>
+
+    </section>
+    
+    <section data-type="sect1" id="creatingthepackagefile">
+
+        <h1><a name='creatingthepackagefile' href='#creatingthepackagefile' class='book-link'><i class='fa fa-link'></i></a>Creating The Package File</h1>
+        <p>
+            When you've assembled all your files in the directory structure above simply zip it up and rename the zip file with 
+            the extension '.plugin'. The the top-level directories should be "content, install, uninstall". The rest of the 
+            filename is up to you but you may consider adding the package name and version for your future reference.
+        </p>
+    </section>
+
+</section>
+
+<section data-type="chapter" id="database-migrations"><h1><a name='databasemigrations' href='#databasemigrations' class='book-link'><i class='fa fa-link'></i></a>Database Migrations</h1>
+
+    <p>
+        One of the critical steps in the install process is making any needed database 
+        changes required by your package. We provide you with two options for making 
+        these changes.
+    </p>
+    
+    <ol>
+        <li>
+            If your package includes a custom assembly, we highly recommend that your
+            assembly include both up and down migrations. These migrations will be run
+            for both the install (up) and uninstall (down). <code><insert link="" to="" documentation="" on="" making="" migrations=""></insert></code>
+        </li>
+        
+        <li>
+            If your package does not require a custom assembly, you can include a SQL
+            file in your install package. For installs, this file should be in the root
+            <em data-type="reference" data-reference="reference-highlight">install</em> 
+            folder and should be named <em data-type="reference" data-reference="reference-highlight">run.sql</em>. 
+            Uninstall SQL should use the same file name, but be in the root 
+            <em data-type="reference" data-reference="reference-highlight">uninstall</em> folder.
+        </li>
+    </ol>
+
+</section>
+
+<section data-type="chapter" id="uninstalling"><h1><a name='uninstalling' href='#uninstalling' class='book-link'><i class='fa fa-link'></i></a>Uninstalling</h1>
+
+    <p>
+        The current version of the Rock Shop, released in McKinley v3.0, does not 
+        support uninstalling packages. We do see adding this support in the near future.
+        Therefore, the packages you write today must support the 
+        <em data-type="reference" data-reference="reference-highlight">plumbing</em> 
+        needed for uninstalling themselves.
+    </p>
+    
+    <p>
+        In the <em data-type="reference" data-reference="reference-highlight">Database Migration</em>
+        chapter we've already touched on how to support uninstalling your packages 
+        database requirements. Let's now discuss how to deal with the files on the 
+        server. During the uninstall, Rock will look for a file named 
+        <em data-type="reference" data-reference="reference-highlight">deletefile.lst</em>
+        in the root <em data-type="reference" data-reference="reference-highlight">uninstall</em>
+        directory. It will go through this file and remove all of the files/directories 
+        that are listed. 
+    </p>
+    
+    <div data-type="note" data-note-type="warning">
+        <h1>Be Careful Choosing Files to Delete:</h1>
+        <p>
+            While it's up to you to determine which files to delete we will pay attention
+            to any files you request to delete out of the <em data-type="reference" data-reference="reference-highlight">bin</em> 
+            directory. It's possible that two different packages may use the same third
+            party extension. Deleting these assemblies haphazardly may keep other packages
+            from working. When you request that a file in the <em data-type="reference" data-reference="reference-highlight">bin</em>
+            directory be deleted, we'll check that no other package has included that 
+            file in their install. If so, we'll refrain from deleting it.
+        </p>
+    </div>
+
+</section>
+
+<section data-type="chapter" id="submitting-to-the-rock-shop"><h1><a name='submittingtotherockshop' href='#submittingtotherockshop' class='book-link'><i class='fa fa-link'></i></a>Submitting to the Rock Shop</h1>
+
+    <p>
+        Ok, your package is done and the only thing still preventing you from saving
+        the world is getting it into the Rock Shop. Not to worry - submitting your 
+        plugin is a piece of cake! Just follow these simple steps.
+        
+        <ol>
+            
+            <li>
+                Log in to the Rock website.
+            </li>
+            
+            <li>
+                Select <em data-type="reference" data-reference="reference-highlight">My Account</em>
+                from the user dropdown in the upper right of the page. This will take
+                you to your user profile page on the Rock site. 
+            </li>
+            
+            <li>
+                Next select the organization that will be submitting the application.
+                Most people will only belong to a single organization, but you could
+                belong to several. This is helpful for those who operate as freelance
+                ninjas at night.
+            </li>
+            
+            <li>
+                Now you'll see your organization's profile page. To submit your package
+                select the <span data-type="action" data-action="action-rock-button">Edit Organization</span>
+                button then press the <span data-type="action" data-action="action-rock-button">Packages</span>
+                link in the menu in the left sidebar.
+            </li>
+            
+            <li>
+                You'll now see a listing of all the packages you have submitted to the
+                Rock Shop. To add a new one press the <span data-type="action" data-action="action-rock-button">[+]</span>
+                button in the grid footer.
+            </li>
+            
+            <li>
+                This will allow you to submit a new package with the following fields.
+            </li>
+            
+                <figure>
+                    <figcaption>Adding A Package</figcaption>
+                    <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/26/1.3.0/images/package-screen-v13.png" alt="Adding a Package"></a>
+                    
+                    <dl class="callout-key">
+                        <dt><span class="callout-number accent-bold-color">1</span><strong>Name: </strong></dt>
+                        <dd>This will be the name of your package that will be displayed in the Rock Shop.</dd>
+                            	
+                        <dt><span class="callout-number accent-bold-color">2</span><strong>HTML Description: </strong></dt>
+                        <dd>Don't skimp here. Take your time and explain what your package does
+                        and how it can help the organization. This is a good place to list any 
+                        limitations also. Remember, even if this is a free package the 
+                        <em data-type="reference" data-reference="reference-highlight">customer</em>
+                        is investing time looking at your package and installing it. Respect that
+                        by providing as many details as you can. Submissions that do not contain 
+                        enough details will be rejected. Be sure to leverage HTML to present your
+                        description in a way that's easy to read.</dd>
+                        	
+                        <dt><span class="callout-number accent-bold-color">3</span><strong>Type: </strong></dt>
+                        <dd>There are a couple of different types of plugins you can submit. These include:</dd>
+                            <ul>
+                                <li><strong>Plugin: </strong>
+                                This is the most common. These include things like custom blocks, field types, 
+                                workflow actions, etc.</li>                        
+                            
+                                <li><strong>Themes: </strong>
+                                This option is for custom website themes you have developed.</li> 
+                            
+                                <li><strong>External Apps: </strong>
+                                Choose this option for applications that run outside of the Rock website. 
+                                Most likely this will be used for client applications that run on the desktop 
+                                or mobile devices.</li> 
+                            </ul>
+                            
+                        <dt><span class="callout-number accent-bold-color">4</span><strong>Cost: </strong></dt>
+                        <dd>This field determines if your package is free or paid and, if applicable, what the cost is. 
+                        Paid Rock Shop packages donating at a rate of 35% or more will be included in the "Sponsored Apps" 
+                        section of the shop homepage.</dd>
+                            	
+                        <dt><span class="callout-number accent-bold-color">5</span><strong>Categories: </strong></dt>
+                        <dd>Next select up to two (one is fine too) categories that make sense for
+                        your package. We reserve the right to change these especially if/when we 
+                        add new categories as the Rock Shop grows.</dd>
+                        	
+                        <dt><span class="callout-number accent-bold-color">6</span><strong>Package Icon: </strong></dt>
+                        <dd>This is an image that will be used in the Rock Shop. More details on
+                        the specifications of this image can be found below.</dd>            
+            
+                        <dt><span class="callout-number accent-bold-color">7</span>Support URL: </dt>
+                        <dd>We require every package to have a support URL where customers can go to
+                        get help with your package.  </dd> 
+                    </dl>
+                </figure>   
+    
+            <li>
+                After creating the package, you must now create an initial version for it. 
+            </li>
+
+                <figure> <a name="adding-a-package-version"></a>
+                    <figcaption>Adding A Package Version</figcaption>
+                    <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/26/1.3.0/images/packageversion-screen.png"></a>
+
+                    <dl class="callout-key">
+                        <dt><span class="callout-number accent-bold-color">1</span><strong>Version: </strong></dt>
+                        <dd>This is the label you'll use to describe your version. We give you the 
+                        flexibility to use any versioning scheme you prefer. Most people will use 
+                        something like <em data-type="reference" data-reference="reference-highlight">Version 1</em>. See <a href="#packageversions">Package Versions</a> for more details.</dd>
+                            	
+                        <dt><span class="callout-number accent-bold-color">2</span><strong>Description: </strong></dt>
+                        <dd>This field describes the specifics of the version. This is especially important 
+                        for describing what's new in later versions. When filling this out for the initial 
+                        version you may wish to include information about future features.</dd>
+                        	
+                        <dt><span class="callout-number accent-bold-color">3</span><strong>Required Rock Version: </strong></dt>
+                        <dd>Your package may not run on all versions of Rock. To limit who can install it, 
+                        you will need to specify a minimum Rock version.</dd>
+                        
+                        <dt><span class="callout-number accent-bold-color">4</span><strong>Package File: </strong></dt>
+                        <dd>This is where you'll upload the install package file that you created above.</dd>
+                            	
+                        <dt><span class="callout-number accent-bold-color">5</span><strong>Documentation URL: </strong></dt>
+                        <dd>This is where you'll link to the documentation about your package.</dd>
+                        	
+                        <dt><span class="callout-number accent-bold-color">6</span><strong>Post Install Instructions: </strong></dt>
+                        <dd>Once the customer has completed the install these instructions will be shown to
+                        point them toward what to do next.</dd> 
+                        
+                        <dt><span class="callout-number accent-bold-color">7</span><strong>Screenshots: </strong></dt>
+                        <dd>Nothing helps the customer understand your package as quickly as screenshots.
+                        You can upload as many as four different screenshots. Please upload at least one 
+                        screenshot of your application. We suggest these screenshots be sized to 1280x960. 
+                        Submissions without any screenshots will be rejected.</dd>                         
+                    </dl>
+                </figure>            
+
+        </ol>   
+
+        <div data-type="note" data-note-type="note">
+            <a name="compingthecost" href="#compingthecost" class="book-link"><i class="fa fa-link"></i></a>
+            <h1>Comping the Cost?</h1>
+            <p>
+                If you're developing a plugin for a customer who is helping to fund the development costs, 
+                please note that it is not possible to comp them the cost of the plugin purchase in the
+                Rock Shop. To keep it simple, we recommend that you reduce your development fee by the cost
+                of the plugin, then direct the customer to purchase the plugin through the shop. 
+            </p>
+        </div>
+    </p>        
+
+    <section data-type="sect1">
+
+        <h1><a name='packageiconspecifications' href='#packageiconspecifications' class='book-link'><i class='fa fa-link'></i></a>Package Icon Specifications</h1>
+        <p>
+            The package icon you submit must meet specific requirements to be included in the
+            store. This single image will be used in several different places so it's important 
+            that you understand the requirements.
+        </p>
+        
+        <figure>
+            <figcaption>Package Icon Template</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/26/1.3.0/images/package-icon.png"></a>
+        </figure>
+        
+        <p>
+            The image itself must be sized to 1365x210. The entire image will be displayed 
+            on the package details page of the store. The area shaded in red will be 
+            displayed when it's shown as an icon in a list of packages. Note, that this
+            red section is not the exact size of the icon. Since the page is responsive
+            the icon will grow and shrink in width depending on the browser width. The red area is more the target location
+            for your icon. 
+        </p>
+    </section>
+
+</section>
+
+<section data-type="chapter" id="review-process"><h1><a name='reviewprocess' href='#reviewprocess' class='book-link'><i class='fa fa-link'></i></a>Review Process</h1>
+
+    <p>
+        Once you submit your package, it will go through a review process before it's
+        available in the store. This review will ensure that your package meets the 
+        guidelines above and those in the Terms and Conditions. We'll do an install 
+        of your package and complete a quick inspection to verify that it does what 
+        it's advertised to do.  We'll also do a quick review of the code to make sure
+        we don’t see anything that could significantly impact the performance or 
+        reliability of Rock.
+    </p>
+    
+    <p>
+        In general we hope to complete this review process within three weeks. This 
+        may take longer depending on the number of application submissions in the 
+        queue.
+    </p>
+
+</section>
+
+<section data-type="chapter" id="rock-store-recipes"><h1><a name='rockstorerecipes' href='#rockstorerecipes' class='book-link'><i class='fa fa-link'></i></a>Rock Store Recipes</h1>
+
+    <p>
+        While the packaging instructions above should cover most types of packages, 
+        we'd like to address some special cases in this section.
+        
+        <ul>
+            
+            <li>
+                <strong>External/Desktop Applications: </strong>If you would like to 
+                add an external application to the store, simply upload the setup file
+                for your application in place of the package file. We will put this 
+                setup file on our file storage account and create a quick Rock Shop 
+                install package that will add a link to your application to the list 
+                found under <span data-type="action" data-action="action-navigation">Admin Tools > Power Tools > External Applications</span>.
+            </li>
+            
+            <li>
+                <strong>Documents: </strong>If you are submitting a document that you
+                would like to share in the store, submit the document as the package 
+                file. Like the desktop application above, we will link to your document
+                from the External Applications list.
+            </li>
+        </ul>
+    </p>
+
+</section>
+
+
+                        </article>
+                        <aside class="col-md-3 col-xl-3 d-none d-md-block">
+                            <div class="sticky"><div id="toc" class="book-toc">
+                                <p>Table of Contents</p>
+                                <ul class="list-unstyled">
+                                    <li><a href='#welcome'>Welcome</a></li><li><a href='#whatcangointothestore'>What Can Go Into the Store</a></li><li><a href='#packageguidelines'>Package Guidelines</a></li><li><a href='#anatomyofapackage'>Anatomy of a Package</a></li><li><a href='#databasemigrations'>Database Migrations</a></li><li><a href='#uninstalling'>Uninstalling</a></li><li><a href='#submittingtotherockshop'>Submitting to the Rock Shop</a></li><li><a href='#reviewprocess'>Review Process</a></li><li><a href='#rockstorerecipes'>Rock Store Recipes</a></li>
+                                </ul>
+                            </div></div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            
+
+			</div>       
+
+        <script>var bookVersionOrder = [ '1.3.0' ];</script>
+
+        <script>
+            $(document).ready(function () {
+                $(".sticky").stick_in_parent();
+
+                $(".bookversion-heading-tab").on("click", function () {
+                    $(this).closest(".bookversion-heading").siblings(".bookversion-details").slideToggle();
+                    $(this).find('i.fa').toggleClass("fa-chevron-down fa-chevron-up");
+                });
+
+                $(".report-issue").mouseenter(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-4px",
+                            opacity: 1
+                        }, 500, function() {
+                            // Animation complete.
+                        });
+                });
+
+                $(".report-issue").mouseleave(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-84px",
+                            opacity: .5
+                        }, 500, function () {
+                            // Animation complete.
+                        });
+                });
+
+                $(function () {
+                    $("a.book-image").fluidbox();
+                });
+
+                // reusable function to get query parameter
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                var scrollPercent = getParameterByName('ScrollPercentage');
+                if (scrollPercent != '') {
+                    var bheight = $(document).height();
+                    var percent = scrollPercent / 100;
+                    var hpercent = bheight * percent;
+                    $('html, body').animate({ scrollTop: hpercent }, 1000);
+                }
+
+                // highlight changes
+                $(".js-bookversion-versionsinceselector").on('change', function () {
+                    
+                    var selectedVersion = $(this).val();
+
+                    if (selectedVersion == '') {
+                        // clear all update highlights and summaries
+                        $("div[data-type='update-summary']").slideUp();
+                        $("[data-update-tag]").removeClass('show-update');
+                    } else  {
+                        var showVersion = true;
+
+                        bookVersionOrder.forEach(function (version) {
+                            console.log(version);
+
+                            if (version == selectedVersion) {
+                                showVersion = false;
+                            }
+
+                            if (showVersion) {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideDown();
+                                $("[data-update-tag*='" + version + "']").addClass('show-update');
+                            } else {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideUp();
+                                $("[data-update-tag*='" + version + "']").removeClass('show-update');
+                            }
+                        });
+
+                    }; 
+                });
+
+            });
+        </script>
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+
+          </div></main>
+          <!-- / content -->
+        </div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl14" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 149,
+    pageId: 1336,
+    layout: 'Documentation',
+    baseUrl: '/'
+});
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1336,"ActionName":"View","BrowserSessionGuid":"e7d79955-c89b-427b-8fda-028852aa8fa2","PageRequestUrl":"https://community.rockrms.com/developer/book/26/26/content","PageRequestDateTime":"2023-08-03T11:03:22.9237671","PageRequestTimeToServe":0.046895,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.255.207","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

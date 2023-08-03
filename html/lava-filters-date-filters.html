@@ -1,0 +1,2098 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaVAdCWFIJUUUIBlpHVEwPW1cYB0FAHQ==","queueTime":0,"applicationTime":43,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Date Filters | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+  <script src="/Scripts/modernizr.js" ></script>
+  <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./date-filters" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="2hQwN/rl7rbDItjz5xCeNlGHIrfU2JXYghdd2sCX8uJf0UnEB602SKPxOah83H6g7gsjSt0KIhWF6AV8w6E6lwW4D7whpb29KXiLPaJXGwq5CLJ5EzA7ODJ2vR4QEJs5LUifLSo/MtjDPsMixLqJ74TRvdNg8x41xph9uxsY4DOIPUeghzaRH+K4OFj7HTKlSYhaSApzYkRPGIGVyLpc/xYS6jFablhsojQuSNreUJpi71rEtyLn2pvsvRxIh9Ci8Nvr24GCLaUEL61fUr3wo6SWd2wmGrCzI1xCxVRQEBOuSGLkpj3RsMwIG7paC+BeqJe9nPKdMCqwM46d6fPLCjiOfDcPATH1cLIFSKs1qwOVU5t16I8CfOrheU2x/+N8dSns4QpWDECSzcSys5MMaz+1Ns5nwDo4nQ2Ij6Yo+S1XQMlwW7J2la3lUIWSnKpPJh3n4qeVml6Ny+W9WU7QCRNPT6zmaZjEDPcJBfdw0ObHTTZGSDLFWGOzPyxoYHzu21Gowy6PjhssBPM18KO7WwiZHxORKY8hvy+/GKBOzwwH2woVZMCdRcEZIMnicxM4+n+tSUFGGCWrcnYADEP4S3o87ELrjJ1xq6iWKEpnQ8MYbguw85eCY7djekssJs5IPxfPYktnlMXBn0Tr24v2YCOfMv2AV2N+tmohUM8QeTY8EGRs9B1InQUMV1mDPyBWFIfkBCAIN97qFFMq2tc822puQwbGuKKVS4CJDkp0sKNTQK5+q/ueMZBXW1N1bE4A94zdHCovl0L1j2Mft39eksp/HLOhvIjk/icpwZIBDDWfrun4DBt/5HorXyEdWR/u5CrCA1k6OFfPhA8HlesSSZVF747FSYLnOVJvjj0sudrK55kRUL3pOHcuGlM9jJVTqIRGh7EWkqDGugSbm4RlZHpE+LQ7cWHJiNRCLP11lXQfOKRFDwSDcfRoHDqd4dFZbRu7UFba8Fa2E3oGikw5nEtXibLmr0dGe1FY4h2TAOtIWeLJ15q+uEWek/JTlHiKM13uYnaj8RqiIn8NcSys9CiubcPH7Ol8GKeklISeYGfU2rOAaDugfhEKnErxh+AvEFrd/f/QHfkPEPi0gtnpVX9gLOe4PGre7gIf33UOWQqj42FnC/wKYEH7YcXYKdK4qd7sOZM6LPcLgZWwGa8ar8gIKAeZjfnueVb1cf79p3KUj0gZi3WufwZRg3obZopJvfaUjwoBVCFzSF561wtiUIXRI/y2fiTfriRIsqWJIEDJlsti9Biy9CXiJrx+dm+4MvBZ8MPVdOxRTeoIU3b9XktbGkVK0vXkhOME8g4AdXF9ab+oz6NuIMVe3syFFfGliWDUNGilMID60w+U6300lDei1CsWrfjg0MArzzsJRYqC+mcI1YBsR1RFDn2fxLlujJZWMKnvHPYEjjyPVz+z25tWZtphhyaHYtIby97T3ckzUEpiT0lEGz5YwQaQGbDdzLCSBdsnt8WkmtqqaWy5V6GEU7xRxdJmNUq/w83cMnzduGZzln48ZMOhrdtzJHx5WBKEozUFhI73Vw5OykUuv/fjbhOBmS9T8UTwP0tWu492ginNB41qLHL35LAQ3Hq+S6GrmIR/P5cTNDGXsfwLP4+HEuBxPyzbYPn0NIMzDnhCnKxsP7U+hRDEECc9rS4Hmziim2HI7qE9jJti4e66skaBsE1E8qB7T6hFsUyo91bIRcwqofmhTn4zn7H1QahJA3ETtGktXH5wfG0EgUY4Dr1bP/ujzAXc+D1Q6rXhR1+aJOh0EidBjySbtd7pi/IXJfUAnNNnzHotuqgOedydd8vJF4utIlfYLEkdne0YdUk/x2PVI57v+TyDUxMT0z7oN0cv7zxbYkf0qMzrc+DAb9lMJZPmkHs/zcuJH/5JXL2Xt4dxzvqbyn29PRAKqpn1BT7SKp17RiQlFdbef3zMTZQxgo4GepLeTfcQ4hDir9ESkY/MyzaKRc4JN3TKEoMkIoDdQ8/mTUpOmMQf/H1ObNA5AyqAOwapWFVprhdXKdeLOqS8ulI8IGUjcw0ZKBpoedO+M+FlFYp58IcKPskL7wFq6rUrICfQS+XnK4uoEkE3S1P3l5VhPVashYukfuJ8ENZN2ZgNUJzlYbqhUItZpH0ObPJRzPoM/QYzR5dO4DyLGMR8RLvgBk/UdLjRfP4mzYQqvEyxyOR2B3LrorkZqsImsqapCHleWIPpKGsOxnTzka2hbeW59y8TloTgjMpekBIv1ppjvoGlZPstG3wUXjF8Mpu8IiMjXxN1HAYUbqWel2JLsfmgDU8+xO3he2vpLuZVbHm/sFcGklZAZ/Jj/37PYu4tZnqK6VU2m+I9zzIhgjHDgVIs8EoMR3JW3rNP2YRKrHtfbv3wT0Tt2xcUK+5wWGK8XAsmwk7NM/U70MAH4NyaAYY9JXx0BYb20n6+ePz6gh345tfuPokStqn/FkjLs6Nij1eJ0F1fIGQzlbEiHXh3SE9AgeH2leEdDyEcfypglHdmhV+PbeueFLurCmgudO7UaUFYShapGPRSYBn24IfuuyxD+sXIBBxa24KXRHjc7OEkaLu6zqcrW/n5uR159Qm1x8Wh/IktFVPLGkOQqNciZOtAOdV+Obdvopf8hOxnoKAefV+G/lul7w5grQrKilhFp7OUDR6UVxJfqkRW1PqGw231liV+i8EShgIKs80YBUfxpKhe4kHYmHILAJ8S6qhn6KHpQWv80DNd/SpnLI+WG4tgren/kItyjJ3NJgczka+btWdPsq+BWUtm0ptzB5EPWkhz7ysqwXZnEHTdmcZ9H6Zfgf5DvE1mG/20udkI23/SpOINYI7yNy51JPYFbR1nQ/Je1ROQExTXmhLrnZ5thVPWT4q9Z5GQW44EhAziwqLBMa3f4RWaFkHfqjeHF4IUNvJPJYP1MeXpQR5wb12vEZrkpKdaBstuZXTdLyUJsvXA1kls8hxeFHwSmfTangVs0AjmMC4MsQgtU0kl0oj0rbKK8prwhXxr7H6ct0Tk6tFYR9iV/LN3jUANDs0mC1lOlzRScgujU/GMbIdi5ND7Z61Mu6AmVb4Ww8T8DDlCpnJE1pZzXPHlxMQAQDFtetXV2xb+ZSSCxTYL+wNHaRxQQQTHPA7pNAvgUtwhotR4XXdvZ1Il2+yywKTgMJY64Le3CskgrcfgaWBpoNFJxlZUldnUnaa3sbW/03FxHliZ+EvSPGsR6vbRORdbxTwutd/4td14pHgkVLwoZnU/AFyE90FkqFmmohnr4aRM/iBgobJiETeo0DTm2bXz4S+tNgAPgmtBABbuvaAj7PAhUC4VE0heMFrGFXdaiOmIlwCkqEIJXL/VOs4Rww6TRFIFG0dxraxeN2IUxwxQW1/RXmLBS8/hq/uIlyL8rtj8lBk4vfTPJIjfCRAviWhIJqBPF5Tcz2IITrfPNUfdU0bW0dmZIprCalvqjBvAGsHSQgxedSnxRUM5Tp2Qo+OzqBcDhTPUB3K0yR/c0usdlXWQnvBeUk3f2pGW015xUvxjj4Qf3HoQQLJrkn9pRF0m7SAaLWD/ALtfI1JDnqV0/kod4U3mxL2lCD38O6tdkFVVnO3zIxMOCLB3WKeSEgQtIVjMU1l1D8pnN5fqif0Ut8DcSJUZZc7na+5kZxVsEytEMAfbNixP7b29Smrz0LrRnIbureOUiCnYeuefxIqTXZkBIRC9Ub/jUnpkV++jzfr1+DrQfmmeorVRB7I0/RPDNtlKQQnZNS91tcoqhFyrTQUUBprZiPA+7wv87JHlIBsHWWwm0Asr7/H0zkmpB3yDaSHvpRXmq3ISysrHEboFL/2DhY28XnLfq25jgX3GNwEQMW7RQMWUUMyq8D4lW0y4uiO2tMT6uBXeXsnyYKvzoMjq7r5belIzoyZtarPK30a9" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="u2wD+3h4ynb/fAyxldM7oJEsriDWqZajUI4S6hxHWbgzhCXbuJEMG0rGIcC2kTaJcbn7OeKXj0Aml05lheYyvF62IW7fVT27pnqYoeiNYvgCsRcJfTZ6ED0/j+RdPEM3Z4JF6iC2q746UdXVAHLTZQ==" />
+      <div id="page-container">
+    <div class="community-ui">
+      <!-- navigation -->
+      <div class="community-sidebar">
+          <nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+              <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2562" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl19_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+          </nav>
+      </div>
+      <!-- / navigation -->
+
+
+      <!-- content -->
+      <main class="community-content">
+        
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+<span class="topbar-text">
+    RX23 Content Subscription available to order now.
+</span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+
+        <div class="scroll-vertical">
+        
+    <div class="header-row">
+        <div class="col">
+
+                <header class="community-content-header">
+                    <div class="row align-items-center">
+                        <div class="col d-none d-md-block">
+                            <nav aria-label="breadcrumb" class="align-items-center">
+                                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/Lava" rel="rocknofollow">Lava</a></li><li class="breadcrumb-item">Date Filters</li>
+</ol>
+                            </nav>
+                        </div>
+                        <div class="col text-lg-right">
+            
+<a href="/login?returnurl=/page/1302" class="login-link">Log In</a>
+                        </div>
+                    </div>
+                </header><section class="header-small">
+                    <div class="image image-bg-gradient">
+                        <img src="/Themes/RockCommunity/Assets/Images/particles.png" alt="" style="opacity: 0.5;" class="img-responsive">
+                    </div><div class="container-fluid h-100"><div class="row h-100 align-items-end"><div class="col-md-9 col-xl-8">
+<h1 class="page-title page-title-constrained">Date Filters</h1>
+                        </div></div></div></section>
+
+        </div>
+    </div>
+
+
+        <!-- main -->
+        <div class="row community-content-body"><!-- justify-content-between -->
+
+          
+
+
+<article class="col-md-9 col-xl-8">
+    <div id="zone-feature" class="zone-instance"><div class="zone-content"></div></div>
+    <div id="zone-main" class="zone-instance"><div class="zone-content"><div id="bid_2501" data-zone-location="Page" class="block-instance js-block-instance html-content">
+	<div class="block-content">
+		<div id="ctl00_main_ctl10_ctl01_ctl00_upnlHtmlContentView">
+			
+        
+
+        
+        
+
+        
+<h1 class="margin-t-none">Date Filters</h1>
+
+<p>
+    These date filters allow you to modify the formatting of dates in some pretty cool ways!
+</p>
+
+
+<div class="alert alert-info">
+    <strong>Now!</strong>
+    
+    When working with dates you'll often want to get the current date/time. This is possible with the 'Now' 
+    keyword. You can use in places where you'd normally input a date/time to use the current date/time. 
+    Consider the example below which would display today's date like '8/3/2023'.
+    
+    
+    <pre>{{ 'Now' | Date:'M/d/yyyy' }}
+    
+&lt;!-- New in V10 - No parameters are required to assign the current date/time.--&gt;
+&lt;!-- However, it is advised you always specify the date format to avoid      --&gt;
+&lt;!-- international confusion.                                                --&gt;
+{% assign now = 'Now' | Date %}</pre>
+    
+</div>
+    
+		</div>
+
+<div id="ctl00_main_ctl10_ctl01_ctl00_upnlHtmlContentEdit">
+			
+
+
+
+        
+        
+
+    
+		</div>
+
+	</div>
+</div><div id="bid_2502" data-zone-location="Page" class="block-instance js-block-instance content-channel-view">
+	<div class="block-content">
+		
+
+<script type="text/javascript">
+    function clearDialog() {
+        $('#rock-config-cancel-trigger').trigger('click');
+    }
+</script>
+
+<div id="ctl00_main_ctl10_ctl02_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl10_ctl02_ctl00_pnlView">
+				
+            
+            
+
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#asdatetimeutc" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="asdatetimeutc"></a>
+        
+        <a name="asdatetimeutc"></a>
+        <h1 class="panel-title">AsDateTimeUtc</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v14.1</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts the input to a DateTime value in Coordinated Universal Time (UTC).
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;2018-05-02T03:00:00+04:00&#39; | AsDateTimeUtc | Date:&#39;yyyy-MM-ddTHH:mm:sszzz&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>2018-05-01T23:00:00+00:00</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      If the input date doesn't specify an offset, the current Rock application timezone is assumed.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#date" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="date"></a>
+        
+        <a name="date"></a>
+        <h1 class="panel-title">Date</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v1.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Displays the date given a format string. The string 'Now' can be used for the current date/time.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>Value formatting elements include:</p>
+
+<strong>Date Elements</strong>
+<ul>
+    <li>sd - Returns the culture's standard shortened date format (m/d/yyyy in the US)</li>
+    <li>d - Day of the month 1 - 31.</li>
+    <li>dd - Two digit day of the month 01 - 31.</li>
+    <li>ddd - Abbreviated day of the week (Mon, Tue, etc.)</li>
+    <li>dddd - Full day of the week (Monday, Tuesday, etc.)</li>
+    <li>M - The month, from 1 through 12</li>
+    <li>MM - The month, from 01 through 12</li>
+    <li>MMM - The abbreviated name of the month (Jan, Feb, etc.)</li>
+    <li>MMMM - The full name of the month</li>
+    <li>yy - The year, from 00 to 99</li>
+    <li>yyyy - The year as a four-digit number</li>
+</ul>
+
+<strong>Time Elements</strong>
+<ul>
+    <li>st - Returns the culture's standard shortened time format (h:mm am/pm in the US)</li>
+    <li>h - The hour, using a 12-hour clock from 1 to 12</li>
+    <li>hh - The hour, using a 12-hour clock from 01 to 12</li>
+    <li>H - The hour, using a 24-hour clock from 0 to 23</li>
+    <li>HH - The hour, using a 24-hour clock from 00 to 23</li>
+    <li>m - The minute, from 0 through 59</li>
+    <li>mm - The minute, from 00 through 59</li>
+    <li>s - The second, from 0 through 59</li>
+    <li>ss - The second, from 00 through 59</li>
+    <li>tt - The AM/PM designator</li>
+</ul>
+
+<div class="alert alert-warning">When the date is going to be saved to the database as an attribute value, we recommend you use the ISO standard format <code>yyyy-MM-ddTHH:mm:ss.fffzzz</code></div>
+
+<p> For even more options see the 
+<a href="http://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx">
+Microsoft .Net Custom Date and Time Formatting Reference Guide</a>.
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "FirstVisit": "2/13/2011 8am"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">Ted&#39;s first visit was on {{ Person | Attribute:&#39;FirstVisit&#39; | Date:&#39;dddd, MMMM d, yyyy&#39; }}.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Ted&#39;s first visit was on Sunday, February 13, 2011.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#dateadd" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="dateadd"></a>
+        
+        <a name="dateadd"></a>
+        <h1 class="panel-title">DateAdd</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Adds a span of time to a provided date (default is in days).
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>By default this filter assumes the amount you pass in is in days. You can also pass in other intervals as a second parameter like:</p>
+
+<p>{{ 'Now' | DateAdd:-12,'h' }}</p>
+
+<p>This would subtract 12 hours from the current date/time.</p>
+
+Valid units are:
+
+<ul>
+    <li>y - Years <small><span class="label label-default">v8.0</span></small>
+    <li>M - Months <small><span class="label label-default">v8.0</span></small>
+    <li>w - Weeks <small><span class="label label-default">v8.0</span></small>
+    <li>d - Days</li>
+    <li>h - Hours</li>
+    <li>m - Minutes</li>
+    <li>s - Seconds</li>
+</ul>
+
+<p>Adding weeks is simply a shorthand for adding by 7 days at a time.</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "FirstVisit": "2/14/2011"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">Your first visit was {{ CurrentPerson | Attribute:&#39;FirstVisit&#39; }}. Two weeks later would be {{ CurrentPerson | Attribute:&#39;FirstVisit&#39; | DateAdd:14 }}.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Your first visit was 2/14/2011. Two weeks later would be 2/28/2011.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      <p>When adding months and years, if you are going from one month with more days than the target month, the day number will be reduced to fit within the new target month.</p>
+<ul>
+    <li>5/31/2018 + 1 month = 6/30/2018</li>
+    <li>2/29/2016 + 1 year = 2/28/2017</li>
+</ul>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#datediff" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="datediff"></a>
+        
+        <a name="datediff"></a>
+        <h1 class="panel-title">DateDiff</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v1.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Takes two datetimes and returns the difference in the unit you provide. You can provide the value 'Now' for either the start or end date.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      Valid units are:
+
+<ul>
+    <li>Y - Years</li>
+    <li>M - Months</li>
+    <li>d - Days</li>
+    <li>h - Hours</li>
+    <li>m - Minutes</li>
+    <li>s - Seconds</li>
+</ul>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "FirstVisit": "2/14/2011",
+    "SecondVisit": "3/18/2011"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">It was {{ Person.FirstVisit | DateDiff:Person.SecondVisit,&#39;d&#39; }}
+days between {{ Person.NickName }} first and second visit.
+</pre>
+        </div>
+        <div class="output">
+          
+          <pre>It was 32 days between Ted&#39;s first and second visit.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      If the start date is after the end date a negative number will be displayed. 
+Note, the difference in days between January 1st at 11:59pm and January 2nd at 12:01am is 0 days, while the difference
+between January 1st and January 2nd (without the time portion) is 1 day.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#daterangefromslidingformat" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="daterangefromslidingformat"></a>
+        
+        <a name="daterangefromslidingformat"></a>
+        <h1 class="panel-title">DateRangeFromSlidingFormat</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v13.4</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Provides a start and end date from a sliding date range format (typically from the Sliding Date Range control).
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign range = &#39;Previous|2|Week||&#39; | DateRangeFromSlidingFormat %}
+{{ range.StartDate }} - {{ range.EndDate }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>3/28/2022 12:00:00 AM - 4/10/2022 11:59:59 PM</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#datesfromical" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="datesfromical"></a>
+        
+        <a name="datesfromical"></a>
+        <h1 class="panel-title">DatesFromICal</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns a list of upcoming dates from an iCal string or List of iCal strings.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>
+    This filter has some optional input parameters:
+</p>
+
+<ul>
+    <li>
+        The number of occurrences to display (optional): 
+        The default is 1. A text value of 'All' can also be used to return all the occurrences (up to one year's worth).
+    </li>
+    <li>
+        enddatetime: (optional)
+        <span class="label label-default pull-right">v7.0</span>
+        if 'enddatetime' is provided, the EndTime property of the iCal's occurrence is returned instead of the StartTime.
+    </li>
+</ul>
+
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"EventItemCampuses": {
+    [
+        { 
+            "ContactEmail": "jenny@rocksolidchurchdemo.com",
+            "EventItemSchedules": [
+                { 
+                    "Schedule": {
+                        ... ,
+                        "iCalendarContent": "BEGIN:VCALENDAR VERSION:2.0 PRODID:-//ddaysof...",
+                        ... ,
+                    }
+                }
+            ]
+        }
+    ]
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign upcomingDates =  EventItemSchedules | Select:&#39;Schedule&#39; | Select:&#39;iCalendarContent&#39; | DatesFromICal:2 %}
+
+&lt;ul&gt;
+{% for date in upcomingDates %}
+    &lt;li&gt;{{ date }}&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;
+
+{% assign upcomingEndDates =  EventItemSchedules | Select:&#39;Schedule&#39; | Select:&#39;iCalendarContent&#39; | DatesFromICal:2,&#39;enddatetime&#39; %}
+
+&lt;ul&gt;
+{% for endDate in upcomingEndDates %}
+    &lt;li&gt;{{ endDate }}&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;
+
+</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;ul&gt;
+    &lt;li&gt;7/15/2015 7:00:00 PM&lt;/li&gt;
+    &lt;li&gt;7/16/2015 7:00:00 PM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;7/15/2015 8:00:00 PM&lt;/li&gt;
+    &lt;li&gt;7/16/2015 8:00:00 PM&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      This is a complex filter. The example above uses a portion of the input from the calendar items lava file. It's only 
+a sample and may need some changes to work correctly. See the CalendarItem.lava file in the themes folders for
+a working example.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#daysfromnow" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="daysfromnow"></a>
+        
+        <a name="daysfromnow"></a>
+        <h1 class="panel-title">DaysFromNow</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns a humanized string of the number of days from now without concern for time. 
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      Valid return values are:
+<ul>
+    <li>X days ago</li>
+    <li>yesterday</li>
+    <li>today</li>
+    <li>tomorrow</li>
+    <li>in x days</li>
+</ul>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "FirstVisit": "2/14/2015",
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">Visited {{ Person.FirstVisit | DaysFromNow }}.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Visited 14 days ago.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#daysinmonth" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="daysinmonth"></a>
+        
+        <a name="daysinmonth"></a>
+        <h1 class="panel-title">DaysInMonth</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns the number of days in the month you provide.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      There are several options on how to provide the month/year combination to check for. Valid methods include:
+<ul>
+    <li>{{ 'now' | DaysInMonth }} - Get the days in the current month/year.</li>
+    <li>{{ '2/1/2017' | DaysInMonth }} - Get the days in the date provided.</li>
+    <li>{{ '' | DaysInMonth:'02','2016' }} - Get the days based on the month/year provided.</li>
+</ul>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>None</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">There are {{ &#39;now&#39; | DaysInMonth }} days in the current month.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>There are 31 days in the current month.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#dayssince" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="dayssince"></a>
+        
+        <a name="dayssince"></a>
+        <h1 class="panel-title">DaysSince</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v8.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns the number of days that have passed since a given date.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "FullName": "Ted Decker",
+    "AnniversaryDate": '12/23/1995',
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ Person.NickName }} was married {{ Person | Attribute:&#39;AnniversaryDate&#39; | DaysSince }} days ago.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Ted was married 8215 days ago.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#daysuntil" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="daysuntil"></a>
+        
+        <a name="daysuntil"></a>
+        <h1 class="panel-title">DaysUntil</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v8.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns the number of days from now.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "FullName": "Ted Decker",
+    "StaffSabbatical": '5/10/2020',
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ Person.NickName }} can take a sabbatical in {{ Person | Attribute:&#39;StaffSabbatical&#39; | DaysUntil }} days.
+
+There are just {{ &#39;12/25/2018&#39; | DaysUntil }} days until Christmas at Rock Solid Church.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Ted can take a sabbatical in 690 days.
+
+There are just 188 days until Christmas at Rock Solid Church.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#humanizedatetime" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="humanizedatetime"></a>
+        
+        <a name="humanizedatetime"></a>
+        <h1 class="panel-title">HumanizeDateTime</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v1.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Compares the provided date/time to the current date/time and returns a human friendly string like 'yesterday' or '2 hours ago'.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "FullName": "Ted Decker",
+    "AnniversaryDate": '12/23/1995',
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ Person.NickName }} was married {{ Person.AnniversaryDate | HumanizeDateTime }}.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Ted was married 18 years ago.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      Other examples of possible return strings include:
+<ul>
+    <li>"yesterday"</li>
+    <li>"2 hours ago"</li>
+    <li>"4 days ago"</li>
+    <li>"2 weeks ago"</li>
+    <li>"6 months ago'</li>
+</ul>
+It can even work with future dates:
+<ul>
+    <li>"tomorrow"</li>
+    <li>"2 hours from now"</li>
+    <li>etc.</li>
+</ul>
+
+<p>
+    In Rock v4.0 you can optionally add a compare datetime as a parameter HumanizeDateTime:'8/1/2015'.
+</p>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#humanizetimespan" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="humanizetimespan"></a>
+        
+        <a name="humanizetimespan"></a>
+        <h1 class="panel-title">HumanizeTimeSpan</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v1.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Takes two datetimes and humanizes the difference like '1 day'. Supports 'Now' in either the start or end date.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "FirstVisit": "2/14/2011",
+    "SecondVisit": "3/18/2011"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">It was {{ Person.FirstVisit | HumanizeTimeSpan:Person.SecondVisit }} 
+between {{ Person.NickName }}&#39;s first and second visit.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>It was 4 weeks between Ted&#39;s first and second visit.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      There is an optional precision value you can apply to the filter to
+enhance the detail of the description. The default value of precision
+is 1 which means only the largest time unit is returned.
+
+<pre>{{ Person.FirstVisit | HumanizeTimeSpan:Person.SecondVisit,2 }}</pre>
+
+<ul>
+    <li>3 - 4 weeks, 4 days</li>
+    <li>4 - 4 weeks, 4 days, 3 hours</li>
+    <li>5 - 4 weeks, 4 days, 3 hours, 30 minutes</li>
+</ul>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#isdatebetween" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="isdatebetween"></a>
+        
+        <a name="isdatebetween"></a>
+        <h1 class="panel-title">IsDateBetween</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v14.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Determine if the provided date falls within a given range.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>This filter will accept input in the following formats:</p>
+<ul>
+    <li>String (that can be parsed into a date)</li>
+    <li>Date</li>
+    <li>DateTime</li>
+    <li>DateTimeOffset</li>
+</ul>
+
+<p>
+    The filter will attempt to parse each parameter (input, start of range, end of range) into a valid DateTime and check if the input falls within the range (inclusive). A boolean value will be returned.
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Items": [
+    { 
+        "Id": 1, 
+        "Title": "Easter Devotional",
+        "FeaturedDates": "4/10/2022 to 4/20/2022" 
+    },
+    { 
+        "Id": 2, 
+        "Title": "Christmas Devotional",
+        "FeaturedDates": "12/20/2022 to 12/31/2022" 
+    },
+]</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign today = &#39;2022-04-17 07:00&#39; | Date:&#39;yyyy-MM-dd HH:mm&#39; %}
+{% for i in Items %}
+    {% assign startDate = i.FeaturedDates | Split:&#39; to &#39; | First %}
+    {% assign endDate = i.FeaturedDates | Split:&#39; to &#39; | Last %}
+    {% if i.FeaturedDates != &#39;&#39; %}
+        {% assign isFeatured = today | IsDateBetween:startDate,endDate %}
+        {% if isFeatured %}
+            {{i.Title}}
+        {% endif %}
+    {% endif %}
+{% endfor %}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Easter Devotional</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      C# can make incorrect assumptions about the format of a string when parsing into a DateTime, for best results send a DateTime object.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#nextdayoftheweek" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="nextdayoftheweek"></a>
+        
+        <a name="nextdayoftheweek"></a>
+        <h1 class="panel-title">NextDayOfTheWeek</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v8.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Advances the date to a specific day in the next 7 days.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "FirstVisit": "2/9/2011"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ CurrentPerson | Attribute:&#39;FirstVisit&#39; | NextDayOfTheWeek:&#39;Friday&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>2/11/2011</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      Optional Parameters:
+<ul>
+<li>includeCurrentDay (default false) - If true, the date's day can match the given day.  Example: <code>{{ "5/1/2018" | NextDayOfTheWeek:'Tuesday', true }}</code> would result in "5/1/2018" because it was also a Tuesday.</li>
+<li>numberOfWeeks (default 1) - use negative numbers to go back a number of weeks.</li>
+</ul>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#sundaydate" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="sundaydate"></a>
+        
+        <a name="sundaydate"></a>
+        <h1 class="panel-title">SundayDate</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v5.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns the Sunday date portion (without any time portion) of the date provided.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      Keep in mind that Rock considers Sunday to be the last day of the week. This makes sense when
+calculating church metrics. The 'Now' keyword can be used in place of a date for the current
+date.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "FirstVisit": "2/14/2011"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">You first visited on the week of {{ CurrentPerson | Attribute:&#39;FirstVisit&#39; | SundayDate }}.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>You first visited on the week of 2/20/2011.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      To get the previous Sunday simply pipe the filter through DateAdd.
+<code>
+{{ 'Now' | SundayDate | DateAdd:-7 }}
+</code>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#timeofday" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="timeofday"></a>
+        
+        <a name="timeofday"></a>
+        <h1 class="panel-title">TimeOfDay</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v13.1</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns a description of the time of day for an input value that represents a date/time. The keyword 'Now' can be used to represent the current time.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "NickName": "Ted"
+    "ThirdVisit": "2/14/2011 1pm",
+    "FourthVisit": "3/18/2011 11:30am"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ Person.NickName }}&#39;s third visit was in the {{ Person | Attribute:&#39;ThirdVisit&#39; | TimeOfDay }}, and the fourth visit was in the {{ Person | Attribute:&#39;FourthVisit&#39; | TimeOfDay }}.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Ted&#39;s first third was in the Afternoon, and the fourth visit was in the Morning.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      The time period returned by this filter is determined as follows: 
+<ul>
+    <li>Morning - 5:00:00am - 11:59:59am</li>
+    <li>Afternoon - 12:00:00pm - 04:59:59pm</li>
+    <li>Evening - 05:00:00pm - 08:59:59pm</li>
+    <li>Night - 09:00:00pm - 04:59:59am</li>
+</ul>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#tomidnight" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="tomidnight"></a>
+        
+        <a name="tomidnight"></a>
+        <h1 class="panel-title">ToMidnight</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v8.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Sets the time to midnight for a specific day.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "LastOfficeVisit": "2/13/2011 8am"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ Person | Attribute:&#39;LastOfficeVisit&#39; | ToMidnight }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>2/13/2011 12:00:00 AM</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+ 
+            
+        
+			</div>
+
+        
+        
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+</article>
+
+<aside class="col-xs-12 col-md-3 col-xl-3">
+    <div class="sticky">
+        <div id="zone-sidebar1" class="zone-instance"><div class="zone-content"><div id="bid_2561" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_main_ctl12_ctl01_ctl00_upContent">
+			
+    <div class="book-toc small-toc full-height">
+<div class="px-4">
+<a class="btn btn-xs btn-primary margin-b-md" href="/lava" style="color:#fff">Lava Home</a>
+</div>
+
+    <ul class="nav navbar-nav">
+
+		
+            <h6 class="px-4 pt-3">Formatting</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/style">Lava Style Guide</a>
+				</li>
+			
+			</ul>
+				
+        
+            <h6 class="px-4 pt-3">Filters</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/filters">Intro To Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/text-filters">Text Filters</a>
+				</li>
+			
+			    <li class="active">
+					<a href="/lava/filters/date-filters">Date Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/numeric-filters">Numeric Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/color-filters">Color Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/array-filters">Arrays</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/person-filters">Person</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/attribute-filters">Attributes</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/other-filters">Other</a>
+				</li>
+			
+			</ul>
+				
+        
+            <h6 class="px-4 pt-3">Tags</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/tags/variable-tags">Assign / Capture</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/if-else-tags">If / Else</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/case-tags">Case</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/cycle-tags">Cycle</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/for-tags">For</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/include-tags">Include</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/unless-tags">Unless</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/comment-tags">Comment</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/raw-tags">Raw</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/return-tags">Return</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/lava-tags">Lava</a>
+				</li>
+			
+			</ul>
+				
+        
+            <h6 class="px-4 pt-3">Commands</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/commands">Getting Started</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/cache-commands">Cache</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/calendar-events">Calendar Events</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/entity-commands">Entity</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/event-scheduled-instance">Event Scheduled Instance</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/interaction-content-channel-item-write">Interaction Content Channel Item Write</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/interaction-write">Interaction Write</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/javascript-commands">JavaScript</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/personalize-commands">Personalize</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/search-commands">Search</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/sql-commands">SQL</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/stylesheet-commands">Stylesheet</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/taglist-commands">Tag List</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/web-request-commands">Web Request</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/workflow-activate-commands">Workflow Activate</a>
+				</li>
+			
+			</ul>
+				
+        
+            <h6 class="px-4 pt-3">Misc</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/remote-lava">Using Lava Remotely</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/lava-api">Creating APIs Using Lava</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/workflows">Workflows and Lava</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/fluid">About Lava Fluid</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/obsidian">Lava With Obsidian</a>
+				</li>
+			
+			</ul>
+				
+        
+    </ul>
+
+</div>
+
+		</div>
+
+	</div>
+</div></div></div>
+    </div>
+</aside>
+
+<script>
+    Sys.Application.add_load(function () {
+        $('.js-example-toggle').on('click', function () {
+            $(this).closest('.panel').toggleClass('open');
+            $(this).closest('.panel').find('.panel-body').slideToggle();
+            $(this).find('.example-toggle i').toggleClass('fa-circle-o fa-circle');
+        });
+    });
+</script>
+
+<div class="d-none">
+        <!-- Ajax Error -->
+        <div class="alert alert-danger ajax-error no-index" style="display:none">
+            <p><strong>Error</strong></p>
+            <span class="ajax-error-message"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="zone-sectiona" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div id="zone-sectionb" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectionc" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectiond" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+    </div>
+        <!-- End Content Area -->
+
+
+
+          
+
+
+<footer class="footer">
+    <div class="section section-footer-top">
+        <div class="container">
+            <div class="footer-top">
+                <nav class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4">
+                                <span class="brand mb-5 d-block">
+                                    <a href="https://www.rockrms.com/" class="brand">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                        <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path>
+                                      </svg>
+                                  </a>
+                                </span>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3 ml-md-auto">
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.rockrms.com/Download">Download Rock</a></li>
+                                    <li><a href="https://github.com/SparkDevNetwork/Rock/issues">Issues</a></li>
+                                    <li>
+                                        <a href="https://github.com/SparkDevNetwork/RockWebsites/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">Report Website Issue</a>
+                                    </li>
+                                    <li><a href="https://community.rockrms.com/learn">Learn</a></li>
+                                    <li><a href="https://community.rockrms.com/ministry-impact">Ministry Impact</a></li>
+                                    <li><a href="https://community.rockrms.com/jobs">Careers</a></li>
+                                    <li><a href="https://community.rockrms.com/rock-playlist" class="text-primary font-weight-semibold">Rock Playlist</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3">
+                              <ul class="list-unstyled">
+                                <li><a href="https://www.rockrms.com/partners">Partners</a></li>
+                                <li><a href="https://www.rockrms.com/sponsors">Sponsors</a></li>
+                                <li><a href="https://www.rockrms.com/organizations">Who's Using Rock</a></li>
+                                <li><a href="https://community.rockrms.com/built-with-rock">Websites Using Rock</a></li>
+                                <li><a href="https://store.rockrms.com" target="_blank">Promo Shop</a></li>
+                                <li><a href="https://realchip.rocks/" target="_blank">Chip</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6">
+                      <ul class="social-list list-inline text-center">
+                        <li class="social-icon"><a href="https://www.facebook.com/TheRockRMS/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-icon"><a href="https://twitter.com/rockrms"><i class="fab fa-twitter"></i></a></li>
+                      </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="section section-footer-bottom">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap flex-justify" style="justify-content: space-between;">
+                    <ul class="list-inline">
+                        <li><a href="/login" class="hover-orange">Login</a></li>
+                        <li><a href="/privacy" class="hover-orange">Privacy</a></li>
+                        <li><a href="/license" class="hover-orange">License</a></li>
+                    </ul>
+                    <p>Rock is a project of <a target="_blank" href="https://sparkdevnetwork.org/">Spark Development Network</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+          
+
+        </div>
+        <!-- / main -->
+      </div>
+      </main>
+      <!-- / content -->
+
+      <div class="d-none">
+        <div id="zone-header" class="zone-instance"><div class="zone-content"></div></div>
+        <div id="zone-login" class="zone-instance"><div class="zone-content"></div></div>
+
+      </div>
+      </div>
+      </div>
+
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl16" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 153,
+    pageId: 1302,
+    layout: 'LavaDocumentation',
+    baseUrl: '/'
+});Rock.controls.modal.closeModalDialog($('#ctl00_main_ctl10_ctl01_ctl00_mdEdit_modal_dialog_panel'));
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1302,"ActionName":"View","BrowserSessionGuid":"3ba9b225-781e-48a9-8327-3745f404dbb7","PageRequestUrl":"https://community.rockrms.com/lava/filters/date-filters","PageRequestDateTime":"2023-08-03T11:03:50.6738985","PageRequestTimeToServe":0.0312448,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.255.211","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

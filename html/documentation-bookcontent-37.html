@@ -1,0 +1,3330 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXAlXTFsDXEQEF11cWxYHR0lO","queueTime":0,"applicationTime":130,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Assessments | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<link href="/Styles/fluidbox.css?v=637945608860000000" type="text/css" rel="stylesheet" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./37" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="162836" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Plugins/org_sparkdevnetwork/Documentation/Scripts/sticky-kit.min.js?v=637618953640000000" type="text/javascript"></script>
+<script src="/Scripts/imagesloaded.min.js?v=637618953660000000" type="text/javascript"></script>
+<script src="/Scripts/jquery.fluidbox.min.js?v=637957064360000000" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Sc6lYo+fWbT3FueSLYoM6aOc8ixzEmdrYQKy/lVhSAM27kxr34vvzvY1IZaiXD6EJ9YfCl4Z1NGHPwcdYmdz+OmLBFxiFtrMoDLFKkY6KpaNIZLpPB2lW/C8YyP2j7bAPYl/lxJHDD/gWslTgQZ61euBcXaGv3c5D4e5M04TJwsTt8VgEv3vR5f7rQMCTDRClpWgRlQmW5bKcvaqiG2tUb8NS4xDj+r/ie/jv88iwlopmQvfzYEfKAXaE6Df0bWV2rUJvLpRwPpBuQj893oWfBhl2U1qBVI6UGKXPHNm37tkSSgJb8OhMYVuwuZelekX0L9EUxYd0R6DDXHKrUNz/V8msVOHXjPxz+QkbAC8j8RAsvtc9d7mHTVdCFpwxAwwAwDKQiO9030R11pB7eyiYgdF0rFiB2OUkiiVCDCW4tsVn9XZYpO1B5Ef8n+cV4W8S7LVIOjIOEPeJrozeGVRvw==" />
+    <div id="page-container">
+      <div class="community-ui">
+
+          <!-- navigation -->
+          <div class="community-sidebar">
+            <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2609" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl17_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+          </div>
+          <!-- / navigation -->
+
+          <!-- content -->
+          <main class="community-content">
+            
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+            <span class="topbar-text">
+  RX23 Content Subscription available to order now.
+            </span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+  
+          
+          <div class="scroll-vertical">
+            
+<div class="header-row">
+    <div class="col">
+
+        <header class="community-content-header community-content-header-absolute">
+            <div class="row align-items-center">
+            <div class="col d-none d-md-block">
+                <nav aria-label="breadcrumb" class="align-items-center">
+                <!-- <a href="../../index.html" class="breadcrumb-back" title="Back"></a> -->
+                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/documentation" rel="rocknofollow">Manuals</a></li><li class="breadcrumb-item">Assessments</li>
+</ol>
+                </nav>
+            </div>
+                <div class="col text-lg-right">
+                    
+<a href="/login?returnurl=/page/1296" class="login-link">Log In</a>
+                    
+
+                  </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+            
+    <div id="zone-main" class="zone-instance zone-instance-full"><div class="zone-content"><div id="bid_2608" data-zone-location="Page" class="block-instance js-block-instance book-shelf-book-contents-v2">
+	<div class="block-content">
+		<div id="ctl00_main_ctl02_ctl01_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl02_ctl01_ctl00_pnlDetails">
+				       
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divBookContainer" class="rockversion-1-15-0">
+                <div class="book-header jumbotron clearfix">
+                    <div class="book margin-r-lg">
+                        <div class="img-content">
+                            <img id="ctl00_main_ctl02_ctl01_ctl00_imgCover" src="/GetImage.ashx?id=15118&amp;width=710&amp;height=919" />
+                        </div>
+                    </div>
+
+                    <h1>Assessments</h1>
+                    <p>We're all a unique creation. Assessments help us to celebrate what makes us unique and work to match opportunities to our wiring.</p>
+
+                    <div class="bookversion clearfix">
+                        <div class="bookversion-heading row no-gutters">
+                            <div class="col-xs-12">
+                                <a id="ctl00_main_ctl02_ctl01_ctl00_hlPdf" class="btn btn-default btn-xs margin-l-md" href="https://rockrms.blob.core.windows.net/documentation/PDFs/74048f7629b34b5293771ae5d6f9cd2f_Assessments.pdf">Download PDF</a>
+                                <div id="ctl00_main_ctl02_ctl01_ctl00_divBookVersionSelector" class="bookversion-heading-tab pull-left">
+                                    Current Version: McKinley 15.0 <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bookversion-details" style="display: none;">
+                            <div class="row no-gutters">
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-4">
+                                    <div class="form-group rock-drop-down-list mr-1">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlVersionsSince">Show Changes Since</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlVersionsSince" id="ctl00_main_ctl02_ctl01_ctl00_ddlVersionsSince" class="mr-2 js-bookversion-versionsinceselector form-control">
+							<option value="" selected="selected"></option>
+							<option value="1.14.0">McKinley 14.0</option>
+							<option value="1.13.0">McKinley 13.0</option>
+							<option value="1.12.0">McKinley 12.0</option>
+							<option value="1.11.0">McKinley 11.0</option>
+							<option value="1.10.0">McKinley 10.0</option>
+							<option value="1.9.0">McKinley 9.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group rock-drop-down-list ">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions">Version</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlBookVersions" id="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions" class="form-control">
+							<option value="289" selected="selected">McKinley 15.0</option>
+							<option value="267">McKinley 14.0</option>
+							<option value="248">McKinley 13.0</option>
+							<option value="229">McKinley 12.0</option>
+							<option value="209">McKinley 11.0</option>
+							<option value="188">McKinley 10.0</option>
+							<option value="173">McKinley 9.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row"><div class="col-md-12">
+                        
+                    </div></div>
+                    <div class="row documentation-content-body">
+                        <article class="col-md-9 col-xl-8">
+                            <div data-type='update-summary' data-update-tag='1.15.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 15.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.9.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 9.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.10.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 10.0</h4><p>Below is a summary of the updates for this version.</p>
+<ul>
+    <li>Added Assessments to History in Person Profile</li>
+</ul></div><div data-type='update-summary' data-update-tag='1.11.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 11.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.12.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 12.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.13.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 13.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.14.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 14.0</h4>No updates made.</div>
+            
+                            <section data-type="chapter" id="assessments"><h1><a name='assessments' href='#assessments' class='book-link'><i class='fa fa-link'></i></a>Assessments</h1>
+
+    <p>
+        We are all uniquely wired and given specific gifts, abilities, ways of thinking, and ways of solving problems. 
+        In Rock we have implemented five assessments to empower your organization to understand your people more. The 
+        results that come from these assessments can greatly help your workers better understand their strengths, calling 
+        and fill needs based on your greater understanding of your organization’s members.
+    </p>
+    
+    <p>
+        By gathering assessment data on the people in your organization, both internal staff and other participants, 
+        your organization can understand how individuals can fit into the best roles for their unique blend of strengths. 
+        Additionally, you can use the assessment information in order to help guide your people with a fresh understanding. 
+        You can find out the best ways to motivate and communicate with them to challenge them to greater engagement in 
+        the body. You can use data views to filter people based on the results of any assessment in Rock in order to gather 
+        them and generate reports on their assessment responses.
+    </p>
+    
+    <p>
+        Here’s a list of all the available assessments: later we will break each one down individually. 
+    </p>
+    
+    <ul>
+        <li>DISC</li>
+        <li>Spiritual Gifts</li>
+        <li>Emotional Intelligence</li>
+        <li>Conflict Profile</li>
+        <li>Motivators</li>
+    </ul>
+
+</section>
+
+<section data-type="chapter" id="sending-requests"><h1><a name='sendingrequests' href='#sendingrequests' class='book-link'><i class='fa fa-link'></i></a>Sending Requests</h1>
+
+    <p>
+        Before we get into each assessment one by one, let’s take a look at how requests are sent to groups or individuals. 
+        Out of the box, Rock comes with these assessments ready to go, so you don’t have to do any background work.
+    </p>
+
+    <section data-type="sect1">
+
+        <h1><a name='individualrequests' href='#individualrequests' class='book-link'><i class='fa fa-link'></i></a>Individual Requests</h1>
+        
+        <p>
+            One way to send a request is through a person’s profile page. 
+            This is done by clicking the Actions button located below the 
+            person's photo. Click on the button and choose 
+            <em data-type="reference" data-reference="reference-highlight">Request Assessment</em>. 
+        </p>
+        
+        <figure>
+            <figcaption>Send Request</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/send-individual-request-v14.png" alt="Send Request"></a>
+        </figure>
+        
+        <p>
+            A page will then show all five assessments to choose and add a message 
+            to send with the request. You can select one assessment or multiple.
+        </p>
+        
+        <figure>
+            <figcaption>Assessments</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/choose-assessments-to-send-v13.png" alt="Choose"></a>
+        </figure>
+        
+    </section>
+    
+    <section data-type="sect1">
+        
+        <h1><a name='grouprequests' href='#grouprequests' class='book-link'><i class='fa fa-link'></i></a>Group Requests</h1>
+        
+        <p>
+            Alternatively, you can use the 
+            <span data-type="action" data-action="action-document-ref"><a href="https://community.rockrms.com/lava/" target="_blank">Lava</a></span> codes below in any 
+            communication to send to large groups of people at the same time. See our 
+            <span data-type="action" data-action="action-document-ref"><a href="https://community.rockrms.com/documentation/bookcontent/8/" target="_blank">Communicating With Rock</a></span> 
+            guide for more information on creating and sending communications.
+        </p>
+        
+        <p>
+        <code> 
+            {{ 'Global' | Attribute:'PublicApplicationRoot' }}/DISC/{{ Person.UrlEncodedKey }} 
+        </code>
+        </p>
+        <p>
+        <code>
+            {{ 'Global' | Attribute:'PublicApplicationRoot' }}/SpiritualGifts/{{ Person.UrlEncodedKey }}
+        </code>
+        </p>
+        <p>
+        <code>
+            {{ 'Global' | Attribute:'PublicApplicationRoot' }}/EQ/{{ Person.UrlEncodedKey }}
+        </code>
+        </p>
+        <p>
+        <code>
+            {{ 'Global' | Attribute:'PublicApplicationRoot' }}/Motivators/{{ Person.UrlEncodedKey }}
+        </code>
+        </p>
+        <p>
+        <code>
+            {{ 'Global' | Attribute:'PublicApplicationRoot' }}/ConflictProfile/{{ Person.UrlEncodedKey }}
+        </code>
+        </p>
+        
+        <p>
+            Once the request has been sent, the person will receive the email with an external link to start the assessment. 
+            They can also access the request and other assessments on their 
+            <em data-type="reference" data-reference="reference-page">My Account</em> page on the external website. 
+        </p>
+
+        <figure>
+            <figcaption>Email</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/assessment_email_v9.png" alt="Email"></a>
+        </figure>
+        
+    </section>
+
+</section><section data-type="chapter" id="assessmenthistory" data-update-tag="1.10.0"><h1><a name='assessmenthistory' href='#assessmenthistory' class='book-link'><i class='fa fa-link'></i></a>Assessment History</h1>
+
+    <p>
+        A history of assessments can be viewed from an individual's 
+        <em data-type="reference" data-reference="reference-page">Person Profile</em> page under 
+        the <em data-type="reference" data-reference="reference-highlight">History</em> tab.
+        This history includes assessments that were taken with or without a formal request.
+    </p>
+    
+    <figure>
+        <figcaption>Person Profile - Assessment History</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/person-profile-assessment-history-v14.png" alt="Person Profile Assessment History"></a>
+            <dl class="callout-key">
+                <dt><span class="callout-number primary-color">1</span> Assessment</dt>
+                <dd>The name of the assessment is displayed here. The same assessment will appear 
+                    in the list more than once if multiple requests exist.</dd>
+                    	
+                <dt><span class="callout-number primary-color">2</span> Status</dt>
+                <dd>The status column will display either "Pending" or "Complete" to let you know if the person took the 
+                    assessment.</dd>
+                
+                <dt><span class="callout-number primary-color">3</span> Requested</dt>
+                <dd>The date and time of the requests are displayed here for reference. This column will be empty if the 
+                    person took the assessment on their own, without a corresponding request.</dd>
+            
+                <dt><span class="callout-number primary-color">4</span> Requested By</dt>
+                <dd>The person who sent the request is displayed here for reference. This column will be empty if the 
+                    person took the assessment without a request.</dd>
+                    	
+                <dt><span class="callout-number primary-color">5</span> Completed</dt>
+                <dd>The date and time when the person finished the assessment are displayed here for reference. Nothing
+                    will be displayed here if the person hasn't Completed the assessment.</dd>
+                
+                <dt><span class="callout-number primary-color">6</span> Delete/Cancel</dt>
+                <dd>A request can be deleted only if the person hasn't already Completed the assessment.</dd>
+            </dl>
+    </figure>
+
+</section>
+
+<section data-type="chapter" id="taking-assessments"><h1><a name='takingassessments' href='#takingassessments' class='book-link'><i class='fa fa-link'></i></a>Taking Assessments</h1>
+
+    <p>
+        The assessments are all taken in a similar way; however, each assessment will vary on the questions and type of answers provided. 
+        These are not configurable. The assessments were heavily researched and designed to meet a huge audience. 
+    </p>
+
+    <p>
+        It’s essential to keep a few things in mind while taking these assessments. One is to reflect on who you are at the time of taking the assessment. 
+        It is tempting to answer questions based on who you aspire to be someday. 
+        It is best to take a present approach to these questions. Another thing to keep in mind is your environment. 
+        It’s possible you have two very different responses from how you would answer if you were home vs. at work. Throughout the whole assessment, 
+        we encourage you to choose the same environment for each question.
+    </p>
+    
+    <p>
+        At the beginning of each chapter, we are going to start with a breakdown on how each assessment is structured. Let’s get started.
+    </p>
+
+</section>
+
+<section data-type="chapter" id="disc-personality-assessment"><h1><a name='discpersonalityassessment' href='#discpersonalityassessment' class='book-link'><i class='fa fa-link'></i></a>DISC Personality Assessment</h1>
+
+    <p>
+        The DISC assessment is like many other quadrant-style personality profiles. You may have seen some that divide all personalities 
+        into four types or combinations of those types. Some tests show results as colors or animals. DISC takes that same concept but 
+        uses letters to stand for each personality type.
+    </p>
+
+    <section data-type="sect1">
+
+        <p>
+           Here's a quick look at the four main types and some adjectives that describe them:
+        </p>
+        
+        <ul>
+            <li>D: dominant, driving, determined, decisive</li>
+            <li>I: inspirational, impressive, influencing, impulsive</li>
+            <li>S: steady, stable, specialized</li>
+            <li>C: cautious, competent, consistent, conscientious</li>
+        </ul>
+        
+        <p>
+            Rock's DISC test delivers 16 different results that take into account letter types and combinations of any two or one. 
+            We'll talk more about what each of these means in detail later in this chapter.
+        </p>
+    </section>
+    
+    <section data-type="sect1">
+        <h1><a name='takingdisc' href='#takingdisc' class='book-link'><i class='fa fa-link'></i></a>Taking DISC</h1>
+        
+        <p>
+            The DISC assessment has four statements. Out of the four, you will choose which one you are least like and which one you are most like.
+        </p>
+        
+        <figure>
+            <figcaption>Taking DISC</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/taking-DISC-v13.png" alt="Taking DISC"></a>
+        </figure>
+        
+        <p>
+            At the completion of the assessment, you will be presented with a bar graph showing your personality type
+            with a few details underneath. Check out the <a href="#catalogoftypes">Catalog of Types</a> section below
+            for greater details on the results of DISC.
+        </p>
+        
+        <figure>
+            <figcaption>DISC Results</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/DISC-results-v13.png" alt="DISC Results"></a>
+        </figure>
+        
+    </section>
+    
+    <section data-type="sect1">
+        <h1><a name='organizationalbenefits' href='#organizationalbenefits' class='book-link'><i class='fa fa-link'></i></a>Organizational Benefits</h1>
+        
+        <p>
+            The actual DISC instrument algorithm provides for millions of combinations and allows for the many nuances of human behavior.  
+            For the sake of Rock, we have simplified the reporting to allow for four levels within each of the four scales (DISC). Because 
+            there are only four types (and their combinations), DISC results are therefore easy to remember and simple to apply in the 
+            context of a team or structured messaging. While some assessments have a greater number of results and more complex typing 
+            patterns, the goal of Rock is to simplify. Instead of delivering long, complicated and highly individualized results, Rock's 
+            DISC assessment was created to support the application's focus on groups, group management, and customizable group experiences.
+        </p>
+        
+        <p>
+            Not only that, but the DISC profiling tool has major implications for screening potential staff, encouraging emotional intelligence, 
+            developing strong interpersonal relationships, predicting leadership behaviors and solving problems.
+        </p>
+        
+        <p>
+            Once you get started, you'll see how easy it is to understand individuals in a new light, remember their profile results and apply that knowledge for results.
+        </p>
+    
+    </section>
+    
+    <section data-type="sect1">
+        <h1><a name='catalogoftypes' href='#catalogoftypes' class='book-link'><i class='fa fa-link'></i></a>Catalog of Types</h1>
+        
+    <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>D</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy accomplishing the end goal and are willing to do whatever it takes to accomplish the task. 
+                You may hurt people in accomplishing the goal, but you feel the goal is more important.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As naturally powerful, confident leaders, D's take the initiative to pursue goals at all costs. 
+                 They are undaunted by obstacles or high-risk situations. Highly efficient and purposeful, 
+                 D's dream big and set records. Other personality types generally admire D's for their dynamic courage, boldness and laser vision.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 D's are high achievers who can be insensitive, impatient, impulsive and egotistical. 
+                 Immature D's are short on self-control and self-discipline, leading to conflicts with authority. 
+                 To mature, D's need to learn to balance their aggressive determination by developing listening skills and avoiding unnecessary arguments.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 D's are forceful and overly direct.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Results, challenge, action
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by creating opportunities and taking initiative.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 D's are visionaries who are interested in the bottom line. They challenge perceptions and value efficiency, 
+                 innovation and achievement. D's are leaders who have what it takes to move a team forward.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While D's may not be naturally great team players, they excel at overcoming obstacles that would discourage 
+                 other personality types. They are committed, independent workers who need variety and space to find answers 
+                 and get the job done. D's often attempt to do too much at once and need to understand the priority of a job from the start.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>DI</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy accomplishing the end goal and want to bring people with you to accomplish the task. 
+                 You are able to persuade people to get on board, but when they are no longer needed, you can move on without them.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As dynamic, inspirational motivators, DI's have a knack for influencing large crowds. People naturally follow DI's, 
+                 who often focus on multiple large projects at once. Likeable and confident, DI's excel at taking a creative idea and applying 
+                 it to a practical purpose. Other personality types generally admire DI's for their energy and accomplishments.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 DI's are hard-working individualists. Immature DI's are short on patience and tact, leading to misunderstandings. 
+                 To mature, DI's need to learn to slow down by spending time relaxing, listening to others and thinking through projects.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 DI’s tend to be driven by the task and a desire for people to get along. 
+                 However, at times they may sacrifice the relationships for the task.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Results, recognition, control
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by establishing the vision and motivating people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 DI's are high-powered visionaries who are interested in progress and motivating groups of people. 
+                 They inspire loyalty and change, and expect goals to be met. Quick decision-makers, 
+                 DI's value clarity and brevity. DI's are leaders who have what it takes to change the course of a business or reinvigorate a brand.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While DI's are not rule-followers, they excel at meeting goals. They are energetic, 
+                 independent workers who need change, challenge and contact with other people. DI's set high 
+                 standards and have excellent communication skills.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    
+    </section>
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>DS</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy accomplishing the end goal and want to accomplish it without alienating people in the process. 
+                 You may struggle between accomplishing the task and keeping people on board, the tradeoff is often difficult for you.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As determined, independent planners, DS's are typically driven to achieve. They are visionaries who love to help others 
+                 reach their own goals. A mix of creative and analytical, DS's are uniquely poised to move both people and tasks forward. 
+                 Other personality types generally admire DS's for their gritty determination.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 DS's are objective directors who can appear to be distant and uncaring. 
+                 Immature DS's are short on patience for details. 
+                 To mature, DS's need to learn to let go of their frustrations by developing flexibility and putting relationships first.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 DS's become inflexible and detached.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Results, loyalty
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by overcoming obstacles and developing people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 DS's are solid leaders who are interested in developing people and overcoming obstacles. 
+                 They value loyalty and set a steady pace, smoothing over difficult situations and mentoring future leaders. 
+                 DS's have what it takes to make steady progress while helping each team member reach their potential.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 DS's excel at team building. They are focused, independent workers who need the freedom to choose their 
+                 methods and timing of work.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>DC</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy accomplishing the end goal as well as all of the steps needed to accomplish the goal. You have an 
+                 excellent ability to see the end goal and know the specific steps needed to accomplish this which can make it difficult to work with you on a team.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                DC's are determined, hard-working creators. Driven to be competent, DC's like to be in charge. 
+                Other personality types generally admire DC's for their ability to get a great deal of work 
+                done in a short time frame.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 DC's are perfectionists who can appear to be uncaring, frazzled and pushy. Immature DC's are 
+                 short on patience and consideration, leading them to neglect relationships. They can be great 
+                 decision makers, but rarely consider input from others. To mature, DC's need to learn to 
+                 acknowledge other people's needs by listening and slowing down.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 DC's are defiant, confrontational and inflexible.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Results, challenge, control
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by setting an energetic pace and seeking solutions.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 DC's are excellent administrators who value clarity and brevity. They speak truth and keep others focused, 
+                 see problems clearly and provide workable solutions. DC's are leaders who have 
+                 what it takes to set the vision and move teams forward quickly.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 DC's are solution-focused, and they arrive at solutions quickly and accurately. They are independent, 
+                 tenacious workers who need challenging deadlines and the space to work at their own rapid pace. DC's 
+                 work is motivated by their own personal standards of excellence, creativity and strong resolve.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+
+    </section>
+    
+    <section data-type="sect1">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>I</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy bringing energy and life to people that you are with. You may not be able to keep focused on the task, but you enjoy hanging with people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As inspiring and fun entertainers, I's typically have above-average communication skills. 
+                 They are very socially active and have a wide circle of friends. High-energy and optimistic, 
+                 I's easily motivate others to action. Other personality types generally admire I's for their natural friendliness and confidence, especially in new environments.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 I's have a flair for the dramatic and can be more concerned with popularity than results. 
+                 Immature I's are short on focus and patience, leading to impulsive decision-making. To mature, 
+                 I's need to learn to slow down, accept advice from others and consider the consequences before 
+                 acting or speaking. They can do this by developing critical listening skills and honing 
+                 organizational habits.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 I's attack then withdraw emotionally.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Recognition, approval, acceptance
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by influencing people and solving problems.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 I's are creative problem-solvers who are interested in bringing people together. 
+                 They focus on the future, encourage team members and use positive humor to relieve 
+                 interpersonal or organizational tension. I's are leaders who have what it takes to motivate others to succeed.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While I's can be distractible, they excel at collaboration. They are quick workers who need variety in 
+                 their schedules and appreciation for their efforts. I's work best in a team environment with lots of feedback.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+    
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>ID</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy bringing energy and life to people that you are with and moving them in a direction to accomplish a task. 
+                 You may not always accomplish the task, because you don’t want to hurt peoples’ feelings.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As friendly, positive motivators, ID's generally gain respect and admiration quickly. 
+                 They are inspirational figures that love large groups of people. Talkative and interested, 
+                 ID's have a desire to understand people. Other personality types generally admire ID's for their confident, easy leadership.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 ID's are driven leaders who are always in the middle of something. 
+                 Immature IDs tend to be fidgety and overconfident and exaggerating, with a tendency to jump into things without thinking 
+                 them through. To mature, ID's need to focus on being more studious and still; making decisions carefully instead of following popular opinion.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 ID's become aggressive and pushy. They will become talkative to convince you their way is best.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Recognition, approval, results
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by getting results and solving conflicts.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 ID's are inspiring managers who value motivation and action. They smoothly influence and direct their teams, 
+                 converting others to their viewpoint and creating mutually beneficial environments. ID's are 
+                 leaders who have what it takes to get results through people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While IDs tend to be impulsive, they excel at effective communication. 
+                 They are friendly, determined workers who need exciting opportunities, freedom and recognition. 
+                 ID's are often successful salespeople and make a good match when paired with analytical co-workers.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>IS</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy bringing energy and life to people that you are with and keeping everyone content and on board in long term relationships. 
+                 You would tend to focus more on people than the task at hand, which may frustrate task-oriented people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As warm, encouraging listeners, IS's typically have outstanding people skills. 
+                 They are efficient and steadfast in their work. IS's like to please and serve people and are usually well liked. 
+                 Other personality types generally admire IS's for their casual poise and genuine friendships.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 IS's are patient, empathetic souls who can be too tolerant of non-producers. 
+                 Immature IS's are short on objectivity, taking criticism very personally. 
+                 To mature, IS's need to learn to stand up for themselves and develop boundaries.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 IS's prefer withdrawing over resolution.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Acceptance, relationships, recognition
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by providing motivation and inspiring loyalty.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 IS's are considerate guides who prefer to be in leadership positions. 
+                 They make decisions that account for others' feelings and don't force ideas on people. 
+                 IS's are leaders who have what it takes to develop strong, supportive teams.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While IS's are not typically organized, they are top-notch team players. 
+                 They are thoughtful, diligent workers who need deadlines, guidelines and personal 
+                 attention to do their best. IS's have strong problem-solving skills.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>IC</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy bringing energy and life to people that you are with as well as following rules and procedures. 
+                 Because you have competing behavioral needs of enjoying people and focusing on details; you may find yourself 
+                 torn between meeting the needs of people and paying attention to the rules or processes necessary to accomplish a task well.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As competent teachers, IC's typically like to follow the rules. They are skilled at making strangers comfortable and are often excellent 
+                 judges of character. Observant and friendly, IC's communicate carefully and thoughtfully. Other personality types generally admire 
+                 IC's for their easy, informal manner of relating to people and their ability to articulate complex issues clearly.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 IC's can be a little too pushy and focused on winning. 
+                 Immature IC's can be impatient and critical, insensitive and risk-averse leading to poor decision-making. 
+                 To mature, IC's need to learn to develop patience and sensitivity toward others and keep an open mind toward change.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 IC's become questioning and frustrated.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Acceptance, completion
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by communicating clearly and resolving problems.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 IC's are dominant leaders who value both influence and results. 
+                 They prefer to lead, value people, follow established rules and look for mutually beneficial resolutions. 
+                 IC's are leaders who have what it takes to recruit people and solve problems.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While IC's can be flexible and precise, they excel at delivering quality. 
+                 They are encouraging, conscientious, workers who need exact guidelines 
+                 and social approval. IC's constantly push themselves to do better.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+        
+    </section>
+    
+    
+    <section data-type="sect1">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>S</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy a stable and consistent pace with everyone in harmony. You may have difficulty with change because it usually involves some sense of the unknown.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As low-key, sensitive team players, S's typically excel at listening, understanding and supporting their close friends. 
+                 They are warm-hearted and predictable. Friendly yet quiet, S's often seek peace and predictable processes. 
+                 Other personality types generally admire S's for their dependability and ability to infuse their environment with a sense of calmness.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 S's are pleasers who often have a hard time saying no. Overly self-sacrificing and possessive, they can internalize their feelings of 
+                 irritation and hold grudges for long periods of time. Immature S's will seek peace at any cost, leading to a difficulty in establishing priorities. 
+                 To mature, S's need to learn to set appropriate boundaries by developing their ability to withstand minor conflicts and politely declining some opportunities.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 S's are stubborn and quiet, reluctantly giving in.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Relationships, appreciation, security
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by building relationships and providing security.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 S's are team-focused leaders who are interested in nurturing individual talent and team coordination. 
+                 They seek input, listen well and make decisions slowly. S's can be excellent leaders who have what 
+                 it takes to reconcile interpersonal conflicts and build stable bonds.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While S's are non-confrontational, they excel at providing dependable, loyal support. 
+                 They are conscientious, compliant workers who need encouragement, a stable work environment and clear rules and guidelines. 
+                 S's work well with many other personality styles.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+    
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>SD</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy a stable and consistent pace with everyone in harmony while also wanting to accomplish a goal and/or task. 
+                 You may struggle with valuing how to get the task done, while attempting to keep things consistent and everyone in harmony.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As loyal friends, SD's generally enjoy secure relationships. 
+                 They are motivated by major challenges that allow them to do great things. 
+                 Steady and kind, SD's prefer stability and small groups of people. Other personality types generally admire SD's for their consistency and determination to succeed.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 SD's are focused planners who are intimidated by large crowds and instability. 
+                 Immature SD's can appear uncaring and distant when they are in the zone, leading to damaged relationships. 
+                 To mature, SD's need to learn to value relationships without dominating them, even if that means deviating from the plan.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 SD's become passive aggressive.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Stability, harmony and challenge
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by aiming high and solving problems.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 SD's are quiet leaders who are interested in getting the job done with a small, competent, hard-working team. 
+                 They are calm and steady. SD's are leaders who have what it takes to overcome obstacles and create successful plans.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While SD's are not quick decision-makers, they excel at objective analysis. 
+                 They are focused, independent workers who set personal goals and follow their inner drive to meet deadlines. SD's don't quit.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>SI</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy a stable and consistent pace with everyone in harmony as well as having fun in the moment. 
+                 You would tend to focus more on people than the task at hand, which may frustrate task-oriented people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As stable influencers, SI's easily convince others to follow them. They are kind, 
+                 considerate and talkative. Tolerant and forgiving, SI's have many friends and seem to represent others well. 
+                 Other personality types generally admire SI's for their casual confidence and genuine warmth.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 SI's are empathetic listeners who can be highly sensitive, distractible, or careless, tolerating non-performers too long. 
+                 Immature SI's have difficulty finishing their work and listening to instructions, leading to extra burden on team members. 
+                 To mature, SI's need to learn to pay attention to the details, stick with a job until it is complete and deal with criticism constructively.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 SI's prefer withdrawal over resolution.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Acceptance, peace, appreciation
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by mentoring and influencing people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 SI's are nonchalant leaders who lead by quietly influencing others' opinions. 
+                 They do not force their opinions on people, considering each point of view in order to arrive at peaceable solutions. 
+                 SI's are leaders who have what it takes to share the vision and represent their team well.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While SI's are not task-oriented, they excel at working with a team. 
+                 They are sensitive, steady workers who need opportunities to share and shine. 
+                 SI's can be very influential and concerned for team morale.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>SC</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy a stable and consistent pace with everyone in harmony, while maintaining high standards and precise procedures. 
+                 You may tend to hold high standards for yourself, your work as well as those around you, which may cause others not to meet your expectations.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As loyal friends, SC's typically enjoy small groups of people and are particularly sensitive to the needs of others. 
+                 They are private and independent peacemakers. Contemplative and systematic, SC's like to carefully weigh evidence and take 
+                 their time drawing logical conclusions. Other personality types generally admire SC's for their dependability and patience.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 SC's are careful thinkers who can be critical, shy, pessimistic and overly sensitive. 
+                 Immature SC's are indecisive and stubborn. They have difficulty adapting to change. 
+                 To mature, SC's need to learn to make decisions, take initiative and agree to try out new ideas with objectivity.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 SC's become frustrated and argumentative.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Peace, acceptance, accuracy
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by focusing on details and providing dependability.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 SC's lead with common sense and compassion, always looking out for the underdog. 
+                 They are thoughtful and supportive, successful and determined. SC's are leaders who have 
+                 what it takes to strengthen the weaker members of the team and steadily raise the quality of work that their team is responsible for.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While SC's are not outspoken, they excel at working with a team. 
+                 They are loyal, considerate workers who need security, boundaries and justice. 
+                 SC's are detail-oriented and plan their work carefully, asking questions and collecting data.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+        
+    </section>
+    
+    <section data-type="sect1">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>C</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy maintaining high standards and following procedures correctly. You may have difficulty accepting the lack of quality in projects or people around you.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As competent, reserved thinkers, C's typically apply very high standards to themselves and others. 
+                 They are thorough and systematic, often preferring to work behind the scenes. Analytical and logical, 
+                 C's are able to construct a complete, organized picture out of many scattered details. Other personality 
+                 types generally admire C's for their ability to create clear organizational patterns out of chaos.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 C's are perfectionists who can be critical, overly sensitive and reluctant to try something new. 
+                 Immature C's are short on grace and flexibility, becoming controlling and bound by procedures at the expense of relationships. 
+                 To mature, C's need to learn to become adaptable and friendly by concentrating on other personalities' strengths rather than their short comings.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 C's avoid conflict and become defensive.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Accuracy, quality
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by focusing on details and setting high standards.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 C's are natural administrators who value quality and logic. 
+                 They focus on the details, define situations and analyze information, making decisions 
+                 slowly and carefully. C's are leaders who have what it takes to analyze risks and implement strategic plans.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While C's are not outgoing, they excel at one-on-one mentorship. They are industrious, 
+                 conscientious workers who need clearly defined boundaries and a stable work environment. 
+                 C's are motivated by explanations and projects that stimulate their thinking.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+    
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>CD</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy maintaining high standards and following procedures correctly while also accomplishing the task. 
+                 You may be seen by others as being only concerned with accomplishing a goal to the exclusion of the people in the process.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As systematic problem-solvers, CD's are typically competitive with themselves, evaluating details and setting standards. 
+                 They value accuracy and precision and are willing to stand up for what they believe is right. Sociable and creative, 
+                 CD's can effectively initiate change. Other personality types generally admire CD's for their originality and confidence.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 CD's are bound by procedures and methods, and can be perfectionistic, wary and risk averse. 
+                 Immature CD's are short on patience and flexibility, leading to problems delegating. To mature, 
+                 CD's need to learn to be sensitive to others' needs and to create positive environments by developing their listening skills and valuing people and data equally.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 CD's become aggressive and stubborn.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Respect, control, results
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by providing focus and initiating activity.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 CD's are purposeful and value clarity, brevity and accuracy. 
+                 They are good administrators, making decisions carefully, keeping others focused and solving problems. 
+                 CD's are leaders who have what it takes to keep projects moving and stay in tune with their team's morale.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While CD's are not delegators, they excel at setting high standards for the whole team. They are meticulous, 
+                 quick-thinking workers who need challenging assignments and deadlines. CD's try to do their best, studying 
+                 people and problems to craft the best solutions.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+           <caption></caption>
+            <thead>
+        <tr>
+            <th>CI</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy maintaining high standards and following procedures correctly while also valuing having fun with people in the process. 
+                 You may be frustrated because it is difficult to maintain excellence while having fun with people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As communicators, CI's generally make excellent teachers. They provide positive feedback, 
+                 encouraging people to master new skills and developing trust quickly. Insightful, 
+                 CI's are great judges of character. Other personality types generally admire CI's for their easy demeanor and competence.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 CI's can be quiet, insecure and exacting. Immature CI's are highly sensitive and worry too much about what others think of them, 
+                 leading to difficulty making decisions. To mature, CI's need to learn to be more self-motivated and assertive.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 CI's become competitive, impatient and critical.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Acceptance, completion, peace
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by influencing people and stabilizing situations.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 CI's are balanced observers who value people and data. They are knowledgeable and analytical, 
+                 influencing people with logic, and consistently meeting their goals. 
+                 CI's are leaders who have what it takes to do great things through people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While CI's are not assertive, they excel at high-quality work. They are competent, 
+                 conscientious specialists who consistently push themselves to do better. They need approval, 
+                 goals and logical explanations from their supervisors. CI's enjoy large and small groups of people.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+    
+    <section data-type="sect2">
+        
+        <table class="table table-bordered">
+            <caption></caption>
+            <thead>
+        <tr>
+            <th>CS</th>
+            <th>Detail</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Description</td>
+             <td>
+                 You enjoy maintaining high standards and following procedures correctly while keeping a stable and consistent pace. 
+                 You may tend to hold high standards for yourself, your work as well as those around you; 
+                 which may cause others not to meet your expectations.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Strengths</td>
+             <td>
+                 As systematic thinkers, CS's typically influence people through facts. They like to do one thing at a time and do it 
+                 right the first time. Friendly and caring, CS's have a tendency to keep to themselves and do not usually seek attention. 
+                 Other personality types generally admire CS's for their competence and stability.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Challenges</td>
+             <td>
+                 CS's are sensitive perfectionists who can be risk-averse, shy, pessimistic and stubborn. 
+                 Immature CS's are short on flexibility and decisiveness, leading to unresolved conflict. 
+                 To mature, CS's need to get out of their comfort zones and work to recognize the strengths of other personality types.
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Under Pressure</td>
+             <td>
+                 CS's become critical and avoid conflict.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Motivation</td>
+             <td>
+                 Approval, security, quality
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Team Contribution</td>
+             <td>
+                 They contribute to a team by focusing on details and building relationships behind the scenes.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Leadership Style</td>
+             <td>
+                 CS's can be powerful leaders who are interested in both details and people. Although they are 
+                 not disciplinarians, they think logically and analyze intuitively. CS's are leaders who have 
+                 what it takes to effectively leverage their organization's data and people.
+             </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+             <td>Follower Style</td>
+             <td>
+                 While CS's are not agents of change, they excel at carrying out tasks correctly. 
+                 They are considerate, meticulous workers who need a predictable work environment and verbal approval. 
+                 CS's can be counted on to complete their projects and do an excellent job.
+             </td>
+        </tr>
+        </tbody>
+    </table>
+        
+    </section>
+        
+    </section>
+    
+    <section data-type="sect1">
+        
+        <h1><a name='workingwithothers' href='#workingwithothers' class='book-link'><i class='fa fa-link'></i></a>Working with Others</h1>
+    
+    <table class="table table-bordered">
+        <caption></caption>
+            <thead>
+            <tr>
+            <th></th>
+            <th>D</th>
+            <th>I</th>
+            <th>S</th>
+            <th>C</th>
+            </tr>
+            </thead>
+        <tbody>
+        <tr>
+             <td>Encourage</td>
+             <td>Affirm their outcomes or accomplishments.</td>
+             <td>Affirm them for their personal involvement.</td>
+             <td>Affirm their consistent and stable teamwork.</td>
+             <td>Affirm their precision and doing everything right.</td>
+        </tr>
+        </tbody>
+        
+        <tbody>
+        <tr>
+             <td>Challenge</td>
+             <td>Start with the end in mind.</td>
+             <td>Value them as a person.</td>
+             <td>Keep the atmosphere safe.</td>
+             <td>Have all of the details.</td>
+        </tr>
+        </tbody>
+        
+        <tbody>
+        <tr>
+             <td>Relate</td>
+             <td>Be Direct</td>
+             <td>Be Enthusiastic</td>
+             <td>Be Relational</td>
+             <td>Be Analytical</td>
+        </tr>
+        </tbody>
+        
+        <tbody>
+        <tr>
+             <td>Lead</td>
+             <td>Acknowledge what is needed.</td>
+             <td>Affirm around others.</td>
+             <td>Agree on working as a team.</td>
+             <td>Allow them to work on details.</td>
+        </tr>
+        </tbody>
+        
+        <tbody>
+        <tr>
+             <td>Persuade</td>
+             <td>Key Question: What?</td>
+             <td>Key Question: Who?</td>
+             <td>Key Question: Why?</td>
+             <td>Key Question: How?</td>
+        </tr>
+        </tbody>
+        
+        <tbody>
+        <tr>
+             <td>Disagree</td>
+             <td>Agree with their outcome – then ask why they feel their way is best. Next show an alternative way.</td>
+             <td>Agree with their desire – then ask them what options they considered. </td>
+             <td>Acknowledge needed change – affirm them that the change will not cause conflict. Give them time. </td>
+             <td>Acknowledge the facts – point out how the change will produce a better result. Answer their questions.</td>
+        </tr>
+        </tbody>
+    </table>
+    
+    </section>
+
+</section>
+
+<section data-type="chapter" id="spiritual-gifts"><h1><a name='spiritualgifts' href='#spiritualgifts' class='book-link'><i class='fa fa-link'></i></a>Spiritual Gifts</h1>
+
+    <p>
+       The Spiritual Gifts Assessment identifies the spiritual gifts an individual possesses. 
+       While this is not a comprehensive list of spiritual gifts, 
+       it does include those that are most commonly seen in action for most people.
+    </p>
+
+    <p>
+        Empowering the members of your organization to make an impact starts with identifying their spiritual gifts. 
+        From there, they are positioned to learn what these gifts are and how they fit into the functioning of your mission.
+    </p>
+    
+    <p>
+        This assessment will identify clusters of dominant, supportive and other gifts for each person. 
+    </p>
+    
+    <p>
+        This is searchable through Data Views. If, for instance, you want to search for people to host new small groups in their homes, 
+        you could create a person Data View and select the attribute ‘Dominant Gifts’ that includes ‘Hospitality’.
+    </p>
+    
+    <p>
+        Each of the 17 spiritual gifts that are assessed are broken down with descriptions below.
+    </p>
+
+<section data-type="sect1">
+    
+    <h1><a name='takingtheassessment' href='#takingtheassessment' class='book-link'><i class='fa fa-link'></i></a>Taking the Assessment</h1>
+    
+    <p>
+        The spiritual gifts assessment has one statement and five responses on whether you Strongly Agree, Agree, Somewhat Agree, Neutral, or Disagree.
+    </p>
+    
+    <figure>
+        <figcaption>Spiritual Gifts</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/spiritual-gifts-assessment-v13.png" alt="Spiritual Gifts Assessment"></a>
+    </figure>
+    
+    <p>
+        The results are then broken up into three categories of Dominant Gifts, Supportive Gifts, and Other Gifts. 
+    </p>
+    
+    <figure data-update-tag="1.10.0">
+        <figcaption>Results</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/assessment-results-spiritual-gifts-v13.png" alt="Spiritual Gifts Assessment"></a>
+    </figure>
+    
+</section>
+
+<section data-type="sect1">
+    <h1><a name='resultdetails' href='#resultdetails' class='book-link'><i class='fa fa-link'></i></a>Result Details</h1>
+    
+    <p>
+        At the end of the assessments, you will get a page that breaks down the three areas where you scored in.
+    </p>
+    
+    <ul>
+        <li>Dominant Gift</li>
+        <li>Supportive Gifts</li>
+        <li>Other Gifts</li>
+    </ul>
+    
+    <p>
+        Each gift will be in order and have a description provided like the ones below:
+    </p>
+    
+    <table class="table table-bordered">
+    <caption></caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+             <td>Wisdom</td>
+             <td>
+                 The gift of wisdom means you have insight on how knowledge may best be applied to 
+                 specific needs in the Body of Christ. This involves applying Biblical truths to everyday situations.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Service</td>
+             <td>
+                 The gift of service means you unselfishly meet the needs of other people 
+                 through practical service that is most often done behind the scenes.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Encouragement</td>
+             <td>
+                 The gift of encouragement allows you to counsel, model and encourage people through one's personal 
+                    testimony, life and Scripture so people are comforted and encouraged to act.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Faith</td>
+             <td>
+                 The gift of faith helps you envision with clarity and confidence 
+                 God's future direction and goals for the Body of Christ.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Leadership</td>
+             <td>
+                 The gift of leadership allows you to set Godly objectives, make decisions and 
+                 communicate them to the Body of Christ in a way that motivates them to willingly 
+                 follow and joyously work to accomplish these objectives.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Administration</td>
+             <td>
+                 The gift of administration means you are skilled at developing, 
+                 articulating and accomplishing tasks for the accomplishment of the objectives for the Body.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Discernment</td>
+             <td>
+                 The gift of discernment allows you to perceive the motives, 
+                 intentions and sincerity of others within relationships of the local church.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Prophecy</td>
+             <td>
+                 The gift of prophecy means you are able to publicly or privately speak the Word of God, 
+                 so people are convicted, consoled, encouraged, challenged or strengthened.
+             </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+             <td>Knowledge</td>
+             <td>
+                 The gift of knowledge allows you to discover, analyze, accumulate, 
+                 systematize and articulate ideas that are essential for the growth and building up of the Body.
+             </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+             <td>Mentoring</td>
+             <td>
+                 The gift of combining shepherding and teaching assists you in instructing, guiding and caring for 
+                 believers in a smaller expression of the Body so that they are equipped to reach out in ministry 
+                 to others, both inside and outside the church.
+             </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+             <td>Teaching</td>
+             <td>
+                 The gift of teaching helps you to communicate instruction, so members of the Body understand how to 
+                 apply spiritual principles to their own lives and ministries in every-day context.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Shepherding</td>
+             <td>
+                 The gift of shepherding helps you nurture a group of believers by caring 
+                 for their spiritual welfare in a holistic manner on a longer-term basis.
+             </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+             <td>Teaching</td>
+             <td>
+                 The gift of teaching helps you to communicate instruction, so members of the Body understand how to 
+                 apply spiritual principles to their own lives and ministries in every-day context.
+             </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+             <td>Giving</td>
+             <td>
+                 The gift of giving allows you to give liberally to meet the needs of others and support 
+                 God's ministry with the resources which God has entrusted to you.
+             </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+             <td>Mercy</td>
+             <td>
+                 The gift of mercy empowers you to empathize with those in need, especially 
+                 those suffering and in trauma, and to manifest empathy so those in need are strengthened.
+             </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+             <td>Evangelism</td>
+             <td>
+                 The gift of evangelism assists you in sharing the Good News of Christ in a relevant manner 
+                 with people far from Christ, so they respond positively to become disciples of Jesus Christ.
+             </td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+             <td>Hospitality</td>
+             <td>
+                 The gift of hospitality enables you to reach out to others and welcome them into your 
+                 home and life in a loving, warm manner. These guests feel "at home" in your presence.
+             </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+             <td>Apostleship</td>
+             <td>
+                 The gift of apostleship means you are able to articulate the Gospel in places 
+                 that are geographically, socially, ethnically or culturally different from one's background.
+             </td>
+        </tr>
+    </tbody>
+</table>
+
+</section>
+
+</section>
+
+<section data-type="chapter" id="motivators"><h1><a name='motivators' href='#motivators' class='book-link'><i class='fa fa-link'></i></a>Motivators</h1>
+
+    <p>
+        The Motivators Assessment identifies what a person truly values, which drives their perspective and goals. 
+    </p>
+    
+    <p>
+        Because there are so many possible combinations of motivators, this assessment will demonstrate the unique set 
+        of strengths and challenges a person will face. It would be advisable to look for opportunities that require 
+        the strengths associated with a person’s top five to seven motivators, and to provide upwardly mobile 
+        opportunities for those who have a high propensity for growth. It is also helpful to evaluate the bottom five 
+        to seven motivators as venues that they should stay away from in serving if possible.
+    </p>
+    
+    <p>
+        This assessment will identify the top theme or themes of motivators, along with the propensity for growth and the top five individual motivators.
+    </p>
+<!--    
+    <p>
+        {{ Person.NickName }}, here are your motivators results. We’ve listed your Top 5 Motivators, 
+        your growth propensity score, along with a complete listing of all 22 motivators and your results for each.
+    </p>
+-->
+    <section data-type="sect1">
+
+        <h1><a name='takingmotivators' href='#takingmotivators' class='book-link'><i class='fa fa-link'></i></a>Taking Motivators</h1>
+        <p>
+            The motivators assessment has seven possible responses to a statement. Depending on the question you may have two sets of responses.
+        </p>
+        
+        <figure>
+            <figcaption>Taking Motivators</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/motivators-assessment-v13.png" alt="Motivators Assessment"></a>
+        </figure>
+        
+        <p>
+            The results show a growth propensity scale. The numbers range and are based on a fixed to growth mindset. 
+            They also show the composite score and ranked motivators. The results focus on your top scores to avoid clutter of showing descriptions on all the possible motivators.
+        </p>
+        
+        <figure>
+            <figcaption>Motivators Results</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/motivators-results-v13.png" alt="Motivators Results"></a>
+        </figure>
+        
+    </section>
+    
+    <section data-type="sect1">
+        <h1><a name='growthpropensity' href='#growthpropensity' class='book-link'><i class='fa fa-link'></i></a>Growth Propensity</h1>
+        
+        <p>
+            Growth Propensity measures your perceived mindset on a continuum between a growth mindset and a fixed mindset. 
+            These are two ends of a spectrum about how we view our capacity and potential. This number is a measurement of 
+            the current propensity for growth, but that can change for an individual over time through applied effort and 
+            awareness. Also, their growth propensity scale may be different from one area in their life to another.
+        </p>
+        
+    </section>
+    
+    <section data-type="sect1">
+        <h1><a name='motivatorsthemes' href='#motivatorsthemes' class='book-link'><i class='fa fa-link'></i></a>Motivators Themes</h1>
+        
+    <section data-type="sect2">
+        <h2>Relational</h2>
+        
+        <p>
+            This theme describes how you relate to others. These motivators can best be seen as the reasons you build relationships 
+            with the people around you, and influence what you value in relationships. 
+            The greater the number of the motivators from this cluster you possess in your top five, the more strongly you will be focused on building healthy relationships.
+        </p>
+        
+        <p>
+            Here are the influential motivators:
+        </p>
+        
+        <ul>
+            <li>Caring</li>
+            <li>Engaging</li>
+            <li>Gathering</li>
+            <li>Relating</li>
+            <li>Uniting</li>
+        </ul>
+    </section>
+    
+    <section data-type="sect2">
+        <h2>Directional</h2>
+        
+        <p>
+            This theme describes how you desire to give direction to a team or an organization. The motivators in this theme can be seen in the type of behavior you demonstrate 
+            in your preferred position as it relates to the direction or health of the organization or team in which you are engaged. 
+            The greater the number of the motivators from this cluster you possess in your top five, the more effective you will be providing direction within the organization.
+        </p>
+        
+        <p>
+            Here are the organizational motivators:
+        </p>
+        
+        <ul>
+            <li>Empowering</li>
+            <li>Leading</li>
+            <li>Serving</li>
+            <li>Transforming</li>
+            <li>Risking</li>
+            <li>Envisioning</li>
+        </ul>
+    </section>
+    
+    <section data-type="sect2">
+        <h2>Intellectual</h2>
+        
+        <p>
+            This theme describes how you focus your mind. These motivators can be seen in the way you think or the kind of mental activities you naturally pursue. 
+            The way you view your mental activity will be directly influenced by the motivators in this theme. 
+            Your conversations will be greatly influenced by these motivators that are in the top five of your profile.
+        </p>
+        
+        <p>
+            Here are the organizational motivators:
+        </p>
+        
+        <ul>
+            <li>Believing</li>
+            <li>Expressing</li>
+            <li>Learning</li>
+            <li>Perceiving</li>
+            <li>Meta-Thinking</li>
+        </ul>
+    </section>
+    
+    <section data-type="sect2">
+        <h2>Positional</h2>
+        
+        <p>
+            This theme describes how you execute your role or position within the team. The motivators in this theme can be seen in the way you approach activity, 
+            moment by moment. They dramatically influence what you value and how you spend your time or effort at work. When others look at the way you act, 
+            your behavior will be greatly determined by the motivators from this cluster that are found in your top five.
+        </p>
+        
+        <p>
+            Here are the operational motivators:
+        </p>
+        
+        <ul>
+            <li>Adapting</li>
+            <li>Innovating</li>
+            <li>Maximizing</li>
+            <li>Organizing</li>
+            <li>Pacing</li>
+            <li>Persevering</li>
+        </ul>
+    </section>
+</section>
+
+<section data-type="sect1">
+    <h1><a name='individualmotivators' href='#individualmotivators' class='book-link'><i class='fa fa-link'></i></a>Individual Motivators</h1>
+    
+    <p>
+        There are 22 possible motivators in this assessment. While your Top 5 Motivators may be most helpful in understanding your 
+        results in a snapshot, you may also find it helpful to see your scores on each for a complete picture.
+    </p>
+    
+<section data-type="sect2">
+        <h2>Adapting</h2>
+        
+        <p>
+            <strong>Description:</strong> You change quickly when circumstances require it. You have the capacity to be adaptable in diverse situations. 
+            You understand when the need for transformation is necessary before others do. You enjoy change. You have a desire to be on the front edge of any movement. 
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by incorporating change so that you are better prepared to handle challenges. 
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You are so quick to adjust and adapt that you may miss the positive results of perseverance.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Believing</h2>
+        
+        <p>
+            <strong>Description:</strong> You pursue the principles in which you believe with dogged determination. 
+            You have a tremendous capacity to be tenacious in pursuing principles in which you trust. 
+            You clearly know what you believe and are able to articulate this to others. You have expectations
+            for yourself and others according to these standards. You are confident that you have formed your beliefs through wise experience, counsel and judgment.   
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others through your convictions.  
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> Some may see you as inflexible.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Caring</h2>
+        
+        <p>
+            <strong>Description:</strong> You are motivated to meet the needs of others. 
+            You genuinely care for other people, especially when they are hurting. 
+            You have a large capacity for supporting others and are seen as empathetic, especially for 
+            those in difficult situations. You may find it easy to identify with the pain that others experience.    
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others with your care and compassion.   
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may become so consumed with meeting immediate needs that you miss long term solutions.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Empowering</h2>
+        
+        <p>
+            <strong>Description:</strong> You equip others to do what they are gifted to do. 
+            You have the capacity to equip and release individuals. 
+            You enjoy developing mentoring relationships and modeling leadership. 
+            You find it easy to see the strengths of others and are also aware of the areas they need to develop.     
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by investing in them to do so much more than they could do without your intentional effort.    
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may not always address negative issues in the lives of those you are developing.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Engaging</h2>
+        
+        <p>
+            <strong>Description:</strong> This motivator influences you to become deeply involved in the needs of the community. 
+            You understand the community and have a keen sense of how to meet their needs. You are frustrated when you see these needs go unmet. 
+            You have a desire to be involved in various organizations that are making an impact in your community.     
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by engaging your community’s needs in real and tangible ways to make a difference.   
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may not always see issues which need addressing in your life because you are so focused on the community.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Expressing</h2>
+        
+        <p>
+            <strong>Description:</strong> You seek opportunities to speak in a variety of environments. You have the capacity to speak effectively and 
+            enjoy talking and engaging others about your areas of expertise. You find it easy to articulate your thoughts and to share them in a credible manner. 
+            You are not intimidated by speaking in large or small groups, and you find pleasure in persuading others to your perspective.      
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others through speaking and sharing your perspective.    
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may spend more time speaking to people rather than listening to them. 
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Gathering</h2>
+        
+        <p>
+            <strong>Description:</strong> You bring people together.  You have the capacity to engage people and find they want to be around you. 
+            You understand what people want in a relationship and are able to meet those needs. 
+            You enjoy bringing people together. You have a desire to influence those who are drawn to you.       
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by bringing them along with you wherever you go.     
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may enjoy bringing people together more than actually accomplishing something together. 
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Innovating</h2>
+        
+        <p>
+            <strong>Description:</strong> You continuously look for new ways to do everything. You have the capacity to see what could be done better. 
+            You understand why something isn’t working, and you can figure out how to do it differently. 
+            You enjoy finding new solutions and have a desire to create something from nothing. You may be frustrated if you are not challenged. You never look for the easy answer.    
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by energetically tackling something that may never have been done before.      
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may enjoy creating so much that there is no execution of a plan to bring that innovation to reality.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Leading</h2>
+        
+        <p>
+            <strong>Description:</strong> You bring others together to accomplish a task. You have the capacity to take responsibility for others to achieve something together. 
+            You understand what needs to happen in most situations and can mobilize others to work together to undertake it. 
+            You enjoy when others follow your lead, and you have a desire to make an impact working together with others.   
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by your ability to inspire and engage them to accomplish more together than they could have accomplished individually.       
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may not feel comfortable just being “one of the team” when you are not the sole leader.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Learning</h2>
+        
+        <p>
+            <strong>Description:</strong> You continually seek out opportunities to understand new things. You have the capacity to continue 
+            learning through various media. You understand that there is so much more to know about our world, and you feel stagnant 
+            if you are not growing in some manner. You have a desire to learn all that you can about everything. Every opportunity is an opportunity to learn and grow.    
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by sharing what you are learning in one area and helping them apply it in different areas.        
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may enjoy learning so much that there is little effort to actually apply what you learn.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Maximizing</h2>
+        
+        <p>
+            <strong>Description:</strong> You only invest your time, money or effort in areas that can give you a significant rate of return. 
+            You have the capacity to see opportunities where a substantial benefit will result. You understand what is necessary to make an impact using your resources.     
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others through your strategic sense of when and where to invest resources for maximum impact.         
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may find it difficult to serve others on the team rather than maximizing your own time and effort.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Organizing</h2>
+        
+        <p>
+            <strong>Description:</strong> You seek opportunities that allow you to bring chaos under control. You have the capacity to bring order 
+            out of disorder. You understand that the “devil is in the details,” so you work on creating systems to maintain control of those details. 
+            You enjoy when everything flows as planned. You have a desire to organize various pieces into one coherent whole.   
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by bringing random fragments together to meet your goals.          
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may be resistant to change because it could bring unwanted chaos.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Pacing</h2>
+        
+        <p>
+            <strong>Description:</strong> You keep a consistent and stable structure in your life and work. You have the capacity to know when your life is 
+            getting out of balance. You understand how much you can handle and what has to change for your work/life balance to achieve healthy stability. 
+            You enjoy living in a structured and consistent manner. You desire to create beneficial boundaries in all areas of your life.      
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by modeling long-term sustainable margins within life and work.          
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may resist a temporary imbalance that is required to complete a task with excellence.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Perceiving</h2>
+        
+        <p>
+            <strong>Description:</strong> You discern in others what is not readily apparent. You have the capacity to observe behaviors in others 
+            which is not consistent with what they are saying. You understand when things don’t turn out to be as they were initially described. 
+            You enjoy trying to understand others. You have a desire to find out if your intuitions are correct.       
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others through your observations that can be harnessed to help the team be more effective in working together.           
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may not know what to do with your insights and may find yourself sharing with others who do not need to know.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Persevering</h2>
+        
+        <p>
+            <strong>Description:</strong> You stay the course when trying to accomplish a goal, long after others have given up. 
+            You have the capacity to ride the ups and downs of circumstances without being defeated. You understand that all forward 
+            progress is accomplished through grit and hard work. You see demanding times as a test of your abilities. 
+            You have a desire to succeed in spite of resistance.        
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others through your resilience and perseverance in difficult times.           
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may not be able to walk away from those situations that are simply not worth the effort.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Relating</h2>
+        
+        <p>
+            <strong>Description:</strong> You seek others with whom you can build relationships. 
+            You have the capacity to draw people into your sphere of trust and rapport. 
+            You understand what others want or need relationally and are able to provide that in a healthy manner. 
+            You enjoy the close relationships that develop others. You have a desire to ensure everyone is connected to other people through an interpersonal network.        
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by building strong ties with those who are socially connected to you.            
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may form relationships with so many people that you simply cannot maintain integrity and depth in them all.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Risking</h2>
+        
+        <p>
+            <strong>Description:</strong> You seek out opportunities involving risk and challenge. 
+            You have the capacity to thrive in environments which entail some level of risk. You understand how to handle uncertainty in the assignments you pursue. 
+            You enjoy the thrill of being challenged to attempt something you have not previously tried. You have a desire to do things that test you.         
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by stretching them to try something new.             
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You will seldom be satisfied with the status quo and will therefore be easily bored.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Serving</h2>
+        
+        <p>
+            <strong>Description:</strong> You attend to the needs of others while pursuing their best, not your own. 
+            You have the capacity to work behind the scenes when others are not even aware of what you are doing. 
+            You understand what needs to be done long before others do. You enjoy doing the little things which may have gone unattended. 
+            You have a desire to serve others, so they can flourish.          
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by helping them, so they can function within their strengths.              
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You and those around you may undervalue your contribution to the team.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Meta-Thinking</h2>
+        
+        <p>
+            <strong>Description:</strong> You are intentionally aware of your thoughts at any given moment. 
+            You have the capacity to consciously evaluate your patterns of thought. You understand what is going on in your mind and why you are thinking the way you are. 
+            You enjoy internal reflection. You have a desire to understand why others respond as they do and to fit that into your logical mental framework.          
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by your insight into what others may be thinking.               
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You can get lost in your thoughts rather than making a decision and moving forward.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Transforming</h2>
+        
+        <p>
+            <strong>Description:</strong> You try to improve the organizations to which you belong. 
+            You have the capacity to identify and understand crucial changes that need to be made to bring about progress. 
+            You understand how to motivate people to accept change and work together through that process. You have a desire to help people embrace the differences that are best for the team.           
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by enabling them to feel comfortable and committed to organizational transformation.                
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may experience the discomfort of leaving people behind who do not want to change, while feeling the need to keep moving ahead with the change.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Uniting</h2>
+        
+        <p>
+            <strong>Description:</strong> You naturally connect people around a common cause. You have the capacity to help people develop ownership of a vision. 
+            You understand how to deal with individual needs in order for the team to win. You enjoy helping others feel like a part of the group. 
+            You have a desire for everyone on the team to feel responsible for the success of the team.            
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by creating a sense of belonging for every member of the team.                
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You may spend so long unifying the team that it hurts the critical progress or momentum.
+        </p>
+</section>
+
+<section data-type="sect2">
+        <h2>Visioning</h2>
+        
+        <p>
+            <strong>Description:</strong> You dream of things that don’t yet exist. You have the capacity to picture what could be possible in the future. 
+            You understand that you can’t accomplish this by yourself; therefore, you enjoy attracting others to your picture of the future. 
+            You have a desire for your organization to be much more than it currently is and want to bring that into reality.            
+        </p>
+        
+        <p>
+            <strong>Influence:</strong> You influence others by inspiring and encouraging them to see much more than their current reality.                 
+        </p>
+        
+        <p>
+            <strong>Challenge:</strong> You can tend to live in the future and get frustrated with the realities of the current situation.
+        </p>
+</section>
+    
+    
+</section>
+
+
+</section>
+
+<section data-type="chapter" id="emotional-intelligence"><h1><a name='emotionalintelligence' href='#emotionalintelligence' class='book-link'><i class='fa fa-link'></i></a>Emotional Intelligence</h1>
+
+    <p>
+        The Emotional Intelligence, or EQ, Assessment is a measure of individuals’ developed skills in 
+        understanding the emotions of themselves and others, and appropriately harnessing their emotional responses. 
+    </p>
+    
+    <p>
+        Most people learn a habitual approach to emotions based on what they saw demonstrated early in their lives. 
+        EQ is not static but can be developed through intentional effort and practice over time.
+    </p>
+    
+    <p>
+        This assessment will provide a ranking of high, medium or low for each of the six EQ measurements. 
+    </p>
+    
+    <p>
+        This is searchable through Data Views. If, for instance, you want to search for people in your database who scored high on ‘Others-Awareness’ 
+        for a new hospital visitors volunteer team, you would create a person Data View and select the attribute ‘Others-Awareness’ with a value of ‘High’. 
+    </p>
+    
+    <p>
+        Each of the six EQ measurements is described below.
+    </p>
+    
+<section data-type="sect1">
+    <h1><a name='takingeq' href='#takingeq' class='book-link'><i class='fa fa-link'></i></a>Taking EQ</h1>
+    
+    <p>
+        The EQ assessment is similar to the format of the Spiritual Gifts assessment. 
+        There is one statement with five multiple choice answers. Never, Rarely, Sometimes, Usually and Always. 
+        On the assessment you can only choose one answer for each question.
+    </p>
+    
+    <figure>
+        <figcaption>EQ Assessment</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/taking-EQ-v13.png" alt="Taking EQ"></a>
+    </figure>
+    
+    <p>
+        The results have five categories with a line graph from 1 – 100 which shows where you land for each category. 
+        The five are Self Awareness, Self-Regulating, Others-Awareness, 
+        Others- Regulating, EQ in problem solving and EQ under stress.
+    </p>
+    
+    <figure>
+        <figcaption>EQ Results</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/EQ-results-v13.png" alt="EQ results"></a>
+    </figure>
+    
+</section>
+
+<section data-type="sect1">
+    <h1><a name='primarymeasurements' href='#primarymeasurements' class='book-link'><i class='fa fa-link'></i></a>Primary Measurements</h1>
+    
+<section data-type="sect2">
+    <h2>Self-Awareness</h2>
+    
+    <p>
+        Self-Awareness is being aware of what emotions you are experiencing and why you are experiencing them. 
+        This skill is demonstrated in real time. In other words, when you are in the midst of a discussion or even a 
+        disagreement with someone else, ask yourself these questions:
+    </p>
+    
+    <ul>
+        <li>Are you aware of what emotions you are experiencing?</li>
+        <li>Are you aware of why you are experiencing these emotions?</li>
+    </ul>
+</section>
+
+<section data-type="sect2">
+    <h2>Self-Regulating</h2>
+    
+    <p>
+       Self-Regulating is appropriately expressing your emotions in the context of the relationships around you. 
+       This doesn’t indicate suppressing emotions; rather the ability to express your emotions appropriately. 
+       Healthy human beings experience a full range of emotions and these are important for family, friends and co-workers to understand. 
+       Self-Regulating is learning to tell others what you are feeling in the moment.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>Others-Awareness</h2>
+    
+    <p>
+       Others-Awareness is being aware of what emotions others are experiencing around you and why they are experiencing these emotions. 
+       As with understanding your own emotions, this skill is knowing in real time what another person is experiencing. 
+       This skill involves reading cues to their emotional state through their eyes, facial expressions, body posture, the tone of voice and many other ways.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>Others-Regulating</h2>
+    
+    <p>
+       Others-Regulating is helping those around you express their emotions appropriately in the context of your relationship with them. 
+       This skill centers on helping others know what emotions they are experiencing and then asking questions or giving them permission 
+       to freely and appropriately express their emotions in the context of your relationship.
+    </p>
+</section>
+
+</section>
+
+<section data-type="sect1">
+    <h1><a name='leadershipmeasurements' href='#leadershipmeasurements' class='book-link'><i class='fa fa-link'></i></a>Leadership Measurements</h1>
+    
+    <p>
+       The final two measurements are particularly useful for those who are in leadership roles.
+    </p>
+    
+<section data-type="sect2">
+    <h2>EQ in Problem Solving</h2>
+    
+    <p>
+       EQ in Problem Solving identifies how proficient you are at using emotions to solve problems. 
+       This skill requires first being aware of what emotions are involved in the problem and what is the source of those emotions. 
+       It also includes helping others (and yourself) express those emotions appropriately in the context of the situation.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>EQ Under Stress</h2>
+    
+    <p>
+       EQ Under Stress identifies how capable you are of keeping high EQ under high-stress moments; which is particularly challenging. 
+       This skill requires highly developed Self- and Others-Awareness to understand the impact of the current stress. 
+       It also involves being able to articulate the appropriate emotions under pressure which may be different from articulating them when not under stress.
+    </p>
+</section>
+
+</section>
+
+</section>
+
+<section data-type="chapter" id="conflict-profile"><h1><a name='conflictprofile' href='#conflictprofile' class='book-link'><i class='fa fa-link'></i></a>Conflict Profile</h1>
+
+    <p>
+        The Conflict Engagement Assessment is a measure of how individuals see themselves responding to 
+        conflict in a given setting. This may or may not be a fully accurate picture, depending on their self-awareness during a conflict.
+    </p>
+
+    <p>
+        Most people feel comfortable using a few approaches based on what they saw demonstrated early in their lives. 
+        And most people have different natural responses in different settings. However, everyone is capable of using all five modes; 
+        it just takes some effort to develop those they aren’t as familiar with.
+    </p>
+    
+    <p>
+        This assessment will provide a ranking of high, medium or low for each of the five Conflict Engagement Modes. 
+        It will also provide an overall Conflict Engagement Theme which helps visualize how a person will resolve problems within a team or group setting.
+    </p>
+    
+    <p>
+        This is searchable through Data Views. If, for instance, you want to search for people in your database who scored high on the Conflict Engagement 
+        Theme ‘Solving’ for new group leader roles, you would create a person Data View and select the attribute ‘Solving’ with a value of ‘High’. 
+    </p>
+    
+    <p>
+        Each of the five Conflict Engagement Modes and three Conflict Engagement Themes are described below.
+    </p>
+    
+<section data-type="sect1">
+    <h1><a name='takingtheassessment' href='#takingtheassessment' class='book-link'><i class='fa fa-link'></i></a>Taking the Assessment</h1>
+    
+    <p>
+        This assessment has four multiple choice answers for a statement. Strongly Disagree, Disagree, Agree and Strongly Agree.
+    </p>
+    
+    <figure>
+        <figcaption>Conflict Profile</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/conflict-profile-assessment-v13.png" alt="Taking Assessment"></a>
+    </figure>
+    
+    <p>
+        The results you see are two graphs. One is a bar graph with the five types of modes and the other is a pie chart showing the conflict themes. 
+    </p>
+    
+    <figure>
+        <figcaption>Conflict Profile Results</figcaption>
+        <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/conflict-profile-results-v13.png" alt="Results"></a>
+    </figure>
+    
+</section>
+
+<section data-type="sect1">
+    <h1><a name='conflictengagementmodes' href='#conflictengagementmodes' class='book-link'><i class='fa fa-link'></i></a>Conflict Engagement Modes</h1>
+    
+<section data-type="sect2">
+    <h2>Winning</h2>
+    
+    <p>
+        Winning means you prefer competing over cooperating. You believe you have the right answer and you desire to prove you are right, 
+        whatever it takes. This may include standing up for your own rights, beliefs or position.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>Resolving</h2>
+    
+    <p>
+        Resolving means you attempt to work with the other person in depth to find the best solution, regardless of who appears to get 
+        the most immediate benefit. This involves digging beneath the presenting issue to find a solution that offers benefit to both parties, and can take more time than other approaches.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>Compromising</h2>
+    
+    <p>
+        Compromising means you find a middle ground in the conflict. This often involves meeting in the middle or 
+        finding some mutually agreeable point between both positions. This is useful for quick solutions.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>Avoiding</h2>
+    
+    <p>
+        Avoiding means not pursuing your own rights or those of the other person. You typically do not address the 
+        conflict at all, if possible. This may be diplomatically sidestepping an issue or staying away from a threatening situation.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>Yielding</h2>
+    
+    <p>
+        Yielding means neglecting your own interests while giving in to those of the other person. 
+        This is self-sacrificing and maybe charitable; serving or choosing to obey another when you prefer not to.
+    </p>
+</section>
+    
+    <p>
+        Frequently these modes are combined into a Conflict Engagement Theme. 
+        This assessment will also provide a high, medium or low ranking for each of the three themes.
+    </p>
+    
+</section>
+
+<section data-type="sect1">
+    <h1><a name='conflictengagementthemes' href='#conflictengagementthemes' class='book-link'><i class='fa fa-link'></i></a>Conflict Engagement Themes </h1>
+
+<section data-type="sect2">
+    <h2>Solving</h2>
+    
+    <p>
+        Solving describes those who seek to use both Resolving and Compromising modes for solving conflict. 
+        By combining these two modes, they seek to solve problems as a team. 
+        Their leadership styles are highly cooperative and empowering for the benefit of the entire group.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>Accommodating</h2>
+    
+    <p>
+        Accommodating combines Avoiding and Yielding modes for solving conflict. They are most effective in 
+        roles where allowing others to have their way is better for the team, such as support roles or 
+        roles where an emphasis on the contribution of others is significant.
+    </p>
+</section>
+
+<section data-type="sect2">
+    <h2>Winning</h2>
+    
+    <p>
+        Winning is not a combination of modes, but a theme that is based entirely on the Winning model alone for solving conflict. 
+        This theme is important for times when quick decisions need to be made and is essential for roles such as sole-proprietor.
+    </p>
+</section>
+    
+</section>
+
+</section>
+
+<section data-type="chapter" id="retaking-assessments"><h1><a name='retakingassessments' href='#retakingassessments' class='book-link'><i class='fa fa-link'></i></a>Retaking Assessments</h1>
+
+    <p>
+        After an assessment has been taken it's possible to take it again, but you may need to adjust some 
+        configuration to allow it.
+    </p>
+
+    <section data-type="sect1">
+
+        <h1><a name='assessmenttypeconfiguration' href='#assessmenttypeconfiguration' class='book-link'><i class='fa fa-link'></i></a>Assessment Type Configuration</h1>
+        <p>
+            The Assessment Type configuration can be accessed by navigating to 
+            <span data-type="action" data-action="action-navigation">Admin Tools > System Settings > Assessment Types</span>.
+            From there you can select an assessment type to view or edit its settings.
+        </p>
+        <p>
+            Each Assessment Type has a setting which controls how much time must pass after an assessment is
+            completed before the same assessment can be taken again by the same person. By default, this is
+            set to one year (365 days), but this can be adjusted as pictured below.
+        </p>
+        
+        <p>
+            Another aspect to consider is whether the assessment requires a formal request for the 
+            person to take it. By default, this is turned off, so a request does not need to be sent in order
+            for someone to take the assessment. This too can be set within the Assessment Type configuration
+            pictured below.
+        </p>
+        
+        
+        <figure>
+            <figcaption>Assessment Type Configuration</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/assessment-type-configuration-v13.png" alt="Assessment Type Configuration"></a>
+        
+            <dl class="callout-key">
+                <dt><span class="callout-number primary-color">1</span> Assessment Paths</dt>
+                <dd>For the assessments that ship with Rock, the same page is used for taking an assessment
+                    (Assessment Path) and viewing the results (Assessment Results Path). Generally, you won't
+                    want to make any changes to these paths.</dd>
+                    	
+                <dt><span class="callout-number primary-color">2</span> Minimum Days to Re-take</dt>
+                <dd>This is where you specify how many days must pass after an assessment is completed before
+                    the same assessment can be taken again by the same person.</dd>
+                	
+                <dt><span class="callout-number primary-color">3</span> Requires Request</dt>
+                <dd>Enable this setting if a request needs to be sent in order for someone to take an
+                    assessment. This also applies to retaking assessments. See the 
+                    <a href="#sendingrequests">Sending Requests</a> chapter above for additional details. </dd>
+            </dl>
+        
+        </figure>        
+        
+    </section>
+    
+    <section data-type="sect1">
+
+        <h1><a name='accessingassessmentstoretake' href='#accessingassessmentstoretake' class='book-link'><i class='fa fa-link'></i></a>Accessing Assessments to Retake</h1>
+        
+        <p>
+            A person on your external site can retake an assessment in one of two ways. From the 
+            <em data-type="reference" data-reference="reference-page">My Account</em> page the person can 
+            simply click 
+            <em data-type="reference" data-reference="reference-highlight">Retake Assessment</em>. Or the
+            person can click 
+            <em data-type="reference" data-reference="reference-highlight">View Results</em> and can then 
+            retake the assessment from the results page.
+        </p>
+        
+        <figure>
+            <figcaption>My Account Retake Assessment</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/my-account-retake-assessment-v13.png" alt="My Account Retake Assessment"></a>
+        </figure>
+        
+        <figure>
+            <figcaption>Retake From Assessment Results</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/37/1.15.0/images/results-retake-assessment-v13.png" alt="Retake From Assessment Results"></a>
+        </figure>        
+        
+    </section>    
+
+</section>
+
+
+                        </article>
+                        <aside class="col-md-3 col-xl-3 d-none d-md-block">
+                            <div class="sticky"><div id="toc" class="book-toc">
+                                <p>Table of Contents</p>
+                                <ul class="list-unstyled">
+                                    <li><a href='#assessments'>Assessments</a></li><li><a href='#sendingrequests'>Sending Requests</a></li><li><a href='#assessmenthistory'>Assessment History</a></li><li><a href='#takingassessments'>Taking Assessments</a></li><li><a href='#discpersonalityassessment'>DISC Personality Assessment</a></li><li><a href='#spiritualgifts'>Spiritual Gifts</a></li><li><a href='#motivators'>Motivators</a></li><li><a href='#emotionalintelligence'>Emotional Intelligence</a></li><li><a href='#conflictprofile'>Conflict Profile</a></li><li><a href='#retakingassessments'>Retaking Assessments</a></li>
+                                </ul>
+                            </div></div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divReportIssue" class="report-issue"><i class="fa fa-bullhorn"></i> Improve</div>
+
+			</div>       
+
+        <script>var bookVersionOrder = [ '1.15.0','1.14.0','1.13.0','1.12.0','1.11.0','1.10.0','1.9.0' ];</script>
+
+        <script>
+            $(document).ready(function () {
+                $(".sticky").stick_in_parent();
+
+                $(".bookversion-heading-tab").on("click", function () {
+                    $(this).closest(".bookversion-heading").siblings(".bookversion-details").slideToggle();
+                    $(this).find('i.fa').toggleClass("fa-chevron-down fa-chevron-up");
+                });
+
+                $(".report-issue").mouseenter(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-4px",
+                            opacity: 1
+                        }, 500, function() {
+                            // Animation complete.
+                        });
+                });
+
+                $(".report-issue").mouseleave(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-84px",
+                            opacity: .5
+                        }, 500, function () {
+                            // Animation complete.
+                        });
+                });
+
+                $(function () {
+                    $("a.book-image").fluidbox();
+                });
+
+                // reusable function to get query parameter
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                var scrollPercent = getParameterByName('ScrollPercentage');
+                if (scrollPercent != '') {
+                    var bheight = $(document).height();
+                    var percent = scrollPercent / 100;
+                    var hpercent = bheight * percent;
+                    $('html, body').animate({ scrollTop: hpercent }, 1000);
+                }
+
+                // highlight changes
+                $(".js-bookversion-versionsinceselector").on('change', function () {
+                    
+                    var selectedVersion = $(this).val();
+
+                    if (selectedVersion == '') {
+                        // clear all update highlights and summaries
+                        $("div[data-type='update-summary']").slideUp();
+                        $("[data-update-tag]").removeClass('show-update');
+                    } else  {
+                        var showVersion = true;
+
+                        bookVersionOrder.forEach(function (version) {
+                            console.log(version);
+
+                            if (version == selectedVersion) {
+                                showVersion = false;
+                            }
+
+                            if (showVersion) {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideDown();
+                                $("[data-update-tag*='" + version + "']").addClass('show-update');
+                            } else {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideUp();
+                                $("[data-update-tag*='" + version + "']").removeClass('show-update');
+                            }
+                        });
+
+                    }; 
+                });
+
+            });
+        </script>
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+
+          </div></main>
+          <!-- / content -->
+        </div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl14" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 149,
+    pageId: 1296,
+    layout: 'Documentation',
+    baseUrl: '/'
+});//]]>
+</script>
+ <script> 
+                                                Sys.Application.add_load(function () {
+                                                    $('.report-issue').click(function() {
+                                                            var s = $(window).scrollTop(),
+                                                                    d = $(document).height(),
+                                                                    c = $(window).height();
+
+                                                            scrollPercent = (s / (d - c)) * 100;
+
+                                                            var windowWidth = $(window).width();
+                                                            window.open('/documentation/issue?WorkflowTypeId=20&BookId=37&BookVersionId=289&ScrollPercentage=' + scrollPercent + '&WindowWidth=' + windowWidth, '_blank' );
+                                                        });
+                                                 });
+                                            </script>
+<script type="text/javascript">
+//<![CDATA[
+
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1296,"ActionName":"View","BrowserSessionGuid":"d313ade7-1966-4c31-aa17-953884690467","PageRequestUrl":"https://community.rockrms.com/documentation/bookcontent/37","PageRequestDateTime":"2023-08-03T11:03:40.4081929","PageRequestTimeToServe":0.12494569999999999,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.255.203","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

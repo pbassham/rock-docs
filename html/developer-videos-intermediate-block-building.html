@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXhNYVUEPVkQNTVVARUA=","queueTime":0,"applicationTime":65,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Intermediate Block Building | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<meta property="og:url" content="https://community.rockrms.com/developer/videos/intermediate-block-building" />
+	<meta property="og:title" content="Intermediate Block Building | Rock Community Developer Videos" />
+	<meta property="og:type" content="video" />
+	<meta property="og:image:alt" content="Intermediate Block Building Video Thumbnail" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+<link rel="canonical" href="https://community.rockrms.com/developer/videos/intermediate-block-building" /></head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./intermediate-block-building" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Scripts/Rock/plyr.js?v=638236713180000000" type="text/javascript"></script>
+<script src="/Scripts/Rock/UI/mediaplayer/mediaplayer.js?v=638224630700000000" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="idETAbB7i+sUb1YLxBx3VtQPkLnO7OwjADbSJnNdNOuqsD4LrGDpKeY11FYUA6WlSsHPj1MG6goexrbMIS209cFqndjoqoruVLKOXQY5+ItD+jyMh3lej7B9AHwR7h0YcygSDqsZwkVJvjr5wjtOBw==" />
+    <div id="page-container">
+    <div class="community-ui">
+      <!-- navigation -->
+      <div class="community-sidebar">
+              <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2467" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl19_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+      </div>
+      <!-- / navigation -->
+
+      <!-- content -->
+      <main class="community-content">
+        
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+<span class="topbar-text">
+    RX23 Content Subscription available to order now.
+</span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+
+        
+    <div class="header-row">
+        <div class="col">
+
+                <header class="community-content-header">
+                    <div class="row align-items-center">
+                        <div class="col d-none d-md-block">
+                            <nav aria-label="breadcrumb" class="align-items-center">
+                                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/developer" rel="rocknofollow">Developer Resources</a></li><li class="breadcrumb-item"><a href="/developer/videos" rel="rocknofollow">Videos</a></li><li class="breadcrumb-item">Intermediate Block Building</li>
+</ol>
+                            </nav>
+                        </div>
+                        <div class="col text-lg-right">
+            
+<a href="/login?returnurl=/page/1371" class="login-link">Log In</a>
+                        </div>
+                    </div>
+                </header>
+                <section class="header-small">
+      <div class="image image-bg-gradient">
+        <img src="/Themes/RockCommunity/Assets/Images/particles.png" alt="" style="opacity: 0.5;" class="img-responsive">
+      </div><div class="container h-100"><div class="row h-100 align-items-end"><div class="col">
+            <h1 class="page-title">Video</h1>
+          </div></div></div></section>
+            
+
+
+        </div>
+    </div>
+
+
+        <!-- main -->
+        <div class="row community-content-body">
+          <div class="container">
+            
+
+    <div class="row">
+        <div class="col-12">
+            <div id="zone-feature" class="zone-instance"><div class="zone-content"></div></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="zone-main" class="zone-instance"><div class="zone-content"><div id="bid_2631" data-zone-location="Page" class="block-instance js-block-instance content-channel-item-view">
+	<div class="block-content">
+		
+
+<script type="text/javascript">
+    function clearDialog() {
+        $('#rock-config-cancel-trigger').trigger('click');
+    }
+</script>
+
+<div id="ctl00_main_ctl09_ctl01_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl09_ctl01_ctl00_pnlView">
+				
+            
+            
+
+
+
+
+
+
+    <div class="videolesson">
+        
+        <div class="my-4" style="aspect-ratio: 16 / 9;">
+            <div id="mediaplayer_eb806723-261c-4d56-9c75-69076c28eabe" style="--plyr-color-main: var(--color-primary); width:100%"$></div>
+<script>
+(function() {
+    new Rock.UI.MediaPlayer("#mediaplayer_eb806723-261c-4d56-9c75-69076c28eabe", {"autopause":true,"autoplay":false,"clickToPlay":true,"controls":"play-large,play,progress,current-time,mute,volume,captions,settings,pip,airplay,fullscreen","debug":false,"hideControls":true,"mediaElementGuid":"c56d362b-837d-4d5d-847f-89dc5f45fa6e","mediaUrl":"https://player.vimeo.com/external/583092711.m3u8?s=7688c83177bb82be22a912a362939d67f72f1389&oauth2_token_id=1518161279","muted":false,"posterUrl":"https://i.vimeocdn.com/video/1206777057-6047e0b2d9199389ff9fb91b52abbd84bc2cda3afb330e2e4ee97a5c7a50dac5-d_1920x1080?r=pad","resumePlaying":false,"seekTime":10.0,"sessionGuid":"52239fec-be85-4cc7-862f-0be7075d600a","trackProgress":true,"type":"","volume":1.0,"writeInteraction":true});
+})();
+</script>
+
+        </div>
+
+        <h1 class="m-0">Intermediate Block Building</h1>
+        <p><span class="label label-default">46m</span> Speaker: Nick Airdo</p>
+        
+        
+        <p>Now that you know the basics, go to the next-level with even more tips and tricks to writing your own Rock blocks.</p>
+        
+        
+
+    </div>
+
+        
+			</div>
+
+        
+        
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+        </div>
+    </div>
+
+
+<div class="d-none">
+        <!-- Ajax Error -->
+        <div class="alert alert-danger ajax-error no-index" style="display:none">
+            <p><strong>Error</strong></p>
+            <span class="ajax-error-message"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="zone-sectiona" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div id="zone-sectionb" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectionc" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectiond" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+    </div>
+        <!-- End Content Area -->
+
+
+
+          </div>
+          
+
+
+<footer class="footer">
+    <div class="section section-footer-top">
+        <div class="container">
+            <div class="footer-top">
+                <nav class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4">
+                                <span class="brand mb-5 d-block">
+                                    <a href="https://www.rockrms.com/" class="brand">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                        <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path>
+                                      </svg>
+                                  </a>
+                                </span>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3 ml-md-auto">
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.rockrms.com/Download">Download Rock</a></li>
+                                    <li><a href="https://github.com/SparkDevNetwork/Rock/issues">Issues</a></li>
+                                    <li>
+                                        <a href="https://github.com/SparkDevNetwork/RockWebsites/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">Report Website Issue</a>
+                                    </li>
+                                    <li><a href="https://community.rockrms.com/learn">Learn</a></li>
+                                    <li><a href="https://community.rockrms.com/ministry-impact">Ministry Impact</a></li>
+                                    <li><a href="https://community.rockrms.com/jobs">Careers</a></li>
+                                    <li><a href="https://community.rockrms.com/rock-playlist" class="text-primary font-weight-semibold">Rock Playlist</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3">
+                              <ul class="list-unstyled">
+                                <li><a href="https://www.rockrms.com/partners">Partners</a></li>
+                                <li><a href="https://www.rockrms.com/sponsors">Sponsors</a></li>
+                                <li><a href="https://www.rockrms.com/organizations">Who's Using Rock</a></li>
+                                <li><a href="https://community.rockrms.com/built-with-rock">Websites Using Rock</a></li>
+                                <li><a href="https://store.rockrms.com" target="_blank">Promo Shop</a></li>
+                                <li><a href="https://realchip.rocks/" target="_blank">Chip</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6">
+                      <ul class="social-list list-inline text-center">
+                        <li class="social-icon"><a href="https://www.facebook.com/TheRockRMS/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-icon"><a href="https://twitter.com/rockrms"><i class="fab fa-twitter"></i></a></li>
+                      </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="section section-footer-bottom">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap flex-justify" style="justify-content: space-between;">
+                    <ul class="list-inline">
+                        <li><a href="/login" class="hover-orange">Login</a></li>
+                        <li><a href="/privacy" class="hover-orange">Privacy</a></li>
+                        <li><a href="/license" class="hover-orange">License</a></li>
+                    </ul>
+                    <p>Rock is a project of <a target="_blank" href="https://sparkdevnetwork.org/">Spark Development Network</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+          
+
+        </div>
+        <!-- / main -->
+
+      </main>
+      <!-- / content -->
+
+
+    </div>
+      </div>
+
+      <div class="d-none">
+        <div id="zone-header" class="zone-instance"><div class="zone-content"></div></div>
+        <div id="zone-login" class="zone-instance"><div class="zone-content"></div></div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl16" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 143,
+    pageId: 1371,
+    layout: 'FullWidth',
+    baseUrl: '/'
+});
+// activity animation
+$('.rock-panel-widget > header').on('click', function () {
+    $(this).siblings('.panel-body').slideToggle();
+    $(this).parent().toggleClass('collapsed')
+
+    if ( $(this).find('.js-header-controls').length ) {
+        $(this).find('.js-header-title').slideToggle();
+        $(this).find('.js-header-controls').slideToggle();
+    }
+
+    $expanded = $(this).children('input.filter-expanded');
+    $expanded.val($expanded.val() == 'True' ? 'False' : 'True');
+
+    $('a.view-state > i', this).toggleClass('fa-chevron-down');
+    $('a.view-state > i', this).toggleClass('fa-chevron-up');
+});
+
+// fix so that certain controls will fire its event, but not the parent event
+$('.js-stop-immediate-propagation').on('click', function (event) {
+    event.stopImmediatePropagation();
+});
+
+
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1371,"ActionName":"View","BrowserSessionGuid":"52239fec-be85-4cc7-862f-0be7075d600a","PageRequestUrl":"https://community.rockrms.com/developer/videos/intermediate-block-building","PageRequestDateTime":"2023-08-03T11:03:31.2606986","PageRequestTimeToServe":0.0468776,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.183.76","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

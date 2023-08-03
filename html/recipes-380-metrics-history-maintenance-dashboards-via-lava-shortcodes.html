@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXhNYVUEPVkQNTVVARUA=","queueTime":0,"applicationTime":243,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Metrics History, Maintenance & Dashboard(s) via Lava Shortcode(s) | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<meta property="og:url" content="https://community.rockrms.com/recipes/380/metrics-history-maintenance-dashboards-via-lava-shortcodes" />
+	<meta property="article:published_time" content="2023-07-10T11:41:33-07:00" />
+	<meta name="title" content="Metrics History, Maintenance &amp; Dashboard(s) via Lava Shortcode(s)" />
+	<meta property="og:title" content="Metrics History, Maintenance &amp; Dashboard(s) via Lava Shortcode(s) – Rock RMS Recipes" />
+	<meta property="og:updated_time" content="2023-07-21T07:14:52-07:00" />
+	<meta property="twitter:title" content="Metrics History, Maintenance &amp; Dashboard(s) via Lava Shortcode(s)" />
+	<meta property="og:type" content="article" />
+	<meta property="author" content="Kurt Vogeler" />
+	<meta property="og:description" content="Have you ever been asked something like... &quot;Can you give me metrics on a Person Date (Attribute) or Step Started..." />
+	<meta property="article:publisher" content="https://www.facebook.com/TheRockRMS" />
+	<meta property="og:image" content="https://www.rockrms.com/GetImage.ashx?id=56611&amp;w=1080&amp;h=1080&amp;mode=crop" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+<link rel="canonical" href="https://community.rockrms.com/recipes/380/metrics-history-maintenance-dashboards-via-lava-shortcodes" />
+<script src='https://fat.github.io/zoom.js/js/zoom.js' type='text/javascript'></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js' type='text/javascript'></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css' type='text/javascript'></script>
+
+<script>
+$(document).ready(function() {
+    
+var str = $("pre").html();
+var regex = /<br\s*[\/]?>/gi;
+$('pre').filter(':not([rel])').html(function(i, text) {
+    return text.replace(regex, "\n");
+});
+    
+$('pre').filter(':not([rel])').attr('rel', 'ROCK').addClass('language-rock').wrapInner( "<code></code>");
+Prism.highlightAll();
+
+$(function(){
+        //Notice the 'live' function has been replaced with 'on'
+        $("[id*=lbSaveNote]").on("click", function () {
+              Sys.WebForms.PageRequestManager.getInstance().add_endRequest(highlight);
+        });
+    });
+
+                });
+                function highlight(){
+Prism.highlightAll();
+                }
+</script>
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./metrics-history-maintenance-dashboards-via-lava-shortcodes" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Scripts/summernote/summernote.min.js?v=637781563200000000" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockHtmlEditorPlugins?v=WrioKbfT_yxpb-ibdzLtakczEhcKe9lqZWQlVs27BFI1" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="rA0xbAxvYwI18FpEH5dXjNk8PxUqILivpHaAYBELlgpDV+2XJj5aZJlysp6NMKWo1dspvWf/9BPTBaS4w/SZDEsfjylpDRWYjVpdU3JzDDqibSoeH3abxdGRBMUYPs9cd7poND7v1LX/qnE6yYSBAd12aE5Z9FCekN20fUe+9+5J8+iKybOdfbpg+zzUzg3/4X1fgSe09iBtGjI+Tgn91nqNpNgT/ArLImeHLX+ZWGKI+PTno/BmiF+M9kUsanLP1hxdWKbr1zg3WnZr6VvHag==" />
+    <div id="page-container">
+    <div class="community-ui">
+      <!-- navigation -->
+      <div class="community-sidebar">
+              <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2467" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl19_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community current has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+      </div>
+      <!-- / navigation -->
+
+      <!-- content -->
+      <main class="community-content">
+        
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+<span class="topbar-text">
+    RX23 Content Subscription available to order now.
+</span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+
+        
+    <div class="header-row">
+        <div class="col">
+
+                <header class="community-content-header">
+                    <div class="row align-items-center">
+                        <div class="col d-none d-md-block">
+                            <nav aria-label="breadcrumb" class="align-items-center">
+                                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/recipes" rel="rocknofollow">Recipes</a></li><li class="breadcrumb-item">Metrics History, Maintenance & Dashboard(s) via Lava Shortcode(s)</li>
+</ol>
+                            </nav>
+                        </div>
+                        <div class="col text-lg-right">
+            
+<a href="/login?returnurl=/page/1292" class="login-link">Log In</a>
+                        </div>
+                    </div>
+                </header>
+                <section class="header-small">
+      <div class="image image-bg-gradient">
+        <img src="/Themes/RockCommunity/Assets/Images/particles.png" alt="" style="opacity: 0.5;" class="img-responsive">
+      </div><div class="container h-100"><div class="row h-100 align-items-end"><div class="col">
+            <h1 class="page-title">Recipe</h1>
+          </div></div></div></section>
+            
+
+
+        </div>
+    </div>
+
+
+        <!-- main -->
+        <div class="row community-content-body">
+          <div class="container">
+            
+
+    <div class="row">
+        <div class="col-12">
+            <div id="zone-feature" class="zone-instance"><div class="zone-content"><div id="bid_3373" data-zone-location="Page" class="block-instance js-block-instance html-content">
+	<div class="block-content">
+		<div id="ctl00_main_ctl07_ctl01_ctl00_upnlHtmlContentView">
+			
+        
+
+        
+        
+
+        
+
+
+    
+		</div>
+
+<div id="ctl00_main_ctl07_ctl01_ctl00_upnlHtmlContentEdit">
+			
+
+
+
+        
+        
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="zone-main" class="zone-instance"><div class="zone-content"><div id="bid_2485" data-zone-location="Page" class="block-instance js-block-instance recipe-detail">
+	<div class="block-content">
+		<div id="ctl00_main_ctl09_ctl01_ctl00_upnlContent">
+			
+        <style>
+            .table-recipescreenshots td {
+                padding: 0 10px 10px 0;
+            }
+        </style>
+        
+        
+        <div id="ctl00_main_ctl09_ctl01_ctl00_pnlDetails" class="panel panel-block">
+				
+
+            <input type="hidden" name="ctl00$main$ctl09$ctl01$ctl00$hfRecipeId" id="ctl00_main_ctl09_ctl01_ctl00_hfRecipeId" value="380" />
+
+            <div class="panel-heading">
+                <h1 class="panel-title"><i class="fa fa-lightbulb-o"></i>
+                    Metrics History, Maintenance &amp; Dashboard(s) via Lava Shortcode(s)</h1>
+                <div class="panel-labels">
+                    
+                </div>
+            </div>
+
+            <div class="panel-body">
+
+                
+
+
+                <div id="ctl00_main_ctl09_ctl01_ctl00_pnlViewDetails">
+                    <div>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="post-container">
+  <section class="post-body margin-b-md" id="recipe-380">
+      <div class="avatar-group">
+        <div><img src="/GetAvatar.ashx?PhotoId=52992&AgeClassification=Adult&Gender=Male&RecordTypeId=1&Text=KV&w=100&h=100" class="avatar avatar-xl" alt="Photo of Kurt Vogeler"></div>
+        <div class="vote">
+        
+        <a href="/login?returnurl=/community/recipes/380/metrics-history-maintenance-dashboards-via-lava-shortcodes" class="like add-like" title="Login to like a recipe" >
+            <i class='fa fa-lg fa-thumbs-up'></i>
+            <span class="sup">1</span>
+        </a>
+        
+        </div>
+      </div>
+
+      <div class="title-group">
+
+        <!-- title actions -->
+        <div class="title-actions">
+        
+        </div>
+        <h1 class="h2 margin-t-none">Metrics History, Maintenance & Dashboard(s) via Lava Shortcode(s)</h1>
+
+        <div class="metadata">
+        <ul class="list-inline">
+          <li>
+            Shared by
+              <strong><a class="author" href="/profile/3b7f47b4-00cb-4068-85e0-3c089459d208">Kurt Vogeler</a></strong>,
+              <a href="https://community.rockrms.com/organizations/30cadc49-fcfb-4886-9f8f-1441ef4615e8">Trinity Fellowship Church</a>
+            </li>
+            <li>
+              <time datetime="2023-07-10T11:41:33-07:00" data-updated-at="2023-07-21T07:14:52-07:00">23 days ago</time>
+            </li>
+          </ul>
+        </div>
+        <div class="margin-b-md">
+                        
+      <span class="label label-success" title="Compatible with Rock Version 14.0 and later">14.0</span>
+      
+            
+              <span class="label label-info">Administration / Finance, General, Operations, Leadership</span>
+            
+            
+            
+            
+             <span class="label label-warning">Advanced</span>
+             
+            
+            </div>
+      </div>
+
+      <div class="post-content">
+        <p>Have you ever been asked something like... "Can you give me metrics on a Person Date (Attribute) or Step Started or Completed Date or number of new connection requests per week... and include some historical info for comparisons... oh yeah and can you split it up by campus... and then keep those tracking so we can benchmark it going forward?"
+</p><p>Just say "YES - today and today only, just for you, in our Rock Department we have a blue light special running on the metrics easy button !!!"
+</p><p>With this recipe you will be able to build out everything necessary to make a campus dashboard that will be self maintaining, that you can easily add pages and/or change the metrics being displayed.</p><p>Included in the attached zip file are all the instructions, SQL statements and lava code you will need to create attributes, Lava ShortCodes, and pages. Once the zip file is downloaded, you'll see instructions in both Word .docx &amp; PDF, numbered &amp; named .txt files that you will use to copy/paste and a couple of screen shots of the finished dashboards.</p><p><b><i>Don't be overwhelmed by the instructions</i></b> - 22 pages - most pages only have a 1/2 page of easy to follow bullet points along with screenshots so you can see just what is being described or how your settings and items will look when completed.</p><p><br></p><p><img src="/Content/RockExternal/Users/kurtvogeler@tfc.org/11_CampusDB_Screenshot.png" style="width: 100%;" alt="11_CampusDB_Screenshot.png"></p><p><br></p><p><br></p>
+    </div>
+    
+    <div class="attachments text-center">
+    <a href="/GetFile.ashx?guid=30b7cdfc-56f2-4e3f-8c1d-ed0fe18e1a44" class="btn btn-primary btn-lg mx-auto my-3" download="metrics-history-maintenance-dashboards-via-lava-shortcodes">Download File</a>
+    </div>
+    
+
+     <div class='screenshots'>
+      
+          <a href="https://rockrms.imgix.net/https%3a%2f%2fwww.rockrms.com%3a443%2fGetImage.ashx%3fid%3d56611?&s=543426f25d8d7bb31b80040696fb7287" target="_blank"><img src="https://rockrms.imgix.net/https%3a%2f%2fwww.rockrms.com%3a443%2fGetImage.ashx%3fid%3d56611?auto=format&fit=crop&max-w=1000&max-h=1200&s=98c5ac9613e87a1931ce33dd66b26d66" data-width="1835" data-height="886" data-original="/GetImage.ashx?id=56611" /></a>
+        
+    </div></section>
+</article>
+
+                    </div>
+                    <div class="actions">
+                        
+                        
+                        
+                    </div>
+                </div>
+
+
+                
+
+            </div>
+
+        
+			</div>
+    
+		</div>
+
+	</div>
+</div><style>
+    :root {
+        --focus-state-border: 1px solid #ee7725;
+        --focus-state-shadow: 0 0 0 3px rgba(238,119,37,0.6);
+    }
+    
+  .panel-note {
+      border: 0;
+      box-shadow: none;
+  }
+    
+  .hide-panel .panel {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .hide-panel .panel-heading {
+    display: none;
+  }
+  
+  .note {
+      border-top-color:#eee;
+  }
+  
+  .note .note-comments {
+      border-top-color:#eee;
+      background: #f7f7f7;
+  }
+  
+  .note-footer-meta-list {
+      display: none;
+  }
+</style>
+
+<div class="row">
+<div class="col-sm-2"></div><div class="col-sm-8">
+<h5 class="margin-b-none">Login to add a comment...</h5><div id="bid_2622" data-zone-location="Page" class="block-instance js-block-instance notes">
+	<div class="block-content">
+		<div id="ctl00_main_ctl09_ctl02_ctl00_upNotes">
+			
+        <section class="panel panel-note js-notecontainer panel-note-light panel-noteadd-visible" data-sortdirection="Descending">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title">
+						<i class="fa fa-sticky-note-o"></i>
+					</h3>
+				</div><div class="panel-body">
+					<input class="js-currentnoteid" type="hidden" name="ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_hfCurrentNoteId" id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_hfCurrentNoteId" /><input class="js-expandednoteids" type="hidden" name="ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_hfExpandedNoteIds" id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_hfExpandedNoteIds" /><a id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_lbDeleteNote" class="js-delete-postback" href="javascript:__doPostBack(&#39;ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_lbDeleteNote&#39;,&#39;&#39;)" style="display:none;"></a><a id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_lbEditNoteHidden" class="js-edit-postback" href="javascript:__doPostBack(&#39;ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_lbEditNoteHidden&#39;,&#39;&#39;)" style="display:none;"></a><a id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_lbReplyToNoteHidden" class="js-reply-to-postback" href="javascript:__doPostBack(&#39;ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_lbReplyToNoteHidden&#39;,&#39;&#39;)" style="display:none;"></a><ul class="note-view-list note-list list-unstyled js-notelist">
+    
+		
+		<li class="note js-note ">
+    <article class="note-view-item js-noteviewitem  note-type-recipe-discussion"  data-note-id="25198" data-notetype-id="29" id="NoteRef-fe8293af76624203830746953589b326">
+        <header class="meta">
+            <div class="meta-figure"><a href="#NoteRef-fe8293af76624203830746953589b326" class="avatar avatar-lg"><img src="/GetAvatar.ashx?PhotoId=48083&AgeClassification=Adult&Gender=Male&RecordTypeId=1&Text=CB" alt="Chris Bennett"></a></div>
+            <div class="meta-body">
+                <div class="flex">
+                    <p><a href="https://community.rockrms.com/profile/62397346-a844-4fb9-8d35-9fdff2200a28/">Chris Bennett</a></p><div class="dropdown" data-canedit="false" data-canreply="true" data-allowwatch="false">
+                        <button id="25198-options" class="btn btn-link btn-overflow" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i></button>
+                        <ul class="dropdown-menu" id="25198-optionsmenu" aria-labelledby="25198-options"><li><button type="button" class="dropdown-item text-right px-3 btn-link js-replynote">Reply</button></li>
+                            
+                            <!-- false --></ul>
+                    </div></div>
+
+                <div class="note-details"><a href="#NoteRef-fe8293af76624203830746953589b326" class="timestamp">
+                        <time datetime="2023-08-03T09:00:07-07:00" title="August 3, 2023 - 9:00 AM">2 hours ago</time>
+                    </a></div>
+            </div>
+
+        </header>
+        <div class="note-content">
+            <p>this is a fantastic recipe! question though. What Lava would i use if i want to put the weekly attendance for all of our campus's from our current metrics?</p>
+        </div>
+        <footer class="note-footer">
+            
+            <ul class="note-footer-meta-list list-horizontal"></ul>
+        </footer>
+    </article></li>
+
+    
+</ul>
+				</div>
+			</section>
+    
+		</div>
+
+	</div>
+</div></div></div></div></div>
+        </div>
+    </div>
+
+
+<div class="d-none">
+        <!-- Ajax Error -->
+        <div class="alert alert-danger ajax-error no-index" style="display:none">
+            <p><strong>Error</strong></p>
+            <span class="ajax-error-message"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="zone-sectiona" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div id="zone-sectionb" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectionc" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectiond" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+    </div>
+        <!-- End Content Area -->
+
+
+
+          </div>
+          
+
+
+<footer class="footer">
+    <div class="section section-footer-top">
+        <div class="container">
+            <div class="footer-top">
+                <nav class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4">
+                                <span class="brand mb-5 d-block">
+                                    <a href="https://www.rockrms.com/" class="brand">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                        <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path>
+                                      </svg>
+                                  </a>
+                                </span>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3 ml-md-auto">
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.rockrms.com/Download">Download Rock</a></li>
+                                    <li><a href="https://github.com/SparkDevNetwork/Rock/issues">Issues</a></li>
+                                    <li>
+                                        <a href="https://github.com/SparkDevNetwork/RockWebsites/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">Report Website Issue</a>
+                                    </li>
+                                    <li><a href="https://community.rockrms.com/learn">Learn</a></li>
+                                    <li><a href="https://community.rockrms.com/ministry-impact">Ministry Impact</a></li>
+                                    <li><a href="https://community.rockrms.com/jobs">Careers</a></li>
+                                    <li><a href="https://community.rockrms.com/rock-playlist" class="text-primary font-weight-semibold">Rock Playlist</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3">
+                              <ul class="list-unstyled">
+                                <li><a href="https://www.rockrms.com/partners">Partners</a></li>
+                                <li><a href="https://www.rockrms.com/sponsors">Sponsors</a></li>
+                                <li><a href="https://www.rockrms.com/organizations">Who's Using Rock</a></li>
+                                <li><a href="https://community.rockrms.com/built-with-rock">Websites Using Rock</a></li>
+                                <li><a href="https://store.rockrms.com" target="_blank">Promo Shop</a></li>
+                                <li><a href="https://realchip.rocks/" target="_blank">Chip</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6">
+                      <ul class="social-list list-inline text-center">
+                        <li class="social-icon"><a href="https://www.facebook.com/TheRockRMS/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-icon"><a href="https://twitter.com/rockrms"><i class="fab fa-twitter"></i></a></li>
+                      </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="section section-footer-bottom">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap flex-justify" style="justify-content: space-between;">
+                    <ul class="list-inline">
+                        <li><a href="/login" class="hover-orange">Login</a></li>
+                        <li><a href="/privacy" class="hover-orange">Privacy</a></li>
+                        <li><a href="/license" class="hover-orange">License</a></li>
+                    </ul>
+                    <p>Rock is a project of <a target="_blank" href="https://sparkdevnetwork.org/">Spark Development Network</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+          
+
+        </div>
+        <!-- / main -->
+
+      </main>
+      <!-- / content -->
+
+
+    </div>
+      </div>
+
+      <div class="d-none">
+        <div id="zone-header" class="zone-instance"><div class="zone-content"></div></div>
+        <div id="zone-login" class="zone-instance"><div class="zone-content"></div></div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl16" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$rock-config-trigger&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 143,
+    pageId: 1292,
+    layout: 'FullWidth',
+    baseUrl: '/'
+});Rock.controls.modal.closeModalDialog($('#ctl00_main_ctl07_ctl01_ctl00_mdEdit_modal_dialog_panel'));
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1292,"ActionName":"View","BrowserSessionGuid":"cdee46c2-4055-429e-821a-5001daed0038","PageRequestUrl":"https://community.rockrms.com/recipes/380/metrics-history-maintenance-dashboards-via-lava-shortcodes","PageRequestDateTime":"2023-08-03T11:03:59.4236814","PageRequestTimeToServe":0.1562313,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.119.245","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

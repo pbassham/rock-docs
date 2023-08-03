@@ -1,0 +1,1554 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXAlXTFsDXEQEF11cWxYHR0lO","queueTime":0,"applicationTime":178,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Rock Solid Internal Hosting | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<link href="/Styles/fluidbox.css?v=637945608860000000" type="text/css" rel="stylesheet" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./1" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Plugins/org_sparkdevnetwork/Documentation/Scripts/sticky-kit.min.js?v=637618953640000000" type="text/javascript"></script>
+<script src="/Scripts/imagesloaded.min.js?v=637618953660000000" type="text/javascript"></script>
+<script src="/Scripts/jquery.fluidbox.min.js?v=637957064360000000" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Ps2L+H5o8Sd63BoYoGMd6NsPecWutvggdS/QWHBmg/wpBUGenvXOC6FfYDxpKz5pEk4lnL3iXtGM+M2l7kEcOJO56pV1edN0v37aTRo2Jz9J/wcVluwGBvYqvU7iTQPgw3KZLqahzhZBURlJGVUQcC3AWzK3qCJzjkB84r2c2exbta348WTSvbDs43tAszClQL5HZnH2L8NbiafKBBC8MUX+5biTb6YB7b8qAZTlvwZffmIaeFNRubKnVLCuAagBEHXuEg/7EFJ8hwFEm0+8IOjeoRhySXvvEcqggsWHfEIG1RWNYeMyc+nxbB3QhKWt0UqLuYC4qz/u155Yf9DfqJVLbaL9rEcBiQAE/XJ/aJwIOpSyUz54hkv5q6NwlATmRJcUYq2McH6h9df9IU+qiEQEz0ahkeswKog5LhI6DRhBFeUlpr7H6Nimi18boSuVBwLM58UrXKnoCawAIE3WQz2iyWQCYcdCQK+1tH8zFBnpef/sdKMrY1dHjnTBjBfyGX7VTOHPqm1DUnAxXm4CfaGPrrV8j//YXAcEnO2DBSgE+QZZ57m9O1FkWetMshffTZ76an83nFOXYocYe4TOmV3ZOtxXTbp7ViW5jnQHRVJDa8Ifu50tdQ/CXrldTB0R" />
+    <div id="page-container">
+      <div class="community-ui">
+
+          <!-- navigation -->
+          <div class="community-sidebar">
+            <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2609" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl17_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+          </div>
+          <!-- / navigation -->
+
+          <!-- content -->
+          <main class="community-content">
+            
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+            <span class="topbar-text">
+  RX23 Content Subscription available to order now.
+            </span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+  
+          
+          <div class="scroll-vertical">
+            
+<div class="header-row">
+    <div class="col">
+
+        <header class="community-content-header community-content-header-absolute">
+            <div class="row align-items-center">
+            <div class="col d-none d-md-block">
+                <nav aria-label="breadcrumb" class="align-items-center">
+                <!-- <a href="../../index.html" class="breadcrumb-back" title="Back"></a> -->
+                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/documentation" rel="rocknofollow">Manuals</a></li><li class="breadcrumb-item">Rock Solid Internal Hosting</li>
+</ol>
+                </nav>
+            </div>
+                <div class="col text-lg-right">
+                    
+<a href="/login?returnurl=/page/1296" class="login-link">Log In</a>
+                    
+
+                  </div>
+            </div>
+        </header>
+    </div>
+</div>
+
+            
+    <div id="zone-main" class="zone-instance zone-instance-full"><div class="zone-content"><div id="bid_2608" data-zone-location="Page" class="block-instance js-block-instance book-shelf-book-contents-v2">
+	<div class="block-content">
+		<div id="ctl00_main_ctl02_ctl01_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl02_ctl01_ctl00_pnlDetails">
+				       
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divBookContainer" class="rockversion-1-14-0">
+                <div class="book-header jumbotron clearfix">
+                    <div class="book margin-r-lg">
+                        <div class="img-content">
+                            <img id="ctl00_main_ctl02_ctl01_ctl00_imgCover" src="/GetImage.ashx?id=29&amp;width=710&amp;height=919" />
+                        </div>
+                    </div>
+
+                    <h1>Rock Solid Internal Hosting</h1>
+                    <p>A complete look at how to get Rock running with internal hosting.</p>
+
+                    <div class="bookversion clearfix">
+                        <div class="bookversion-heading row no-gutters">
+                            <div class="col-xs-12">
+                                <a id="ctl00_main_ctl02_ctl01_ctl00_hlPdf" class="btn btn-default btn-xs margin-l-md" href="https://rockrms.blob.core.windows.net/documentation/PDFs/4f39778507264f8e8be3a4d09f9f3295_RockSolidInternalHosting.pdf">Download PDF</a>
+                                <div id="ctl00_main_ctl02_ctl01_ctl00_divBookVersionSelector" class="bookversion-heading-tab pull-left">
+                                    Current Version: McKinley 14.0 <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bookversion-details" style="display: none;">
+                            <div class="row no-gutters">
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-4">
+                                    <div class="form-group rock-drop-down-list mr-1">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlVersionsSince">Show Changes Since</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlVersionsSince" id="ctl00_main_ctl02_ctl01_ctl00_ddlVersionsSince" class="mr-2 js-bookversion-versionsinceselector form-control">
+							<option value="" selected="selected"></option>
+							<option value="1.13.0">McKinley 13.0</option>
+							<option value="1.9.0">McKinley 9.0</option>
+							<option value="1.8.0">McKinley 8.0</option>
+							<option value="1.7.0">McKinley 7.0</option>
+							<option value="1.6.0">McKinley 6.0</option>
+							<option value="1.5.0">McKinley 5.0</option>
+							<option value="1.4.0">McKinley 4.0</option>
+							<option value="1.3.0">McKinley 3.0</option>
+							<option value="1.2.0">McKinley 2.0</option>
+							<option value="1.0.0">McKinley 1.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="form-group rock-drop-down-list ">
+					<label class="control-label" for="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions">Version</label> <div class="control-wrapper">
+						<select name="ctl00$main$ctl02$ctl01$ctl00$ddlBookVersions" id="ctl00_main_ctl02_ctl01_ctl00_ddlBookVersions" class="form-control">
+							<option value="274" selected="selected">McKinley 14.0</option>
+							<option value="273">McKinley 13.0</option>
+							<option value="148">McKinley 9.0</option>
+							<option value="145">McKinley 8.0</option>
+							<option value="107">McKinley 7.0</option>
+							<option value="90">McKinley 6.0</option>
+							<option value="73">McKinley 5.0</option>
+							<option value="58">McKinley 4.0</option>
+							<option value="44">McKinley 3.0</option>
+							<option value="31">McKinley 2.0</option>
+							<option value="1">McKinley 1.0</option>
+
+						</select>
+					</div>
+				</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row"><div class="col-md-12">
+                        
+                    </div></div>
+                    <div class="row documentation-content-body">
+                        <article class="col-md-9 col-xl-8">
+                            <div data-type='update-summary' data-update-tag='1.14.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 14.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.0.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 1.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.2.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 2.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.3.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 3.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.4.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 4.0</h4><p>Below is a summary of the updates for this version.</p>
+<ul>
+    <li>Added information on enabling Snapshot Isolation.</li>
+</ul></div><div data-type='update-summary' data-update-tag='1.5.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 5.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.6.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 6.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.7.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 7.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.8.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 8.0</h4>No updates made.</div><div data-type='update-summary' data-update-tag='1.9.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 9.0</h4><p>Below is a summary of the updates for this version.</p>
+<ul>
+    <li>Added Encryption Note</li>
+</ul></div><div data-type='update-summary' data-update-tag='1.13.0' class='bookversion-updatesummary alert alert-info'><h4>Updates for McKinley 13.0</h4>No updates made.</div>
+            
+                            <section data-type="chapter" id="Introduction"><h1><a name='introduction' href='#introduction' class='book-link'><i class='fa fa-link'></i></a>Introduction</h1>
+
+    <section data-type="sect1">
+        <p>
+            Looking for information on how to host Rock internally?  Well look 
+            no further.  In this step-by-step guide we'll walk through the 
+            process of getting Rock up and running. Before we jump in, 
+            let's cover a few things to make sure we get started off on the right 
+            foot.  
+        </p>
+    </section> 
+    
+</section>
+
+<section data-type="chapter" id="Preparing For Rock"><h1><a name='preparingforrock' href='#preparingforrock' class='book-link'><i class='fa fa-link'></i></a>Preparing for Rock</h1>
+
+    <p>
+        In this chapter we will cover what you need for Rock to perform at its best.
+    </p>
+
+     <section data-type="sect1">
+
+        <h1><a name='systemrequirements' href='#systemrequirements' class='book-link'><i class='fa fa-link'></i></a>System Requirements</h1>
+        <p>
+            Rock was developed on Microsoft's ASP.Net platform so it requires 
+            a Windows Server environment to run. Below are specific requirements 
+            of the hosting platform:
+        </p>
+        
+        <section data-type="sect2">
+            <h2>Small Installs</h2>
+            <p>1,000-5,000 records
+
+            <br>One server with the following specs:
+            <br>
+            <table class="table table-bordered">
+                <caption>Server requirements for Small Installs</caption>
+                <thead>
+                    <tr>
+                        <th>Server</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>CPU: 2Ghz dual core or higher</li>
+                                <li>Memory: 2GB or higher</li>
+                                <li>Storage: 1TB</li>
+                                <li>Operating System: Windows Server 2016 or newer</li>
+                                <li data-update-tag="1.10.0">Software: SQL Server Express 2014 (free) or SQL Server 2014 Standard or higher</li>
+                                <br>
+                                <li>Note that the server versions above are the minimum. We would of course recommend using the 
+                                    latest versions if you can. Starting with Rock v15, SQL Server 2016 will be required at a minimum.</li>                                
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+            <div data-type="note" data-note-type="warning">
+                <h1>Keep in Mind PCI Compliance</h1>
+                <p>While a single server configuration will do a lot quite well for small churches, you should be aware that it does not meet PCI requirements (which state you need to have your database and your web host in separate environments). So if you plan to take payments through your Rock site, or store financial information in Rock, you'll probably need to use the Medium Installs configuration instead (or use an external host).</p>
+            </div>
+    
+        </section>
+        
+        <section data-type="sect2">
+            <h2>Medium Installs</h2>
+            <p>5,000-15,000 records
+
+            <br>Two servers with the following specs:
+            <br>
+            <table class="table table-bordered">
+                <caption>Server requirements for Medium Installs</caption>
+                <thead>
+                    <tr>
+                        <th>Web Server</th>
+                        <th>Database Server</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>CPU: 2Ghz quad core</li>
+                                <li>Memory: 8GB or higher</li>
+                                <li>Storage: 1TB</li>
+                                <li>Operating System: Windows Server 2016 or newer</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>CPU: 2Ghz quad core</li>
+                                <li>Memory: 8GB or higher</li>
+                                <li>Storage: 1TB</li>
+                                <li>Operating System: Windows Server 2016 or newer</li>
+                                <li data-update-tag="1.10.0">Software: SQL Server 2014 Standard
+                                    (Starting with Rock v15, SQL Server 2016 will be required at a minimum)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        
+        <section data-type="sect2">
+            <h2>Large Installs</h2>
+            <p>15,000+ records
+
+            <br>Two servers with the following specs:
+            <br>
+            <table class="table table-bordered">
+                <caption>Server requirements for Large Installs</caption>
+                <thead>
+                    <tr>
+                        <th>Web Server</th>
+                        <th>Database Server</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>CPU: 2.5Ghz quad core</li>
+                                <li>Memory: 16GB or higher</li>
+                                <li>Storage: 1TB</li>
+                                <li>Operating System: Windows Server 2016 or newer</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>CPU: 2.5Ghz quad core</li>
+                                <li>Memory: 16GB or higher</li>
+                                <li>Storage: 1TB</li>
+                                <li>Operating System: Windows Server 2016 or newer</li>
+                                <li data-update-tag="1.10.0">Software: SQL Server 2014 Standard
+                                (Starting with Rock v15, SQL Server 2016 will be required at a minimum)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+            
+            <div data-type="note" data-note-type="remember">
+                <h1>SQL Server 2014</h1>
+                <p>
+                    Note that we are ending support for SQL Server 2014 as of Rock version 15.0. 
+                    We generally recommend using the 
+                    <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank">latest versions</a> 
+                    if you can.
+                </p>
+            </div>            
+    
+        </section>
+        
+        <section data-type="sect2">
+            
+             <div data-type="note" data-note-type="note">
+                <h1>Note:</h1>
+                <p>The storage estimates above do not include room for backups. If you are considering local
+                backups, please adjust the volumes appropriately.
+                </p>
+            </div>
+            
+            <div data-type="note" data-note-type="note">
+                <h1>More Info:</h1>
+                <p>If you plan to install Rock on a two server configuration, be sure to check out the
+                    <a href="#two-server-configuration"><em data-type="reference" data-reference="two-server-configuration">Two-Server Configuration</em></a> 
+                    chapter for some helpful tips.
+                </p>
+            </div>
+    
+        </section>
+        
+    </section>
+    
+    <section data-type="sect1">
+        <h1><a name='thingsyoullneedduringinstallation' href='#thingsyoullneedduringinstallation' class='book-link'><i class='fa fa-link'></i></a>Things You'll Need During Installation</h1>
+         
+        <p>            
+            Here is a short list of settings that you'll need to complete the Rock installation.
+        </p>    
+            <ul>
+                <li>Internal and external web addresses for your organization</li>
+                <li>An email address to send exception messages to</li>
+            </ul>
+    </section>
+    
+    <section data-type="sect1">
+        <h1><a name='otherconsiderations' href='#otherconsiderations' class='book-link'><i class='fa fa-link'></i></a>Other Considerations</h1>
+         
+        <p>            
+            <b>Windows Updates</b> 
+            <br>
+            Rock's foundation is built upon Microsoft's 
+            .NET technology.  Since .NET is an ever-evolving technology, 
+            we recommend that you install all the latest updates for your 
+            Windows Server.        
+            <br>
+            <br> 
+            <b>Server Version</b>
+            <br>
+            The instructions and pictures in this guide are written for 
+            Windows Server 2012.  If you plan to install Rock on a newer version,
+            there are a few differences in the installation
+            you will need to watch out for.  
+            <br>
+            <br>
+            <b>Certificates</b>
+            <br>
+            As you configure Rock, make sure you purchase and configure 
+            an SSL certificate before making it available at a publicly 
+            accessible domain. 
+            Prices range from $9–$100+ per year, and while the setup may 
+            seem daunting, there are plenty of helpful tutorials that walk
+            you through the setup process. Also, you can check with your 
+            current domain registrar to see if they offer SSL Certificates. 
+            If you're new to SSL, Google provides a 
+            <a href="https://support.google.com/webmasters/answer/6073543?utm_source=wmx_blog%3Camp%20/%3Eamp;utm_medium=referral%3Camp%20/%3Eamp;utm_campaign=tls_en_post" target="_blank">detailed list of best practices</a>.
+            Check out the <a href="#configuringinternetinformationservicesiis">Configuring IIS</a> chapter below for additional details.
+        </p>
+
+        <div data-type="note" data-note-type="tip" data-update-tag="1.7.0">
+            <h1>Free SSL Plugin Available</h1>
+            <p>
+                Thanks to the Rock Community, there is an easier option available for configuring SSL. 
+                Check out the 
+                <a href="https://www.rockrms.com/Plugin/74" target="_blank">Acme Certificate</a> plugin in
+                the Rock Shop. This will walk you through getting and installing a free Lets Encrypt
+                certificate - a much easier route for anyone who has never set up website encryption 
+                before.
+            </p>
+        </div>
+        
+        <div data-type="note" data-note-type="note" data-update-tag="1.9.0">
+            <h1>Encryption Best Practice</h1>
+            <p>You might be wondering where and when you should add your encryption for your website.
+            Every secure website will have an HTTPS address on every page. The simplest way of doing this for each site within Rock is by encrypting at the Site Level. This is done by checking the box for every site at:
+            <span data-type="action" data-action="action-navigate">Admin Tools > CMS Configuration > Sites > Edit Site > Require Encryption</span>.
+            The two Rock sites for which you should enable SSL are the internal RockRMS Site, and the external facing website. Even if you don’t plan to use Rock for your main website, it’s important to protect the 
+            information flowing between your server and those who are giving you their information. Users typing http:// addresses in their browsers to visit your pages will be redirected automatically to the secure 
+            https:// site when “Require Encryption” is checked. </p>
+        </div>
+        
+        <p>
+            Now that we have these things covered, let’s begin!
+        </p>
+    </section>
+    
+
+</section>
+
+<section data-type="chapter" id="Installing Server Roles Features"><h1><a name='installingserverrolesfeatures' href='#installingserverrolesfeatures' class='book-link'><i class='fa fa-link'></i></a>Installing Server Roles & Features</h1>
+
+    <p>
+        In this chapter, we'll install the required server roles and features 
+        needed for Rock.
+    </p>
+
+    <section data-type="sect1">
+
+        <p>
+            Let’s open up <span data-type="action" data-action="action-os-button">Start > Server Manager</span>.  Once opened, the first thing we need to 
+            do is to install the Web Server role.  That can be done by 
+            clicking on <span data-type="action" data-action="action-os-button">Manage</span> and then <span data-type="action" data-action="action-os-button">Add Roles and Features</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Server Manager Dashboard</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-1.png" alt=""></a>
+        </figure>
+        
+        
+        <p>
+            Click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Add Roles and Features Wizard</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-2.png" alt=""></a>
+        </figure>
+        
+        
+        <p>
+            On the next screen, select <span data-type="action" data-action="action-os-button">Role-based or feature-based installation</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Select Installation Type</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-3.png" alt=""></a>
+        </figure>
+        
+        
+        <p>
+            Choose <span data-type="action" data-action="action-os-button">Select a server from the server pool</span> and then highlight your server from the list below.  Click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Select Destination Server</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-4.png" alt=""></a>
+        </figure>
+       
+        
+        <p>
+            On the next screen, check the box for <span data-type="action" data-action="action-os-button">Web Server (IIS)</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Select Server Roles</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-5.png" alt=""></a>
+        </figure>
+        
+        <div data-type="note" data-note-type="note">
+            <h1>HTTP Redirection</h1>
+            <p>By default HTTP Redirection is not installed/activated. If it is installed, you'll typically want to redirect to nothing (<em>Redirect requests to this destination</em> will not be checked).</p>
+        </div>
+        
+        <p>
+            You will be prompted to add some required features for IIS.  
+            Click on <span data-type="action" data-action="action-os-button">Add Features</span>.  Then click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Required Features Prompt</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-6.png" alt=""></a>
+        </figure>
+        
+        
+        <p>
+            On the <em data-type="reference" data-reference="reference-highlight">Select Features</em> screen, add <span data-type="action" data-action="action-os-button">.NET Framework 3.5 Features</span> and click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Select Features</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-7.png" alt=""></a>
+        </figure>        
+        
+        <p>
+            You will be presented with some information about the IIS feature.  Click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Web Server Role (IIS)</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-8.png" alt=""></a>
+        </figure>
+        
+        <p>
+            On the <em data-type="reference" data-reference="reference-highlight">Select Role Services</em> screen, 
+            scroll down to <em data-type="reference" data-reference="reference-highlight">Application Development</em> 
+            and check the boxes for <em data-type="reference" data-reference="reference-highlight">ASP.NET 4.7</em>
+            and <em data-type="reference" data-reference="reference-highlight">Websocket Protocol</em>.
+        </p>
+        
+        <figure>
+            <figcaption>Select Role Services</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-9-v14.png" alt=""></a>
+        </figure>
+        
+        <div data-type="note" data-note-type="tip">
+            <h1>Version information</h1>
+            <p>Server 2012 has ASP.NET 4.5, and Server 2016 has ASP.NET 4.6, instead of ASP.NET 4.7.  Don't worry about that difference; just check the box next to the correct version and it'll work the same.</p>
+        </div>
+        
+        <p>
+            You will be prompted to add some required features for ASP.NET.  Click on <span data-type="action" data-action="action-os-button">Add Features</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Required Features Prompt</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-10.png" alt=""></a>
+        </figure>
+        
+        <p>
+            Next, check the box labeled <em data-type="reference" data-reference="reference-highlight">Application Initialization</em>.  Then click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Install ASP.NET and Application Initialization</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-10a.png" alt=""></a>
+        </figure>
+        
+        <p>
+            On the final screen, select <span data-type="action" data-action="action-os-button">Restart the destination server automatically if required</span> and click <span data-type="action" data-action="action-os-button">Install</span>.
+        </p>
+        <div data-type="warning">
+            <h1>Warning:</h1>
+            <p>If this is a production server, you might not want to have the server automatically reboot.</p>
+        </div>
+        
+        <figure>
+            <figcaption>Confirming Installation Settings</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-11.png" alt=""></a>
+        </figure>
+        
+        <div data-type="note" data-note-type="tip">
+            <h1>Alternate Sources</h1>
+            <p>If the installation gives you an error about sources not being available (as in the screenshot above), you can click <span data-type="action" data-action="action-os-button">Specify an alternate source path</span> before beginning installation. Make sure that your installation disc (or image) is available, then type in the path to it's the "sources\sxs" directory. For instance, if the Windows Server installation DVD is inserted in your D:\ drive on the server, type <span data-type="action" data-action="action-os-button">d:\sources\sxs</span> in the alternate source path dialogue and click OK.</p>
+        </div>
+        
+        <p>
+            Installation will begin.
+        </p>
+        
+        <figure>
+            <figcaption>Installation Progress</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/server-12.png" alt=""></a>
+        </figure>
+        
+        <p>Congratulations!  The web server is now installed.  Let's move on to configuring Internet Information Services.</p>
+    </section>
+
+</section>
+
+<section data-type="chapter" id="Configuring Internet Information Services (IIS)"><h1><a name='configuringinternetinformationservicesiis' href='#configuringinternetinformationservicesiis' class='book-link'><i class='fa fa-link'></i></a>Configuring Internet Information Services (IIS)</h1>
+
+    
+    <p>
+        Now we will configure Internet Information Services for Rock.
+    </p>
+
+    <section data-type="sect1">
+
+        <h1><a name='configuringiis' href='#configuringiis' class='book-link'><i class='fa fa-link'></i></a>Configuring IIS</h1>
+        
+        <p>
+            Open up the Internet Information Services Manager by clicking <span data-type="action" data-action="action-navigation">Start > Administrative Tools > Internet Information Services (IIS) Manager</span>.
+            Expand your server's node in the treeview on the left side, then click on <em data-type="reference" data-reference="reference-highlight">Application Pools</em>. Right click on <span data-type="action" data-action="action-os-button">DefaultAppPool</span> and click on <span data-type="action" data-action="action-os-button">Advanced Settings</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Application Pools</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/iis-1.png" alt=""></a>
+        </figure>
+        
+        
+        <p>
+            Change the <em data-type="reference" data-reference="reference-highlight">Application Pools</em>.NET Framework Version to v4.0 (if it's not already) and change the Start Mode to <em data-type="reference" data-reference="reference-highlight">Always Running</em>. Then change <em data-type="reference" data-reference="reference-highlight">Identity</em> setting to <span data-type="action" data-action="action-os-button">LocalSystem</span> and change <em data-type="reference" data-reference="reference-highlight">Idle Time-out (minutes)</em> to <em data-type="reference" data-reference="reference-highlight">0</em>.  Then click <span data-type="action" data-action="action-os-button">OK</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Advanced Settings</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/iis-2.png" alt=""></a>
+        </figure>
+        
+        <p>
+            Now right-click on <em data-type="reference" data-reference="reference-highlight">DefaultAppPool</em> and  click on <em data-type="reference" data-reference="reference-highlight">Recycling</em>. Un-check <span data-type="action" data-action="action-os-button">Regular Time Intervals</span> and instead provide a convenient time for Rock to restart each day (such as 4:00am) in the <em data-type="reference" data-reference="reference-highlight">Specific Time(s)</em> option. Click <span data-type="action" data-action="action-os-button">next</span> and then click <span data-type="action" data-action="action-os-button">Finish</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Recycling</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/iis-3.png" alt=""></a>
+        </figure>
+        
+        <p>
+            Finally, expand <em data-type="reference" data-reference="reference-highlight">Sites</em> (below Application Pools on the left side) and right-click <em data-type="reference" data-reference="reference-highlight">Default Web Site</em>. Choose <em data-type="reference" data-reference="reference-highlight">Manage Website -> Advanced Settings</em>. Change <em data-type="reference" data-reference="reference-highlight">Preload Enabled</em> to True and click <span data-type="action" data-action="action-os-button">OK</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Turn on preload</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/iis-4.png" alt=""></a>
+        </figure>
+        
+        <p>
+            Generally the bindings will be configured for you automatically. However, if they're changed and you need to reset them, 
+            in most cases you'll use the configuration pictured below. Note that in some cases you must provide a Host Name; You can 
+            use an asterisk (*) in place of a host name.
+        </p>
+        
+        <figure>
+            <figcaption>Port 80</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/iis-port-80.png" alt=""></a>
+        </figure>
+        
+        <figure>
+            <figcaption>Port 443</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/iis-port-443.png" alt=""></a>
+        </figure>
+        
+        <p>
+            Click on the SSL Settings padlock icon to view your SSL settings.
+        </p>
+        
+        <figure>
+            <figcaption>SSL Configuration</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/iis-ssl-configuration.png" alt=""></a>
+        </figure>
+        
+        <p>
+            That was easy!  Now let's move on and set up our database.
+        </p>
+        
+    </section>
+
+</section>
+
+<section data-type="chapter" id="Installing Configuring SQL Server"><h1><a name='installingconfiguringsqlserver' href='#installingconfiguringsqlserver' class='book-link'><i class='fa fa-link'></i></a>Installing & Configuring SQL Server</h1>
+
+
+    <p>
+        In this chapter we will walk through installing SQL Server.  If your organization
+        doesn't have a SQL Server license, no worries.  Rock 
+        works great with Microsoft's free version of SQL, SQL Server Express. Please note
+        that SQL Server Express will work best with fewer than 20,000 records. If you
+        are working with more than 20,000 records, your best option would be SQL Server Web
+        or Standard edition.
+    </p>
+
+    <div data-type="note" data-note-type="tip">
+        <h1>Installing SQL Server 2016</h1>
+        <p>
+            The installation steps for SQL Server 2016 are an almost exact match to those pictured
+            below for 2012. Note that we are 
+            <a href="https://community.rockrms.com/connect/ending-support-for-sql-server-2012" target="_blank">ending support for SQL Server 2012</a> 
+            in Rock version 11.0.
+        </p>
+    </div>
+
+    <section data-type="sect1">
+
+        <h1><a name='gettingsqlserverexpress' href='#gettingsqlserverexpress' class='book-link'><i class='fa fa-link'></i></a>Getting SQL Server Express</h1>
+       
+        <p>
+            To download SQL Server Express, <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank">Click Here</a>.
+        </p>
+        
+        <p>
+            Some versions of SQL Server Express come in different editions. The version we recommend is the 64-bit 
+            version of SQL Server Express.  Once you have SQL Server downloaded,
+            let's move on to the next section.
+        </p>
+        
+    </section>
+
+    <section data-type="sect1">
+
+        <h1><a name='installingsqlserver' href='#installingsqlserver' class='book-link'><i class='fa fa-link'></i></a>Installing SQL Server</h1>
+        
+        <p>
+            In this section, we will be installing SQL Server onto our Rock server.  Let's begin.
+            <br><br>
+            Start the SQL Server installer and on the first screen click on <span data-type="action" data-action="action-os-button">New SQL Server stand-alone installation or add features to an existing installation</span>.
+        </p>
+        
+        <figure>
+            <figcaption>SQL Setup</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-1.png" alt="SQL Setup"></a>
+        </figure>        
+        
+        
+        <p>
+            On the next screen, agree to the license agreement and then click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>License Agreement</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-2.png" alt="License Agreement"></a>
+        </figure>
+        
+       
+       <p>
+           Keep the <em data-type="reference" data-reference="reference-highlight">Include SQL Server Product Updates</em> checkbox checked and click <span data-type="action" data-action="action-os-button">Next</span>.
+       </p>
+       
+        <figure>
+            <figcaption>Product Updates</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-3.png" alt="Product Updates"></a>
+        </figure>       
+       
+       
+        <p>
+            Next, the SQL installer will prepare to set up.
+        </p>
+        
+        <figure>
+            <figcaption>Installing Setup Files</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-4.png" alt="Installing Setup Files"></a>
+        </figure>        
+        
+        
+        <p>
+            On the <em data-type="reference" data-reference="reference-highlight">Feature Selection</em> screen, we recommend using the settings 
+            shown in Figure 4.8.  These are the minimum required settings 
+            needed for Rock.  Click <span data-type="action" data-action="action-os-button">Next</span> to continue.
+        </p>
+        
+        <figure>
+            <figcaption>Feature Selection</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-5.png" alt="Feature Selection"></a>
+        </figure>        
+        
+        
+        <p>
+            On the <em data-type="reference" data-reference="reference-highlight">Instance Configuration</em> screen, click on the <span data-type="action" data-action="action-os-button">Default Instance</span> button.  Click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        <div data-type="warning">
+            <h1>Warning</h1>
+            <p>Be sure to use <em data-type="reference" data-reference="reference-highlight">Default Instance</em> if you are unfamiliar with SQL Server.  This
+                will simplify our Rock setup.  We only recommend using <em data-type="reference" data-reference="reference-highlight">Named Instances</em> if
+                you are familiar with them.
+            </p>
+        </div>
+        
+        <figure>
+            <figcaption>Instance Configuration</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-6.png" alt="Instance Configuration"></a>
+        </figure>   
+        
+        
+        <p>
+            Leave the default settings on the <em data-type="reference" data-reference="reference-highlight">Server Configuration</em> screen and click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Server Configuration</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-7.png" alt="Server Configuration"></a>
+        </figure>  
+        
+        
+        <p>
+            On the <em data-type="reference" data-reference="reference-highlight">Database Engine Configuration</em> screen, set the <em data-type="reference" data-reference="reference-highlight">Authentication Mode</em> to <span data-type="action" data-action="action-os-button">Mixed Mode</span> and set a password for SQL Server.  Click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        <div data-type="note" data-note-type="note">
+            <h1>Note:</h1>
+            <p>
+                Keep this password handy since it will be needed later to set up the Rock RMS database.
+                But remember to keep this password secure, and only share it with those who truly
+                need it.
+            </p>
+        </div>
+        
+        <figure>
+            <figcaption>Database Engine Configuration</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-8.png" alt="Database Engine Configuration"></a>
+        </figure>  
+        
+        
+        <p>
+            Skip past the <em data-type="reference" data-reference="reference-highlight">Error Reporting</em> unless you would like to send Microsoft error reports.  Click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Error Reporting</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-9.png" alt="Error Reporting"></a>
+        </figure>  
+        
+        
+        <p>
+            Installation will begin, so hold tight.
+        </p>
+        
+        <figure>
+            <figcaption>SQL Server Installing</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-10.png" alt="SQL Server Installing"></a>
+        </figure>
+        
+        <p>Once it's complete with the installation, you can close the installer.</p>
+        
+        <figure>
+            <figcaption>Installation Complete</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-11.png" alt="Installation Complete"></a>
+        </figure>
+        
+        <p>
+            Now, the <em data-type="reference" data-reference="reference-highlight">SQL Server Installation Center</em> (the first screen of the installer) should still be open on your desktop. Whereas you clicked the first option last time, now we need to click <em data-type="reference" data-reference="reference-highlight">Install SQL Server Management Tools</em>. This will launch the web browser, pointed to the <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms" target="_blank">SSMS Download page</a>. You need to download <em data-type="reference" data-reference="reference-highlight">SQL Server Management Studio</em>, not just the upgrade package. Download and then run this package. (You can close the Installation Center window now). There aren't many options in the installation of this package- just accept the license and let the installer run.
+        </p>
+        
+    </section>
+
+    <section data-type="sect1">
+
+        <h1><a name='configuringsqlserver' href='#configuringsqlserver' class='book-link'><i class='fa fa-link'></i></a>Configuring SQL Server</h1>
+        
+        <p>
+            In this section, we will be setting up a user account for Rock to 
+            use to access the SQL Server.  To begin,  let's open the SQL Server 
+            Management Studio. Change the <span data-type="action" data-action="action-os-button">Windows Authentication</span> option to <span data-type="action" data-action="action-os-button">SQL Server Authentication</span> and log in using the password we created during 
+            the SQL Server installation.
+        </p>
+        
+        <div data-type="note" data-note-type="note">
+            <h1>Note:</h1>
+            <p>By default, the admin username for SQL is “sa”.  Use that username when logging in for the first time.</p>
+        </div>
+        
+        <p>
+            On the Object Explorer, expand the <em data-type="reference" data-reference="reference-highlight">Security</em> folder and right click on Logins and click on <span data-type="action" data-action="action-os-button">New Login</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Object Explorer</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-12.png" alt="Object Explorer"></a>
+        </figure>
+        
+        
+        <p>
+            Create a user called RockUser (or another username if you prefer), set the <span data-type="action" data-action="action-os-button">Authentication Type</span> to <span data-type="action" data-action="action-os-button">SQL Server authentication</span>, and create a password. Be sure to keep this password secured and only share it with those who truly need it.  Also, uncheck the <em data-type="reference" data-reference="reference-highlight">Enforce password policy setting</em> for this account.
+        </p>
+        
+        <figure>
+            <figcaption>New User Window</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-13.png" alt="New User Window"></a>
+        </figure>
+        
+        
+        <p>
+            Next, click on <em data-type="reference" data-reference="reference-highlight">Server Roles</em>.  Check the <span data-type="action" data-action="action-os-button">dbcreator</span> role.  Then click <span data-type="action" data-action="action-os-button">OK</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Login Properties</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-14.png" alt="Login Properties"></a>
+        </figure>
+        
+        <p>
+            Now let's open up <em data-type="reference" data-reference="reference-highlight">SQL Server Configuration Manager</em>.
+            Expand the <em data-type="reference" data-reference="reference-highlight">SQL Server Network Configuration</em> item and click on <em data-type="reference" data-reference="reference-highlight">Protocols 
+            for MSSQLSERVER</em>.  Right click on <em data-type="reference" data-reference="reference-highlight">TCP/IP</em> and click on <span data-type="action" data-action="action-os-button">Enable</span>.
+            
+        </p>
+        
+        <div data-type="note" data-note-type="tip">
+        <h1>Opening the SQL Manager</h1>
+        <p>
+            You can run the <em data-type="reference" data-reference="reference-highlight">SQL Server Configuration Manager</em> by navigating to Start > Microsoft SQL Server yyyy > SQL Server yyyy Configuration Manager, 
+            or by navigating to Start > Run.
+            Refer to the <a href="https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-configuration-manager?view=sql-server-2017" target="_blank">SQL Server Configuration</a> for instructions for your file name 
+            depending on your version of SQL Server.
+        </p>
+        </div>
+        
+        <figure>
+            <figcaption>Enabling TCP/IP</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-15.png"></a>
+        </figure>
+        
+        <p>
+            Next, click on <em data-type="reference" data-reference="reference-highlight">SQL Server Services</em> and then right click on <span data-type="action" data-action="action-os-button">SQL Server Agent (MSSQLSERVER)</span>
+             and click on <span data-type="action" data-action="action-os-button">Properties</span>.
+        </p>
+        
+        <figure>
+            <figcaption>SQL Server Services</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-16.png"></a>
+        </figure>
+        
+        <p>
+            Set the start mode to <em data-type="reference" data-reference="reference-highlight">Automatic</em> and click on <span data-type="action" data-action="action-os-button">Apply</span>. Now, since our earlier changes warned us that we'd need to restart the service to take effect, you should right-click the SQL Server service and choose "Restart".
+        </p>
+        
+        <figure>
+            <figcaption>SQL Server Agent Properties</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-17.png"></a>
+        </figure>
+        
+        <p>
+            Next, let's open up <em data-type="reference" data-reference="reference-highlight">Firewall with Advanced Security</em>.  
+            Right click on <span data-type="action" data-action="action-os-button">Inbound Rules</span> and click <span data-type="action" data-action="action-os-button">New Rule</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Creating a New Rule</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-18.png"></a>
+        </figure>
+        
+        <p>
+            Click on <span data-type="action" data-action="action-os-button">Port</span> and click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Define By Port</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-19.png"></a>
+        </figure>
+        
+        <p>
+            Choose <span data-type="action" data-action="action-os-button">TCP</span> and type in the specified local port, "1433."
+        </p>
+        
+        <figure>
+            <figcaption>Specify Port 1433</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-20.png"></a>
+        </figure>
+        
+        <p>
+            Click on <span data-type="action" data-action="action-os-button">Allow the connection</span> and click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Allow The Connection</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-21.png"></a>
+        </figure>
+        
+        <p>
+            Choose which profiles this rule is applied to and click <span data-type="action" data-action="action-os-button">Next</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Firewall Profiles</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-22.png"></a>
+        </figure>
+        
+        <p>
+            Give the rule a name and click <span data-type="action" data-action="action-os-button">Finish</span>.
+        </p>
+        
+        <figure>
+            <figcaption>Firewall Rule Name</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/sql-23.png"></a>
+        </figure>
+        
+    </section>
+    
+    <p>
+        If you're installing Rock and SQL Server on the same server (see warning below) 
+        then you'll probably want to lock down port 1433 so that your database is not 
+        exposed to the internet. In that case, open the firewall rule you created above. 
+        Under the <em>Scope</em> tab add <code>127.0.0.1</code> to both the Local IP 
+        address and to the Remote IP address sections. <code>127.0.0.1</code> is the 
+        local host where SQL Server is installed. This prevents anyone from outside 
+        that server from accessing your database. This does not apply to an Azure setup.
+    </p>
+    
+    <div data-type="note" data-note-type="warning">
+        <h1>PCI Compliance</h1>
+        <p>
+            If you're planning on processing credit cards within Rock, it’s not PCI 
+            compliant to have the web server and database on the same server. Regardless of
+            the size of your organization, it's not allowed.
+        </p>
+    </div> 
+    
+    <p>
+        That's it!  Let's move on to the next chapter.
+    </p>
+</section>
+
+<section data-type="chapter" id="Installing Rock"><h1><a name='installingrock' href='#installingrock' class='book-link'><i class='fa fa-link'></i></a>Installing Rock</h1>
+
+    <p>
+        Now that our foundation is set, we can begin the best part - installing Rock!
+    </p>
+
+    <section data-type="sect1">
+        
+        <p>
+            The first thing we need to do is to download the Rock installer, which
+            you can find at <a href="http://www.rockrms.com/Rock/GetStarted" target="_blank">rockrms.com/Rock/GetStarted</a>.
+            Place the <em data-type="reference" data-reference="reference-highlight">Start.aspx</em> and 
+            <em data-type="reference" data-reference="reference-highlight">web.config</em> files from the installer 
+            package in the root of the web folder.  By default, the web root folder will be located here: C:\inetpub\wwwroot.
+        </p>
+        
+        <div data-type="note" data-note-type="remember">
+            <h1>Tip: make a fresh start!</h1>
+            <p>If you're installing in the default wwwroot folder, you'll see that Windows has already placed some content here. 
+            Be sure to delete that before starting your installation; only Start.aspx and web.config should be in that directory.</p>
+        </div>
+        
+        <p>
+            Open up a web browser and go to <a href="http://localhost/Start.aspx" target="_blank">http://localhost/Start.aspx</a> to begin the installation process.
+        </p>
+        <figure>
+            <figcaption>Rock Installer</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-1.png" alt=""></a>
+        </figure>
+        
+        <p>
+            Now we will enter in the SQL server information.  If the SQL server is installed on this server,
+            you can type in "localhost" in the <em data-type="reference" data-reference="reference-highlight">Database Server</em> box.  If you are using another server for SQL,
+            you can enter the server name instead.
+            <br><br>
+            Next, enter in a name for the Rock Database (e.g. "Rock") and enter in the username and password 
+            we created earlier in the SQL Chapter.  Click <span data-type="action" data-action="action-rock-button">Next</span>.
+        </p>
+        <figure>
+            <figcaption>Database Configuration</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-2.png" alt=""></a>
+        </figure>
+        
+        <p>
+            Now the Rock installer will run some checks to make sure the environment is ready
+            for use.  If everything checks out, you will see the <em data-type="reference" data-reference="reference-highlight">Pass!</em> screen.  Click <span data-type="action" data-action="action-rock-button">Next</span>.
+        </p>
+        <figure>
+            <figcaption>Environment Checks</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-3.png" alt=""></a>
+        </figure>
+        
+		<p>			
+			The next screen will allow us to create an admin username
+            and password for Rock.  This will be the default admin account for Rock.  
+            Be sure to use a good password, and limit who has access to it.
+            Click <span data-type="action" data-action="action-rock-button">Next</span>.
+        </p>
+        
+        <div data-type="note" data-note-type="note">
+            <h1>Note:</h1>
+            <p>We recommend using a general or organization account, not a personal one.  You can create your own login after the install.</p>
+        </div>
+        
+        <figure>
+            <figcaption>Admin Account Setup</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-4.png" alt=""></a>
+        </figure>
+		
+		<p>
+            Now you'll need to enter in your organization URLs.
+        </p>
+            <ul>
+                <li><b>Internal URL:</b> The web address you'll use to 
+                    connect to Rock internally. (Example: http://admin.rocksolidchurchdemo.com)
+                </li>
+                <li><b>Public URL:</b> The public facing website 
+                    for your organization. (Example: http://www.rocksolidchurchdemo.com)
+                </li>
+            </ul>
+        
+        <div data-type="note" data-note-type="note">
+            <h1>Note:</h1>
+            <p>
+                Don't worry if these addresses aren't configured to point to your new server yet.  
+                These addresses are intended to be the ones you'll use once you're ready to go live.
+            </p>
+        </div>
+        
+        <figure>
+            <figcaption>Hosting Configuration</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-5.png" alt=""></a>
+        </figure>
+		
+		<p>
+            Now let's enter in your Organization Information.
+            <ul>
+                <li><b>Organization Name:</b> The name of your organization
+                </li>
+                <li><b>Organization Default Email Address:</b> The default 
+                    email sending address for Rock
+                </li>
+                <li><b>Organization Phone Number:</b> The main phone 
+                number of your organization
+                </li>
+                <li><b>Organization Website:</b> The website of your organization
+                </li>
+            </ul>
+        </p>
+        
+        <div data-type="note" data-note-type="note">
+            <h1>Note:</h1>
+            <p>Don't worry, these settings can be changed later under 
+            <span data-type="action" data-action="action-rock-button">Admin Tools > General Settings > Global Attributes</span></p>
+        </div>
+        
+        <figure>
+            <figcaption>Organization Information</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-6.png" alt=""></a>
+        </figure>
+		
+        <p>
+            Now that you have all of your organization's information entered into Rock, click
+            <span data-type="action" data-action="action-rock-button">Next</span> to begin the Rock installation.
+        </p>
+        <figure>
+            <figcaption>Installation Progress</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-8.png" alt=""></a>
+        </figure>
+        
+		<p>
+			Rock will begin downloading the needed files onto the webserver and configuring the database.
+			You can observe this process by clicking on the <span data-type="action" data-action="action-rock-button">Show Console</span> button.
+		</p>
+		<figure>
+            <figcaption>Installation Console</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-9.png" alt=""></a>
+        </figure>
+		
+		<p>
+			When complete, click on the <span data-type="action" data-action="action-rock-button">Flip the Switch</span> button.
+			Keep in mind, this loading screen will take the longest to load since Rock is starting up for the first time.
+		</p>
+		<figure>
+            <figcaption>Installation Complete!</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-10.png" alt=""></a>
+        </figure>
+        
+        <div data-type="note" data-note-type="note">
+            <h1>Note</h1>
+            <p>
+                If you arrive at the external site instead of the internal login page it could be that the 
+                domain name is set to be used as the external site.  When Rock isn't provided with a specific
+                page to load in the URL it looks at the domain and finds a site in the database that matches.
+                If this happens to you, you can get to the internal site by this URL: http://{yourserver}/page/12
+            </p>
+        </div>
+		
+        <p>
+            Now that Rock is installed, you can begin by logging in.  Log in
+            with the Rock admin account you created during the installation.
+        </p>
+        <figure>
+            <figcaption>Logon Screen</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-11.png" alt=""></a>
+        </figure>
+        
+        <p>
+            Once logged in, you'll be taken to the Rock homepage.  You will
+            see the <em data-type="reference" data-reference="reference-highlight">Administrator Checklist</em>, which is a list of the recommended
+            first steps to maximize the potential of Rock at your organization.
+            Don't worry about completing the list today.  You can get to it as 
+            you become more familiar with Rock.  The list will disappear once you
+            mark off all the items.  It may reappear after updates, if special 
+            configurations are needed.  Think of it as a friend that only
+            shows up in your time of need.
+        </p>
+        <figure>
+            <figcaption>Rock Home Page</figcaption>
+            <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/rock-12.png" alt=""></a>
+        </figure>	
+        
+        <section data-type="sect2" data-update-tag="1.4.0">
+            <h2>Snapshot Isolation Settings</h2>
+            <p>We recommend enabling snapshot isolation for your Rock database. This keeps database reads from being locked by database writes.  Below are the settings
+                we recommend (found by right-clicking on the database name in SQL Server Management Studio and selecting <span data-type="action" data-action="action-rock-button">Properties</span>.)
+                
+            </p>
+            <figure>
+                <figcaption>Snapshot Isolation Settings</figcaption>
+                <a href='' class='book-image'><img src="https://rockrms.blob.core.windows.net/documentation/Books/1/1.14.0/images/snapshot-isolation.png"></a>
+            </figure>
+            
+            <div data-type="note" data-note-type="note">
+                <h1>Default Settings May Vary</h1>
+                <p>Depending on your SQL Server edition and version this may already be the default.</p>
+            </div>
+            
+        </section>        
+        
+    </section>
+
+</section>
+
+<section data-type="chapter" id="two-server-configuration"><h1><a name='twoserverconfiguration' href='#twoserverconfiguration' class='book-link'><i class='fa fa-link'></i></a>Two-Server Configuration</h1>
+    <p>
+        If you were looking at the system requirements in this
+        guide's introduction, you might have noticed that there is
+        a two-server configuration for larger installations. Even 
+        for smaller installations, we recommend two servers for the 
+        following reasons:
+    </p>    
+    
+    <ul>
+        <li><b>Performance:</b>
+        Having your Rock Database and Web Environment on separate servers
+        means they won't be sharing resources and will be able to 
+        perform at a higher capacity.</li>
+        <br>
+        <li><b>Security:</b>
+        If you plan to use a public website with Rock, you can put the
+        web server in a DMZ for added network security.  Setting up a
+        DMZ is outside the scope of this guide, but if this is something
+        you plan on pursuing, reach out to the Rock
+        community.</li>
+        <br>
+        <li><b>PCI Compliance:</b>
+        PCI Requirements in the U.S. require that if you are taking or
+        storing financial information through your website, your database
+        must be separate from your web host.</li>
+    </ul>
+    
+    <section data-type="sect1">
+        <h1><a name='itsallinthedetails' href='#itsallinthedetails' class='book-link'><i class='fa fa-link'></i></a>It's All in the Details</h1>
+    
+        <p>
+            The process for setting up a two-server environment is not 
+            that much different from the single-server setup described 
+            in this guide.
+            Here is a high-level task list for each server:
+        </p>    
+            <br><br>
+            <b>Database Server</b>
+            <ul>
+                <li>Install & Configure SQL Server</li>
+            </ul>
+            <b>Web Server</b>
+            <ul>
+                <li>Install the required Server Roles and Features</li>
+                <li>Configure Internet Information Services (IIS)</li>
+                <li>Point Rock at the database server during installation</li>
+            </ul>
+        <p>
+            Be sure to check out the rest of the Rock guides and manuals to help you get started.
+        </p>
+    </section>
+    
+    <section data-type="sect1">
+        <h1><a name='selfinstallingrock' href='#selfinstallingrock' class='book-link'><i class='fa fa-link'></i></a>Self-Installing Rock</h1>
+        
+        <p>
+            If you're installing Rock and SQL Server on separate VMs or servers yourself, in your own network 
+            (not in Azure), then port 1433 should only be open to the Rock server. This is so Rock itself can 
+            talk to the SQL db. In this setup your self-hosted SQL server should not be NATed 
+            (exposed via a public IP) to the Internet at all. It should be internal to your network with only 
+            Rock (and perhaps a dev machine) allowed to talk to it.
+        </p>
+        
+        <p>
+            To do this, open the firewall rule you created in the
+            <a href="#installingconfiguringsqlserver">Installing & Configuring SQL Server</a>
+            chapter above. Under the <em>Scope</em> tab, add the IP address of your Rock web server to the 
+            Local IP address if it's on your internal network, or to the Remote IP address section 
+            if it is external to your network. No other ports need to be open if the database is external 
+            to the network (i.e., on another external server).
+        </p>
+        
+    </section>    
+    
+</section>
+
+
+                        </article>
+                        <aside class="col-md-3 col-xl-3 d-none d-md-block">
+                            <div class="sticky"><div id="toc" class="book-toc">
+                                <p>Table of Contents</p>
+                                <ul class="list-unstyled">
+                                    <li><a href='#introduction'>Introduction</a></li><li><a href='#preparingforrock'>Preparing for Rock</a></li><li><a href='#installingserverrolesfeatures'>Installing Server Roles & Features</a></li><li><a href='#configuringinternetinformationservicesiis'>Configuring Internet Information Services (IIS)</a></li><li><a href='#installingconfiguringsqlserver'>Installing & Configuring SQL Server</a></li><li><a href='#installingrock'>Installing Rock</a></li><li><a href='#twoserverconfiguration'>Two-Server Configuration</a></li>
+                                </ul>
+                            </div></div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ctl00_main_ctl02_ctl01_ctl00_divReportIssue" class="report-issue"><i class="fa fa-bullhorn"></i> Improve</div>
+
+			</div>       
+
+        <script>var bookVersionOrder = [ '1.14.0','1.13.0','1.9.0','1.8.0','1.7.0','1.6.0','1.5.0','1.4.0','1.3.0','1.2.0','1.0.0' ];</script>
+
+        <script>
+            $(document).ready(function () {
+                $(".sticky").stick_in_parent();
+
+                $(".bookversion-heading-tab").on("click", function () {
+                    $(this).closest(".bookversion-heading").siblings(".bookversion-details").slideToggle();
+                    $(this).find('i.fa').toggleClass("fa-chevron-down fa-chevron-up");
+                });
+
+                $(".report-issue").mouseenter(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-4px",
+                            opacity: 1
+                        }, 500, function() {
+                            // Animation complete.
+                        });
+                });
+
+                $(".report-issue").mouseleave(
+                    function () {
+                        $(".report-issue").stop().animate({
+                            right: "-84px",
+                            opacity: .5
+                        }, 500, function () {
+                            // Animation complete.
+                        });
+                });
+
+                $(function () {
+                    $("a.book-image").fluidbox();
+                });
+
+                // reusable function to get query parameter
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                var scrollPercent = getParameterByName('ScrollPercentage');
+                if (scrollPercent != '') {
+                    var bheight = $(document).height();
+                    var percent = scrollPercent / 100;
+                    var hpercent = bheight * percent;
+                    $('html, body').animate({ scrollTop: hpercent }, 1000);
+                }
+
+                // highlight changes
+                $(".js-bookversion-versionsinceselector").on('change', function () {
+                    
+                    var selectedVersion = $(this).val();
+
+                    if (selectedVersion == '') {
+                        // clear all update highlights and summaries
+                        $("div[data-type='update-summary']").slideUp();
+                        $("[data-update-tag]").removeClass('show-update');
+                    } else  {
+                        var showVersion = true;
+
+                        bookVersionOrder.forEach(function (version) {
+                            console.log(version);
+
+                            if (version == selectedVersion) {
+                                showVersion = false;
+                            }
+
+                            if (showVersion) {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideDown();
+                                $("[data-update-tag*='" + version + "']").addClass('show-update');
+                            } else {
+                                $("[data-type='update-summary'][data-update-tag='" + version + "']").slideUp();
+                                $("[data-update-tag*='" + version + "']").removeClass('show-update');
+                            }
+                        });
+
+                    }; 
+                });
+
+            });
+        </script>
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+
+          </div></main>
+          <!-- / content -->
+        </div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl14" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 149,
+    pageId: 1296,
+    layout: 'Documentation',
+    baseUrl: '/'
+});//]]>
+</script>
+ <script> 
+                                                Sys.Application.add_load(function () {
+                                                    $('.report-issue').click(function() {
+                                                            var s = $(window).scrollTop(),
+                                                                    d = $(document).height(),
+                                                                    c = $(window).height();
+
+                                                            scrollPercent = (s / (d - c)) * 100;
+
+                                                            var windowWidth = $(window).width();
+                                                            window.open('/documentation/issue?WorkflowTypeId=20&BookId=1&BookVersionId=274&ScrollPercentage=' + scrollPercent + '&WindowWidth=' + windowWidth, '_blank' );
+                                                        });
+                                                 });
+                                            </script>
+<script type="text/javascript">
+//<![CDATA[
+
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1296,"ActionName":"View","BrowserSessionGuid":"e4b84c42-472f-4f56-904f-e838fecb5b7c","PageRequestUrl":"https://community.rockrms.com/documentation/bookcontent/1","PageRequestDateTime":"2023-08-03T11:03:35.2061898","PageRequestTimeToServe":0.0937533,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.183.76","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

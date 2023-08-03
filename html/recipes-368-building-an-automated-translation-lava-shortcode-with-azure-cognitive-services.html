@@ -1,0 +1,787 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaXhNYVUEPVkQNTVVARUA=","queueTime":0,"applicationTime":299,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Building an Automated Translation Lava Shortcode with Azure Cognitive Services | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+	<meta property="og:url" content="https://community.rockrms.com/recipes/368/building-an-automated-translation-lava-shortcode-with-azure-cognitive-services" />
+	<meta property="article:published_time" content="2023-04-11T19:38:01-07:00" />
+	<meta name="title" content="Building an Automated Translation Lava Shortcode with Azure Cognitive Services" />
+	<meta property="og:title" content="Building an Automated Translation Lava Shortcode with Azure Cognitive Services – Rock RMS Recipes" />
+	<meta property="og:updated_time" content="2023-05-26T14:46:39-07:00" />
+	<meta property="twitter:title" content="Building an Automated Translation Lava Shortcode with Azure Cognitive Services" />
+	<meta property="og:type" content="article" />
+	<meta property="author" content="Bill Deitrick" />
+	<meta property="og:description" content="The ChallengeTranslating Rock websites into the user&#39;s language has long been possible using third-party services. However, the traditional approach doesn&#39;t..." />
+	<meta property="article:publisher" content="https://www.facebook.com/TheRockRMS" />
+	<meta property="og:image" content="https://www.rockrms.com/GetImage.ashx?id=53268&amp;w=1080&amp;h=1080&amp;mode=crop" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+    <script src="/Scripts/modernizr.js" ></script>
+    <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+<link rel="canonical" href="https://community.rockrms.com/recipes/368/building-an-automated-translation-lava-shortcode-with-azure-cognitive-services" />
+<script src='https://fat.github.io/zoom.js/js/zoom.js' type='text/javascript'></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js' type='text/javascript'></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css' type='text/javascript'></script>
+
+<script>
+$(document).ready(function() {
+    
+var str = $("pre").html();
+var regex = /<br\s*[\/]?>/gi;
+$('pre').filter(':not([rel])').html(function(i, text) {
+    return text.replace(regex, "\n");
+});
+    
+$('pre').filter(':not([rel])').attr('rel', 'ROCK').addClass('language-rock').wrapInner( "<code></code>");
+Prism.highlightAll();
+
+$(function(){
+        //Notice the 'live' function has been replaced with 'on'
+        $("[id*=lbSaveNote]").on("click", function () {
+              Sys.WebForms.PageRequestManager.getInstance().add_endRequest(highlight);
+        });
+    });
+
+                });
+                function highlight(){
+Prism.highlightAll();
+                }
+</script>
+</head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./building-an-automated-translation-lava-shortcode-with-azure-cognitive-services" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<script src="/Scripts/summernote/summernote.min.js?v=637781563200000000" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockHtmlEditorPlugins?v=WrioKbfT_yxpb-ibdzLtakczEhcKe9lqZWQlVs27BFI1" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="9p1pOvruelkZi1jEJiz9k5YSi7a+PTyfglI9+crdemsXP5LlNFlRXFzr0Q/gN5ZBptgSBA849+W/u1wszjLsBRPZT9DcducUHlTZecqJxpJs/a5FBxbAOOUe++7fzZlvUBz9dkCRw9hDMbRQ8IC3p7YAITpK/2w9U5MZWPkCXwhgc9tKQKcsQfAToc6a5EOHlOd8rddNb6B4SCip4i9NfA6tHmJXvesvfpYxyP7b1Ssu6VDqWILowXzJeKKNWQgZL4lBLqX7w2niCVCUCD/flw==" />
+    <div id="page-container">
+    <div class="community-ui">
+      <!-- navigation -->
+      <div class="community-sidebar">
+              <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2467" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl19_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community current has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+      </div>
+      <!-- / navigation -->
+
+      <!-- content -->
+      <main class="community-content">
+        
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+<span class="topbar-text">
+    RX23 Content Subscription available to order now.
+</span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+
+        
+    <div class="header-row">
+        <div class="col">
+
+                <header class="community-content-header">
+                    <div class="row align-items-center">
+                        <div class="col d-none d-md-block">
+                            <nav aria-label="breadcrumb" class="align-items-center">
+                                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/recipes" rel="rocknofollow">Recipes</a></li><li class="breadcrumb-item">Building an Automated Translation Lava Shortcode with Azure Cognitive Services</li>
+</ol>
+                            </nav>
+                        </div>
+                        <div class="col text-lg-right">
+            
+<a href="/login?returnurl=/page/1292" class="login-link">Log In</a>
+                        </div>
+                    </div>
+                </header>
+                <section class="header-small">
+      <div class="image image-bg-gradient">
+        <img src="/Themes/RockCommunity/Assets/Images/particles.png" alt="" style="opacity: 0.5;" class="img-responsive">
+      </div><div class="container h-100"><div class="row h-100 align-items-end"><div class="col">
+            <h1 class="page-title">Recipe</h1>
+          </div></div></div></section>
+            
+
+
+        </div>
+    </div>
+
+
+        <!-- main -->
+        <div class="row community-content-body">
+          <div class="container">
+            
+
+    <div class="row">
+        <div class="col-12">
+            <div id="zone-feature" class="zone-instance"><div class="zone-content"><div id="bid_3373" data-zone-location="Page" class="block-instance js-block-instance html-content">
+	<div class="block-content">
+		<div id="ctl00_main_ctl07_ctl01_ctl00_upnlHtmlContentView">
+			
+        
+
+        
+        
+
+        
+
+
+    
+		</div>
+
+<div id="ctl00_main_ctl07_ctl01_ctl00_upnlHtmlContentEdit">
+			
+
+
+
+        
+        
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="zone-main" class="zone-instance"><div class="zone-content"><div id="bid_2485" data-zone-location="Page" class="block-instance js-block-instance recipe-detail">
+	<div class="block-content">
+		<div id="ctl00_main_ctl09_ctl01_ctl00_upnlContent">
+			
+        <style>
+            .table-recipescreenshots td {
+                padding: 0 10px 10px 0;
+            }
+        </style>
+        
+        
+        <div id="ctl00_main_ctl09_ctl01_ctl00_pnlDetails" class="panel panel-block">
+				
+
+            <input type="hidden" name="ctl00$main$ctl09$ctl01$ctl00$hfRecipeId" id="ctl00_main_ctl09_ctl01_ctl00_hfRecipeId" value="368" />
+
+            <div class="panel-heading">
+                <h1 class="panel-title"><i class="fa fa-lightbulb-o"></i>
+                    Building an Automated Translation Lava Shortcode with Azure Cognitive Services</h1>
+                <div class="panel-labels">
+                    
+                </div>
+            </div>
+
+            <div class="panel-body">
+
+                
+
+
+                <div id="ctl00_main_ctl09_ctl01_ctl00_pnlViewDetails">
+                    <div>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="post-container">
+  <section class="post-body margin-b-md" id="recipe-368">
+      <div class="avatar-group">
+        <div><img src="/GetAvatar.ashx?PhotoId=52324&AgeClassification=Adult&Gender=Male&RecordTypeId=1&Text=BD&w=100&h=100" class="avatar avatar-xl" alt="Photo of Bill Deitrick"></div>
+        <div class="vote">
+        
+        <a href="/login?returnurl=/community/recipes/368/building-an-automated-translation-lava-shortcode-with-azure-cognitive-services" class="like add-like" title="Login to like a recipe" >
+            <i class='fa fa-lg fa-thumbs-up'></i>
+            <span class="sup">5</span>
+        </a>
+        
+        </div>
+      </div>
+
+      <div class="title-group">
+
+        <!-- title actions -->
+        <div class="title-actions">
+        
+        </div>
+        <h1 class="h2 margin-t-none">Building an Automated Translation Lava Shortcode with Azure Cognitive Services</h1>
+
+        <div class="metadata">
+        <ul class="list-inline">
+          <li>
+            Shared by
+              <strong><a class="author" href="/profile/e04ac108-e8c0-4c03-b228-1a6283e9a999">Bill Deitrick</a></strong>,
+              <a href="https://community.rockrms.com/organizations/223f0496-a9a1-4a04-8f3e-e4c548ae813f">BEMA Software Services</a>
+            </li>
+            <li>
+              <time datetime="2023-04-11T19:38:01-07:00" data-updated-at="2023-05-26T14:46:39-07:00">3 months ago</time>
+            </li>
+          </ul>
+        </div>
+        <div class="margin-b-md">
+                        
+      <span class="label label-success" title="Compatible with Rock Version 12.0 and later">12.0</span>
+      
+            
+              <span class="label label-info">Communications, Web</span>
+            
+            
+            
+            
+             <span class="label label-warning">Advanced</span>
+             
+            
+            </div>
+      </div>
+
+      <div class="post-content">
+        <h1 class="">The Challenge</h1><p>Translating Rock websites into the user's language has long been possible using third-party services. However, the traditional approach doesn't fit every scenario, such as inside Rock mobile apps and email or SMS communications sent from Rock. This approach to automated translation can help fill some of those gaps.</p><h1 class="">The Solution</h1><p>Using a combination of Azure Cognitive Services, a Lava shortcode, and a custom caching table in the database, it is possible to build a Lava shortcode to automate text translation anywhere Lava can be run. The Cognitive Services API supports the translation of both HTML and text, so you can translate plain text or whole sections of formatted content (HTML translation keeps images, formatting, etc. intact).<br></p><h2 class="">Cognitive Services Translator</h2><p><a href="https://azure.microsoft.com/en-us/products/cognitive-services/translator" target="_blank">Azure Cognitive Services Translator</a>&nbsp;is Microsoft's automated translation API offered as part of the Cognitive Services family of tools. Translation on the Pay-as-you-Go tier is relatively inexpensive, at $10 per million characters translated per month. A free tier offers up to 2 million translated characters per month, though a paid tier is best for production use to make sure your translation service doesn't stop working unexpectedly.<br></p><p>Microsoft provides instructions for deploying a Translator resource on the <a href="https://learn.microsoft.com/en-us/azure/cognitive-services/Translator/create-translator-resource" target="_blank">Microsoft Learn site</a>.</p><p>There are many other translation API products, but the Azure product is relatively simple to use and, if applicable, can be covered by your church's Azure Sponsorship credits.</p><h1 class="">Setting it Up</h1><h2 class="">Global Attributes</h2><p>To set up the shortcode, you'll first need to create global attributes to point to your Translator resource deployed in Azure.&nbsp;</p><p>Create a global attribute called "Cognitive Services Translator Key" to store the API key for your translator resource. Ensure the key matches the value in the screenshot below.<br><img src="/Content/RockExternal/Users/billdeitrick-bema/Snag_34f7528.png" style="width: 383.6px; height: 340.054px;" alt="Snag_34f7528.png"></p><p>Next, create a global attribute called "Cognitive Services Translator Region", again matching the key shown in the image below:<br><img src="/Content/RockExternal/Users/billdeitrick-bema/Snag_3523fd1.png" style="width: 386.6px; height: 340.241px;" alt="Snag_3523fd1.png"></p><p>Populate these attributes with your Translator API Key and region. You can find these values in the Azure portal, as described in&nbsp;<a href="https://learn.microsoft.com/en-us/azure/cognitive-services/translator/quickstart-translator?tabs=csharp" target="_blank">Microsoft's Quickstart article</a>.</p><h2 class="">Caching Table</h2><p>The shortcode we will create caches the translated text while it is actively being referenced. This reduces cost since we pay for translation by the character and improves performance.</p><p>IMPORTANT: Database modifications are not recommended if you do not have experience with SQL. Always back up your database, especially when making schema changes.</p><p>The following SQL will create the caching table in your database:<br></p><pre>CREATE TABLE [_com_bemaservices_TranslationCache]
+(
+    [ContentHash]    VARBINARY(32) NOT NULL,
+    [TranslatorCode] NVARCHAR(2)    NOT NULL,
+    [LastDisplayed]  DATE           NOT NULL,
+    [Translation]    NVARCHAR(MAX)
+)
+
+CREATE UNIQUE INDEX [UX_com_bemaservices_TranslationCache]
+    ON [_com_bemaservices_TranslationCache] ([ContentHash], [TranslatorCode])
+</pre><p></p><h2>Shortcode</h2><p>The shortcode does most of the heavy lifting, translating the supplied text if it is not stored in the cache or retrieving it from the cache (and updating the time it was last accessed) if it is cached.<br><br>Determining the output language is an interesting consideration. Following the logic below, we accept the "to" argument as the destination language (by default we assume we're translating from English, unless a "from" argument indicating otherwise is provided. If a "to" argument is not provided, we attempt to determine the best person object to reference (Person is useful in communication and CurrentPerson in most other contexts). We then pull from a defined type attribute set on the person profile; on that defined type attribute, we specify a "TranslatorCode" attribute that specifies the language code in the format we need to use for the translation API. You could set up various ways to collect and set such an attribute on person profiles, or you might use different logic to determine the appropriate destination language.<br></p><p>Note that Microsoft makes the list of languages for Translator available via a GET request to this endpoint: https://api.cognitive.microsofttranslator.com/languages?api-version=3.0&amp;scope=translation<br></p><p>Create your shortcode using the settings shown below; description, documentation, and shortcode markup are provided below the screenshot.<br><img src="/Content/RockExternal/Users/billdeitrick-bema/Snag_832d3fc.png" style="width: 767.5px; height: 314.82px;" alt="Snag_832d3fc.png"></p><h2 class="">Description</h2><pre class="">A shortcode that, given a block of text, will translate it from English to the desired language. This looks at the language preference on the person's profile in Rock or can optionally have a specific language provided.</pre><h2 class="">Documentation</h2><pre class="">This is a block shortcode, so call it like this:<br>{[ translate ]}Hello World{[ endtranslate ]}<br><br>The shortcode can also handle properly-formed HTML, which will be returned with the HTML intact:<br>{[ translate ]}&lt;h1&gt;Chapter 2&lt;/h1&gt;&lt;p&gt;"A wizard is never late, Frodo Baggins. Nor is he early. He always arrives precisely when he means to."&lt;/p&gt;{[ endtranslate ]}<br><br>There are two optional parameters. A "from" parameter specifies the source language (this defaults to English). A "to" parameter specifies the destination language. If they are identical, no translation will be performed. If no "to" language is specified, the Language Preference from the Current Person's profile will be used (defaulting to English if none set). The language can be found by making a GET request to: https://api.cognitive.microsofttranslator.com/languages?api-version=3.0&amp;scope=translation<br><br>The Language Preference has a "Translator Code" field that allows entering the corresponding value from the cognitive services translation API's language list.</pre><h2 class="">Shortcode Markup</h2><pre class="">{%- if to == null or to == empty -%}
+    {%- if Person -%}
+       {%- assign person = Person -%}
+    {%- else -%}
+       {% assign person = CurrentPerson %}
+    {%- endif -%}
+    {%- assign to = person | Attribute:'Language','Object' | Attribute:'TranslatorCode' | Default:'en' -%}
+{%- endif -%}
+
+{%- if from == to -%}
+    {{- blockContent -}}
+{%- else -%}
+    {%- comment %}Lava webrequest doesn't handle the single quote character in the payload. We cheat by replacing it with a right single quote character that the translation service is happy with.{% endcomment -%}
+    {%- capture payload -%}
+    [
+        {
+            "Text": {{ blockContent | Replace:"'",'’' | ToJSON }}
+        }
+    ]
+    {%- endcapture -%}
+
+    {%- sql return:'cachedResult' -%}
+        DECLARE @Hash VARBINARY(32) = HASHBYTES('SHA2_256', '{{ payload | SanitizeSql }}')
+        DECLARE @TranslatorCode NVARCHAR(2) = '{{ to }}'
+        
+        SELECT
+            *
+        FROM [_com_bemaservices_TranslationCache] tc
+        WHERE
+            tc.[ContentHash] = @Hash
+            AND tc.[TranslatorCode] = @TranslatorCode
+    {%- endsql -%}
+    
+    {%- assign cacheDate = cachedResult | First | Property:'LastDisplayed' | AsDateTime -%}
+    {%- assign today = 'Now' | Date:'MM/dd/yyyy 00:00' | AsDateTime -%}
+
+    {%- if cachedResult == null or cachedResult == empty -%}
+        {%- webrequest url:'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from={{ from }}&to={{ to }}&textType=html' headers:'Ocp-Apim-Subscription-Key^{{ 'Global' | Attribute:'CognitiveServicesTranslatorKey' }}|Ocp-Apim-Subscription-Region^{{ 'Global' | Attribute:'CognitiveServicesTranslatorRegion' }}' method:'POST' body:'{{ payload }}' requestcontenttype:'application/json' -%}
+        {%- capture output -%}{{ results | First | Property:'translations' | First | Property:'text' }}{%- endcapture -%}
+        {%- endwebrequest -%}
+    {%- else -%}
+        {%- capture output -%}{{ cachedResult | First | Property:'Translation' }}{%- endcapture -%}
+    {%- endif -%}
+
+    {%- if cacheDate != today -%}
+        {%- sql -%}
+            DECLARE @Hash VARBINARY(32) = HASHBYTES('SHA2_256', '{{ payload | SanitizeSql }}')
+            DECLARE @TranslatorCode NVARCHAR(2) = '{{ to }}'
+            DECLARE @LastDisplayed DATE = TRY_CAST('{{ today | Date:'yyyy-MM-dd' }}' AS DATE)
+            DECLARE @Translation NVARCHAR(MAX) = N'{{ output | SanitizeSql }}'
+            
+            MERGE [_com_bemaservices_TranslationCache] AS [TARGET]
+            USING (
+                SELECT
+                      [ContentHash]    = @Hash
+                    , [TranslatorCode] = @TranslatorCode
+                    , [LastDisplayed]  = @LastDisplayed
+                    , [Translation]    = @Translation
+                ) AS [SOURCE]
+            ON [TARGET].[ContentHash] = [SOURCE].[ContentHash] AND [TARGET].[TranslatorCode] = [SOURCE].[TranslatorCode]
+            WHEN NOT MATCHED THEN
+                INSERT ( [ContentHash], [TranslatorCode], [LastDisplayed], [Translation] )
+                VALUES
+                    ( [SOURCE].[ContentHash], [SOURCE].[TranslatorCode], [SOURCE].[LastDisplayed], [SOURCE].[Translation] )
+            WHEN MATCHED THEN
+                UPDATE
+                SET
+                    [TARGET].[LastDisplayed] = [SOURCE].[LastDisplayed]
+                ;
+            SELECT 1
+        {%- endsql -%}
+    {%- endif -%}
+    {{- output -}}
+{%- endif -%}</pre><h1 class="">Cleanup Job</h1><p>We could keep all translated text in the database, but this is wasted space if the translated text is no longer being used. Because the shortcode will update a timestamp in the cache table to the last day a particular chunk of text was translated, we can use a simple SQL job that runs periodically to clean up stale translations. The below SQL will clear out any translation records from the cache table that have not been accessed in 60 days.</p><pre class="">DECLARE @CacheLifetimeInDays INT = 60<br>DECLARE @Now DATETIME = CAST(SYSDATETIMEOFFSET() AT TIME ZONE 'Eastern Standard Time' AS DATETIME)<br><br>DELETE<br>FROM<br>    [_com_bemaservices_TranslationCache]<br>WHERE<br>    DATEDIFF(DAY, [LastDisplayed], @Now) &gt; @CacheLifetimeInDays</pre><p>If translated text you've cleared from the cache needs to be translated again, this is no problem--the shortcode simply sends the text off to the translation API and caches it again.<br></p><h1 class="">Wrapping Things Up<br></h1><p>This article should get you started on the path to building your own translation shortcode using Azure Cognitive Services, and you could certainly use similar techniques with another service of your choosing. This approach works well for automated translation of communications and can also be used in Rock mobile apps anywhere you can render server-side Lava.&nbsp;</p><p>You might also find a clever way to combine this with some of the techniques described in Jon Corey's excellent <a href="https://community.rockrms.com/recipes/359/bilingual-workflow-forms" target="_blank">Bilingual Workflow Forms</a> recipe.</p><p>Special thanks to Braden Cohen and Ben Murphy Rocket Chat's #mobile channel for bouncing around ideas that lead to this recipe, and to Joanna Burress at Grace Church!</p><p>The Azure Cognitive Services logo is the property of Microsoft.</p><h1 class="">Example Output</h1><p>This screenshot shows example output using the shortcode.<br><img src="/Content/RockExternal/Users/billdeitrick-bema/Snag_87640e9.png" style="width: 100%;" alt="Snag_87640e9.png"><br></p>
+
+    </div>
+    
+
+     <div class='screenshots'>
+      
+          <a href="https://rockrms.imgix.net/https%3a%2f%2fwww.rockrms.com%3a443%2fGetImage.ashx%3fid%3d53268?&s=bcb5fb31938375c2e4d0d45724aff9ea" target="_blank"><img src="https://rockrms.imgix.net/https%3a%2f%2fwww.rockrms.com%3a443%2fGetImage.ashx%3fid%3d53268?auto=format&fit=crop&max-w=1000&max-h=1200&s=2f574ff73fd41246403262c2161b7ead" data-width="1480" data-height="833" data-original="/GetImage.ashx?id=53268" /></a>
+        
+    </div></section>
+</article>
+
+                    </div>
+                    <div class="actions">
+                        
+                        
+                        
+                    </div>
+                </div>
+
+
+                
+
+            </div>
+
+        
+			</div>
+    
+		</div>
+
+	</div>
+</div><style>
+    :root {
+        --focus-state-border: 1px solid #ee7725;
+        --focus-state-shadow: 0 0 0 3px rgba(238,119,37,0.6);
+    }
+    
+  .panel-note {
+      border: 0;
+      box-shadow: none;
+  }
+    
+  .hide-panel .panel {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .hide-panel .panel-heading {
+    display: none;
+  }
+  
+  .note {
+      border-top-color:#eee;
+  }
+  
+  .note .note-comments {
+      border-top-color:#eee;
+      background: #f7f7f7;
+  }
+  
+  .note-footer-meta-list {
+      display: none;
+  }
+</style>
+
+<div class="row">
+<div class="col-sm-2"></div><div class="col-sm-8">
+<h5 class="margin-b-none">Login to add a comment...</h5><div id="bid_2622" data-zone-location="Page" class="block-instance js-block-instance notes">
+	<div class="block-content">
+		<div id="ctl00_main_ctl09_ctl02_ctl00_upNotes">
+			
+        <section class="panel panel-note js-notecontainer panel-note-light panel-noteadd-visible" data-sortdirection="Descending">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title">
+						<i class="fa fa-sticky-note-o"></i>
+					</h3>
+				</div><div class="panel-body">
+					<input class="js-currentnoteid" type="hidden" name="ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_hfCurrentNoteId" id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_hfCurrentNoteId" /><input class="js-expandednoteids" type="hidden" name="ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_hfExpandedNoteIds" id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_hfExpandedNoteIds" /><a id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_lbDeleteNote" class="js-delete-postback" href="javascript:__doPostBack(&#39;ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_lbDeleteNote&#39;,&#39;&#39;)" style="display:none;"></a><a id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_lbEditNoteHidden" class="js-edit-postback" href="javascript:__doPostBack(&#39;ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_lbEditNoteHidden&#39;,&#39;&#39;)" style="display:none;"></a><a id="ctl00_main_ctl09_ctl02_ctl00_notesTimeline_notesTimeline_lbReplyToNoteHidden" class="js-reply-to-postback" href="javascript:__doPostBack(&#39;ctl00$main$ctl09$ctl02$ctl00$notesTimeline$notesTimeline_lbReplyToNoteHidden&#39;,&#39;&#39;)" style="display:none;"></a><ul class="note-view-list note-list list-unstyled js-notelist">
+    
+		
+		<li class="note js-note ">
+    <article class="note-view-item js-noteviewitem  note-type-recipe-discussion"  data-note-id="24731" data-notetype-id="29" id="NoteRef-d23436d9ec984a309d32f0c11dae33b9">
+        <header class="meta">
+            <div class="meta-figure"><a href="#NoteRef-d23436d9ec984a309d32f0c11dae33b9" class="avatar avatar-lg"><img src="/GetAvatar.ashx?PhotoId=&AgeClassification=Adult&Gender=Male&RecordTypeId=1&Text=NR" alt="Nicolas Raj"></a></div>
+            <div class="meta-body">
+                <div class="flex">
+                    <p><a href="https://community.rockrms.com/profile/1e2fd1ad-d839-4f37-8c32-ca249749334c/">Nicolas Raj</a></p><div class="dropdown" data-canedit="false" data-canreply="true" data-allowwatch="false">
+                        <button id="24731-options" class="btn btn-link btn-overflow" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i></button>
+                        <ul class="dropdown-menu" id="24731-optionsmenu" aria-labelledby="24731-options"><li><button type="button" class="dropdown-item text-right px-3 btn-link js-replynote">Reply</button></li>
+                            
+                            <!-- false --></ul>
+                    </div></div>
+
+                <div class="note-details"><a href="#NoteRef-d23436d9ec984a309d32f0c11dae33b9" class="timestamp">
+                        <time datetime="2023-07-03T20:50:52-07:00" title="July 3, 2023 - 8:50 PM">one month ago</time>
+                    </a></div>
+            </div>
+
+        </header>
+        <div class="note-content">
+            <p>This is briliant, thank you</p>
+        </div>
+        <footer class="note-footer">
+            
+            <ul class="note-footer-meta-list list-horizontal"></ul>
+        </footer>
+    </article></li>
+
+    
+		
+		<li class="note js-note ">
+    <article class="note-view-item js-noteviewitem  note-type-recipe-discussion"  data-note-id="24454" data-notetype-id="29" id="NoteRef-a640c3b361e54228a261d10425dd152a">
+        <header class="meta">
+            <div class="meta-figure"><a href="#NoteRef-a640c3b361e54228a261d10425dd152a" class="avatar avatar-lg"><img src="/GetAvatar.ashx?PhotoId=52324&AgeClassification=Adult&Gender=Male&RecordTypeId=1&Text=BD" alt="Bill Deitrick"></a></div>
+            <div class="meta-body">
+                <div class="flex">
+                    <p><a href="https://community.rockrms.com/profile/e04ac108-e8c0-4c03-b228-1a6283e9a999/">Bill Deitrick</a></p><div class="dropdown" data-canedit="false" data-canreply="true" data-allowwatch="false">
+                        <button id="24454-options" class="btn btn-link btn-overflow" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i></button>
+                        <ul class="dropdown-menu" id="24454-optionsmenu" aria-labelledby="24454-options"><li><button type="button" class="dropdown-item text-right px-3 btn-link js-replynote">Reply</button></li>
+                            
+                            <!-- false --></ul>
+                    </div></div>
+
+                <div class="note-details"><a href="#NoteRef-a640c3b361e54228a261d10425dd152a" class="timestamp">
+                        <time datetime="2023-05-26T14:47:46-07:00" title="May 26, 2023 - 2:47 PM">2 months ago</time>
+                    </a></div>
+            </div>
+
+        </header>
+        <div class="note-content">
+            <p>Update: Fixed a small issue in the shortcode causing a problem with non-Latin characters.</p>
+        </div>
+        <footer class="note-footer">
+            
+            <ul class="note-footer-meta-list list-horizontal"></ul>
+        </footer>
+    </article></li>
+
+    
+		
+		<li class="note js-note ">
+    <article class="note-view-item js-noteviewitem  note-type-recipe-discussion"  data-note-id="23934" data-notetype-id="29" id="NoteRef-afc74bdee5944d38bbc4ab78f33ade92">
+        <header class="meta">
+            <div class="meta-figure"><a href="#NoteRef-afc74bdee5944d38bbc4ab78f33ade92" class="avatar avatar-lg"><img src="/GetAvatar.ashx?PhotoId=16118&AgeClassification=Adult&Gender=Male&RecordTypeId=1&Text=GM" alt="Gerry Miller"></a></div>
+            <div class="meta-body">
+                <div class="flex">
+                    <p><a href="https://community.rockrms.com/profile/3aeaec15-6879-4a8b-a5f8-c9bdd624a999/">Gerry Miller</a></p><div class="dropdown" data-canedit="false" data-canreply="true" data-allowwatch="false">
+                        <button id="23934-options" class="btn btn-link btn-overflow" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-h"></i></button>
+                        <ul class="dropdown-menu" id="23934-optionsmenu" aria-labelledby="23934-options"><li><button type="button" class="dropdown-item text-right px-3 btn-link js-replynote">Reply</button></li>
+                            
+                            <!-- false --></ul>
+                    </div></div>
+
+                <div class="note-details"><a href="#NoteRef-afc74bdee5944d38bbc4ab78f33ade92" class="timestamp">
+                        <time datetime="2023-04-13T07:20:24-07:00" title="April 13, 2023 - 7:20 AM">3 months ago</time>
+                    </a></div>
+            </div>
+
+        </header>
+        <div class="note-content">
+            <p>This is so cool!</p>
+        </div>
+        <footer class="note-footer">
+            
+            <ul class="note-footer-meta-list list-horizontal"></ul>
+        </footer>
+    </article></li>
+
+    
+</ul>
+				</div>
+			</section>
+    
+		</div>
+
+	</div>
+</div></div></div></div></div>
+        </div>
+    </div>
+
+
+<div class="d-none">
+        <!-- Ajax Error -->
+        <div class="alert alert-danger ajax-error no-index" style="display:none">
+            <p><strong>Error</strong></p>
+            <span class="ajax-error-message"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="zone-sectiona" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div id="zone-sectionb" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectionc" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectiond" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+    </div>
+        <!-- End Content Area -->
+
+
+
+          </div>
+          
+
+
+<footer class="footer">
+    <div class="section section-footer-top">
+        <div class="container">
+            <div class="footer-top">
+                <nav class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4">
+                                <span class="brand mb-5 d-block">
+                                    <a href="https://www.rockrms.com/" class="brand">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                        <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path>
+                                      </svg>
+                                  </a>
+                                </span>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3 ml-md-auto">
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.rockrms.com/Download">Download Rock</a></li>
+                                    <li><a href="https://github.com/SparkDevNetwork/Rock/issues">Issues</a></li>
+                                    <li>
+                                        <a href="https://github.com/SparkDevNetwork/RockWebsites/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">Report Website Issue</a>
+                                    </li>
+                                    <li><a href="https://community.rockrms.com/learn">Learn</a></li>
+                                    <li><a href="https://community.rockrms.com/ministry-impact">Ministry Impact</a></li>
+                                    <li><a href="https://community.rockrms.com/jobs">Careers</a></li>
+                                    <li><a href="https://community.rockrms.com/rock-playlist" class="text-primary font-weight-semibold">Rock Playlist</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3">
+                              <ul class="list-unstyled">
+                                <li><a href="https://www.rockrms.com/partners">Partners</a></li>
+                                <li><a href="https://www.rockrms.com/sponsors">Sponsors</a></li>
+                                <li><a href="https://www.rockrms.com/organizations">Who's Using Rock</a></li>
+                                <li><a href="https://community.rockrms.com/built-with-rock">Websites Using Rock</a></li>
+                                <li><a href="https://store.rockrms.com" target="_blank">Promo Shop</a></li>
+                                <li><a href="https://realchip.rocks/" target="_blank">Chip</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6">
+                      <ul class="social-list list-inline text-center">
+                        <li class="social-icon"><a href="https://www.facebook.com/TheRockRMS/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-icon"><a href="https://twitter.com/rockrms"><i class="fab fa-twitter"></i></a></li>
+                      </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="section section-footer-bottom">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap flex-justify" style="justify-content: space-between;">
+                    <ul class="list-inline">
+                        <li><a href="/login" class="hover-orange">Login</a></li>
+                        <li><a href="/privacy" class="hover-orange">Privacy</a></li>
+                        <li><a href="/license" class="hover-orange">License</a></li>
+                    </ul>
+                    <p>Rock is a project of <a target="_blank" href="https://sparkdevnetwork.org/">Spark Development Network</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+          
+
+        </div>
+        <!-- / main -->
+
+      </main>
+      <!-- / content -->
+
+
+    </div>
+      </div>
+
+      <div class="d-none">
+        <div id="zone-header" class="zone-instance"><div class="zone-content"></div></div>
+        <div id="zone-login" class="zone-instance"><div class="zone-content"></div></div>
+      </div>
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl16" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$rock-config-trigger&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 143,
+    pageId: 1292,
+    layout: 'FullWidth',
+    baseUrl: '/'
+});Rock.controls.modal.closeModalDialog($('#ctl00_main_ctl07_ctl01_ctl00_mdEdit_modal_dialog_panel'));
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1292,"ActionName":"View","BrowserSessionGuid":"8d4628d0-8a9d-445a-ada8-a7628377b80b","PageRequestUrl":"https://community.rockrms.com/recipes/368/building-an-automated-translation-lava-shortcode-with-azure-cognitive-services","PageRequestDateTime":"2023-08-03T11:03:58.643628","PageRequestTimeToServe":0.1730889,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.255.201","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

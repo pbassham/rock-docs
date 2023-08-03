@@ -1,0 +1,5032 @@
+
+<!DOCTYPE html>
+
+
+
+<html class="no-js">
+<head><meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"35d27380d9","applicationID":"422678491","transactionName":"YQNQZBcCWkBUWxJdVlhJc2M1TEBbUFUDRxZECVFbBgxZXkBWD0BAGQpTSQoWQEAaVAdCWFIJUUUIBlpHVEwPW1cYB0FAHQ==","queueTime":0,"applicationTime":95,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"35d27380d9",applicationID:"422678491"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><title>
+	Other | Rock Community
+</title>
+
+    <script src="/Scripts/Bundles/RockJQueryLatest?v=PFAGrQSbQ5701zQdYAGRCurjSyAXknQJ9oKIQ6G3T6U1"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="generator" content="Rock v1.16.0.8" />
+
+  <!-- Included CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="/Themes/RockCommunity/Styles/bootstrap.css?v=638263951396971123"/>
+	<link rel="stylesheet" href="/Themes/RockCommunity/Styles/theme.css?v=638263951445565894"/>
+
+  <script src="/Scripts/modernizr.js" ></script>
+  <script src="/Themes/RockCommunity/Assets/Scripts/theme.js?v=637618953660000000" ></script>
+
+    
+	<link rel="shortcut icon" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="/GetImage.ashx?id=12754&width=16&height=16&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="32x32" href="/GetImage.ashx?id=12754&width=32&height=32&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/GetImage.ashx?id=12754&width=144&height=144&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/GetImage.ashx?id=12754&width=180&height=180&mode=crop&format=png" />
+	<link rel="apple-touch-icon-precomposed" sizes="192x192" href="/GetImage.ashx?id=12754&width=192&height=192&mode=crop&format=png" />
+    <!-- BEGIN Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQE6JSQDP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8SQE6JSQDP');
+    </script>
+    <!-- END Global site tag (gtag.js) - Google Analytics -->
+<link rel="canonical" href="https://community.rockrms.com/lava/filters/other-filters" /></head>
+<body id="body" data-spy="scroll" data-target="#toc">
+
+    <form method="post" action="./other-filters" id="form1">
+<input type="hidden" name="__CVIEWSTATESIZE" id="__CVIEWSTATESIZE" value="0" />
+<input type="hidden" name="__CVIEWSTATE" id="__CVIEWSTATE" value="/TVMOf7QyREJbBvt4kNMYRX0NRPh9lQDdTbPgKlApVCIbqrkaXg9ddlhpsUZiEjiTHHHpkCwqNk7xOunbQobsBuIURlX3E9i3g8Asfl2xAyTtcx/UjPxTGKmDvuf07SP9l/1dehIRZToZCoMUU7XGbEoZZBLJtBpMG2gOq3+Mn8py0lVf8gVcnratDyb6UmWScBhaf2jtm+rPJtwRDA9i9K3oFizNjPd/RALxgQ3gypTTkEf50iu96yGZtXdOYWW9ErAnuLKoZAVfVNdm7SH85zysTSRNh05ERHe7ljGAmvYzRMYs03kcAt+pZfXNDhFWTw9bMamW4DKb+x1V9THrecPOBYmfNjJJ5y+2+cOQfNBYyTPNZUuOz9tcNhbYnSJpq8XcNNmD7IbwclGpGEiD/iL+gVxsKOqGTEEt0Ty04FH/nE788rou+osrHIEAP1LpDZ8x29+ED3mzwlXr6pmaznFLKOVvyo6eMjmKQlvYohUeRHt1VCB9EFsvBSdS9r1yFBQODbtFExOPmoGNoV/1QQdsdq6RpgICnupNNOE5Eguev10hyG92IxSE8O889JpY23Aw8q1iJgkLBKkKZrw41lRQVGJQQiysSwJCwlLJKKARlC7CkHG7iN85njJYBHKQUlkG2Kp3CHR0zrOpqT6Nk8j6FT7AGj5RgRQBf1YGjE02PgTnKSSpjvWpyf/nw4MdlUqkjD6bL8Zj0a8owCkxUdTAzpeTiIfDrqY3Q5fks6OAYzrCLbM7ml7hs9BY63rv7AHdSmSUr1XMLcF3jHMCHtBU/0NBRPBGtsoYgIQWZGMEGSPw+pzXEq6dE40kWMFYl9YylCaRX4S9G6b88wBqhUQAGQ0waDGpgoZHl+FJXG9gjCHsFcfn10GEhYxEFmlOQ3Iq4Xhb0RA1CK8h/Kx4xr2sPj8FlSMjU0z+WRT+flS6leVvxMrOIP6ccXkvjXxmNwV9RNMYdnDNVkA7dq9FTlDx7UQRHCT/W+VzJCKOryI5idqL1NLANd2HfOMuVLzMTb0HMcvV65QCs8fdRVglqam3y3QeV7HBCQjljv7yXT/bB0JkKf9Kzc9oTkyMWP0t5fW81vEcmVC3yFM6AB1W6tC8zhod4ept6Q5Ee6XRjIYRuEcuuOjFKnVHBFUZPcrmdaEwNEGBd+Pgy91BohFQ2vJBEmdfowndiTkOSSwqC+O9gMlYy4FzwVEiTL80hNizG2rsZ7Wx9/CcT0pArEWRB3GatUEPobv/vwL9UL3usPIIXpuPsI6W+nQOu8slRM09CwadCx09xsklPZxT35B/c1ixWxD7qY40ktwoPN/pyS75SXPhDT9lB/wRIS2i4RN7DNW2WE5JknUIT+kzDStqWgwv5hfrhpLOCylsTS08hdJBAm15ZOyGvfYlXwVVKcm0RheZDYrTRZCIMGYp+RnzXiEETmh5aT4jYaWOxWTC9CdOR1dbyE3zJxUey7uVKrozSD52cne/kQu38PVzcrTZAiN0vA7dF+UnZmw4s6qugJPi4yYncRS5iPi5lVAwOHryChjZt/ZU4BAOlOCBVtPtTesy9f9vuLBmS/dw3gQowFTq70WwltiZon5UDsQ7Z7707GbV/9BMafCCFxcQLVdtwvnERGY5jZKzeXswVQk9uGOX3Y4hZzKpJ1gKNMuT1i5jljmFxY3LOSa8E/wcz11w4R9maaPp9O9LXTn0147cwpSO1k3tmTICdO26ZrkIpqI1RPI2u030H4RxDIAFGA47S+vxf93Ep+fiJKXLWAj4HJTsWaH1iY9B8dYNA40OTK5ohu0zN3sLROmQrPYZVIsb3mPw4JEuR/+6rPG7KKCGAFePPtK7PVR60WXAz5/z/4ZDQCYjOcdi9OPuj2xZo9W80Wspungl8OHPOzm509tAI6AfGb8JXQMazpbCk4jI2UCYUiROm20KTjGAeHJLNUHOqXfN5RYEbfB+awZGqRS2H6Byz5g12hUhemONa6BPnahicxn0M0CgEmnG0BUVu/IHcs0G4OU1n3R93mHgTqYgywsrAqL/Gno68cGSZLxDFE+nFMMFeSqJxXgLR0/Yt0XN0R/bhUyG5LFF2iAIPytp6XKqBBegRRMbU14brLRhmJswmU6Crqaz1SLI5ZTgn/KO+EzUGCghAPBw0jvfYFsPPFUbIi5bFLGh6Xvg48GdbyOyYcmUhJaFenFxVaaqJlMV4U1HUC2m+C/HIu7sLclTAkJ569wQgZAPWEreoSvBsDkN4pjuM+QB+NR9BNTEQ6RpLeoXswvgVpXLviPKMH+eLlsi2ZxE+8l3HPF5uM4uF712tRhRMBi7oA0cSWe5Iku/k5iq54eFbPxPr6a3fgBcYtvfP184Zi2G8d8ixcS8NHVTME51YkBmRRCVAdFQDY+chWp4G5/cNoRux1pra6b70thWf8HCOLMiHqXtDLbSz3XZQV5EVAgsYlnmMZFRj0iGu0W0kn5zhNphg01feDOmh4zArgNFbCg7NbGNvyTtXTFdpEZ4Zj9rDWctjGYOy2j6CgrtGFgA/UZJUsSEUOvT+pySoS3MOLMVJfyYFAwB0GRwNpV8xovqkAkI4mvYKZbO+aYk2Ogf3DVEbSqzd0yhmWwSHGM0iszEGWmxETd3CdX8l6uwW6zZd16iFyEAUVFmsuJh5uhh+FSIZd5GfzG5hXNwZgj3VvyDmQphKhxdFzd0w1WAUVkRVMxAAUUkrmDFDgDJY4qAOz0AU/HFOuKEXmIZHVBtXAf0ogzC+FPTixEirZDx21ejrSw7WbdmLUGSbhe+IuFeMvdsgUO2xPFIRDX2KxuWwfkaZAF6abd+2jz+fKAQyE0wfqEHsyQbHGJvi7KH6ZwURIlI4a0VIeW9ipuWVT7qI6IxbAHqpghBODjCfzZpIgK3f132EFPUZ3vK20S8tMV+INyWEIWEkWf3xfAUd8lE3Elj5B1b4uw8vxJvK4d9UiZJD+lhcvjLxTuqsjqZwz6ek4QOQld1zfCuNLY1zFSH3Eo7OQJ/EgaTcN1nEbjDtIm3hiPTr/CJqBT7CGfCVxklVrHVrvrvfTIxqUuj3q5fwhoGLli/msjoRu56yC4L8hnq9S3/u2oBG+Xq927KtBa0QA2nhShbDT8g+JbYPmPFxJtrlTwHEMjo3KsAfdft5YbCkVq0QQ+7xl19m7UzxejX+0tmCl+qAmydkLtgBzo+DSnQlpBcT2Bdic4rQ8RNPZ8CC5CgBXQOXmeqrkX2MEuDeIHovgU5cKqqdiq9HbYW4TjdFinw5akDtrtv2GEtapm2fmm9i92K/z6DSg0t+ID4mYETHw0x0dkjUeDwumKojYJDNn/6B1Kzf+FDzIcKsMiXvl8t/HCKYPFHMhHUisLK+F149YzXQuX1TKeNKhH5RGPmd5gxiBCDHCRioWct9d8Vgv8aAbJbvnUn0BRyrPHHN0EBppVkPBiZadnv4O9I8/ef5KovBKFXPNYMR89+46ZqVi6bMfqXuMhoAeL0l+VYBugUb7OBQZVrizY98pgQR5majp2LjdhknzmASl7XWJFJD4pCUjARydh8dZAGsfu4tuzC3fQxR0q7e7f1LBjoi+8Zolws8tMsu2ainoH8YHz6kl643bzq0hM4qS6crbu+zC4PxWZmg0EwKEnKpzD4PVs93Y3oaxh9/xTJQXFXdLihU5woqBInE5sjgFwnh4qkthojF0Gzu35oc03OMk82R1KJSShqYEVqGlIlkv260m+3cb21kWZQ8Di0EPxrl++jR7HGyISsWjcju7tRdfYB2HPev0kwB3D8DL/p1QxtsYEcbZppjZ+B3OhdazrXLi9xPn64ic+9G5FvaDora6JOMrTEMp1zVivXYmFq7W9JjzTtVHl4BOiGdXyREUquhcpdLRsebdtFQujTaGtfwD+RBJqQ+X6VBVmfVmF" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQjaDVM4_5I9VKMT4RprX_DQ7V7AxcS0WqjvyDbGaU_gtJHnRGg-cpUnhDHEuWsm-QaLQVex-WTMJwDSTfygpiehKocceHLIlrXUaVyVbYvW-WEcRdzlCX04Xc8uKgWVgxdo-quTFvSloc2VHB_jARiM1&amp;t=ffffffffaa493ab8" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/Scripts/Bundles/RockLibs?v=msXCkqwxaoeS4rK1sGJE0Z8EcqFb7RnG37KxQ06anSo1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockUi?v=-gT3CEuVFt_bUsGhPX8SkCAlA6I1dUgqwin60qE7VUM1" type="text/javascript"></script>
+<script src="/Scripts/Bundles/RockValidation?v=4Kvx_pR-b70eKP9hPeGzEIT-wueedEIq_kT08CTT8YE1" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="KhhY9V2h+4zocIn/xhIB0RZPJATAejuE7nf9Z6KRWvhdzaZNucbQtaPnTbE0nQA8xKKzse+7L1XVD/FAsGXfFKbOnc0D62XQjXF6uanwcgs7pVwa+l0W4hXf09pfrxljmBz8OuTmbOyJN8K8UYVI1g==" />
+      <div id="page-container">
+    <div class="community-ui">
+      <!-- navigation -->
+      <div class="community-sidebar">
+          <nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+              <div id="zone-navigation" class="zone-instance"><div class="zone-content"><div id="bid_2562" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_ctl19_ctl01_ctl00_upContent">
+			
+    
+
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<div class="brand-container text-md-center">
+    <a href="https://community.rockrms.com/" class="rock-brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path></svg><div>Community</div></a>
+    <button aria-expanded="false" class="collapsed navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="nav flex-column navbar-side"><li data-title="Community" class="community has-children"><div>Community</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/ask"><i class="fa fa-question-circle"></i>Q&A</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/recipes"><i class="fa fa-book"></i>Recipes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Ideas"><i class="fa fa-lightbulb"></i>Ideas</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/chat"><i class="fa fa-comments"></i>Chat</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/get-involved"><i class="fa fa-users"></i>Get Involved</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/Connect"><i class="fa fa-newspaper"></i>Blog</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/podcast"><i class="fa fa-volume-up"></i>Podcast</a>
+                                    </li></ul></li><li data-title="Learn" class="learn current has-children"><div>Learn</div>
+                        <ul class="nav nav-childpages"><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/askchip"><i class="fa fa-comment"></i>Ask Chip</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/documentation"><i class="fa fa-book-open"></i>Manuals</a>
+                                    </li><li><a class="active false" role="menu-item" href="https://community.rockrms.com/Lava"><i class="fa fa-file-code"></i>Lava</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/styling"><i class="fa fa-brush"></i>Styling</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/rocku"><i class="fa fa-video"></i>Rock U</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/classes"><i class="fa fa-users-class"></i>Classes</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/subscriptions"><i class="fa fa-play"></i>Subscriptions</a>
+                                    </li><li><a class="nav-link false" role="menu-item" href="https://community.rockrms.com/developer"><i class="fa fa-code"></i>Developer Resources</a>
+                                    </li></ul></li></ul></div>
+
+</nav>
+
+
+		</div>
+
+	</div>
+</div></div></div>
+          </nav>
+      </div>
+      <!-- / navigation -->
+
+
+      <!-- content -->
+      <main class="community-content">
+        
+
+
+    
+        <div id="mbb-6053" data-topbar-name="dismiss6053Topbar" data-topbar-value="dismissed" class="topbar" style="background-color:#ee7625;color:#ffffff;">
+        <a href="https://community.rockrms.com/subscriptions">
+<span class="topbar-text">
+    RX23 Content Subscription available to order now.
+</span>
+        </a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    
+
+
+        <div class="scroll-vertical">
+        
+    <div class="header-row">
+        <div class="col">
+
+                <header class="community-content-header">
+                    <div class="row align-items-center">
+                        <div class="col d-none d-md-block">
+                            <nav aria-label="breadcrumb" class="align-items-center">
+                                <ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="/page/1247" rel="rocknofollow">Rock Community</a></li><li class="breadcrumb-item"><a href="/Lava" rel="rocknofollow">Lava</a></li><li class="breadcrumb-item">Other</li>
+</ol>
+                            </nav>
+                        </div>
+                        <div class="col text-lg-right">
+            
+<a href="/login?returnurl=/page/1307" class="login-link">Log In</a>
+                        </div>
+                    </div>
+                </header><section class="header-small">
+                    <div class="image image-bg-gradient">
+                        <img src="/Themes/RockCommunity/Assets/Images/particles.png" alt="" style="opacity: 0.5;" class="img-responsive">
+                    </div><div class="container-fluid h-100"><div class="row h-100 align-items-end"><div class="col-md-9 col-xl-8">
+<h1 class="page-title page-title-constrained">Other</h1>
+                        </div></div></div></section>
+
+        </div>
+    </div>
+
+
+        <!-- main -->
+        <div class="row community-content-body"><!-- justify-content-between -->
+
+          
+
+
+<article class="col-md-9 col-xl-8">
+    <div id="zone-feature" class="zone-instance"><div class="zone-content"></div></div>
+    <div id="zone-main" class="zone-instance"><div class="zone-content"><div id="bid_2512" data-zone-location="Page" class="block-instance js-block-instance html-content">
+	<div class="block-content">
+		<div id="ctl00_main_ctl10_ctl01_ctl00_upnlHtmlContentView">
+			
+        
+
+        
+        
+
+        
+
+
+<h1 class="margin-t-none">Other Filters</h1>
+
+<p>
+    These filters provide various utility roles in creating your Lava.
+</p>
+    
+		</div>
+
+<div id="ctl00_main_ctl10_ctl01_ctl00_upnlHtmlContentEdit">
+			
+
+
+
+        
+        
+
+    
+		</div>
+
+	</div>
+</div><div id="bid_2511" data-zone-location="Page" class="block-instance js-block-instance content-channel-view">
+	<div class="block-content">
+		
+
+<script type="text/javascript">
+    function clearDialog() {
+        $('#rock-config-cancel-trigger').trigger('click');
+    }
+</script>
+
+<div id="ctl00_main_ctl10_ctl02_ctl00_upnlContent">
+			
+
+        
+        <div id="ctl00_main_ctl10_ctl02_ctl00_pnlView">
+				
+            
+            
+
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#addcsslink" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="addcsslink"></a>
+        
+        <a name="addcsslink"></a>
+        <h1 class="panel-title">AddCssLink</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Adds a CSS link to the page. If the link has already been previously registered (by a block or other Lava) it will not be duplicated.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&#39; | AddCssLink }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      Couple of usage notes:
+
+<ul>
+    <li>You can use ~/ to have Rock append the application path or ~~/ to append
+        your theme root to your relative links.
+    </li>
+    <li>
+        You can pass in an option parameter to add fingerprinting to your
+        file. This only works on local links and serves to cache the file on
+        the user's browser.
+        {{ '/Styles/myfile.css' | AddCssLink:true }}
+    </li>
+</ul>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#addlinktagtohead" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="addlinktagtohead"></a>
+        
+        <a name="addlinktagtohead"></a>
+        <h1 class="panel-title">AddLinkTagToHead</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Adds a link to the HTML head of the current page.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+   "PhotoUrl": "/GetImage.ashx?id=55"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ CurrentPerson.PhotoUrl | AddLinkTagToHead:&#39;rel&#39;,&#39;image_src&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>The tag below will be added to the head of the page.
+&lt;link rel=&quot;image_src&quot; href=&quot;/GetImage.ashx?id=55&quot;&gt;
+</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      This filter will only work on blocks that are on a page. This may not be the case with some workflow actions and email templates.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#addmetatagtohead" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="addmetatagtohead"></a>
+        
+        <a name="addmetatagtohead"></a>
+        <h1 class="panel-title">AddMetaTagToHead</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Creates a meta tag that will be inserted into the HTML head. This is useful for adding 
+<a href="http://moz.com/blog/meta-data-templates-123">social media links</a>.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+   "PhotoUrl": "/GetImage.ashx?id=55"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ CurrentPerson.PhotoUrl | AddMetaTagToHead:&#39;property&#39;,&#39;og:image&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>The tag below will be added to the head of the page.
+&lt;meta property=&quot;og-image&quot; content=&quot;/GetImage.ashx?id=55&quot;&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      This filter will only work on blocks that are on a page. This may not be the case with some workflow actions and email templates.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#addresponseheader" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="addresponseheader"></a>
+        
+        <a name="addresponseheader"></a>
+        <h1 class="panel-title">AddResponseHeader</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v12.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Adds a header to the HTTP response. This allows you to set custom headers. Note that any headers already being set in Rock will overwrite the values you provide. These should only be used to add custom headers.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;public, max-age=120&#39; | AddResponseHeader:&#39;cache-control&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>There is no output displayed, but the HTTP response object will have a new header added.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#addscriptlink" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="addscriptlink"></a>
+        
+        <a name="addscriptlink"></a>
+        <h1 class="panel-title">AddScriptLink</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Adds a script link to the page. If the link has already been previously registered (by a block or other Lava) it will not be duplicated.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&#39; | AddScriptLink }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      Couple of usage notes:
+
+<ul>
+    <li>You can use ~/ to have Rock append the application path or ~~/ to append
+        your theme root to your relative links.
+    </li>
+    <li>
+        You can pass in an option parameter to add fingerprinting to your
+        file. This only works on local links and serves to cache the file on
+        the user's browser.
+        {{ '/Styles/myfile.js' | AddScriptLink:true }}
+    </li>
+</ul>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#appendfollowing" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="appendfollowing"></a>
+        
+        <a name="appendfollowing"></a>
+        <h1 class="panel-title">AppendFollowing</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns the following status for the currently logged in user to the results of an entity command or Persisted Dataset.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      The append following filter is exclusively used by entity commands and adds the property <code>IsFollowing</code> to the returned data object. Details on how to create a Persisted Dataset are available in the 
+<a href="https://www.rockrms.com/documentation/bookcontent/14#persisteddatasets">Designing & Building Websites Using Rock</a> 
+guide.
+<br><br>
+An optional purpose key can be provided as a parameter in v13.4+.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;p&gt;Entity Command Example&lt;/p&gt;
+{%- person where:&#39;Id != 1&#39; limit:&#39;3&#39; iterator:&#39;People&#39; -%}
+  {%- assign followedItems = People | AppendFollowing -%}
+&lt;ul&gt;
+  {%- for item in followedItems -%}
+    &lt;li&gt;{{ item.FullName }} - {{ item.IsFollowing }} &lt;/li&gt;
+  {%- endfor -%}
+&lt;/ul&gt;
+{%- endperson -%}
+
+
+&lt;p&gt;Persisted Dataset Example&lt;/p&gt;
+{%- assign data = &#39;mydataset&#39; | PersistedDataset | AppendFollowing -%}
+&lt;ul&gt;
+{%- for item in data -%}
+  &lt;li&gt;{{ item.Title }} - {{ item.IsFollowing }}&lt;/li&gt;
+{%- endfor -%}
+&lt;/ul&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;p&gt;Entity Command Example&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Ted Decker - true&lt;/li&gt;
+    &lt;li&gt;Cindy Decker - false&lt;/li&gt;
+    &lt;li&gt;Noah Decker - false&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Persisted Dataset Example&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Friday 3/25 - true&lt;/li&gt;
+    &lt;li&gt;Saturday 3/26 - false&lt;/li&gt;
+    &lt;li&gt;Sunday 3/27 - false&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#asboolean" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="asboolean"></a>
+        
+        <a name="asboolean"></a>
+        <h1 class="panel-title">AsBoolean</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts the input to a Boolean (true/false) value.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Workflow": {
+    "Option": "f"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign isEnabled = Workflow | Attribute:&#39;Option&#39; | AsBoolean %}
+
+{% if isEnabled == true %}
+    It is enabled.
+{% else %}
+    Nope, it&#39;s disabled.
+{% endif %}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Nope, it&#39;s disabled.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#asdatetime" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="asdatetime"></a>
+        
+        <a name="asdatetime"></a>
+        <h1 class="panel-title">AsDateTime</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts the input to a DateTime value.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;1/1/2017&#39; | AsDateTime |  DateAdd:3,&#39;d&#39; }}
+</pre>
+        </div>
+        <div class="output">
+          
+          <pre>1/4/2017 12:00:00 AM </pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#asdecimal" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="asdecimal"></a>
+        
+        <a name="asdecimal"></a>
+        <h1 class="panel-title">AsDecimal</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts the input to a decimal value.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Workflow": {
+    "Miles": "5.0001"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign miles = Workflow | Attribute:&#39;Miles&#39; | AsDecimal %}
+
+{% if miles &gt; 5.0 %}
+    {{ miles }} is more than 5.
+{% else %}
+    Less than 5 miles.
+{% endif %}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>5.0001 is more than 5.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#asdouble" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="asdouble"></a>
+        
+        <a name="asdouble"></a>
+        <h1 class="panel-title">AsDouble</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts the input to a double value (which has less precision than a decimal).
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Workflow": {
+    "Precision": "5.00000000000000009"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign miles = Workflow | Attribute:&#39;Precision&#39;| AsDouble %}
+
+{% if miles &gt; 5.0 %}
+    {{ miles }} is more than 5.
+{% else %}
+    Well, it looks like {{ miles }} ({{ miles | ToJSON }}) is less than 5 miles.
+{% endif %}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Well, it looks like 5 (5.0) is less than 5 miles.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      Use AsDecimal if you need the highest amount of precision.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#asinteger" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="asinteger"></a>
+        
+        <a name="asinteger"></a>
+        <h1 class="panel-title">AsInteger</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts the input to an integer value.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Workflow": {
+    "Quantity": "3"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign quantity = Workflow | Attribute:&#39;Quantity&#39; | AsInteger %}
+
+{% if quantity &gt; 0 %}
+    There are more than none.
+{% else %}
+    There are none.
+{% endif %}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>There are more than none.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#asstring" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="asstring"></a>
+        
+        <a name="asstring"></a>
+        <h1 class="panel-title">AsString</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts the input to a string value.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ CurrentPerson | AsString }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Alisha Marble</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#base64encode" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="base64encode"></a>
+        
+        <a name="base64encode"></a>
+        <h1 class="panel-title">Base64Encode</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts a binary file to a base-64 encoded string.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>
+    This filter has an optional input parameter:
+    
+    <ul>
+        <li>Image Resize Parameters: If the binary file is an image, this  optional parameter can
+        be used to resize and/or format the image using a collection of key/values. See notes below for details.</li>
+    </ul>
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "FullName": "Ted Decker",
+    "AnniversaryDate": '',
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">Base64Format: {{ CurrentPerson.PhotoId | Base64Encode }}&lt;br/&gt;
+Base64Format: {{ CurrentPerson.PhotoId | Base64Encode:&#39;h=92&amp;w=92&amp;mode=max&amp;format=jpg&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Base64Format: /2wBDAQQEBAUFBQoGBgoWDwwPFhYW...
+Base64Format: /9j/4AAQSkZJRgABAQEAY....
+</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      <p>
+    If using the optional Image Resize parameter, the  filter will use 
+    the <a href='http://imageresizing.net/docs/v4/docs/basics' target='_blank'>ImageResizer</a> component to resize and/or
+    format the image. Any of that component's supported parameters can be used (click the link for details).
+</p>
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#client" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="client"></a>
+        
+        <a name="client"></a>
+        <h1 class="panel-title">Client</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns information about the client browser.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">IP Address: {{ &#39;Global&#39; | Client:&#39;ip&#39; }} &lt;br /&gt;
+Login: {{ &#39;Global&#39; | Client:&#39;login&#39; }} &lt;br /&gt;
+Browser: {{ &#39;Global&#39; | Client:&#39;browser&#39; }} &lt;br /&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>IP Address: 12.34.55.15 (note this is not guaranteed to be the user&#39;s IP address, it could be
+the users firewall / proxy server)
+Login: tdecker
+Browser: Windows 10 Other Chrome 57.0.2987</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      <p>
+    The 'browser' parameter actually returns a structured object with 
+    lots of additional information. Below is a JSON representation of 
+    the details.
+</p>
+
+<pre>{
+  "String": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36",
+  "OS": {
+    "Family": "Windows 10",
+    "Major": null,
+    "Minor": null,
+    "Patch": null,
+    "PatchMinor": null
+  },
+  "Device": {
+    "IsSpider": false,
+    "Brand": "",
+    "Family": "Other",
+    "Model": ""
+  },
+  "UserAgent": {
+    "Family": "Chrome",
+    "Major": "57",
+    "Minor": "0",
+    "Patch": "2987"
+  },
+  "UA": {
+    "Family": "Chrome",
+    "Major": "57",
+    "Minor": "0",
+    "Patch": "2987"
+  }
+}</pre>
+
+<p>
+    ASP.Net also provides several additional server variables. The number and nature of 
+    these can change based on server and client. You can pass in any server variable key
+    and the filter will return the value. To get a full list of keys use:
+</p>
+
+<pre>{{ 'Global' | Client:'parmlist' }}</pre>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#createshortlink" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="createshortlink"></a>
+        
+        <a name="createshortlink"></a>
+        <h1 class="panel-title">CreateShortLink</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v8.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Creates a <a href="https://community.rockrms.com/documentation/BookContent/14#shortlinks">URL short link</a> for the provided URL. 
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      There are several overrides you can pass:
+<br>
+
+<pre>{{ 'url' | CreateShortLink:token,siteId,overwrite,randomLength }}</pre>
+
+<p>
+    <strong>Definitions</strong>
+</p>
+
+<ul>
+    <li>token (string): If you'd like to provide the token to use in 
+    the short code you can provide it here. Leave this blank ('') to
+    use a random code.</li>
+    <li>siteId (int): The id of the site to use for the shorting. By default 
+    the first site found with the 'Enabled for Shortening' set to true will be used. Pass in 0 if you'd like to force the default site.</li>
+    <li>overwrite (bool): This determines what to do if the token you
+    provided already exists. By default it will not overwrite an existing
+    shortcode. If you
+    provided a token, it exists and overwrite is set to false, a new
+    random token will be returned. When set to true then the existing token will be used.
+    <li>randomLength (int): If using a random code, this determines how 
+    long it should be.
+</ul>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"ConnectionOpportunity": {
+    "Url": "http://www.rocksolidchurchdemo.com/greeters"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">Your personalized link is:
+{{ ConnectionOpportunity | Attribute:&#39;Url&#39; | CreateShortLink }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Your personalized link is:
+http://www.rocksolidchurchdemo.com/HSGFTSF</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      This filter attempts to return a valid shortlink at all cost.
+This means that if the configuration passed to it is invalid
+it will try to correct it with reasonable defaults. For instance
+if you pass in an invalid siteId, the first active site will be used. If you
+pass in an empty URL, or if no shortened site is enabled in Rock you
+will get an empty string.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#debug" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="debug"></a>
+        
+        <a name="debug"></a>
+        <h1 class="panel-title">Debug</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      The debug filter provides you with a ton of information on the variables you have access to in your Lava.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "FullName": "Ted Decker"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;Lava&#39; | Debug }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      
+<p>
+    There are a couple of options on how you use this filter. The default shown 
+    in the example above will output the debug information for all the variables 
+    provided in the merge fields. The information will be shown to ALL logged in users.
+</p>
+
+<p>
+    If you'd like to limit who can see the debug information you can provide a username
+    to limit on. In the example below only Ted Decker would be able to see the debug 
+    information.
+</p>
+
+<pre>
+{{ 'Lava' | Debug:'tdecker' }}
+</pre>
+
+<p>
+    Up till this point we've gotten all of the variables back from the merge fields. You
+    can optionally just report on a single field by piping it to the filter instead of the
+    global 'Lava' keyword like so:
+</p>
+
+<pre>
+{{ CurrentPerson | Debug:'tdecker' }}
+</pre>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#entityfromcachedobject" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="entityfromcachedobject"></a>
+        
+        <a name="entityfromcachedobject"></a>
+        <h1 class="panel-title">EntityFromCachedObject</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v11.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns a full entity object loaded from the database from its cached counterpart.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      When you request the object for an attribute, you will get back a cached version of that entity if one is available. One example of this is a Campus attribute. This provides significant speed boosts to Rock and your Lava as it doesn't have to hit the database to load it. Occasionally, though, you might need an actual entity object rather than the cached object. This filter will let you take that cached object and get back a real database entity.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign cached = Workflow | Attribute:&#39;TargetCampus&#39;,&#39;Object&#39; %}
+{% assign campus = cached | EntityFromCachedObject %}
+{{ campus.Location.FormattedAddress }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>3120 W Cholla St Phoenix, AZ 85029-4113</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      If you pass in anything other than a cached object, the original value will be returned by the filter.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#filterfollowed" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="filterfollowed"></a>
+        
+        <a name="filterfollowed"></a>
+        <h1 class="panel-title">FilterFollowed</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns a subset of followed entities for the current user from either a Persisted Dataset or an entity command.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      The filter is used in conjunction with either a Persisted Dataset or an entity command. Details on how to create a Persisted Dataset are available in the 
+<a href="https://www.rockrms.com/documentation/bookcontent/14#persisteddatasets">Designing & Building Websites Using Rock</a> 
+guide.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;p&gt;Entity Command Example&lt;/p&gt;
+{%- person where:&#39;Id != 1&#39; limit:&#39;3&#39; iterator:&#39;People&#39; -%}
+  {%- assign followedItems = People | AppendFollowing | FilterFollowed -%}
+&lt;ul&gt;
+  {%- for item in followedItems -%}
+    &lt;li&gt;{{ item.FullName }} - {{ item.IsFollowing }} &lt;/li&gt;
+  {%- endfor -%}
+&lt;/ul&gt;
+{%- endperson -%}
+
+&lt;p&gt;Persisted Dataset Example&lt;/p&gt;
+{%- assign data = &#39;mydataset&#39; | PersistedDataset | AppendFollowing | FilterFollowed -%}
+&lt;ul&gt;
+{%- for item in data -%}
+  &lt;li&gt;{{ item.Title }} - {{ item.IsFollowing }}&lt;/li&gt;
+{%- endfor -%}
+&lt;/ul&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;p&gt;Entity Command Example&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Ted Decker - true&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Persisted Dataset Example&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Friday 3/25 - true&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#filterunfollowed" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="filterunfollowed"></a>
+        
+        <a name="filterunfollowed"></a>
+        <h1 class="panel-title">FilterUnfollowed</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns a subset of entities that have not been followed by the current user from either a Persisted Dataset or an entity command.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      The filter is used in conjunction with either a Persisted Dataset or an entity command. Details on how to create a Persisted Dataset are available in the 
+<a href="https://www.rockrms.com/documentation/bookcontent/14#persisteddatasets">Designing & Building Websites Using Rock</a> 
+guide.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;p&gt;Entity Command Example&lt;/p&gt;
+{%- person where:&#39;Id != 1&#39; limit:&#39;3&#39; iterator:&#39;People&#39; -%}
+  {%- assign followedItems = People | AppendFollowing | FilterUnfollowed -%}
+&lt;ul&gt;
+  {%- for item in followedItems -%}
+    &lt;li&gt;{{ item.FullName }} - {{ item.IsFollowing }} &lt;/li&gt;
+  {%- endfor -%}
+&lt;/ul&gt;
+{%- endperson -%}
+
+&lt;p&gt;Persisted Dataset Example&lt;/p&gt;
+{%- assign data = &#39;mydataset&#39; | PersistedDataset | AppendFollowing | FilterUnfollowed-%}
+&lt;ul&gt;
+{%- for item in data -%}
+  &lt;li&gt;{{ item.Title }} - {{ item.IsFollowing }}&lt;/li&gt;
+{%- endfor -%}
+&lt;/ul&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;ul&gt;
+    &lt;li&gt;Cindy Decker - false&lt;/li&gt;
+    &lt;li&gt;Noah Decker - false&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Persisted Dataset Example&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Saturday 3/26 - false&lt;/li&gt;
+    &lt;li&gt;Sunday 3/27 - false&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#frombase64" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="frombase64"></a>
+        
+        <a name="frombase64"></a>
+        <h1 class="panel-title">FromBase64</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v13.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Decodes the base 64 encoded string and returns the resulting data. 
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      If the true parameter is provided, then the data is returned as a human readable string.  Otherwise a byte array of the raw data is returned. Why might I need this filter? Base 64 encoding is sometimes returned from API calls and usually must be decoded before it can be used.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Object": {
+    "Id": 23,
+    "Data": "VGVkIERlY2tlcg=="
+}
+</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ Object.Data | FromBase64:true }}
+</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Ted Decker
+</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#fromcache" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="fromcache"></a>
+        
+        <a name="fromcache"></a>
+        <h1 class="panel-title">FromCache</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Reads objects from the Rock cache which will reduce the number of database reads your Lava produces.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>
+    This filter works by passing in either an integer or Guid of the cached item 
+    you'd like - or 'All' to retrieve all cached items of a given type <small><span class="label label-default">v12.0</span></small> - along with the cache object type. Supported types are:
+</p>
+
+<ul>
+    <li>DefinedValue</li>
+    <li>DefinedType</li>
+    <li>Campus</li>
+    <li>Category</li>
+    <li>GroupType</li>
+    <li>Page</li>
+    <li>Block</li>
+    <li>BlockType</li>
+    <li>EventCalendar</li>
+    <li>Attribute</li>
+    <li>NoteType</li>
+    <li>ContentChannel</li>
+</ul>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "CampusId": "2"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;h4&gt;Current Person&#39;s Campus&lt;/h4&gt;
+
+{% assign campus = CurrentPerson.PrimaryCampusId | FromCache:&#39;Campus&#39; %}
+
+Current Person&#39;s Campus Is: {{ campus.Name }}
+
+{% assign allCampuses = &#39;All&#39; | FromCache:&#39;Campus&#39; %}
+
+&lt;h4&gt;All Campuses&lt;/h4&gt;
+
+&lt;ul&gt;
+{% for c in allCampuses %}
+    &lt;li&gt;{{ c.Name }} &lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;h4&gt;Current Person&#39;s Campus&lt;/h4&gt;
+
+Current Person&#39;s Campus Is: West-side Campus
+
+&lt;h4&gt;All Campuses&lt;/h4&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Main Campus&lt;/li&gt;
+    &lt;li&gt;West-side Campus&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#fromjson" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="fromjson"></a>
+        
+        <a name="fromjson"></a>
+        <h1 class="panel-title">FromJSON</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v5.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Takes a JSON string and makes a Lava object from it.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>NA </pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% capture jsonString %}
+{
+    &quot;Name&quot;: &quot;Ted Decker&quot;,
+    &quot;ServingTimes&quot;: [
+      {
+        &quot;Date&quot;: &quot;Friday 3/25&quot;,
+        &quot;Times&quot;: [
+          &quot;5:30 pm&quot;,
+          &quot;7:00 pm&quot;
+        ]
+      },
+      {
+        &quot;Date&quot;: &quot;Saturday 3/26&quot;,
+        &quot;Times&quot;: [
+          &quot;4:30 pm&quot;,
+          &quot;6:00 pm&quot;
+        ]
+      },
+      {
+        &quot;Date&quot;: &quot;Sunday 3/27&quot;,
+        &quot;Times&quot;: [
+          &quot;6:30 am sunrise&quot;,
+          &quot;9:00 am&quot;,
+          &quot;10:30 am&quot;,
+          &quot;12:00 pm&quot;
+        ]
+      }
+    ]
+}
+{% endcapture %}
+
+
+{% assign jsonObject = jsonString | FromJSON %}
+{{ jsonObject.Name }}
+&lt;ul&gt;
+{% for servingTime in jsonObject.ServingTimes %}
+  &lt;li&gt;{{ servingTime.Date }}&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Ted Decker
+&lt;ul&gt;
+    &lt;li&gt;Friday 3/25&lt;/li&gt;
+    &lt;li&gt;Saturday 3/26&lt;/li&gt;
+    &lt;li&gt;Sunday 3/27&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#groupbyguid" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="groupbyguid"></a>
+        
+        <a name="groupbyguid"></a>
+        <h1 class="panel-title">GroupByGuid</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns a full Group object from the Guid of the group.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"GroupMember" {
+    "Group": {
+        Guid: "8fedc6ee-8630-41ed-9fc5-c7157fd1eaa4"
+    }
+    ...
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign group = GroupMember.Group.Guid | GroupByGuid %}
+
+Group Name: {{ group.Name }}!</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Group Name: Ushers</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#groupbyid" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="groupbyid"></a>
+        
+        <a name="groupbyid"></a>
+        <h1 class="panel-title">GroupById</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Provides a full Group object by providing an Id of the group.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"GroupMember" {
+    "GroupId": 234
+    ...
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign group = GroupMember.GroupId | GroupById %}
+
+Group Name: {{ group.Name }}!</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Group Name: Ushers</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#hasrightsto" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="hasrightsto"></a>
+        
+        <a name="hasrightsto"></a>
+        <h1 class="panel-title">HasRightsTo</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v6.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      This filter helps you check the security of the model you pass it.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>[person model]</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ person | HasRightsTo:&#39;View&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>true</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      <p>
+In the typical use case you'll be passing full models to the filter. It can also take 
+just the Id of the model as long as you also provide the entity type. The example below
+would check for edit rights for the group with the id of 12.
+</p>
+
+{{ 12 | HasRightsTo:'Edit','Rock.Model.Group' }}
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#hmacsha1" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="hmacsha1"></a>
+        
+        <a name="hmacsha1"></a>
+        <h1 class="panel-title">HmacSha1</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts a string into a SHA-1 hash using a hash message authentication code (HMAC).
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      Pass the secret key for the message as a parameter to the filter.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign my_secret_string = &#39;RockIsAwesome!&#39; | HmacSha1:&#39;secret_key&#39; %}
+My encoded string is: {{ my_secret_string }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>My encoded string is: 17dbf467d8f49e9f541c7af8adf26c8422bdb342</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#hmacsha256" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="hmacsha256"></a>
+        
+        <a name="hmacsha256"></a>
+        <h1 class="panel-title">HmacSha256</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts a string into a SHA-256 hash using a hash message authentication code (HMAC).
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      Pass the secret key for the message as a parameter to the filter.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign my_secret_string = &#39;RockIsAwesome!&#39; | HmacSha256:&#39;secret_key&#39; %}
+My encoded string is: {{ my_secret_string }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>My encoded string is: 3518d7aa4ad81041e14033f2bbfa317e8f2f5aa26d6f48f719783aeaebe481ae</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#imageurl" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="imageurl"></a>
+        
+        <a name="imageurl"></a>
+        <h1 class="panel-title">ImageUrl</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v12.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Simplifies making an image URL with a fallback.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>
+    This filter works by passing in either an integer or Guid of the image for which you want to create a URL. There are two input parameters:
+    <ul>
+        <li>Fallback URL (optional): The URL to be returned if the integer ID or Guid input is not defined.</li>
+        <li>Root URL (optional): This parameter is multipurpose:
+            <ul>
+                <li>If the parameter is not passed (is null), or a value of false is passed, the image URL will be returned without prepending Rock's root application URL.</li>
+                <li>If a value of true or 'rootUrl' is passed, the returned image URL will include Rock's root application URL, meaning it will be the complete URL to the image.</li>
+            </ul>
+        </li>
+    </ul>
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>None</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% contentchannelitem id:&#39;1&#39; %}
+    &lt;img src=&quot;{{ contentchannelitem | Attribute:&#39;Image&#39;,&#39;RawValue&#39; | ImageUrl }}&quot; /&gt;
+    
+    &lt;img src=&quot;{{ contentchannelitem | Attribute:&#39;Image&#39;,&#39;RawValue&#39; | ImageUrl:&#39;https://via.placeholder.com/150&#39;, true }}&quot; /&gt;
+{% endcontentchannelitem %}
+
+&lt;img src=&quot;{{ item | Attribute:&#39;Image&#39;,&#39;RawValue&#39; | ImageUrl:&#39;https://via.placeholder.com/150&#39; }}&quot; /&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;img src=&quot;/GetImage.ashx?Guid=0241ED2F-B527-424C-917C-1142A398711F&quot;&gt;
+
+&lt;img src=&quot;http://www.rocksolidchurchdemo.com/GetImage.ashx?Guid=0241ED2F-B527-424C-917C-1142A398711F&quot;&gt;
+
+&lt;img src=&quot;https://via.placeholder.com/150&quot;&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#isfollowed" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="isfollowed"></a>
+        
+        <a name="isfollowed"></a>
+        <h1 class="panel-title">IsFollowed</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Takes an entity object as input and tests if it is being followed by the current person. Returns a boolean value of either true or false.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      Has optional parameters to provide a purpose key (v13.4) and specify a different the person to test against instead of the current person.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign group = 56 | GroupById %}
+{% assign followed = group | IsFollowed %}
+{% if followed == true %}
+  &lt;p&gt;You are following the group {{ group.Name }}.&lt;/p&gt;
+{% else %}
+  &lt;p&gt;You are not currently following the group {{ group.Name }}.&lt;/p&gt;
+{% endif %}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;p&gt;You are following the group Serving Teams.&lt;/p&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#isindataview" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="isindataview"></a>
+        
+        <a name="isindataview"></a>
+        <h1 class="panel-title">IsInDataView</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v14.1</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Takes the given Entity or Entity Id and returns a boolean that indicates whether the entity is in the data view or not.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>
+This filter operates on the given entity object or entity Id and has a single parameter:
+
+<ul>
+    <li>
+        Data View Id: The Id of the specific data view you want to check.
+    </li>
+</ul>
+
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    ...
+}
+
+"Group" {
+    "Id": 111,
+    "Name" : "Decker Group"
+    ...
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign inDataView = CurrentPerson.Id | IsInDataView:&#39;1337&#39; %}
+{% if inDataView %}
+   That person is in the 1337 data view.
+{% endif %}
+
+{% assign inDataView = Group | IsInDataView:&#39;230&#39; %}
+{% if inDataView %}
+   The &#39;{{Group.Name}}&#39; is in the 230 data view.
+{% endif %}
+
+</pre>
+        </div>
+        <div class="output">
+          
+          <pre>That person is in the 1337 data view.
+
+The &#39;Decker Group&#39; is in the 230 data view.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      The Data View's 'Applies To' entity type is the assumed entity type for the given entity/entityId.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#md5" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="md5"></a>
+        
+        <a name="md5"></a>
+        <h1 class="panel-title">Md5</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts a string into an MD5 hash.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      An example use case for this filter is showing the Gravatar image associated with the poster of a comment:
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "Email": "hi@example.com"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;img src=&quot;https://www.gravatar.com/avatar/{{ Person.Email | Trim | Downcase | Md5 }}&quot; /&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;img src=&quot;https://www.gravatar.com/avatar/767fc9c115a1b989744c755db47feb60&quot;&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#notes" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="notes"></a>
+        
+        <a name="notes"></a>
+        <h1 class="panel-title">Notes</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Retrieves notes for the provided entity.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>
+    This filter has plenty of options to help make retrieving notes simple. First 
+    you can pass the filter either a full entity (any type) or an integer that 
+    represents the entity id.
+</p>
+
+<p>
+    You must pass in either an integer that represents a note type id or a
+    comma delimited string of note type ids.
+</p>
+
+<p>
+    Optional parameters include:
+    <ul>
+        <li>Sort Order: string ('asc' or 'desc'). If
+            no option is provided 'desc' is assumed.</li>
+        <li>Count: an integer of how many items you'd like returned.<li>
+    </ul>
+</p>
+
+<p>
+    Security is checked on the notes based on the currently logged in user.
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    ...
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign notes = CurrentPerson | Notes:&#39;4,5&#39;,&#39;asc&#39;,2 %}
+
+Notes
+{% for note in notes %}
+    &lt;p&gt;{{ note.Text }} &lt;/p&gt;
+{% endfor %}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Notes
+&lt;p&gt;Note one.&lt;/p&gt;
+&lt;p&gt;Note two.&lt;/p&gt; </pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#page" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="page"></a>
+        
+        <a name="page"></a>
+        <h1 class="panel-title">Page</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns information about the current page.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>None</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">Title: {{ &#39;Global&#39; | Page:&#39;Title&#39; }} &lt;br /&gt;
+BrowserTitle: {{ &#39;Global&#39; | Page:&#39;BrowserTitle&#39; }} (v9) &lt;br /&gt;
+Description: {{ &#39;Global&#39; | Page:&#39;Description&#39; }} (v7 +)&lt;br /&gt; 
+URL: {{ &#39;Global&#39; | Page:&#39;Url&#39; }} &lt;br /&gt;
+Page Id: {{ &#39;Global&#39; | Page:&#39;Id&#39; }} &lt;br /&gt;
+Host: {{ &#39;Global&#39; | Page:&#39;Host&#39; }} &lt;br /&gt;
+Path: {{ &#39;Global&#39; | Page:&#39;Path&#39; }} &lt;br /&gt;
+Site Name: {{ &#39;Global&#39; | Page:&#39;SiteName&#39; }} &lt;br /&gt;
+Site Id: {{ &#39;Global&#39; | Page:&#39;SiteId&#39; }} &lt;br /&gt;
+Theme: {{ &#39;Global&#39; | Page:&#39;Theme&#39; }} &lt;br /&gt;
+Layout: {{ &#39;Global&#39; | Page:&#39;Layout&#39; }} &lt;br /&gt;
+Scheme: {{ &#39;Global&#39; | Page:&#39;Scheme&#39; }} &lt;br /&gt;
+Cookies: {{ &#39;Global&#39; | Page:&#39;Cookies&#39; }} (v8.4)&lt;br /&gt;
+
+{% assign queryParms = &#39;Global&#39; | Page:&#39;QueryString&#39;  %}
+Query Parms &lt;br /&gt;
+{% for item in queryParms %}
+    {% assign kvItem = item | PropertyToKeyValue %}
+    {{ kvItem.Key }}: {{ kvItem.Value }} &lt;br /&gt;
+{% endfor %}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Title: Home 
+BrowserTitle: Home of the Browser&#39;s Title
+Description: This is the page description 
+URL: http://localhost:6229/page/1 
+Page Id: 1 
+Host: localhost 
+Path: /page/1 
+Site Name: External Website 
+Site Id: 3 
+Theme: Stark 
+Layout: Homepage 
+Scheme: http 
+
+Query Parms 
+Id: 12
+SomeOtherId: 23</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      <p>
+    In most cases the properties are returned as strings. The 'QueryString' property will
+return an array of query parameters. The Lava sample below shows how to use them.
+</p>
+
+
+<pre>{% assign queryParms = 'Global' | Page:'QueryString'  %}
+{% for item in queryParms %}
+    {% assign kvItem = item | PropertyToKeyValue %}
+    {{ kvItem.Key }}: {{ kvItem.Value }} 
+{% endfor %}</pre>
+
+<p>
+    The Cookies property will return an array of Cookie objects. 
+</p>
+<pre>{% assign cookies = 'Global' | Page:'Cookies'  %}
+{% for cookie in cookies %}
+    {{ cookie.Name }}: {{ cookie.Value }} 
+{% endfor %}</pre>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#pageparameter" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="pageparameter"></a>
+        
+        <a name="pageparameter"></a>
+        <h1 class="panel-title">PageParameter</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns the value of a specified page parameter.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>Example URL: http://rock.rocksolidchurchdemo.com/Group/12</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">The Group Id passed in from the URL is: {{ &#39;Global&#39; | PageParameter:&#39;GroupId&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>The Group Id passed in from the URL is: 12</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      If the value is an integer it will be returned as an integer otherwise it will be a string.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#pageredirect" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="pageredirect"></a>
+        
+        <a name="pageredirect"></a>
+        <h1 class="panel-title">PageRedirect</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Will redirect the page to the provided URL.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p class="alert alert-danger">Be very careful on how you configure this 
+filter. You always want to provide a way to get back to this page, 
+without it redirecting, so that you can edit your lava. Below are two
+strategies for doing this.</p>
+
+<p>
+    If your lava is inside of an HTML block you can use that block's
+    'CurrentPersonCanEdit' merge field to stop the redirect if the
+    current user has edit access to the block. An example of this usage
+    is below.
+</p>
+
+<pre>{% if CurrentPersonCanEdit %}
+    &lt;p class=&quot;alert alert-warning&quot;&gt;If you could not edit you would be redirected to: &lt;a href=&quot;http://www.rockrms.com&quot;&gt;http://www.rockrms.com&lt;/a&gt;.&lt;/p&gt;
+{% else %}
+    {{ &#39;http://www.rockrms.com&#39; | PageRedirect }}
+{% endif %}</pre>
+
+<p>Another strategy to allow the editing of the lava content is to
+add ?Redirect=false to the query string. If the lava filter sees
+this in the page's address it will not perform the redirect. Instead
+it will display the link that it would have redirected to.
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Event": {
+    "ExternalUrl": "http://www.rockrms.com",
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ Event.ExternalUrl | PageRedirect }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>The current page request will be redirected to the address provided. </pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#pageroute" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="pageroute"></a>
+        
+        <a name="pageroute"></a>
+        <h1 class="panel-title">PageRoute</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v13.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts a page identifier into a URL string. 
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>
+    The identifier can either be the a Page Id, a Page Guid or a full page route (as shown in the example) which contains &lt;PageGuid&gt;,&lt;RouteGuid&gt;. You can optionally pass in a string of parameters to use when generating the URL. The parameters should be separated by <code>^</code>. Each parameter should consist of a key and value separated by an <code>=</code>. You may also pass in a dictionary object that contains the parameters.
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;Global&#39; | Attribute:&#39;WorkflowEntryPage&#39;,&#39;RawValue&#39; | PageRoute:&#39;WorkflowTypeId=10^WorkflowId=324&#39; }}
+</pre>
+        </div>
+        <div class="output">
+          
+          <pre>/WorkflowEntry/10/324</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#persisteddataset" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="persisteddataset"></a>
+        
+        <a name="persisteddataset"></a>
+        <h1 class="panel-title">PersistedDataset</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns data contained in a Persisted Dataset as a Lava object.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      Details on how to create a Persisted Dataset are available in the 
+<a href="https://www.rockrms.com/documentation/bookcontent/14#persisteddatasets">Designing & Building Websites Using Rock</a> 
+guide.
+
+<!-- These optional input parameters are not being documented because they are being removed: ReturnOnlyFollowedItems, ReturnOnlyNotFollowedItems, AppendFollowing -->
+
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign data = &#39;mydataset&#39; | PersistedDataset %}
+&lt;ul&gt;
+{% for item in data %}
+  &lt;li&gt;{{ item.Title }}&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;ul&gt;
+    &lt;li&gt;Friday 3/25&lt;/li&gt;
+    &lt;li&gt;Saturday 3/26&lt;/li&gt;
+    &lt;li&gt;Sunday 3/27&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#postback" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="postback"></a>
+        
+        <a name="postback"></a>
+        <h1 class="panel-title">Postback</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v3.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      This is a very specialized Lava filter that helps to wire-up ASP.Net postbacks. This is only available on specific blocks that provide 
+'Postback Commands'. The 'Group Details Lava' is an example of a block that provides these hooks.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Group": {
+    "Id": 1
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;a class=&quot;btn btn-default btn-sm pull-right&quot; href=&quot;#&quot; onclick=&quot;{{ Group.Id | Postback:&#39;EditGroup&#39; }}&quot;&gt;Edit&lt;/a&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;a class=&quot;btn btn-default btn-sm pull-right&quot; href=&quot;#&quot; onclick=&quot;javascript:__doPostBack(&#39;ctl00_main_ctl33_ctl01_ctl06_upnlContent&#39;,&#39;EditGroup^1&#39;); return false;&quot;&gt;Edit&lt;/a&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#property" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="property"></a>
+        
+        <a name="property"></a>
+        <h1 class="panel-title">Property</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v5.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns the property of a provided object. This often saves you from having to assign an object 
+to a variable to get just one of its properties.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "FullName": "Ted Decker",
+    "AnniversaryDate": '',
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ CurrenPerson.NickName}}, your campus is: {{ CurrentPerson | Campus | Property:&#39;Name&#39;  }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Ted, your campus is: Main Campus</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      The 'Property' filter does allow you to use dot notation so you can do things like:
+<br />
+<code>{% assign campusLeader = CurrentPerson | Campus | Property:'LeaderPersonAlias.Person' %}
+<br />{{ campusLeader.FullName }}</code>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#propertytokeyvalue" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="propertytokeyvalue"></a>
+        
+        <a name="propertytokeyvalue"></a>
+        <h1 class="panel-title">PropertyToKeyValue</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Takes a property and returns it as a key/value pair. This is helpful for iterating over a list of properties.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "Attributes": [
+        {
+            "FavoriteMovie": "Star Wars"
+        },
+        {
+            "FavoriteStarWarsEpisode": "Episode VI"
+        },
+        {
+            "FavoriteStarWarsCharacter": "Boba Fett"
+        }
+    ]
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;ul&gt;
+{% for attribute in Attributes %}
+    {% assign attributeParts = attribute | PropertyToKeyValue %}
+
+    &lt;li&gt;{{ attributeParts.Key | Humanize | Capitalize }}: {{ attributeParts.Value }} &lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;ul&gt;
+    &lt;li&gt;Favorite Movie: Star Wars&lt;/li&gt;
+    &lt;li&gt;Favorite Star Wars Episode: Episode VI&lt;/li&gt;
+    &lt;li&gt;Favorite Star Wars Character: Boba Fett&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#readcookie" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="readcookie"></a>
+        
+        <a name="readcookie"></a>
+        <h1 class="panel-title">ReadCookie</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v12.1</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Gets the value of a HTTP cookie for the current user session.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      This filter has the following format:
+<br>
+
+<pre>{{ 'cookieName' | ReadCookie }}</pre>
+
+<p>
+    <strong>Definitions</strong>
+</p>
+
+<ul>
+    <li>cookieName (string): A name that uniquely identifies the cookie. This should be the same as the name that used to set the cookie with the WriteCookie filter.</li>
+</ul>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">You recently told us that your favorite cookie is {{ &#39;FavoriteCookie&#39; | ReadCookie }}
+and your favorite color is {{ &#39;FavoriteColor&#39; | ReadCookie }}.</pre>
+        </div>
+        <div class="output">
+          
+          <pre>You recently told us that your favorite cookie is choc-chip
+and your favorite color is green.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      If a cookie with the specified name does not exist or has expired, the filter will return an empty string.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#renderstructuredcontentashtml" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="renderstructuredcontentashtml"></a>
+        
+        <a name="renderstructuredcontentashtml"></a>
+        <h1 class="panel-title">RenderStructuredContentAsHtml</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v15.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Takes the given <a href="https://community.rockrms.com/documentation/bookcontent/14#contentchannels">structured content</a> and renders it as HTML.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <p>
+This filter operates on the given structured content and renders it as HTML:
+
+<ul>
+    <li>
+        Content: String saved using the StructuredContentEditor control. The string is saved with metadata which this filter uses to render it as HTML.
+    </li>
+</ul>
+
+</p>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"StructuredContent": {
+    ""time"":1676039688279,
+    ""blocks"":[
+       {
+          ""id"":""a2FYCrj8NG"",
+          ""type"":""header"",
+          ""data"":{
+             ""text"":""Things I love."",
+             ""level"":2
+          }
+       },
+       {
+          ""id"":""egdM-bpIfg"",
+          ""type"":""list"",
+          ""data"":{
+             ""style"":""ordered"",
+             ""items"":[
+                {
+                   ""content"":""Reading a good book."",
+                   ""items"":[
+                      
+                   ]
+                },
+                {
+                   ""content"":""Helping others."",
+                   ""items"":[
+                      
+                   ]
+                },
+                {
+                   ""content"":""Seeing other people laugh."",
+                   ""items"":[
+                      
+                   ]
+                }
+             ]
+          }
+       }
+    ],
+    ""version"":""2.22.1""
+ }</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ StructuredContent | RenderStructuredContentAsHtml }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;h2&gt;Things I love.&lt;/h2&gt;
+&lt;ol&gt;
+    &lt;li&gt;Reading a good book.&lt;/li&gt;
+    &lt;li&gt;Helping others.&lt;/li&gt;
+    &lt;li&gt;Seeing other people laugh.&lt;/li&gt;
+&lt;/ol&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      The filter will return an empty string if the 'StructuredContent' is not in the right format or cannot be parsed as HTML.
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#resolverockurl" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="resolverockurl"></a>
+        
+        <a name="resolverockurl"></a>
+        <h1 class="panel-title">ResolveRockUrl</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      This filter helps to resolve the application path in Rock using ~/ for the application home and ~~/ for the theme home. This is helpful
+when writing Lava that may be used by several organizations.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Person": {
+    "Id": 12623
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign personProfilePage = &#39;~/Person/&#39; %}
+
+The link for this person is: &#39;{{ personProfilePage | ResolveRockUrl }}{{ CurrentPerson.Id }}&#39;</pre>
+        </div>
+        <div class="output">
+          
+          <pre>The link for this person is: &#39;/Rock/Person/12623&#39;
+( assumes Rock was stored in a virtual directory called &#39;Rock&#39;)</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#rockinstanceconfig" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="rockinstanceconfig"></a>
+        
+        <a name="rockinstanceconfig"></a>
+        <h1 class="panel-title">RockInstanceConfig</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v12.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Shows configuration values for the current Rock instance.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      The five supported settings are shown in the example.
+
+<!-- v13 only (temporary?)
+Lava Engine: {{ 'LavaEngine' | RockInstanceConfig }}
+-->
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">Application Directory: {{ &#39;ApplicationDirectory&#39; | RockInstanceConfig }}
+Physical Directory: {{ &#39;PhysicalDirectory&#39; | RockInstanceConfig }}
+Machine Name: {{ &#39;MachineName&#39; | RockInstanceConfig }}
+Is Clustered: {{ &#39;IsClustered&#39; | RockInstanceConfig }}
+System Date/Time: {{ &#39;SystemDateTime&#39; | RockInstanceConfig | Date:&#39;yyyy-MM-dd HH:mm:ss&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Application Directory: D:\inetpub\wwwroot\Rock\bin
+Physical Directory: D:\inetpub\wwwroot\Rock\bin
+Machine Name: MYROCKSERVER
+Is Clustered: false
+System Date/Time: 2020-11-17 10:30:01</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#runlava" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="runlava"></a>
+        
+        <a name="runlava"></a>
+        <h1 class="panel-title">RunLava</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v13.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Executes Lava that is inside a string.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      This can be useful when taking Lava from an Attribute Value that needs to be processed before displaying to an individual. The Lava executes in the same security context as the existing Lava. So if you have Entity Commands enabled in your parent Lava, then the child Lava you execute will also be able to run Entity Commands.
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>{
+    "Value": "{% assign test = 'Hello World' %}{{ test }}"
+}
+</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;p&gt;
+    {{ Value }}
+&lt;/p&gt;
+&lt;p&gt;
+    {{ Value | RunLava }}
+&lt;/p&gt;
+</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;p&gt;
+    {% assign test = &#39;Hello World&#39; %}{{ test }}
+&lt;/p&gt;
+&lt;p&gt;
+    Hello World
+&lt;/p&gt;
+</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#setpagetitle" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="setpagetitle"></a>
+        
+        <a name="setpagetitle"></a>
+        <h1 class="panel-title">SetPageTitle</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Takes a string as input and sets the page's title.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "FullName": "Ted Decker",
+    ...
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% capture pageTitle %}Current Person - {{ CurrentPerson.FullName }}{% endcapture %}
+{{ pageTitle | SetPageTitle }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>The page title would be: &#39;Current User - Ted Decker&#39;.</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      The example show will change the page title on the page and in browser window. As of v9.0, if 
+you'd like to update just one you can add an additional parameter to your filter. 
+<ul>
+    <li>{{ 'New Title' | SetPageTitle:'BrowserTitle' }}</li>
+    <li>{{ 'New Title' | SetPageTitle:'PageTitle' }}</li>
+</ul>
+
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#seturlparameter" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="seturlparameter"></a>
+        
+        <a name="seturlparameter"></a>
+        <h1 class="panel-title">SetUrlParameter</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v14.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Sets a parameter in the input URL string and returns the updated URL.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      To modify the URL of the current page, specify "Current" as the input string.
+<p>Available parameters:
+    <ol>
+        <li>the URL parameter name. If the parameter exists in the page route, the route will be modified - if not, the parameter will be added to the query string.</li>
+        <li>the parameter value. To remove an existing parameter, specify an empty string.</li>
+        <li>the format of the output URL (optional):
+            <ul>
+                <li>absolute = A complete URL, including scheme and host name.</li>
+                <li>relative = A URL that is expressed relative to the current Rock host server.</li>
+            </ul>
+        </li>
+    </ol>
+    
+    If the input string is not recognized as a URL, it will be returned unmodified.
+</p>
+
+
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">Example 1:
+{{ &#39;https://rocksolidchurchdemo.com/reporting/reports/12&#39; | SetUrlParameter:&#39;ReportId&#39;,&#39;155&#39; }}
+
+Example 2:
+{{ &#39;https://rocksolidchurchdemo.com/reporting/reports&#39; | SetUrlParameter:&#39;CategoryId&#39;,&#39;101&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Example 1:&lt;br&gt;
+https://rocksolidchurchdemo.com/reporting/reports/155
+&lt;hr&gt;
+Example 2:&lt;br&gt;
+https://rocksolidchurchdemo.com/reporting/reports?CategoryId=101
+</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="alert alert-info margin-t-md">
+      <strong>Note:</strong><br/>
+      <p>
+If the input URL specifies a Rock page on the current site, modifying the "PageId" parameter changes the target page of the URL. Parameters from the input URL are reapplied to the new target page URL, with route parameters being assigned first and the remaining parameters added to the query string.
+</p>
+    </div>
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#sha1" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="sha1"></a>
+        
+        <a name="sha1"></a>
+        <h1 class="panel-title">Sha1</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts a string into a SHA-1 hash.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign my_secret_string = &#39;RockIsAwesome!&#39; | Sha1 %}
+My encoded string is: {{ my_secret_string }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>My encoded string is: 845b0f246f221697761d085847fbc056652d03d0</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#sha256" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="sha256"></a>
+        
+        <a name="sha256"></a>
+        <h1 class="panel-title">Sha256</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Converts a string into a SHA-256 hash.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign my_secret_string = &#39;RockIsAwesome!&#39; | Sha256 %}
+My encoded string is: {{ my_secret_string }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>My encoded string is: 06530e8aabeb6becaabcd0c357134f3cd0a340d87500002b0a14929d92e0ac78</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#tojson" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="tojson"></a>
+        
+        <a name="tojson"></a>
+        <h1 class="panel-title">ToJSON</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v4.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Returns a JSON representation of the object. This is useful if you are wanting to return the object for use in JavaScript.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"CurrentPerson": {
+    "NickName": "Ted",
+    "LastName": "Decker"
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ CurrentPerson | ToJSON }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>{
+    &quot;NickName&quot;: &quot;Ted&quot;,
+    &quot;LastName&quot;: &quot;Decker&quot;
+}</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#uniqueidentifier" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="uniqueidentifier"></a>
+        
+        <a name="uniqueidentifier"></a>
+        <h1 class="panel-title">UniqueIdentifier</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Generates a new GUID (UUID) string. These are generally considered to be globally unique. This makes them ideal to use inside a shortcode where you need to identifier an HTML element by id but know the shortcode may be used twice on the same page.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      <ul>
+  <li>The input value is ignored.</li>
+  <li>The generated string takes the format of "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", where each "x" can be 0-9 or A-F.</li>
+</ul>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;&#39; | UniqueIdentifier }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>E9206998-3Fb5-4ED1-A372-C593A79C7DD1</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#url" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="url"></a>
+        
+        <a name="url"></a>
+        <h1 class="panel-title">Url</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v7.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      The Url filter allows you to easily get access to parts of a URL without a ton of string manipulation.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{% assign url = &#39;https://www.rockrms.com/WorkflowEntry/35?PersonId=2&#39; %}
+Testing URL {{ url }}
+host - {{ url | Url:&#39;host&#39; }}
+port - {{ url | Url:&#39;port&#39; }}
+segments - {{ url | Url:&#39;segments&#39; | ToJSON }}
+scheme - {{ url | Url:&#39;scheme&#39; }}
+protocol - {{ url | Url:&#39;protocol&#39; }}
+localpath - {{ url | Url:&#39;localpath&#39; }}
+pathandquery - {{ url | Url:&#39;pathandquery&#39; }}
+queryparameter no key - {{ url | Url:&#39;queryparameter&#39; }}
+queryparameter with key - {{ url | Url:&#39;queryparameter&#39;,&#39;PersonId&#39; }}
+url - {{ url | Url:&#39;url&#39; }}
+invalid_part - {{ url | Url:&#39;invalid_part&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>Testing URL https://www.rockrms.com/WorkflowEntry/35?PersonId=2
+host - www.rockrms.com
+port - 443
+segments - [ &quot;/&quot;, &quot;WorkflowEntry/&quot;, &quot;35&quot; ]
+scheme - https
+protocol - https
+localpath - /WorkflowEntry/35
+pathandquery - /WorkflowEntry/35?PersonId=2
+queryparameter no key -
+queryparameter with key - 2
+url - https://www.rockrms.com/WorkflowEntry/35?PersonId=2
+invalid_part -</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#writecookie" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="writecookie"></a>
+        
+        <a name="writecookie"></a>
+        <h1 class="panel-title">WriteCookie</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v12.1</span> 
+				
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Sets a HTTP cookie for the current user session. Cookies provide a means of storing information about the current user's session that can be accessed in subsequent requests.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      This filter has the following format:
+<br>
+
+<pre>{{ 'cookieName' | WriteCookie:'value','expiryInMinutes' }}</pre>
+
+<p>
+    <strong>Definitions</strong>
+</p>
+
+<ul>
+    <li>cookieName (string): A name that uniquely identifies the cookie. The name is required and is used to retrieve the cookie in subsequent requests.</li>
+    <li>value (string): The value to be stored in the cookie.</li>
+    <li>expiryInMinutes (int, optional): Setting an expiry value cause the cookie to be deleted after the specified number of minutes has elapsed. If you do not specify an expiry time, the cookie will be available until it is overwritten, deleted by the user, or the session expires.</li>
+</ul>
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre></pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">{{ &#39;FavouriteCookie&#39; | WriteCookie:&#39;choc-chip&#39;,&#39;5&#39; }}
+{{ &#39;FavouriteColor&#39; | WriteCookie:&#39;green&#39; }}</pre>
+        </div>
+        <div class="output">
+          
+          <pre>(none)
+&lt;p&gt;
+This filter modifies the response sent back to the user by including the specified cookie with an expiration time of 5 minutes.
+It does not produce any output.
+&lt;/p&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+<div class="panel panel-default panel-lavaitem">
+  <div class="panel-heading js-example-toggle clearfix">
+    <div class="row">
+      <div class="col-md-8">
+      &nbsp;<a href="#xamlwrap" class="rollover-link text-color"><i class="fa fa-link"></i></a>
+        <a name="xamlwrap"></a>
+        
+        <a name="xamlwrap"></a>
+        <h1 class="panel-title">XamlWrap</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="pull-right">
+
+		  <div class="example-toggle text-right">
+            <i class="fa fa-circle-o"></i> Show Details
+          </div>
+		  <div class="pull-right margin-t-sm text-right">
+			
+			
+				
+				
+					 <span class="label label-info">Server: v10.0</span> 
+				
+				
+			
+				
+				
+				
+					  <span class="label label-success">Mobile: v1.0</span> 
+				
+			
+			
+		  </div>
+        </div>
+      </div>
+    </div>
+    <p class="description">
+      Wraps XAML in CDATA tags to make it XML compliant.
+    </p>
+  </div>
+  <div class="panel-body" style="display: none;">
+    <strong>Additional Details</strong>
+    <p>
+      
+    </p>
+
+    <div class="examples">
+      <strong>Example:</strong>
+
+      <div class="example">
+        <div class="input">
+          <pre>"Item": {
+    "Id": 12,
+    "Content": '# Heading
+    The quick brown folx jumped over the lazy dog.
+    ',
+}</pre>
+        </div>
+        <div class="lava">
+          
+          <pre class="usage">&lt;Rock:Markdown&gt;{{ Item.Content | XamlWrap }}&lt;/Rock:Markdown&gt;
+</pre>
+        </div>
+        <div class="output">
+          
+          <pre>&lt;Rock:Markdown&gt;&lt;![CDATA[The quick brown folx jumped over the lazy dog.]]&lt;/Rock:Markdown&gt;</pre>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+</div>
+
+            
+        
+			</div>
+
+        
+        
+
+    
+		</div>
+
+	</div>
+</div></div></div>
+</article>
+
+<aside class="col-xs-12 col-md-3 col-xl-3">
+    <div class="sticky">
+        <div id="zone-sidebar1" class="zone-instance"><div class="zone-content"><div id="bid_2561" data-zone-location="Layout" class="block-instance js-block-instance page-menu">
+	<div class="block-content">
+		<div id="ctl00_main_ctl12_ctl01_ctl00_upContent">
+			
+    <div class="book-toc small-toc full-height">
+<div class="px-4">
+<a class="btn btn-xs btn-primary margin-b-md" href="/lava" style="color:#fff">Lava Home</a>
+</div>
+
+    <ul class="nav navbar-nav">
+
+		
+            <h6 class="px-4 pt-3">Formatting</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/style">Lava Style Guide</a>
+				</li>
+			
+			</ul>
+				
+        
+            <h6 class="px-4 pt-3">Filters</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/filters">Intro To Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/text-filters">Text Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/date-filters">Date Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/numeric-filters">Numeric Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/color-filters">Color Filters</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/array-filters">Arrays</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/person-filters">Person</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/filters/attribute-filters">Attributes</a>
+				</li>
+			
+			    <li class="active">
+					<a href="/lava/filters/other-filters">Other</a>
+				</li>
+			
+			</ul>
+				
+        
+            <h6 class="px-4 pt-3">Tags</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/tags/variable-tags">Assign / Capture</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/if-else-tags">If / Else</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/case-tags">Case</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/cycle-tags">Cycle</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/for-tags">For</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/include-tags">Include</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/unless-tags">Unless</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/comment-tags">Comment</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/raw-tags">Raw</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/return-tags">Return</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/tags/lava-tags">Lava</a>
+				</li>
+			
+			</ul>
+				
+        
+            <h6 class="px-4 pt-3">Commands</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/commands">Getting Started</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/cache-commands">Cache</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/calendar-events">Calendar Events</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/entity-commands">Entity</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/event-scheduled-instance">Event Scheduled Instance</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/interaction-content-channel-item-write">Interaction Content Channel Item Write</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/interaction-write">Interaction Write</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/javascript-commands">JavaScript</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/personalize-commands">Personalize</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/search-commands">Search</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/sql-commands">SQL</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/stylesheet-commands">Stylesheet</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/taglist-commands">Tag List</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/web-request-commands">Web Request</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/commands/workflow-activate-commands">Workflow Activate</a>
+				</li>
+			
+			</ul>
+				
+        
+            <h6 class="px-4 pt-3">Misc</h6>
+
+			<ul class="list-unstyled">
+			
+			    <li>
+					<a href="/lava/remote-lava">Using Lava Remotely</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/lava-api">Creating APIs Using Lava</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/workflows">Workflows and Lava</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/fluid">About Lava Fluid</a>
+				</li>
+			
+			    <li>
+					<a href="/lava/obsidian">Lava With Obsidian</a>
+				</li>
+			
+			</ul>
+				
+        
+    </ul>
+
+</div>
+
+		</div>
+
+	</div>
+</div></div></div>
+    </div>
+</aside>
+
+<script>
+    Sys.Application.add_load(function () {
+        $('.js-example-toggle').on('click', function () {
+            $(this).closest('.panel').toggleClass('open');
+            $(this).closest('.panel').find('.panel-body').slideToggle();
+            $(this).find('.example-toggle i').toggleClass('fa-circle-o fa-circle');
+        });
+    });
+</script>
+
+<div class="d-none">
+        <!-- Ajax Error -->
+        <div class="alert alert-danger ajax-error no-index" style="display:none">
+            <p><strong>Error</strong></p>
+            <span class="ajax-error-message"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="zone-sectiona" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div id="zone-sectionb" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectionc" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+            <div class="col-md-4">
+                <div id="zone-sectiond" class="zone-instance"><div class="zone-content"></div></div>
+            </div>
+        </div>
+    </div>
+        <!-- End Content Area -->
+
+
+
+          
+
+
+<footer class="footer">
+    <div class="section section-footer-top">
+        <div class="container">
+            <div class="footer-top">
+                <nav class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4">
+                                <span class="brand mb-5 d-block">
+                                    <a href="https://www.rockrms.com/" class="brand">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                        <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"></path>
+                                      </svg>
+                                  </a>
+                                </span>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3 ml-md-auto">
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.rockrms.com/Download">Download Rock</a></li>
+                                    <li><a href="https://github.com/SparkDevNetwork/Rock/issues">Issues</a></li>
+                                    <li>
+                                        <a href="https://github.com/SparkDevNetwork/RockWebsites/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">Report Website Issue</a>
+                                    </li>
+                                    <li><a href="https://community.rockrms.com/learn">Learn</a></li>
+                                    <li><a href="https://community.rockrms.com/ministry-impact">Ministry Impact</a></li>
+                                    <li><a href="https://community.rockrms.com/jobs">Careers</a></li>
+                                    <li><a href="https://community.rockrms.com/rock-playlist" class="text-primary font-weight-semibold">Rock Playlist</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-3">
+                              <ul class="list-unstyled">
+                                <li><a href="https://www.rockrms.com/partners">Partners</a></li>
+                                <li><a href="https://www.rockrms.com/sponsors">Sponsors</a></li>
+                                <li><a href="https://www.rockrms.com/organizations">Who's Using Rock</a></li>
+                                <li><a href="https://community.rockrms.com/built-with-rock">Websites Using Rock</a></li>
+                                <li><a href="https://store.rockrms.com" target="_blank">Promo Shop</a></li>
+                                <li><a href="https://realchip.rocks/" target="_blank">Chip</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6">
+                      <ul class="social-list list-inline text-center">
+                        <li class="social-icon"><a href="https://www.facebook.com/TheRockRMS/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-icon"><a href="https://twitter.com/rockrms"><i class="fab fa-twitter"></i></a></li>
+                      </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="section section-footer-bottom">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap flex-justify" style="justify-content: space-between;">
+                    <ul class="list-inline">
+                        <li><a href="/login" class="hover-orange">Login</a></li>
+                        <li><a href="/privacy" class="hover-orange">Privacy</a></li>
+                        <li><a href="/license" class="hover-orange">License</a></li>
+                    </ul>
+                    <p>Rock is a project of <a target="_blank" href="https://sparkdevnetwork.org/">Spark Development Network</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+          
+
+        </div>
+        <!-- / main -->
+      </div>
+      </main>
+      <!-- / content -->
+
+      <div class="d-none">
+        <div id="zone-header" class="zone-instance"><div class="zone-content"></div></div>
+        <div id="zone-login" class="zone-instance"><div class="zone-content"></div></div>
+
+      </div>
+      </div>
+      </div>
+
+
+        
+        <input type="hidden" name="ctl00$sManager" id="sManager" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("sManager", "ctl00$sManager");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+
+        <div id="updateProgress" style="display:none;">
+	
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        
+</div>
+
+    <div id="ctl16" style="display:none">
+	<input type="submit" name="ctl00$rock-config-trigger" value="" id="rock-config-trigger" /><input type="hidden" name="ctl00$rock-config-trigger-data" id="rock-config-trigger-data" />
+</div><div id="modal-popup" class="modal container modal-content rock-modal rock-modal-frame">
+	<div id="modal-popup_contentPanel" class="iframe">
+		<iframe id="modal-popup_iframe" scrolling="no" style="height:auto;"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+Rock.settings.initialize({
+    siteId: 17,
+    layoutId: 153,
+    pageId: 1307,
+    layout: 'LavaDocumentation',
+    baseUrl: '/'
+});Rock.controls.modal.closeModalDialog($('#ctl00_main_ctl10_ctl01_ctl00_mdEdit_modal_dialog_panel'));
+Sys.Application.add_load(function () {
+const getCookieValue = (name) => {
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+};
+var interactionArgs = {"PageId":1307,"ActionName":"View","BrowserSessionGuid":"7bf5bffe-e0b7-4ed3-b42b-78cccd56a44b","PageRequestUrl":"https://community.rockrms.com/lava/filters/other-filters","PageRequestDateTime":"2023-08-03T11:03:51.6954425","PageRequestTimeToServe":0.078112199999999993,"UserAgent":"axios/1.4.0","UserHostAddress":"147.243.17.171","UrlReferrerHostAddress":null,"UrlReferrerSearchTerms":null,"UserIdKey":null};
+if (!interactionArgs.UserIdKey) {
+    interactionArgs.UserIdKey = getCookieValue('.ROCK_VISITOR_KEY');
+}
+$.ajax({
+    url: '/api/Interactions/RegisterPageInteraction',
+    type: 'POST',
+    data: interactionArgs
+    });
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
