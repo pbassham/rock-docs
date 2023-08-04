@@ -1,5 +1,4 @@
 # Cards
-PlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholderPlaceholder
 [View Original Source](https://community.rockrms.com/styling/components/cards)
 
 Styling Cards

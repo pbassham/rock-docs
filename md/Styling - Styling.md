@@ -1,5 +1,5 @@
 # Styling
-[View Original Source](https://community.rockrms.com/styling/utilities)
+[View Original Source](https://community.rockrms.com/styling/layout)
 
 Introduction to Styling
 -----------------------
@@ -24,4 +24,4 @@ CSS, at its core, starts with properties and values. A property could be conside
 </div>
 ```
 
-The documentation below walks through some of the core styling classes available for your use when writing custom HTML/Lava. These helper classes are included outside of the website's theme, so they can be utilized on anywhere - both on your internal and external websites..
+The documentation below walks through some of the core styling classes available for your use when writing custom HTML/Lava. These helper classes are included outside of the website's theme, so they can be utilized on anywhere - both on your internal and external websites.es..

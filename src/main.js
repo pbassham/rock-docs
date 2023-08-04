@@ -1,16 +1,10 @@
-import axios from "axios";
 import { load } from "cheerio";
-import { log } from "console";
 import fs, { createWriteStream } from "fs";
-import { URL } from "url";
 import { getAllLinksFromPages, htmlToMarkdown } from "./parse.js";
 import { getFiles } from "./files.js";
 import { downloadPages } from "./fetching.js";
 import path from "path";
-// TODO: need to split this into multiple files
-// file for downloading pages
-// file for parsing pages
-// TODO: Publish as github repo of MD files
+
 // TODO: Transcribe videos
 
 const rootUrls = [
@@ -38,7 +32,7 @@ async function makeMdFiles() {
 
     // with cheerio, get title from html and trim whitespace
     const $ = load(file.contents);
-    let title = $("title").text().replace(" | Rock Community", "").trim();
+    let title = $("head > title").text().replace(" | Rock Community", "").trim();
 
     // if filename contains "_" split filename by _ and get first part as category
     let category = getCategory(file.fileName);
