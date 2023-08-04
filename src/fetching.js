@@ -12,18 +12,6 @@ import { URL } from "url";
 // TODO: Publish as github repo of MD files
 // TODO: Transcribe videos
 
-
-
-
-// returns the name of the file from the url path
-function nameFileFromUrl(url) {
-  var parsedUrl = new URL(url);
-  var path = parsedUrl.pathname; //+ parsedUrl.search + parsedUrl.hash;
-  var replacedPath = path.replace(/\//g, "-");
-  return replacedPath.startsWith("-") ? replacedPath.slice(1) : replacedPath;
-}
-
-
 // fetches a page and returns an array of links from the page (does not download the page)
 // const fetchPage = async (url) => {
 //   try {
@@ -51,7 +39,6 @@ function nameFileFromUrl(url) {
 //   }
 // };
 
-
 // main function that gets all links from rootUrls and downloads them and the pages they link to
 // const processPages = async () => {
 //   let uniqueLinks = [];
@@ -74,23 +61,33 @@ function nameFileFromUrl(url) {
 //   // downloadPages(links);
 // };
 
+// returns the name of the file from the url path
+function nameFileFromUrl(url) {
+  var path = new URL(url).pathname;
+
+  // trim leading slash if it exists
+  if (path.startsWith("/")) path = path.slice(1);
+
+  // replace all slashes with underscores for file name
+  return path.replace(/\//g, "_");
+}
+
 // downloads pages and saves them locally from an array of links
 export const downloadPages = async (links) => {
   for (const link of links) {
     try {
       const response = await axios.get(link, { responseType: "stream" });
-      // response.data.pipe(createWriteStream(`./html/${link.replace(/\//g, '')}.html`)); // download page and save to ./html folder
-      response.data.pipe(
-        createWriteStream(`./html/${nameFileFromUrl(link)}.html`)
-      ); // download page and save to ./html folder
+
+      const fileName = nameFileFromUrl(link);
+      // save to ./html folder
+      response.data.pipe(createWriteStream(`./html/${fileName}.html`));
+
       console.log(`Downloaded page at URL: ${link}`);
-      
     } catch (error) {
       console.error(`Problem fetching URL: ${link}`);
     }
   }
 };
-
 
 // const allPages = await getLocalLinks("./html");
 // getFiles("./html");

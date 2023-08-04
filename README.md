@@ -8,3 +8,5 @@ I was frustrated with how many places I had to search to find answers to my Rock
 - [ ] Automate the process of updating the documentation.
 - [ ] Fix link back to the official Rock RMS documentation at the top of each page.
 - [ ] Add RockU video transcriptions
+- [ ] find and replace "[](#link)section header" with "[section header](#link)" (have to do this rather than regular md links to not break all section links in docs)
+- [ ] fix internal links by appending the filename before the [section heading](#link)

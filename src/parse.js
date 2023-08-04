@@ -1,58 +1,42 @@
-import fs from 'fs';
-import * as cheerio from 'cheerio';
-import TurndownService from 'turndown';
-import turndownPluginGfm from 'turndown-plugin-gfm';
+import fs from "fs";
+import * as cheerio from "cheerio";
+import TurndownService from "turndown";
+import turndownPluginGfm from "turndown-plugin-gfm";
 const turndownService = new TurndownService({
   // headingStyle: 'atx',
   preformattedCode: true,
 });
-turndownService.use(turndownPluginGfm.gfm)
-turndownService.addRule('code', {
-  filter: ['pre'],
+
+// Enables Tables
+turndownService.use(turndownPluginGfm.gfm);
+
+// Makes code blocks use triple backticks
+turndownService.addRule("code", {
+  filter: ["pre"],
   replacement: function (content) {
-    return '\n```\n' + content + '\n```\n'
-  }
-})
-
-// const html = fs.readFileSync('/Users/philipb/Documents/documentation/1.html', 'utf-8');
-// Load HTML content using Cheerio
-// const $ = cheerio.load(html);
-// $('h1').each((index, element) => {
-//     console.log($(element).text());
-//   });
-
-
-// Function to convert HTML to JSON
-// const htmlToJson = (element) => {
-//   const json = {};
-//   json.name = element.tagName;
-//   if (element.children().length > 0) {
-//     json.children = [];
-//     element.children().each((index, child) => {
-//       json.children.push(htmlToJson($(child)));
-//     });
-//   } else {
-//     json.text = element.text();
-//   }
-//   return json;
-// };
-
-// Convert HTML to JSON
-// const jsonData = htmlToJson($.root());
-// console.log(jsonData);
-// Write JSON data to a file
-// fs.writeFile('output.json', JSON.stringify(jsonData, null, 2), err => {
-//   if (err) throw err;
-//   console.log('Conversion complete. JSON saved to output.json');
-// });
+    return "\n```\n" + content + "\n```\n";
+  },
+});
 
 // parses html and returns an array of links
 const baseUrl = "https://community.rockrms.com"; // Your webpage base URL
 
-let slugs = ["lava", "documentation", "styling", "developer", 
-// "recipes"
+let slugs = [
+  "lava",
+  "documentation",
+  "styling",
+  "developer",
+  // "recipes"
 ]; // Patterns to match in URL
-let slugsToIgnore = ["#","wordpress.org","facebook.com", "google.com",".pdf","mozilla.org","www.rockrms.com"]; // Patterns to match in URL
+let slugsToIgnore = [
+  "#",
+  "wordpress.org",
+  "facebook.com",
+  "google.com",
+  ".pdf",
+  "mozilla.org",
+  "www.rockrms.com",
+]; // Patterns to match in URL
 
 export function getLinksFrom(html) {
   try {
@@ -85,12 +69,10 @@ export function getLinksFrom(html) {
   }
 }
 
-
-
 // returns true if url contains a slug from the slugs array
 function filterUrls(url) {
   url = url.toLowerCase(); // Convert url to lowercase
-  
+
   // if url contains "/book/" it should also contain "/content"
   if (url.includes("/book/")) {
     if (!url.includes("/content")) {
@@ -99,10 +81,6 @@ function filterUrls(url) {
     }
   }
 
-  
-  
-
-  
   // Exclude links that contain a slug to ignore
   for (let i = 0; i < slugsToIgnore.length; i++) {
     if (url.includes(slugsToIgnore[i].toLowerCase())) {
@@ -124,8 +102,6 @@ function filterUrls(url) {
       // console.log(`Found /bookcontent/ with pattern of /#/ in ${url}`);
       return false;
     }
-
-    
   }
   // Include only links that contain a slug
   for (let i = 0; i < slugs.length; i++) {
@@ -138,17 +114,17 @@ function filterUrls(url) {
   return false;
 }
 
-export const getAllLinksFromPages = async (files) => {
+export const getAllLinksFromPages = async (fileObjects) => {
   let uniqueLinks = [];
   try {
-    for (const fileContents of files) {
-      const links = getLinksFrom(fileContents);
+    for (const fileObj of fileObjects) {
+      const links = getLinksFrom(fileObj.contents);
       // console.log(`Found ${links.length} links on ${file}`);
       uniqueLinks = [...new Set([...uniqueLinks, ...links])];
     }
     console.log(`Found ${uniqueLinks.length} unique links`);
     // console.log each link
-    uniqueLinks.forEach(link => {
+    uniqueLinks.forEach((link) => {
       console.log(link);
     });
     // console.log(uniqueLinks.sort());
@@ -156,68 +132,65 @@ export const getAllLinksFromPages = async (files) => {
   } catch (error) {
     console.error(error);
   }
-}
+};
 // const links = getLinksFrom(contents);
 
 // log(`Found ${links.length} links on ${file}`);
 // uniqueLinks = [...new Set([...uniqueLinks, ...links])];
 
-export const getTextFrom = (html) => {
+export const htmlToMarkdown = (html) => {
   try {
     const $ = cheerio.load(html);
     // const text = $.text();
 
-    let pageText = '';
+    let pageText = "";
 
     // with cheerio, get all content from body after removing scripts styles and start after the first h1
-    
+
     // remove scripts and styles
-    $('script').remove();
-    $('style').remove();
-    $('footer').remove();
-    $('aside').remove();
-    $('nav').remove();
-    $('.header-row').remove();
-    $('.topbar').remove();
+    $("script").remove();
+    $("style").remove();
+    $("footer").remove();
+    $("aside").remove();
+    $("nav").remove();
+    $(".header-row").remove();
+    $(".topbar").remove();
     $('div[data-type="update-summary"]').remove();
 
     // remove class header-row
-    
-    let bodyHTML 
+
+    let bodyHTML;
     //  if there is an article tag
-    if ($('article').length) {
+    if ($("article").length) {
       // get the text from the article tag
       // pageText = $('article').text();
-      bodyHTML = $('article').html();
+      bodyHTML = $("article").html();
     } else {
       // get the text from the body tag
       // pageText = $('body').text();
-      bodyHTML = $('body').html();
+      bodyHTML = $("body").html();
     }
 
     // const bodyHTML = $('article').html();
 
     // Convert HTML to markdown
     const markdown = turndownService.turndown(bodyHTML);
-
+    // console.log(`    Finished converting to MD`)
     // console.log(markdown);
 
     return markdown;
     // get article
     // const article = $('article').text();
     //remove footer
-    
-    
-    
-    
+
     // $('article').each((i, elem) => {
     //   pageText += $(elem).text();
     // });
 
     // return pageText;
-    
+
     // return text;
   } catch (error) {
     console.error(error);
   }
-}
+};
